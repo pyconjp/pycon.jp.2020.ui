@@ -1,7 +1,7 @@
 <template>
   <div class="flex justify-center items-center h-120">
     <h1 class="text-5xl">
-      Hello!
+      Staff!
     </h1>
   </div>
 </template>
