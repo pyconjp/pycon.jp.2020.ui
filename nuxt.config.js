@@ -77,6 +77,9 @@ export default {
       }
     }
   },
+  purgeCSS: {
+    whitelist: ['hidden']
+  },
   /*
    ** Axios module configuration
    ** See https://axios.nuxtjs.org/options
