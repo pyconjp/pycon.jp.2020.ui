@@ -3,7 +3,7 @@
     <div
       class="flex flex-col max-w-screen-xl px-4 mx-auto md:items-center md:justify-between md:flex-row md:px-6 lg:px-8"
     >
-      <div class="p-4 flex flex-row items-center justify-between">
+      <div class="flex flex-row items-center justify-between p-4">
         <n-link
           to="/"
           class="text-lg font-semibold tracking-widest text-gray-900 uppercase rounded-lg focus:outline-none focus:shadow-outline"
@@ -20,13 +20,15 @@
         class="flex-col flex-grow pb-4 md:pb-0 md:flex md:justify-end md:flex-row"
       >
         <n-link
-          class="px-4 py-2 mt-2 text-sm font-semibold text-gray-900 bg-gray-200 rounded-lg md:mt-0 transition-colors duration-200 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+          class="px-4 py-2 mt-2 text-sm font-semibold transition-colors duration-200 rounded-lg md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+          exact
+          active-class="text-gray-900 bg-gray-200"
           to="/"
         >
           概要
         </n-link>
         <a
-          class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg md:mt-0 md:ml-4 transition-colors duration-200 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+          class="px-4 py-2 mt-2 text-sm font-semibold transition-colors duration-200 bg-transparent rounded-lg md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
           href="https://pyconjp.blogspot.com/search/label/pyconjp2020"
           target="_blank"
           rel="noopener noreferrer"
@@ -34,13 +36,15 @@
           お知らせ
         </a>
         <n-link
-          class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg md:mt-0 md:ml-4 transition-colors duration-200 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+          class="px-4 py-2 mt-2 text-sm font-semibold transition-colors duration-200 bg-transparent rounded-lg md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+          active-class="text-gray-900 bg-gray-200"
           to="/sponsors"
         >
           スポンサー
         </n-link>
         <n-link
-          class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg md:mt-0 md:ml-4 transition-colors duration-200 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+          class="px-4 py-2 mt-2 text-sm font-semibold transition-colors duration-200 bg-transparent rounded-lg md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+          active-class="text-gray-900 bg-gray-200"
           to="/staff"
         >
           スタッフ

@@ -1,7 +1,7 @@
 <template>
-  <div class="min-h-screen flex flex-col">
+  <div class="flex flex-col min-h-screen">
     <pycon-header />
-    <main class="flex-1 container mx-auto">
+    <main class="container flex-1 mx-auto">
       <nuxt />
     </main>
     <PyconFooter />

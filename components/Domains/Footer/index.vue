@@ -1,5 +1,5 @@
 <template>
-  <div class="flex justify-around items-center h-24">
+  <div class="flex items-center justify-around h-24">
     <h2>
       <n-link to="/">
         Pycon JP 2020
