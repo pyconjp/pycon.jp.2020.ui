@@ -5,7 +5,7 @@
     >
       <div class="flex flex-row items-center justify-between p-4">
         <n-link
-          to="/"
+          :to="localePath('/')"
           class="text-lg font-semibold tracking-widest text-gray-900 uppercase rounded-lg focus:outline-none focus:shadow-outline"
         >
           Pycon JP 2020
@@ -13,7 +13,7 @@
         <hamburger
           :is-drawer-open="isDrawerOpen"
           @toggleDrawer="isDrawerOpen = !isDrawerOpen"
-        ></hamburger>
+        />
       </div>
       <nav
         :class="{ flex: isDrawerOpen, hidden: !isDrawerOpen }"
@@ -23,9 +23,9 @@
           class="px-4 py-2 mt-2 text-sm font-semibold transition-colors duration-200 rounded-lg md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
           exact
           active-class="text-gray-900 bg-gray-200"
-          to="/"
+          :to="localePath('/')"
         >
-          概要
+          {{ $t('about') }}
         </n-link>
         <a
           class="px-4 py-2 mt-2 text-sm font-semibold transition-colors duration-200 bg-transparent rounded-lg md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
@@ -33,21 +33,21 @@
           target="_blank"
           rel="noopener noreferrer"
         >
-          お知らせ
+          {{ $t('news') }}
         </a>
         <n-link
           class="px-4 py-2 mt-2 text-sm font-semibold transition-colors duration-200 bg-transparent rounded-lg md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
           active-class="text-gray-900 bg-gray-200"
-          to="/sponsors"
+          :to="localePath('/sponsors')"
         >
-          スポンサー
+          {{ $t('sponsor') }}
         </n-link>
         <n-link
           class="px-4 py-2 mt-2 text-sm font-semibold transition-colors duration-200 bg-transparent rounded-lg md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
           active-class="text-gray-900 bg-gray-200"
-          to="/staff"
+          :to="localePath('/staff')"
         >
-          スタッフ
+          {{ $t('staff') }}
         </n-link>
         <dropdown
           :is-dropdown-open="isDropdownOpen"

@@ -1,7 +1,7 @@
 <template>
   <div class="flex items-center justify-center h-120">
     <h1 class="text-5xl">
-      Sponsors!
+      {{ $t('sponsor') }}
     </h1>
   </div>
 </template>

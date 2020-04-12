@@ -1,7 +1,7 @@
 <template>
-  <div class="flex items-center justify-around h-24">
+  <div class="flex flex-col items-center justify-around h-24 my-8 md:flex-row">
     <h2>
-      <n-link to="/">
+      <n-link :to="localePath('/')">
         Pycon JP 2020
       </n-link>
     </h2>
