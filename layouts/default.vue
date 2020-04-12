@@ -4,7 +4,7 @@
     <main class="container flex-1 mx-auto">
       <nuxt />
     </main>
-    <PyconFooter />
+    <pycon-footer />
   </div>
 </template>
 
