@@ -1,3 +1,6 @@
+import ja from './locales/ja.json'
+import en from './locales/en.json'
+
 export default {
   mode: 'spa',
   /*
@@ -46,8 +49,34 @@ export default {
     '@nuxtjs/axios',
     '@nuxtjs/pwa',
     // Doc: https://github.com/nuxt-community/dotenv-module
-    '@nuxtjs/dotenv'
+    '@nuxtjs/dotenv',
+    [
+      'nuxt-i18n',
+      {
+        vueI18nLoader: true
+      }
+    ]
   ],
+  i18n: {
+    locales: [
+      {
+        code: 'en',
+        name: 'English'
+      },
+      {
+        code: 'ja',
+        name: '日本語'
+      }
+    ],
+    defaultLocale: 'ja',
+    vueI18n: {
+      fallbackLocale: 'ja',
+      messages: {
+        ja,
+        en
+      }
+    }
+  },
   /*
    ** Axios module configuration
    ** See https://axios.nuxtjs.org/options
