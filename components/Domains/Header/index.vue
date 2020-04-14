@@ -1,6 +1,6 @@
 <template>
   <div
-    class="flex flex-col max-w-screen-xl px-4 mx-auto md:items-center md:justify-between md:flex-row md:px-6 lg:px-8"
+    class="flex flex-col max-w-screen-xl px-4 mx-auto md:items-center md:justify-between md:flex-row md:my-4 md:px-6 lg:px-8"
   >
     <div class="flex flex-row items-center justify-between p-4">
       <n-link
@@ -25,7 +25,7 @@
     >
       <nav
         v-show="isDrawerOpen || !isMobile"
-        class="flex flex-col flex-grow pb-4 md:pb-0 md:flex md:justify-end md:flex-row"
+        class="flex flex-col pb-4 md:pb-0 md:flex md:justify-end md:flex-row"
       >
         <header-link
           v-for="locale in $i18n.t('header')"
