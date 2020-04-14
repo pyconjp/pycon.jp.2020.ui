@@ -1,10 +1,10 @@
 <template>
   <div class="flex flex-col min-h-screen">
-    <pycon-header />
+    <pycon-header class="w-full text-gray-800" />
     <main class="container flex-1 mx-auto">
       <nuxt />
     </main>
-    <pycon-footer />
+    <pycon-footer class="text-gray-800" />
   </div>
 </template>
 
