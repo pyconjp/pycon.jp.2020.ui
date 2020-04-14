@@ -1,7 +1,7 @@
 <template>
   <div class="flex items-center justify-center h-120">
     <h1 class="text-5xl">
-      {{ $t('staff') }}
+      {{ $t('header.staff.text') }}
     </h1>
   </div>
 </template>

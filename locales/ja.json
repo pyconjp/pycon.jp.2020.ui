@@ -1,7 +1,22 @@
 {
-  "about": "概要",
-  "news": "お知らせ",
-  "sponsor": "スポンサー",
-  "staff": "スタッフ",
+  "header": {
+    "about": {
+      "text": "概要",
+      "path": "/"
+    },
+    "news": {
+      "text": "お知らせ",
+      "path": "https://pyconjp.blogspot.com/search/label/pyconjp2020"
+    }
+    ,
+    "sponsor": {
+      "text": "スポンサー",
+      "path": "/sponsors"
+    },
+    "staff": {
+      "text": "スタッフ",
+      "path": "/staff"
+    }
+  },
   "language": "言語"
 }

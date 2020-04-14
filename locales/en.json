@@ -1,7 +1,21 @@
 {
-  "about": "About",
-  "news": "News",
-  "sponsor": "Sponsor",
-  "staff": "Staff",
+  "header": {
+    "about": {
+      "text": "About",
+      "path": "/"
+    },
+    "news": {
+      "text": "News",
+      "path": "https://pyconjp.blogspot.com/search/label/pyconjp2020"
+    },
+    "sponsor": {
+      "text": "Sponsor",
+      "path": "/sponsors"
+    },
+    "staff": {
+      "text": "Staff",
+      "path": "/staff"
+    }
+  },
   "language": "Language"
 }

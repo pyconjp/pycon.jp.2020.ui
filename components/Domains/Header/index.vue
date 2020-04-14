@@ -10,74 +10,64 @@
         Pycon JP 2020
       </n-link>
       <hamburger
-        ref="hamburger"
         :is-drawer-open="isDrawerOpen"
         @toggleDrawer="isDrawerOpen = !isDrawerOpen"
       />
     </div>
-    <nav
-      :class="{ flex: isDrawerOpen, hidden: !isDrawerOpen }"
-      class="flex-col flex-grow pb-4 md:pb-0 md:flex md:justify-end md:flex-row"
+    <transition
+      name="nav"
+      enter-active-class="transition-all duration-200 ease-out"
+      leave-active-class="transition-all duration-150 ease-in"
+      @enter="enter"
+      @after-enter="afterEnter"
+      @leave="leave"
+      @after-leave="afterLeave"
     >
-      <n-link
-        class="px-4 py-2 mt-2 text-sm font-semibold transition-colors duration-200 rounded-lg md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
-        exact
-        active-class="text-gray-900 bg-gray-200"
-        :to="localePath('/')"
+      <nav
+        v-show="isDrawerOpen || !isMobile"
+        class="flex flex-col flex-grow pb-4 md:pb-0 md:flex md:justify-end md:flex-row"
       >
-        {{ $t('about') }}
-      </n-link>
-      <a
-        class="px-4 py-2 mt-2 text-sm font-semibold transition-colors duration-200 bg-transparent rounded-lg md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
-        href="https://pyconjp.blogspot.com/search/label/pyconjp2020"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        {{ $t('news') }}
-      </a>
-      <n-link
-        class="px-4 py-2 mt-2 text-sm font-semibold transition-colors duration-200 bg-transparent rounded-lg md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
-        active-class="text-gray-900 bg-gray-200"
-        :to="localePath('/sponsors')"
-      >
-        {{ $t('sponsor') }}
-      </n-link>
-      <n-link
-        class="px-4 py-2 mt-2 text-sm font-semibold transition-colors duration-200 bg-transparent rounded-lg md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
-        active-class="text-gray-900 bg-gray-200"
-        :to="localePath('/staff')"
-      >
-        {{ $t('staff') }}
-      </n-link>
-      <dropdown
-        :is-dropdown-open="isDropdownOpen"
-        @toggleDropdown="isDropdownOpen = !isDropdownOpen"
-      >
-        <fade-transition>
-          <DropdownMenu v-if="isDropdownOpen" />
-        </fade-transition>
-      </dropdown>
-    </nav>
+        <header-link
+          v-for="locale in $i18n.t('header')"
+          :key="locale.path"
+          :path="locale.path"
+          :exact="locale.path === '/' ? true : false"
+          class="mt-2 md:mt-0 md:ml-4 md:first:ml-0"
+        >
+          {{ locale.text }}
+        </header-link>
+        <dropdown
+          :is-dropdown-open="isDropdownOpen"
+          @toggleDropdown="isDropdownOpen = !isDropdownOpen"
+        >
+          {{ $t('language') }}
+          <template #menu>
+            <locales-list v-if="isDropdownOpen" />
+          </template>
+        </dropdown>
+      </nav>
+    </transition>
   </div>
 </template>
 
 <script>
 import Hamburger from '~/components/Domains/Header/Hamburger'
 import Dropdown from '~/components/Domains/Header/Dropdown'
-import DropdownMenu from '~/components/Domains/Header/DropdownMenu'
-import FadeTransition from '~/components/Elements/FadeTransition'
+import LocalesList from '~/components/Domains/Header/LocalesList'
+import HeaderLink from '~/components/Domains/Header/HeaderLink'
 
 export default {
   components: {
     Hamburger,
     Dropdown,
-    DropdownMenu,
-    FadeTransition
+    LocalesList,
+    HeaderLink
   },
   data() {
     return {
       isDrawerOpen: false,
-      isDropdownOpen: false
+      isDropdownOpen: false,
+      isMobile: false
     }
   },
   mounted() {
@@ -86,6 +76,45 @@ export default {
       this.isDropdownOpen = false
       next()
     })
+    const mql = window.matchMedia('(min-width: 768px)')
+    this.updateMatches(mql)
+    mql.addListener(this.updateMatches)
+  },
+  methods: {
+    updateMatches(mql) {
+      if (mql.matches) {
+        this.isMobile = false
+      } else {
+        this.isMobile = true
+      }
+    },
+    nextFrame(fn) {
+      window.requestAnimationFrame(() => window.requestAnimationFrame(fn))
+    },
+    enter(el) {
+      el.style.overflow = 'hidden'
+      el.style.height = '0'
+
+      this.nextFrame(() => {
+        el.style.height = `${el.scrollHeight}px`
+      })
+    },
+    leave(el) {
+      el.style.overflow = 'hidden'
+      el.style.height = `${el.scrollHeight}px`
+
+      this.nextFrame(() => {
+        el.style.height = '0'
+      })
+    },
+    afterEnter(el) {
+      el.style.height = ''
+      el.style.overflow = ''
+    },
+    afterLeave(el) {
+      el.style.height = ''
+      el.style.overflow = ''
+    }
   }
 }
 </script>
