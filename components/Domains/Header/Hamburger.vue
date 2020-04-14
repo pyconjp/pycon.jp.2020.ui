@@ -7,6 +7,8 @@
     @click="$emit('toggleDrawer')"
   >
     <svg-transition
+      ref="transition"
+      trigger="none"
       :size="{
         width: 20,
         height: 20
@@ -30,3 +32,19 @@
     </svg-transition>
   </button>
 </template>
+
+<script>
+export default {
+  props: {
+    isDrawerOpen: {
+      type: Boolean,
+      defaulte: false
+    }
+  },
+  watch: {
+    isDrawerOpen() {
+      this.$refs.transition.performTransition()
+    }
+  }
+}
+</script>
