@@ -55,7 +55,8 @@ export default {
       {
         vueI18nLoader: true
       }
-    ]
+    ],
+    '@nuxtjs/robots'
   ],
   i18n: {
     locales: [
