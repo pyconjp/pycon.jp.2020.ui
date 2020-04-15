@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col min-h-screen">
+  <div class="flex flex-col min-h-screen font-sans">
     <pycon-header class="w-full text-gray-800" />
     <main class="container flex flex-col flex-1 mx-auto">
       <nuxt />

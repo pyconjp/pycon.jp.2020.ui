@@ -28,6 +28,7 @@
     "@nuxtjs/pwa": "^3.0.0-0",
     "@nuxtjs/sitemap": "^2.2.0",
     "nuxt": "^2.0.0",
+    "nuxt-font-loader-strategy": "^1.0.0",
     "nuxt-i18n": "^6.8.1",
     "vue-svg-transition": "^0.2.1"
   },

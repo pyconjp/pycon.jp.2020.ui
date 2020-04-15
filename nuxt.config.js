@@ -83,6 +83,63 @@ export default {
     '@nuxtjs/pwa',
     // Doc: https://github.com/nuxt-community/dotenv-module
     '@nuxtjs/dotenv',
+    [
+      'nuxt-font-loader-strategy',
+      {
+        ignoredEffectiveTypes: ['2g', 'slow-2g'],
+        useWorker: true,
+        fonts: [
+          // Font
+          {
+            fileExtensions: ['eot', 'svg', 'woff2', 'woff'],
+            fontFamily: 'Noto Sans',
+            fontFaces: [
+              // Font-Face
+              {
+                preload: true,
+                local: ['Noto Sans', 'NotoSans-Regular'],
+                src:
+                  '@/assets/fonts/noto-sans-jp-v24-japanese_latin/noto-sans-jp-v24-japanese_latin-regular',
+                fontWeight: 400,
+                fontStyle: 'normal'
+              },
+              // Font-Face
+              {
+                local: ['Noto Sans Bold', 'NotoSans-Bold'],
+                src:
+                  '@/assets/fonts/noto-sans-jp-v24-japanese_latin/noto-sans-jp-v24-japanese_latin-700',
+                fontWeight: 700,
+                fontStyle: 'normal'
+              }
+            ]
+          },
+          // Font
+          {
+            fileExtensions: ['eot', 'svg', 'woff2', 'woff'],
+            fontFamily: 'Noto Serif',
+            fontFaces: [
+              // Font-Face
+              {
+                preload: true,
+                local: ['Noto Serif', 'NotoSerif-Regular'],
+                src:
+                  '@/assets/fonts/noto-serif-jp-v7-japanese_latin/noto-serif-jp-v7-japanese_latin-regular',
+                fontWeight: 400,
+                fontStyle: 'normal'
+              },
+              // Font-Face
+              {
+                local: ['Noto Serif Bold', 'NotoSerif-Bold'],
+                src:
+                  '@/assets/fonts/noto-serif-jp-v7-japanese_latin/noto-serif-jp-v7-japanese_latin-700',
+                fontWeight: 700,
+                fontStyle: 'normal'
+              }
+            ]
+          }
+        ]
+      }
+    ],
     'nuxt-i18n',
     '@nuxtjs/sitemap'
   ],
