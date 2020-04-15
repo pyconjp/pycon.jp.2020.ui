@@ -76,7 +76,6 @@ export default {
         vueI18nLoader: true
       }
     ],
-    '@nuxtjs/robots',
     '@nuxtjs/sitemap'
   ],
   i18n: {
