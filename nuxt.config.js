@@ -70,29 +70,29 @@ export default {
     '@nuxtjs/pwa',
     // Doc: https://github.com/nuxt-community/dotenv-module
     '@nuxtjs/dotenv',
-    [
-      'nuxt-i18n',
-      {
-        vueI18nLoader: true
-      }
-    ],
+    'nuxt-i18n',
     '@nuxtjs/sitemap'
   ],
   i18n: {
+    vueI18nLoader: true,
+    baseUrl: 'https://pycon.jp/2020',
+    seo: true,
     locales: [
       {
-        code: 'en',
-        name: 'English'
+        code: 'ja',
+        iso: 'ja',
+        name: '日本語'
       },
       {
-        code: 'ja',
-        name: '日本語'
+        code: 'en',
+        iso: 'en',
+        name: 'English'
       }
     ],
     defaultLocale: 'ja',
     detectBrowserLanguage: {
       useCookie: true,
-      cookieKey: 'i18n_redirected'
+      alwaysRedirect: true
     },
     vueI18n: {
       fallbackLocale: 'ja',
@@ -101,6 +101,9 @@ export default {
         en
       }
     }
+  },
+  sitemap: {
+    hostname: 'https://pycon.jp/2020'
   },
   purgeCSS: {
     whitelist: ['hidden']
