@@ -1,9 +1,10 @@
 <template>
   <button
     class="rounded-lg md:hidden focus:outline-none focus:shadow-outline"
-    aria-label="Menu"
     role="button"
+    aria-label="Open menu"
     aria-controls="navigation"
+    :aria-expanded="isDrawerOpen"
     @click="$emit('toggleDrawer')"
   >
     <svg-transition
@@ -14,6 +15,7 @@
         height: 20
       }"
       class="w-8 h-8"
+      aria-hidden="true"
     >
       <svg slot="initial" fill="currentColor" viewBox="0 0 20 20">
         <path
