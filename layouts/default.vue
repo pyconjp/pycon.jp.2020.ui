@@ -1,7 +1,7 @@
 <template>
-  <div class="flex flex-col min-h-screen font-sans">
+  <div class="flex flex-col min-h-screen font-sans antialiased">
     <pycon-header class="w-full text-gray-800" />
-    <main class="container flex flex-col flex-1 mx-auto">
+    <main class="container flex flex-col flex-1 max-w-5xl mx-auto">
       <nuxt />
     </main>
     <pycon-footer class="text-gray-800" />

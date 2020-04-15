@@ -19,6 +19,9 @@ module.exports = {
         80: '20rem',
         96: '24rem',
         120: '30rem'
+      },
+      margin: {
+        screen: '0 calc(50% - 50vw)'
       }
     }
   },
