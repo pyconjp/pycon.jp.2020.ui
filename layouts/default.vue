@@ -1,7 +1,7 @@
 <template>
   <div class="flex flex-col min-h-screen">
     <pycon-header class="w-full text-gray-800" />
-    <main class="container flex-1 mx-auto">
+    <main class="container flex flex-col flex-1 mx-auto">
       <nuxt />
     </main>
     <pycon-footer class="text-gray-800" />
@@ -16,6 +16,9 @@ export default {
   components: {
     PyconHeader,
     PyconFooter
+  },
+  head() {
+    return this.$nuxtI18nSeo()
   }
 }
 </script>

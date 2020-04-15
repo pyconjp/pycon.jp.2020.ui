@@ -76,7 +76,7 @@ export default {
   i18n: {
     vueI18nLoader: true,
     baseUrl: 'https://pycon.jp/2020',
-    seo: true,
+    seo: false,
     locales: [
       {
         code: 'ja',
