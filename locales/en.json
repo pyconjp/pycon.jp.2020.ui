@@ -1,19 +1,27 @@
 {
-  "header": {
-    "about": {
-      "text": "About",
+  "pages": {
+    "index": {
+      "title": "PyCon JP 2020",
       "path": "/"
     },
+    "about": {
+      "title": "About",
+      "path": "/about"
+    },
     "news": {
-      "text": "News",
+      "title": "News",
       "path": "https://pyconjp.blogspot.com/search/label/pyconjp2020"
     },
+    "code-of-conduct": {
+      "title": "Code of Conduct",
+      "path": "code-of-conduct"
+    },
     "sponsor": {
-      "text": "Sponsor",
-      "path": "/sponsors"
+      "title": "Sponsor",
+      "path": "/sponsor"
     },
     "staff": {
-      "text": "Staff",
+      "title": "Staff",
       "path": "/staff"
     }
   },

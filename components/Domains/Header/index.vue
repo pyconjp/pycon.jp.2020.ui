@@ -25,16 +25,17 @@
     >
       <nav
         v-show="isDrawerOpen || !isMobile"
+        id="navigation"
         class="flex flex-col pb-4 md:pb-0 md:flex md:justify-end md:flex-row"
       >
         <header-link
-          v-for="locale in $i18n.t('header')"
-          :key="locale.path"
-          :path="locale.path"
-          :exact="locale.path === '/' ? true : false"
-          class="mt-2 md:mt-0 md:ml-4 md:first:ml-0"
+          v-for="page in filteredPages"
+          :key="page.path"
+          :path="page.path"
+          :exact="page.path === '/' ? true : false"
+          class="mt-2 md:mt-0 md:ml-2 md:first:ml-0"
         >
-          {{ locale.text }}
+          {{ page.title }}
         </header-link>
         <dropdown
           :is-dropdown-open="isDropdownOpen"
@@ -68,6 +69,16 @@ export default {
       isDrawerOpen: false,
       isDropdownOpen: false,
       isMobile: false
+    }
+  },
+  computed: {
+    filteredPages() {
+      Object.filter = (obj, predicate) =>
+        Object.fromEntries(Object.entries(obj).filter(predicate))
+      return Object.filter(
+        this.$i18n.t('pages'),
+        ([_key, value]) => value.path !== '/'
+      )
     }
   },
   mounted() {

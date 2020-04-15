@@ -1,20 +1,27 @@
 {
-  "header": {
-    "about": {
-      "text": "概要",
+  "pages": {
+    "index": {
+      "title": "PyCon JP 2020",
       "path": "/"
     },
+    "about": {
+      "title": "概要",
+      "path": "/about"
+    },
     "news": {
-      "text": "お知らせ",
+      "title": "お知らせ",
       "path": "https://pyconjp.blogspot.com/search/label/pyconjp2020"
-    }
-    ,
+    },
+    "code-of-conduct": {
+      "title": "行動規範",
+      "path": "code-of-conduct"
+    },
     "sponsor": {
-      "text": "スポンサー",
-      "path": "/sponsors"
+      "title": "スポンサー",
+      "path": "/sponsor"
     },
     "staff": {
-      "text": "スタッフ",
+      "title": "スタッフ",
       "path": "/staff"
     }
   },

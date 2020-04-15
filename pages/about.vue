@@ -1,7 +1,7 @@
 <template>
   <div class="flex items-center justify-center h-120">
     <h1 class="text-5xl">
-      {{ $t('header.sponsor.text') }}
+      {{ $t('pages.about.title') }}
     </h1>
   </div>
 </template>
@@ -10,7 +10,10 @@
 import Vue from 'vue'
 
 export default Vue.extend({
-  components: {}
+  components: {},
+  head() {
+    return { title: this.$t('pages.about.title') }
+  }
 })
 </script>
 
