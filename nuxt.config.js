@@ -70,6 +70,10 @@ export default {
       }
     ],
     defaultLocale: 'ja',
+    detectBrowserLanguage: {
+      useCookie: true,
+      cookieKey: 'i18n_redirected'
+    },
     vueI18n: {
       fallbackLocale: 'ja',
       messages: {
