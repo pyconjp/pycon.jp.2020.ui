@@ -108,6 +108,9 @@ export default {
   purgeCSS: {
     whitelist: ['hidden']
   },
+  generate: {
+    fallback: true
+  },
   /*
    ** Axios module configuration
    ** See https://axios.nuxtjs.org/options

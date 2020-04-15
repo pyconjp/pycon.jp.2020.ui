@@ -25,5 +25,10 @@
       "path": "/staff"
     }
   },
-  "language": "Language"
+  "language": "Language",
+  "error": {
+    "404": "Page not found",
+    "else": "Sorry, something went wrong",
+    "back": "Back to Homepage"
+  }
 }
