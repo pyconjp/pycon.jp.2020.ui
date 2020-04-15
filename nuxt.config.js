@@ -7,14 +7,34 @@ export default {
    ** Headers of the page
    */
   head: {
-    title: process.env.npm_package_name || '',
+    titleTemplate: '%s - PyCon JP 2020',
+    title: 'PyCon JP 2020',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       {
         hid: 'description',
         name: 'description',
-        content: process.env.npm_package_description || ''
+        content: 'PyCon JP 2020 Python'
+      },
+      {
+        hid: 'og:site_name',
+        property: 'og:site_name',
+        content: 'PyCon JP 2020'
+      },
+      { hid: 'og:type', property: 'og:type', content: 'website' },
+      { hid: 'og:url', property: 'og:url', content: 'https://pycon.jp/2020' },
+      { hid: 'og:title', property: 'og:title', content: 'PyCon JP 2020' },
+      {
+        hid: 'og:description',
+        property: 'og:description',
+        content:
+          'PyCon JPは、Pythonユーザが集まり、PythonやPythonを使ったソフトウェアについて情報交換、交流をするためのカンファレンスです。'
+      },
+      {
+        hid: 'og:image',
+        property: 'og:image',
+        content: 'https://pycon.jp/2020/logo.png'
       }
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
@@ -56,7 +76,8 @@ export default {
         vueI18nLoader: true
       }
     ],
-    '@nuxtjs/robots'
+    '@nuxtjs/robots',
+    '@nuxtjs/sitemap'
   ],
   i18n: {
     locales: [
