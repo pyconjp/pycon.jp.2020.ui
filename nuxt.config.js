@@ -39,6 +39,19 @@ export default {
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
   },
+  manifest: {
+    name: 'PyCon JP 2020',
+    title: 'PyCon JP 2020',
+    'og:title': 'PyCon JP 2020',
+    description:
+      'PyCon JPは、Pythonユーザが集まり、PythonやPythonを使ったソフトウェアについて情報交換、交流をするためのカンファレンスです。',
+    lang: 'ja',
+    theme_color: '#529b58',
+    background_color: '#bde0c0',
+    display: 'standalone',
+    scope: 'https://pycon.jp/2020',
+    start_url: 'https://pycon.jp/2020'
+  },
   /*
    ** Customize the progress-bar color
    */
