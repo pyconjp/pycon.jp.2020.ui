@@ -1,7 +1,9 @@
 <template>
-  <div class="flex flex-col min-h-screen font-sans antialiased">
+  <div
+    class="flex flex-col min-h-screen px-6 font-sans antialiased sm:px-8 md:px-10 lg:px-12"
+  >
     <pycon-header class="w-full text-gray-800" />
-    <main class="container flex flex-col flex-1 max-w-5xl mx-auto">
+    <main class="container flex flex-col flex-1 mx-auto">
       <nuxt />
     </main>
     <pycon-footer class="text-gray-800" />

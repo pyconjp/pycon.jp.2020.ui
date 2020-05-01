@@ -1,8 +1,8 @@
 <template>
   <div
-    class="flex flex-col max-w-screen-xl px-4 mx-auto md:items-center md:justify-between md:flex-row md:my-4 md:px-6 lg:px-8"
+    class="flex flex-col max-w-screen-xl mx-auto md:items-center md:justify-between md:flex-row md:my-4"
   >
-    <div class="flex flex-row items-center justify-between p-4">
+    <div class="flex flex-row items-center justify-between py-4">
       <n-link
         :to="localePath('/')"
         class="text-lg font-semibold tracking-widest text-gray-900 uppercase focus:outline-none focus:shadow-outline"
@@ -11,6 +11,7 @@
       </n-link>
       <hamburger
         :is-drawer-open="isDrawerOpen"
+        class="-mr-1"
         @toggleDrawer="isDrawerOpen = !isDrawerOpen"
       />
     </div>
