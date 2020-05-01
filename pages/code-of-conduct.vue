@@ -1,14 +1,17 @@
 vue<template>
-  <div
-    class="flex flex-col items-center justify-start leading-relaxed tracking-wider sm:mx-4 md:mx-8"
-  >
+  <div class="flex flex-col items-center justify-start sm:mx-4 md:mx-8">
     <h1
       class="flex items-center justify-center w-screen h-32 text-2xl text-center bg-gray-200 md:h-56 sm:text-3xl md:text-4xl lg:text-5xl m-screen"
     >
       {{ $t('pages.code-of-conduct.title') }}
     </h1>
     <div
-      class="flex flex-col items-start justify-start my-8 font-serif text-sm text-justify break-words sm:text-base md:text-lg"
+      :class="
+        isEnglish
+          ? 'text-left leading-relaxed tracking-wide'
+          : 'text-justify leading-7 tracking-wider'
+      "
+      class="flex flex-col items-start justify-start my-8 font-serif text-sm sm:text-base md:text-lg"
     >
       <p
         v-for="(paragraph, i) in $t('paragraphs')"
@@ -26,6 +29,11 @@ import Vue from 'vue'
 
 export default Vue.extend({
   components: {},
+  computed: {
+    isEnglish() {
+      return this.$i18n.locale === 'en'
+    }
+  },
   head() {
     return { title: this.$t('pages.code-of-conduct.title') }
   }
