@@ -37,7 +37,13 @@ export default {
         content: 'https://pycon.jp/2020/logo.png'
       }
     ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
+    link: [
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      {
+        rel: 'stylesheet',
+        href: 'https://fonts.googleapis.com/icon?family=Material+Icons'
+      }
+    ]
   },
   manifest: {
     name: 'PyCon JP 2020',
