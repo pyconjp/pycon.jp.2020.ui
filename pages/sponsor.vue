@@ -4,7 +4,9 @@
       <div class="flex items-center justify-center">
         <h1
           class="flex items-center justify-center w-screen h-32 text-2xl text-center bg-gray-200 md:h-56 sm:text-3xl md:text-4xl lg:text-5xl m-screen"
-        >{{ $t('pages.sponsor.title') }}</h1>
+        >
+          {{ $t('pages.sponsor.title') }}
+        </h1>
       </div>
 
       <div class="flex flex-row items-center justify-center">
@@ -42,9 +44,15 @@
       </div>
       <div class="flex items-center justify-center">
         <div class="flex flex-wrap items-center justify-center">
-          <PlatinumAndGoldSponsor class="p-4 w-full md:w-1/2"></PlatinumAndGoldSponsor>
-          <PlatinumAndGoldSponsor class="p-4 w-full md:w-1/2"></PlatinumAndGoldSponsor>
-          <PlatinumAndGoldSponsor class="p-4 w-full md:w-1/2"></PlatinumAndGoldSponsor>
+          <PlatinumAndGoldSponsor
+            class="p-4 w-full md:w-1/2"
+          ></PlatinumAndGoldSponsor>
+          <PlatinumAndGoldSponsor
+            class="p-4 w-full md:w-1/2"
+          ></PlatinumAndGoldSponsor>
+          <PlatinumAndGoldSponsor
+            class="p-4 w-full md:w-1/2"
+          ></PlatinumAndGoldSponsor>
         </div>
       </div>
 
@@ -55,22 +63,16 @@
       </div>
 
       <div class="flex flex-wrap justify-center">
-        <div v-for="value in [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]" :key="value" class="w-1/2 md:w-1/3">
+        <div
+          v-for="value in [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]"
+          :key="value"
+          class="w-1/2 md:w-1/3"
+        >
           <div class="flex justify-center items-center px-2 my-2">
             <div class="silver-sponsor-list-item"></div>
             <div>株式会社 Pythonコミュニティ運営企画 {{ value }}</div>
           </div>
         </div>
-        <!-- <ul>
-          <li
-            v-for="value in [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]"
-            :key="value"
-            class="w-1/3 inline-block"
-          >
-            <div></div>
-            株式会社 {{ value }}
-          </li>
-        </ul>-->
       </div>
     </div>
   </div>
