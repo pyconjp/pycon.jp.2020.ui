@@ -12,7 +12,6 @@
         <h2 class="my-12 text-4xl">Platinum</h2>
         <hr class="w-2/3" />
       </div>
-
       <div class="flex flex-col items-center justify-center">
         <PlatinumAndGoldSponsor class="mt-4">
           <template #companyName>
@@ -48,6 +47,31 @@
           <PlatinumAndGoldSponsor class="p-4 w-full md:w-1/2"></PlatinumAndGoldSponsor>
         </div>
       </div>
+
+      <div class="flex flex-row items-center justify-center">
+        <hr class="w-2/3" />
+        <h2 class="my-12 text-4xl">Silver</h2>
+        <hr class="w-2/3" />
+      </div>
+
+      <div class="flex flex-wrap justify-center">
+        <div v-for="value in [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]" :key="value" class="w-1/2 md:w-1/3">
+          <div class="flex justify-center items-center px-2 my-2">
+            <div class="silver-sponsor-list-item"></div>
+            <div>株式会社 Pythonコミュニティ運営企画 {{ value }}</div>
+          </div>
+        </div>
+        <!-- <ul>
+          <li
+            v-for="value in [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]"
+            :key="value"
+            class="w-1/3 inline-block"
+          >
+            <div></div>
+            株式会社 {{ value }}
+          </li>
+        </ul>-->
+      </div>
     </div>
   </div>
 </template>
@@ -67,4 +91,11 @@ export default Vue.extend({
 })
 </script>
 
-<style></style>
+<style scoped>
+.silver-sponsor-list-item {
+  width: 8px;
+  height: 1px;
+  background-color: #666;
+  margin-right: 0.5rem;
+}
+</style>
