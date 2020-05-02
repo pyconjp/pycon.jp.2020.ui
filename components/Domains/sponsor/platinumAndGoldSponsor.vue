@@ -1,53 +1,50 @@
 <template>
-  <div class="w-3/4">
-    <div class="w-full">
-      <p class="text-2xl">Pythonダミー株式会社</p>
-      <p class="dummy-logo bg-blue-200">Logo</p>
-      <div class="flex justify-center relative z-10">
-        <div class="toggle-button-bg md:w-1/2 w-full relative">
-          <div
-            class="w-1/2 text-center"
-            :class="{ 'active-toggle-button': isCompanyInformation }"
-            @click="
-              isCompanyInformation = true
-              isRecruitInformation = false
-            "
-          >
-            <p class="z-10">会社概要</p>
-          </div>
-          <div
-            class="active-toggle-button-bg"
-            :class="{ 'move-effect-toggle-button': isRecruitInformation }"
-          ></div>
-          <div
-            class="w-1/2 text-center"
-            :class="{ 'active-toggle-button': isRecruitInformation }"
-            @click="
-              isCompanyInformation = false
-              isRecruitInformation = true
-            "
-          >
-            <p class="z-10">採用情報</p>
-          </div>
+  <div class="w-full">
+    <slot name="companyName">
+      <p>ダミーの会社名です</p>
+    </slot>
+    <p class="dummy-logo bg-blue-200">Logo</p>
+    <div class="flex justify-center relative">
+      <div class="toggle-button-bg md:w-1/2 w-full relative">
+        <div
+          class="w-1/2 text-center z-10"
+          :class="{ 'active-toggle-button': isCompanyInformation }"
+          @click="
+            isCompanyInformation = true
+            isRecruitInformation = false
+          "
+        >
+          <p>会社概要</p>
+        </div>
+        <div
+          class="active-toggle-button-bg"
+          :class="{ 'move-effect-toggle-button': isRecruitInformation }"
+        ></div>
+        <div
+          class="w-1/2 text-center z-10"
+          :class="{ 'active-toggle-button': isRecruitInformation }"
+          @click="
+            isCompanyInformation = false
+            isRecruitInformation = true
+          "
+        >
+          <p>採用情報</p>
         </div>
       </div>
+    </div>
 
-      <div class="flex flex-col items-center">
-        <div class="border w-full pt-4 border-gray-400 rounded-lg">
-          <div class="p-3">
-            <div v-if="isCompanyInformation" class="mt-6">
-              <p>
-                弊社はPythonコミュニティの繁栄を目指して活動しています。
-                たくさんの人が楽しみながらPythonを学ぶことができるように日々活動しています。
-              </p>
-            </div>
-            <div v-if="isRecruitInformation" class="mt-6">
-              <p>
-                Python愛にあふれる人を募集しています。
-                経験者、初心者を問わず、何事にも積極的にチャレンジする、失敗を恐れずに前向きな姿勢で取り組む人を
-                歓迎します。
-              </p>
-            </div>
+    <div class="flex flex-col items-center">
+      <div class="border w-full pt-4 border-gray-400 rounded-lg">
+        <div class="p-3">
+          <div v-if="isCompanyInformation" class="mt-6">
+            <slot name="companyInformation">
+              <p>ダミーの会社情報です</p>
+            </slot>
+          </div>
+          <div v-if="isRecruitInformation" class="mt-6">
+            <slot name="recruitInformation">
+              <p>ダミーの採用情報です</p>
+            </slot>
           </div>
         </div>
       </div>
