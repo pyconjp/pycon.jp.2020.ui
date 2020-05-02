@@ -1,7 +1,9 @@
 <template>
   <div class="w-full">
     <slot name="companyName">
-      <p>ダミーの会社名です</p>
+      <div class="text-2xl">
+        ダミーの会社名です <i class="material-icons">launch</i>
+      </div>
     </slot>
     <p class="dummy-logo bg-blue-200">Logo</p>
     <div class="flex justify-center relative">

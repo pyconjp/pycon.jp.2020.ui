@@ -17,7 +17,9 @@
       <div class="flex flex-col items-center justify-center">
         <PlatinumAndGoldSponsor class="mt-4">
           <template #companyName>
-            <p class="text-2xl">Pythonダミー株式会社</p>
+            <div class="text-2xl">
+              Pythonダミー株式会社 <i class="material-icons">launch</i>
+            </div>
           </template>
           <template #companyInformation>
             <p>
