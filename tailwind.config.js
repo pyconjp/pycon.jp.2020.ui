@@ -13,6 +13,12 @@ module.exports = {
       serif: ['Noto Serif', ...defaultTheme.fontFamily.serif],
       mono: [...defaultTheme.fontFamily.mono]
     },
+    screens: {
+      sm: '480px',
+      md: '768px',
+      lg: '992px',
+      xl: '1280px'
+    },
     extend: {
       spacing: {
         72: '18rem',

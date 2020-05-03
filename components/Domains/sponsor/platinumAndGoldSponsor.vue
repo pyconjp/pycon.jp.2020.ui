@@ -1,54 +1,53 @@
 <template>
   <div class="w-full">
-    <slot name="companyName">
-      <div class="text-2xl">
-        ダミーの会社名です <i class="material-icons">launch</i>
-      </div>
-    </slot>
-    <p class="dummy-logo bg-blue-200">Logo</p>
-    <div class="flex justify-center relative">
-      <div class="toggle-button-bg md:w-1/2 w-full relative">
-        <div
-          class="w-1/2 text-center z-10"
+    <h3 class="flex items-center mb-4 text-xl sm:text-2xl lg:text-3xl">
+      <slot name="companyName">
+        ダミーの会社名です
+      </slot>
+      <i class="mt-1 ml-2 material-icons">launch</i>
+    </h3>
+    <p class="bg-blue-200 dummy-logo">Logo</p>
+    <div class="relative flex justify-center">
+      <div
+        class="relative w-full toggle-button-bg sm:w-10/12 md:w-9/12 lg:w-8/12"
+      >
+        <h4
+          class="z-10 w-1/2 text-center"
           :class="{ 'active-toggle-button': isCompanyInformation }"
           @click="
             isCompanyInformation = true
             isRecruitInformation = false
           "
         >
-          <p>会社概要</p>
-        </div>
+          会社概要
+        </h4>
         <div
           class="active-toggle-button-bg"
           :class="{ 'move-effect-toggle-button': isRecruitInformation }"
         ></div>
-        <div
-          class="w-1/2 text-center z-10"
+        <h4
+          class="z-10 w-1/2 text-center"
           :class="{ 'active-toggle-button': isRecruitInformation }"
           @click="
             isCompanyInformation = false
             isRecruitInformation = true
           "
         >
-          <p>採用情報</p>
-        </div>
+          採用情報
+        </h4>
       </div>
     </div>
 
     <div class="flex flex-col items-center">
-      <div class="border w-full pt-4 border-gray-400 rounded-lg">
-        <div class="p-3">
-          <div v-if="isCompanyInformation" class="mt-6">
-            <slot name="companyInformation">
-              <p>ダミーの会社情報です</p>
-            </slot>
-          </div>
-          <div v-if="isRecruitInformation" class="mt-6">
-            <slot name="recruitInformation">
-              <p>ダミーの採用情報です</p>
-            </slot>
-          </div>
-        </div>
+      <div class="w-full pt-4 border border-gray-400 rounded-lg">
+        <p class="px-8 py-6 mt-2">
+          <slot v-if="isCompanyInformation" name="companyInformation">
+            ダミーの会社情報です
+          </slot>
+          <slot v-if="isRecruitInformation" name="recruitInformation">
+            ダミーの採用情報です
+          </slot>
+        </p>
       </div>
     </div>
   </div>
