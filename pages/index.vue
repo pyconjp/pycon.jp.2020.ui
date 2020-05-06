@@ -16,4 +16,24 @@ export default Vue.extend({
 })
 </script>
 
-<style></style>
+<style scoped>
+.main-visual {
+  /* background: linear-gradient(to bottom, #a6d900 0%, #ff4454 100%); */
+  background-image: url('../assets/img/top-background.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+@media screen and (min-width: 768px) {
+  .main-visual-width {
+    width: calc(100vw / 2);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .top-news {
+    width: 80vw;
+  }
+}
+</style>
