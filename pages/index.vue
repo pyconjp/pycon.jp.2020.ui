@@ -38,83 +38,163 @@
           <div
             class="flex flex-col items-center justify-center w-2/3 border-l-2 border-blue-500"
           >
-            <h2 class="text-xl md:text-3xl">スポンサー募集中</h2>
+            <h2 class="text-xl md:text-3xl">スタッフ募集中！</h2>
             <p>詳しくはこちら</p>
           </div>
         </div>
       </div>
     </div> -->
 
-    <div
-      class="relative w-screen h-56 my-8 ml-auto bg-blue-500 shadow-lg w-70vw m-screen"
-    >
-      <div
-        class="absolute inset-y-0 left-0 flex flex-col items-center justify-center w-20 h-full transform -translate-x-20 bg-blue-500 shadow-left rounded-l-xl"
-      >
-        <div class="w-8 h-8 mb-8 bg-white rounded-full"></div>
-        <div class="w-full h-8 bg-white"></div>
-      </div>
+    <python-banner direction="left" back-ground-color="bg-blue-500" size="big">
+      <template #title>
+        企業スポンサー様募集中
+      </template>
+      <template #content>
+        PyCon JP 2020を応援して下さるスポンサー様を募集しております<br />
+        <span class=" hover:underline">> 詳細はこちらから</span>
+      </template>
+    </python-banner>
 
-      <div class="flex flex-col p-6">
-        <h1
-          class="inline text-xl text-white border-b-2 border-white sm:text-2xl md:text-4xl"
-        >
-          企業スポンサー様募集中
-        </h1>
-        <p class="mt-6 text-white sm:text-lg md:text-xl">
-          PyCon JP 2020を応援して下さるスポンサー様を募集しております<br />
-          <span class=" hover:underline">> 詳細はこちらから</span>
-        </p>
-      </div>
-    </div>
-    <div
-      class="relative w-screen h-56 my-8 bg-orange-400 shadow-lg w-70vw m-screen"
+    <python-banner
+      direction="right"
+      back-ground-color="bg-orange-400"
+      size="big"
     >
-      <div class="flex flex-col items-end p-6">
-        <h1
-          class="inline text-xl text-white border-b-2 border-white sm:text-2xl md:text-4xl"
-        >
-          チケット販売開始
-        </h1>
-        <p class="mt-6 text-white sm:text-lg md:text-xl">
-          PyCon JP 2020のチケット販売を開始しました！<br />
-          <span class="hover:underline">> 詳細はこちらから</span>
-        </p>
-      </div>
-      <div
-        class="absolute inset-y-0 right-0 flex flex-col items-center justify-center w-20 h-full transform translate-x-20 bg-orange-400 shadow-right rounded-r-xl"
-      >
-        <div class="w-8 h-8 mb-8 bg-white rounded-full"></div>
-        <div class="w-full h-8 bg-white"></div>
-      </div>
-    </div>
+      <template #title>
+        チケット販売開始
+      </template>
+      <template #content>
+        PyCon JP 2020のチケット販売を開始しました！<br />
+        <span class="hover:underline">> 詳細はこちらから</span>
+      </template>
+    </python-banner>
 
-    <div
-      class="flex flex-col items-center justify-center mb-8 md:items-start md:justify-start mt-112"
-    >
-      <h1
+    <div class="flex flex-col items-center justify-center my-24">
+      <h2
         class="inline text-3xl border-b-8 border-blue-600 border-solid md:text-5xl"
       >
         NEWS
-      </h1>
+      </h2>
     </div>
     <div
-      v-for="item in [1, 2, 3]"
-      :key="item"
-      class="flex justify-center w-full mx-auto mt-4 border-b-2 border-gray-200 border-solid md:w-4/5"
+      class="flex flex-col justify-center w-full mx-auto mt-4 space-y-4 md:w-4/5"
     >
-      <div class="w-1/5 text-left">2020.5.3</div>
-      <div class="w-3/5 ml-4 md:w-full md:m-0 hover:underline">
-        CFP募集開始>CFP募集開始>CFP募集開始>CFP募集開始>CFP募集開始>CFP募集開始>CFP募集開始>CFP募集開始>CFP募集開始>CFP募集開始
+      <div v-for="item in [1, 2, 3]" :key="item" class="flex justify-between">
+        <h3 class="text-lg text-left text-gray-700 md:text-xl">2020.5.3</h3>
+        <div class="w-full ml-6 md:ml-12 hover:underline">
+          CFP募集開始>CFP募集開始>CFP募集開始>CFP募集開始>CFP募集開始>CFP募集開始>CFP募集開始>CFP募集開始>CFP募集開始>CFP募集開始
+        </div>
       </div>
     </div>
+
+    <div class="flex flex-col items-center justify-center my-24">
+      <h2
+        class="inline text-3xl border-b-8 border-blue-600 border-solid md:text-5xl"
+      >
+        Session
+      </h2>
+    </div>
+
+    <python-banner
+      direction="right"
+      back-ground-color="bg-blue-500"
+      size="small"
+    >
+      <template #title>
+        Keynote
+      </template>
+    </python-banner>
+
+    <python-banner
+      direction="right"
+      back-ground-color="bg-orange-400"
+      size="small"
+    >
+      <template #title>
+        Invided talk
+      </template>
+    </python-banner>
+
+    <python-banner
+      direction="right"
+      back-ground-color="bg-blue-500"
+      size="small"
+    >
+      <template #title>
+        Sessions
+      </template>
+    </python-banner>
+
+    <div class="flex flex-col items-center justify-center my-24">
+      <h2
+        class="inline text-3xl border-b-8 border-blue-600 border-solid md:text-5xl"
+      >
+        Sponsor
+      </h2>
+    </div>
+
+    <python-banner
+      direction="right"
+      back-ground-color="bg-indigo-500"
+      size="small"
+    >
+      <template #title>
+        Platinum
+      </template>
+    </python-banner>
+
+    <python-banner
+      direction="right"
+      back-ground-color="bg-yellow-600"
+      size="small"
+    >
+      <template #title>
+        Gold
+      </template>
+    </python-banner>
+
+    <python-banner
+      direction="right"
+      back-ground-color="bg-gray-600"
+      size="small"
+    >
+      <template #title>
+        Silver
+      </template>
+    </python-banner>
+
+    <div class="flex flex-col items-center justify-center my-24">
+      <h2
+        class="inline text-3xl border-b-8 border-blue-600 border-solid md:text-5xl"
+      >
+        Contact
+      </h2>
+    </div>
+    <python-banner
+      direction="left"
+      back-ground-color="bg-gray-600"
+      size="big"
+      :has-title="false"
+    >
+      <template #content>
+        <p class="text-center">
+          事前にFAQをご確認いただけますようにお願いします。 <br />
+          ボランティアによる運営ですので、回答には1週間程度を要します。 <br />
+          何卒お待ちいただけますようにお願いします。 <br />
+        </p>
+      </template>
+    </python-banner>
   </div>
 </template>
 
 <script>
 import Vue from 'vue'
+import PythonBanner from '~/components/Elements/PythonBanner'
 
 export default Vue.extend({
+  components: {
+    PythonBanner
+  },
   head() {
     return { title: 'PyCon JP 2020', titleTemplate: null }
   }

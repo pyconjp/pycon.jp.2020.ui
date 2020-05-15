@@ -27,6 +27,7 @@ module.exports = {
         120: '30rem'
       },
       width: {
+        '35vw': '35vw',
         '50vw': '50vw',
         '70vw': '70vw'
       },
