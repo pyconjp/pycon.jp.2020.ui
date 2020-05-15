@@ -26,8 +26,21 @@ module.exports = {
         96: '24rem',
         120: '30rem'
       },
+      width: {
+        '50vw': '50vw',
+        '70vw': '70vw'
+      },
       margin: {
         screen: '0 calc(50% - 50vw)'
+      },
+      borderRadius: {
+        xl: '4rem'
+      },
+      boxShadow: {
+        right:
+          '10px 10px 15px -3px rgba(0, 0, 0, 0.1), 4px 4px 6px -2px rgba(0, 0, 0, 0.05)',
+        left:
+          '-10px 10px 15px -3px rgba(0, 0, 0, 0.1), -4px 4px 6px -2px rgba(0, 0, 0, 0.05)'
       }
     }
   },
