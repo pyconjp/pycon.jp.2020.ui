@@ -4,7 +4,7 @@
       <div
         class="relative flex items-start justify-center w-screen h-full md:px-10 md:items-center"
       >
-        <div class="z-10 mt-16 mr-2 md:m-0">
+        <div class="mt-16 mr-2 md:m-0">
           <h1 class="text-4xl font-bold leading-tight md:text-6xl">
             PyCon JP <br />2020
           </h1>
