@@ -121,11 +121,18 @@
         </template>
       </python-banner>
 
-      <talk-content
-        class="w-1/2"
-        talk-type="talk"
-        main-color="orange"
-      ></talk-content>
+      <div class="flex flex-wrap justify-around">
+        <talk-content
+          class="w-full md:w-2/5"
+          talk-type="talk"
+          main-color="orange"
+        ></talk-content>
+        <talk-content
+          class="w-full md:w-2/5 mt-10  md:mt-0"
+          talk-type="talk"
+          main-color="orange"
+        ></talk-content>
+      </div>
 
       <python-banner
         direction="right"
