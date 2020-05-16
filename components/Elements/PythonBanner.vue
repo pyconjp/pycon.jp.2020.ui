@@ -1,6 +1,6 @@
 <template>
   <div
-    class="relative w-screen h-auto my-16 shadow-lg m-screen"
+    class="relative h-auto shadow-lg m-screen"
     :class="[
       direction == 'left' ? 'ml-auto' : 'mr-auto',
       size === 'small' ? 'w-50vw md:w-35vw' : 'w-70vw',
@@ -39,14 +39,14 @@
       :class="direction == 'left' ? 'items-start' : 'items-end'"
     >
       <template v-if="size === 'big'">
-        <h2
+        <h3
           v-show="hasTitle === true"
           class="inline mb-6 text-xl text-white border-b-2 border-white sm:text-2xl md:text-4xl"
         >
           <slot name="title">
             企業スポンサー様募集中
           </slot>
-        </h2>
+        </h3>
         <p class="text-white sm:text-lg md:text-xl">
           <slot name="content">
             PyCon JP 2020を応援して下さるスポンサー様を募集しております<br />
@@ -55,11 +55,11 @@
         </p>
       </template>
       <template v-else>
-        <h2 class="inline text-lg text-white sm:text-xl md:text-3xl">
+        <h3 class="inline text-lg text-white sm:text-xl md:text-3xl">
           <slot name="title">
             企業スポンサー様募集中
           </slot>
-        </h2>
+        </h3>
       </template>
     </div>
   </div>
