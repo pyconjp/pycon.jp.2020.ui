@@ -35,13 +35,19 @@ module.exports = {
         screen: '0 calc(50% - 50vw)'
       },
       borderRadius: {
-        xl: '4rem'
+        xl: '4rem',
+        'card-head': '1.7rem'
       },
       boxShadow: {
         right:
           '10px 10px 15px -3px rgba(0, 0, 0, 0.1), 4px 4px 6px -2px rgba(0, 0, 0, 0.05)',
         left:
           '-10px 10px 15px -3px rgba(0, 0, 0, 0.1), -4px 4px 6px -2px rgba(0, 0, 0, 0.05)'
+      },
+      inset: {
+        '1/2': '50%',
+        '3/4': '75%',
+        '1/4': '25%'
       }
     }
   },
