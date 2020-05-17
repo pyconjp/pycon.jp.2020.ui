@@ -36,7 +36,7 @@ module.exports = {
       },
       borderRadius: {
         xl: '4rem',
-        'card-head': '1.7rem'
+        'card-head': '2.35rem'
       },
       boxShadow: {
         right:
