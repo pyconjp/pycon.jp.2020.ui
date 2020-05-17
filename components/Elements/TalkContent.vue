@@ -27,7 +27,6 @@
     <div
       class="absolute top-0 w-20 h-20 -mt-6 -ml-10 border-4 border-solid rounded-card-head"
       :class="[
-        mainColor,
         `border-${mainColor}-400`,
         `bg-${mainColor}-400`,
         talkType === 'talk' ? 'ml-0 left-1/2' : 'ml-10 left-3/4'

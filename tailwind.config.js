@@ -7,6 +7,27 @@
 const defaultTheme = require('tailwindcss/defaultTheme')
 
 module.exports = {
+  purge: {
+    enabled: process.env.NODE_ENV === 'production',
+    content: [
+      'components/**/*.vue',
+      'layouts/**/*.vue',
+      'pages/**/*.vue',
+      'plugins/**/*.js',
+      'nuxt.config.ts'
+    ],
+    options: {
+      whitelist: [
+        'hidden',
+        'border-blue-400',
+        'bg-blue-400',
+        'bg-blue-100',
+        'border-orange-400',
+        'bg-orange-400',
+        'bg-orange-100'
+      ]
+    }
+  },
   theme: {
     fontFamily: {
       sans: ['Noto Sans', ...defaultTheme.fontFamily.sans],

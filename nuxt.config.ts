@@ -182,17 +182,6 @@ export default {
   sitemap: {
     hostname: 'https://pycon.jp/2020'
   },
-  purgeCSS: {
-    whitelist: [
-      'hidden',
-      'border-blue-400',
-      'bg-blue-400',
-      'bg-blue-100',
-      'border-orange-400',
-      'bg-orange-400',
-      'bg-orange-100'
-    ]
-  },
   generate: {
     fallback: true,
     routes() {
