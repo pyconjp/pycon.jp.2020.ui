@@ -1,0 +1,35 @@
+[
+  {
+    "id": "1",
+    "title": "Python開発を円滑に進めるためのツール設定",
+    "speaker": "Atsushi Odagiri",
+    "description":
+      "実際の開発ではただ動かすだけでなく、品質をあげるためにレビューやコーディング規約のチェックなどが行われます。 Pythonでの開発で利用できる規約や静的解析を行うflake8をはじめとしたツールを活用して開発を円滑に進められる環境づくりを行います。",
+    "profile": "株式会社オープンコレクター所属",
+    "details":
+      "flake8 black mypy pytest にいれておいてほしいアドオンrandomly coverage toxやnoxでまとめてチェックツールをエディタ上で動かす",
+    "date": "09.16(Mon) 11:25 - 12:10",
+    "level": "Beginner",
+    "language": "JP",
+    "materials": "https://www.slideshare.net/aodag/python-172432039",
+    "youtube": "https://www.youtube.com/watch?v=1FcLwOpXuAI",
+    "tag": "Beginner"
+  },
+  {
+    "id": "2",
+    "title": "It’s 2019 and I’m still using Python 2. Should I be worried?",
+    "speaker": "Sebastian Witowski",
+    "description":
+      "What will happen with Python 2 in 2020? What are the risks of staying on the unsupported version? What are the possible solutions? How to go through the migration process?",
+    "profile":
+      "I’m a former CERN DevOps that turned into a Python consultant and trainer",
+    "details":
+      "The official End of Life date for Python 2 is set to 01.01.2020. What does it mean for projects that are still using it? Will someone pull the plug and everything will stop working on that day? In this talk, I will discuss the future of Python 2, the dangers of using the unsupported version of Python and opportunities for those who want to migrate to Python 3. But, I will also explain what choice you have if you really can't move to Python 3 yet. This is not a “how we migrated to Python 3 at Foo company” type of talk. There are many other talks that explain the migration process and outcome in various companies. I want to take a different approach and focus on comparing the options that you have: rewriting your Python project, migrating it, staying on Python 2 or moving to a different implementation, like PyPy (together with pros and cons of each). And for those of you who decide to migrate to Python 3, I will explain how to prepare to this kind of task, what tools and techniques can help you and what problems you might encounter.",
+    "date": "09.16(Mon) 13:40 - 14:25",
+    "level": "Intermediate",
+    "language": "EN",
+    "materials": "",
+    "youtube": "https://www.youtube.com/watch?v=8a_TEjCl8NQ",
+    "tag": "Best practices"
+  }
+]
