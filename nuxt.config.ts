@@ -1,5 +1,6 @@
 import ja from './locales/ja.json'
 import en from './locales/en.json'
+const sessionData = require('./mocks/session.json')
 
 export default {
   mode: 'spa',
@@ -193,7 +194,14 @@ export default {
     ]
   },
   generate: {
-    fallback: true
+    fallback: true,
+    routes() {
+      return sessionData.map((session: any) => {
+        return {
+          route: '/session/' + session.id
+        }
+      })
+    }
   },
   /*
    ** Axios module configuration
