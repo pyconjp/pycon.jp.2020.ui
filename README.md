@@ -48,3 +48,30 @@ $ yarn generate
 ```
 
 詳しい説明は[Nuxt.js docs](https://ja.nuxtjs.org)を見て下さい。
+
+
+## AWSとの連携設定
+
+下記のどちらかの方法でAWS環境内のリポジトリへアクセス可能な状態に設定をお願いします。
+
+* [Git 認証情報を使用する HTTPS ユーザー用のセットアップ](https://docs.aws.amazon.com/ja_jp/codecommit/latest/userguide/setting-up-gc.html)
+* [Linux, macOS, or Unix 上で AWS CodeCommit リポジトリに SSH 接続するために必要なセットアップ手順](https://docs.aws.amazon.com/ja_jp/codecommit/latest/userguide/setting-up-ssh-unixes.html)
+
+
+設定が完了後は下記コマンドを実行しリモートリポジトリを追加してください。
+
+```
+# SSHの場合
+$ git remote add aws ssh://git-codecommit.ap-northeast-1.amazonaws.com/v1/repos/pycon.jp.2020.ui
+
+# HTTPSの場合
+$ git remote add aws https://git-codecommit.ap-northeast-1.amazonaws.com/v1/repos/pycon.jp.2020.ui
+```
+
+stagingブランチをプッシュする場合
+
+```
+$ git checkout staging
+$ git pull origin
+$ git push aws
+```
