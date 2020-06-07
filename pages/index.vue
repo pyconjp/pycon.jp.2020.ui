@@ -49,7 +49,7 @@
       </template>
       <template #content>
         PyCon JP 2020を応援して下さるスポンサー様を募集しております<br />
-        <span class=" hover:underline">> 詳細はこちらから</span>
+        <span class="hover:underline">> 詳細はこちらから</span>
       </template>
     </python-banner>
 
@@ -106,7 +106,7 @@
       <div class="flex flex-wrap justify-around">
         <talk-content class="w-full md:w-2/5" talk-type="talk"></talk-content>
         <talk-content
-          class="w-full md:w-2/5 mt-10  md:mt-0"
+          class="w-full md:w-2/5 mt-10 md:mt-0"
           talk-type="talk"
         ></talk-content>
       </div>
@@ -128,7 +128,7 @@
           main-color="orange"
         ></talk-content>
         <talk-content
-          class="w-full md:w-2/5 mt-10  md:mt-0"
+          class="w-full md:w-2/5 mt-10 md:mt-0"
           talk-type="talk"
           main-color="orange"
         ></talk-content>
@@ -216,11 +216,11 @@ import TalkContent from '~/components/Elements/TalkContent'
 export default Vue.extend({
   components: {
     PythonBanner,
-    TalkContent
+    TalkContent,
   },
   head() {
     return { title: 'PyCon JP 2020', titleTemplate: null }
-  }
+  },
 })
 </script>
 

@@ -29,7 +29,7 @@
       :class="[
         `border-${mainColor}-400`,
         `bg-${mainColor}-400`,
-        talkType === 'talk' ? 'ml-0 left-1/2' : 'ml-10 left-3/4'
+        talkType === 'talk' ? 'ml-0 left-1/2' : 'ml-10 left-3/4',
       ]"
     >
       <div class="relative">
@@ -45,13 +45,13 @@ export default {
   props: {
     talkType: {
       type: String,
-      default: 'talk'
+      default: 'talk',
     },
     mainColor: {
       type: String,
-      default: 'blue'
-    }
-  }
+      default: 'blue',
+    },
+  },
 }
 </script>
 

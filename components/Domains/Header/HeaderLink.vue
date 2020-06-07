@@ -16,8 +16,8 @@ export default {
   components: { IsomorphicLink },
   inheritAttrs: false,
   props: {
-    path: { type: String, required: true }
-  }
+    path: { type: String, required: true },
+  },
 }
 </script>
 

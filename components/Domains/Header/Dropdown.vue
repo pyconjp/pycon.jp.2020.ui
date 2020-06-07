@@ -29,14 +29,14 @@ import FadeTransition from '~/components/Elements/FadeTransition'
 
 export default {
   components: {
-    FadeTransition
+    FadeTransition,
   },
   props: {
     isDropdownOpen: {
       type: Boolean,
-      defaulte: false
-    }
-  }
+      defaulte: false,
+    },
+  },
 }
 </script>
 

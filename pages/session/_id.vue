@@ -14,7 +14,7 @@ export default {
   validate({ params }) {
     // params.idの存在チェックをしとかないと、正規表現マッチ時にstring変換されてtestを通ってしまう場合がある
     return params.id && /^\w+$/.test(params.id)
-  }
+  },
 }
 </script>
 

@@ -12,7 +12,7 @@
       trigger="none"
       :size="{
         width: 20,
-        height: 20
+        height: 20,
       }"
       class="w-8 h-8"
       aria-hidden="true"
@@ -40,13 +40,13 @@ export default {
   props: {
     isDrawerOpen: {
       type: Boolean,
-      defaulte: false
-    }
+      defaulte: false,
+    },
   },
   watch: {
     isDrawerOpen() {
       this.$refs.transition.performTransition()
-    }
-  }
+    },
+  },
 }
 </script>

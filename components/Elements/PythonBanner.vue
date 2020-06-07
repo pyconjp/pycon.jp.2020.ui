@@ -4,7 +4,7 @@
     :class="[
       direction == 'left' ? 'ml-auto' : 'mr-auto',
       size === 'small' ? 'w-50vw md:w-35vw' : 'w-70vw',
-      backGroundColor
+      backGroundColor,
     ]"
   >
     <div
@@ -21,7 +21,7 @@
           : direction === 'left' && size === 'big'
           ? '-translate-x-20'
           : 'translate-x-20',
-        backGroundColor
+        backGroundColor,
       ]"
     >
       <template v-if="size === 'small'">
@@ -50,7 +50,7 @@
         <p class="text-white sm:text-lg md:text-xl">
           <slot name="content">
             PyCon JP 2020を応援して下さるスポンサー様を募集しております<br />
-            <span class=" hover:underline">> 詳細はこちらから</span>
+            <span class="hover:underline">> 詳細はこちらから</span>
           </slot>
         </p>
       </template>
@@ -73,24 +73,24 @@ export default {
         // The value must match one of these strings
         return ['left', 'right'].includes(value)
       },
-      default: 'left'
+      default: 'left',
     },
     backGroundColor: {
       type: String,
-      default: 'bg-blue-500'
+      default: 'bg-blue-500',
     },
     size: {
       validator(value) {
         // The value must match one of these strings
         return ['small', 'big'].includes(value)
       },
-      default: 'small'
+      default: 'small',
     },
     hasTitle: {
       type: Boolean,
-      default: true
-    }
-  }
+      default: true,
+    },
+  },
 }
 </script>
 

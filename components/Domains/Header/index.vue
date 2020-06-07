@@ -63,13 +63,13 @@ export default {
     Hamburger,
     Dropdown,
     LocalesList,
-    HeaderLink
+    HeaderLink,
   },
   data() {
     return {
       isDrawerOpen: false,
       isDropdownOpen: false,
-      isMobile: false
+      isMobile: false,
     }
   },
   computed: {
@@ -80,7 +80,7 @@ export default {
         this.$i18n.t('pages'),
         ([_key, value]) => value.path !== '/'
       )
-    }
+    },
   },
   mounted() {
     this.$router.beforeEach((_to, _from, next) => {
@@ -126,8 +126,8 @@ export default {
     afterLeave(el) {
       el.style.height = ''
       el.style.overflow = ''
-    }
-  }
+    },
+  },
 }
 </script>
 
