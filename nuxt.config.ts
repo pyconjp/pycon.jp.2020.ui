@@ -149,6 +149,7 @@ export default {
     ],
     'nuxt-i18n',
     '@nuxtjs/sitemap',
+    'nuxt-webfontloader',
   ],
   i18n: {
     vueI18nLoader: true,
@@ -205,5 +206,10 @@ export default {
      ** You can extend webpack config here
      */
     // extend(config, ctx) {}
+  },
+  webfontloader: {
+    google: {
+      families: ['Rounded Mplus 1c:700,800,900'],
+    },
   },
 }
