@@ -17,6 +17,7 @@
       class="w-8 h-8"
       aria-hidden="true"
     >
+      <!-- ハンバーガーメニュー -->
       <svg slot="initial" fill="currentColor" viewBox="0 0 20 20">
         <path
           fill-rule="evenodd"
@@ -24,6 +25,7 @@
           clip-rule="evenodd"
         ></path>
       </svg>
+      <!-- バツマーク -->
       <svg fill="currentColor" viewBox="0 0 20 20">
         <path
           fill-rule="evenodd"
@@ -40,7 +42,7 @@ export default {
   props: {
     isDrawerOpen: {
       type: Boolean,
-      defaulte: false,
+      default: false,
     },
   },
   watch: {

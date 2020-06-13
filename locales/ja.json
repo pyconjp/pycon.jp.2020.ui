@@ -14,7 +14,17 @@
     },
     "event-list": {
       "title": "イベント一覧",
-      "path": "event-list"
+      "path": "event-list",
+      "childPage": {
+        "timetable": {
+          "title": "タイムテーブル",
+          "path": "timetable"
+        },
+        "workshop": {
+          "title": "子供向けワークショップ",
+          "path": "child-workshop"
+        }
+      }
     },
     "news": {
       "title": "お知らせ",

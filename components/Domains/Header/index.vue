@@ -4,7 +4,10 @@
   >
     <div class="flex flex-row items-center justify-between py-4">
       <n-link :to="localePath('/')">
-        <img :src="require('~/assets/img/header-logo.png')" class="h-8" />
+        <img
+          :src="require('~/assets/img/header-logo.png')"
+          class="h-10 md:h-16"
+        />
       </n-link>
       <hamburger
         :is-drawer-open="isDrawerOpen"

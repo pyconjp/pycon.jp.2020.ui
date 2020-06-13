@@ -14,7 +14,17 @@
     },
     "event-list": {
       "title": "Event List",
-      "path": "event-list"
+      "path": "event-list",
+      "childPage": {
+        "timetable": {
+          "title": "Timetable",
+          "path": "timetable"
+        },
+        "workshop": {
+          "title": "Child Workshop",
+          "path": "child-workshop"
+        }
+      }
     },
     "news": {
       "title": "News",
