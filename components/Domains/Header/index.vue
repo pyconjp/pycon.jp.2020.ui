@@ -1,13 +1,10 @@
 <template>
   <div
-    class="flex flex-col max-w-screen-xl mx-auto md:items-center md:justify-between md:flex-row md:my-4"
+    class="flex flex-col max-w-screen-xl mx-auto md:items-center md:justify-between md:flex-row md:my-4 xl:w-3/4"
   >
     <div class="flex flex-row items-center justify-between py-4">
-      <n-link
-        :to="localePath('/')"
-        class="text-lg font-semibold tracking-widest text-gray-900 uppercase focus:outline-none focus:shadow-outline"
-      >
-        Pycon JP 2020
+      <n-link :to="localePath('/')">
+        <img :src="require('~/assets/img/header-logo.png')" class="h-8" />
       </n-link>
       <hamburger
         :is-drawer-open="isDrawerOpen"
@@ -29,17 +26,37 @@
         id="navigation"
         class="flex flex-col pb-4 md:pb-0 md:flex md:justify-end md:flex-row"
       >
-        <header-link
+        <div
           v-for="page in filteredPages"
           :key="page.path"
-          :path="page.path"
-          :exact="page.path === '/' ? true : false"
-          class="mt-2 md:mt-0 md:ml-2 md:first:ml-0"
+          class="flex flex-col pb-4 md:pb-0 md:flex md:justify-end md:flex-row"
         >
-          {{ page.title }}
-        </header-link>
+          <header-link
+            v-if="page.path !== 'event-list'"
+            :path="page.path"
+            :exact="page.path === '/' ? true : false"
+            class="mt-2 md:mt-0 md:ml-2 md:first:ml-0"
+          >
+            {{ page.title }}
+          </header-link>
+          <dropdown
+            v-else
+            :is-dropdown-open="isEventListDropdownOpen"
+            emit-event="toggleEventListDropdown"
+            @toggleEventListDropdown="
+              isEventListDropdownOpen = !isEventListDropdownOpen
+            "
+          >
+            {{ $t('pages.event-list.title') }}
+            <template #menu>
+              <locales-list v-if="isEventListDropdownOpen" />
+            </template>
+          </dropdown>
+        </div>
+
         <dropdown
           :is-dropdown-open="isDropdownOpen"
+          emit-event="toggleDropdown"
           @toggleDropdown="isDropdownOpen = !isDropdownOpen"
         >
           {{ $t('language') }}
@@ -69,6 +86,7 @@ export default {
     return {
       isDrawerOpen: false,
       isDropdownOpen: false,
+      isEventListDropdownOpen: false,
       isMobile: false,
     }
   },
