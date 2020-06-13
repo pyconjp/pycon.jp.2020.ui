@@ -5,16 +5,20 @@
       "path": "/"
     },
     "about": {
-      "title": "概要",
+      "title": "開催概要",
       "path": "/about"
-    },
-    "news": {
-      "title": "お知らせ",
-      "path": "https://pyconjp.blogspot.com/search/label/pyconjp2020"
     },
     "code-of-conduct": {
       "title": "行動規範",
       "path": "code-of-conduct"
+    },
+    "event-list": {
+      "title": "イベント一覧",
+      "path": "event-list"
+    },
+    "news": {
+      "title": "お知らせ",
+      "path": "https://pyconjp.blogspot.com/search/label/pyconjp2020"
     },
     "sponsor": {
       "title": "スポンサー",

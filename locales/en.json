@@ -8,13 +8,17 @@
       "title": "About",
       "path": "/about"
     },
-    "news": {
-      "title": "News",
-      "path": "https://pyconjp.blogspot.com/search/label/pyconjp2020"
-    },
     "code-of-conduct": {
       "title": "Code of Conduct",
       "path": "code-of-conduct"
+    },
+    "event-list": {
+      "title": "Event List",
+      "path": "event-list"
+    },
+    "news": {
+      "title": "News",
+      "path": "https://pyconjp.blogspot.com/search/label/pyconjp2020"
     },
     "sponsor": {
       "title": "Sponsor",
