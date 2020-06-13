@@ -33,6 +33,6 @@ jobs:
 
     - name: deploy
       run: |
-        npm install -g surge
-        surge ./dist ${{ secrets.SURGE_DOMAIN }} --token ${{ secrets.SURGE_TOKEN }}
+        yarn install surge
+        npx surge ./dist ${{ secrets.SURGE_DOMAIN }} --token ${{ secrets.SURGE_TOKEN }}
 
