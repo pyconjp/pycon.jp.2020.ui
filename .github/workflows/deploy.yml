@@ -33,6 +33,6 @@ jobs:
 
     - name: deploy
       run: |
-        yarn install surge
+        yarn add surge
         npx surge ./dist ${{ secrets.SURGE_DOMAIN }} --token ${{ secrets.SURGE_TOKEN }}
 
