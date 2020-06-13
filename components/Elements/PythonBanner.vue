@@ -4,8 +4,8 @@
     :class="[
       direction == 'left' ? 'ml-auto' : 'mr-auto',
       size === 'small' ? 'w-50vw md:w-35vw' : 'w-70vw',
-      backGroundColor,
     ]"
+    :style="{ 'background-color': backGroundColor }"
   >
     <div
       class="absolute inset-y-0 flex flex-col items-center justify-center h-full overflow-hidden transform"
@@ -21,8 +21,8 @@
           : direction === 'left' && size === 'big'
           ? '-translate-x-20'
           : 'translate-x-20',
-        backGroundColor,
       ]"
+      :style="{ 'background-color': backGroundColor }"
     >
       <template v-if="size === 'small'">
         <div class="w-4 h-4 mb-4 bg-white rounded-full"></div>
@@ -77,7 +77,7 @@ export default {
     },
     backGroundColor: {
       type: String,
-      default: 'bg-blue-500',
+      default: '#3D40CB',
     },
     size: {
       validator(value) {
