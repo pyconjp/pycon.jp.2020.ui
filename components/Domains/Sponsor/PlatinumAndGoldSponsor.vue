@@ -60,7 +60,7 @@ export default Vue.extend({
   components: {},
   data() {
     return { isCompanyInformation: true, isRecruitInformation: false }
-  }
+  },
 })
 </script>
 

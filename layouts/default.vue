@@ -17,11 +17,11 @@ import PyconFooter from '~/components/Domains/Footer'
 export default {
   components: {
     PyconHeader,
-    PyconFooter
+    PyconFooter,
   },
   head() {
     return this.$nuxtI18nSeo()
-  }
+  },
 }
 </script>
 

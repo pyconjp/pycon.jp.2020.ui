@@ -8,13 +8,27 @@
       "title": "About",
       "path": "/about"
     },
-    "news": {
-      "title": "News",
-      "path": "https://pyconjp.blogspot.com/search/label/pyconjp2020"
-    },
     "code-of-conduct": {
       "title": "Code of Conduct",
       "path": "code-of-conduct"
+    },
+    "event-list": {
+      "title": "Event List",
+      "path": "event-list",
+      "childPage": {
+        "timetable": {
+          "title": "Timetable",
+          "path": "timetable"
+        },
+        "workshop": {
+          "title": "Child Workshop",
+          "path": "child-workshop"
+        }
+      }
+    },
+    "news": {
+      "title": "News",
+      "path": "https://pyconjp.blogspot.com/search/label/pyconjp2020"
     },
     "sponsor": {
       "title": "Sponsor",

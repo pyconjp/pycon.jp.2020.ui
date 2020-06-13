@@ -29,10 +29,10 @@ export default {
           '300',
           '500',
           '700',
-          '1000'
+          '1000',
         ].includes(value)
       },
-      default: '100'
+      default: '100',
     },
     leave: {
       validator(value) {
@@ -45,11 +45,11 @@ export default {
           '300',
           '500',
           '700',
-          '1000'
+          '1000',
         ].includes(value)
       },
-      default: '75'
-    }
-  }
+      default: '75',
+    },
+  },
 }
 </script>

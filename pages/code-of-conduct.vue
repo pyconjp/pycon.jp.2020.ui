@@ -32,11 +32,11 @@ export default Vue.extend({
   computed: {
     isEnglish() {
       return this.$i18n.locale === 'en'
-    }
+    },
   },
   head() {
     return { title: this.$t('pages.code-of-conduct.title') }
-  }
+  },
 })
 </script>
 

@@ -4,8 +4,8 @@
     :class="[
       direction == 'left' ? 'ml-auto' : 'mr-auto',
       size === 'small' ? 'w-50vw md:w-35vw' : 'w-70vw',
-      backGroundColor
     ]"
+    :style="{ 'background-color': backGroundColor }"
   >
     <div
       class="absolute inset-y-0 flex flex-col items-center justify-center h-full overflow-hidden transform"
@@ -21,8 +21,8 @@
           : direction === 'left' && size === 'big'
           ? '-translate-x-20'
           : 'translate-x-20',
-        backGroundColor
       ]"
+      :style="{ 'background-color': backGroundColor }"
     >
       <template v-if="size === 'small'">
         <div class="w-4 h-4 mb-4 bg-white rounded-full"></div>
@@ -50,7 +50,7 @@
         <p class="text-white sm:text-lg md:text-xl">
           <slot name="content">
             PyCon JP 2020を応援して下さるスポンサー様を募集しております<br />
-            <span class=" hover:underline">> 詳細はこちらから</span>
+            <span class="hover:underline">> 詳細はこちらから</span>
           </slot>
         </p>
       </template>
@@ -73,24 +73,24 @@ export default {
         // The value must match one of these strings
         return ['left', 'right'].includes(value)
       },
-      default: 'left'
+      default: 'left',
     },
     backGroundColor: {
       type: String,
-      default: 'bg-blue-500'
+      default: '#3D40CB',
     },
     size: {
       validator(value) {
         // The value must match one of these strings
         return ['small', 'big'].includes(value)
       },
-      default: 'small'
+      default: 'small',
     },
     hasTitle: {
       type: Boolean,
-      default: true
-    }
-  }
+      default: true,
+    },
+  },
 }
 </script>
 
