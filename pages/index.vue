@@ -1,20 +1,24 @@
 <template>
-  <div class="">
+  <div class="main-color">
     <section
       class="relative flex items-start justify-center h-80 md:h-120 md:items-center"
     >
       <div class="mt-16 mr-2 md:m-0">
-        <h1 class="text-4xl font-bold leading-tight md:text-6xl">
+        <h1 class="text-4xl font-extrabold leading-tight md:text-6xl">
           PyCon JP <br />2020 Online
         </h1>
         <h2 class="mt-6 text-2xl md:text-3xl">
-          <i class="text-red-400 material-icons">location_on</i> Online
+          <i class="text-gray-700 material-icons">location_on</i> Online
           Conference
         </h2>
         <h2 class="text-2xl md:text-3xl">
-          <i class="text-red-400 material-icons">event</i> August 28(Fri.) /
+          <i class="text-gray-700 material-icons">event</i> 2020 08/28(Fri.) /
           29(Sat.)
         </h2>
+        <div class="flex">
+          <img :src="require('~/assets/img/twitter.png')" class="h-8" />
+          <a class="text-xl text-blue-500 ml-2">#pyconjp</a>
+        </div>
       </div>
       <div
         class="absolute w-screen h-full main-visual md:w-50vw md:relative"
@@ -52,7 +56,12 @@
       </template>
     </python-banner>
 
-    <python-banner direction="right" back-ground-color="#EE9D2C" size="big">
+    <python-banner
+      class="mt-8"
+      direction="right"
+      back-ground-color="#EE9D2C"
+      size="big"
+    >
       <template #title>
         チケット販売開始
       </template>
@@ -63,25 +72,29 @@
     </python-banner>
 
     <section
-      class="flex flex-col items-center justify-center m-screen news-area"
+      class="flex flex-col items-center justify-center m-screen news-area mt-24 pt-12 pb-24 px-4"
     >
-      <h2 class="inline text-3xl md:text-5xl">
-        NEWS
-      </h2>
-      <p>-お知らせ-</p>
+      <div class="flex flex-col items-center">
+        <h2 class="inline text-3xl md:text-5xl mb-2">
+          NEWS
+        </h2>
+        <p class="text-xl md:text-2xl mb-8">-お知らせ-</p>
+      </div>
       <div
-        class="relative flex flex-col justify-center items-center w-full mx-auto md:w-4/5 news-overview-content mt-6 bg-white"
+        class="relative flex flex-col justify-center items-center w-full container news-overview-content mt-6 bg-white"
       >
-        <div class="relative w-2/3 flex justify-center flex-col z-10 bg-white">
+        <div
+          class="relative w-4/5 flex justify-center flex-col z-10 bg-white space-y-6 py-8"
+        >
           <div
             v-for="item in [1, 2, 3]"
             :key="item"
-            class="flex justify-between"
+            class="flex flex-col md:flex-row justify-between"
           >
-            <h3 class="text-lg text-left text-gray-700 md:text-xl">
+            <h3 class="text-lg text-left text-gray-700 md:text-xl mb-2 md:mb-0">
               2020.5.3
             </h3>
-            <div class="w-full ml-6 md:ml-12 hover:underline">
+            <div class="w-full md:ml-12 hover:underline">
               CFP募集開始>CFP募集開始>CFP募集開始>CFP募集開始>CFP募集開始>CFP募集開始>CFP募集開始>CFP募集開始>CFP募集開始>CFP募集開始
             </div>
           </div>
@@ -101,23 +114,29 @@
     </section>
 
     <section
-      class="flex flex-col items-center justify-center m-screen overview-area"
+      class="flex flex-col items-center justify-center m-screen overview-area pt-12 pb-24 px-4"
     >
-      <h2 class="inline text-3xl md:text-5xl">
-        Overview
-      </h2>
-      <p>-概要-</p>
+      <div class="flex flex-col items-center">
+        <h2 class="inline text-3xl md:text-5xl mb-2">
+          Overview
+        </h2>
+        <p class="text-xl md:text-2xl mb-8">-概要-</p>
+      </div>
       <div
-        class="relative flex flex-col justify-center items-center w-full mx-auto md:w-4/5 news-overview-content mt-6 bg-white"
+        class="relative flex flex-col justify-center items-center w-full container news-overview-content mt-6 bg-white"
       >
-        <div class="relative w-2/3 flex justify-center flex-col z-10 bg-white">
+        <div
+          class="relative w-4/5 flex justify-center flex-col z-10 bg-white space-y-6 py-8"
+        >
           <div
             v-for="item in [1, 2, 3]"
             :key="item"
-            class="flex justify-between"
+            class="flex flex-col md:flex-row justify-between"
           >
-            <h3 class="text-lg text-left text-gray-700 md:text-xl">2020.5.3</h3>
-            <div class="w-full ml-6 md:ml-12 hover:underline">
+            <h3 class="text-lg text-left text-gray-700 md:text-xl mb-2 md:mb-0">
+              2020.5.3
+            </h3>
+            <div class="w-full md:ml-12 hover:underline">
               CFP募集開始>CFP募集開始>CFP募集開始>CFP募集開始>CFP募集開始>CFP募集開始>CFP募集開始>CFP募集開始>CFP募集開始>CFP募集開始
             </div>
           </div>
@@ -240,6 +259,11 @@ export default Vue.extend({
 </script>
 
 <style scoped>
+.main-color {
+  color: #404a6b;
+  font-family: 'Rounded Mplus 1c';
+}
+
 .main-visual {
   /* background: linear-gradient(to bottom, #a6d900 0%, #ff4454 100%); */
   background-image: url('../assets/img/top-visual-icon.png');
