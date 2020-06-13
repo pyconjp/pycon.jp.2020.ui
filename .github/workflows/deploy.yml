@@ -25,10 +25,13 @@ jobs:
       with:
         node-version: 12.x
 
+    - name: pre build
+      run: yarn install
+
     - name: generate
       run: yarn run generate
 
-    - name: Run a multi-line script
+    - name: deploy
       run: |
         npm install -g surge
         surge ./dist ${{ secrets.SURGE_DOMAIN }} --token ${{ secrets.SURGE_TOKEN }}
