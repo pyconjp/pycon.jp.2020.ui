@@ -12,8 +12,12 @@
         ボランティアによる運営ですので、回答には1週間程度を要します。 <br />
         何卒お待ちいただけますようにお願いします。 <br />
       </p>
-      <a href="mailto:pyconjp@pycon.jp" class="mt-10 text-2xl font-semibold">
-        pyconjp@pycon.jp
+      <a
+        href="mailto:pyconjp@pycon.jp"
+        class="mt-10 text-2xl font-semibold hover:underline"
+      >
+        <i class="text-2xl align-middle material-icons">email</i>
+        <span>pyconjp@pycon.jp</span>
       </a>
     </section>
 

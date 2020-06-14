@@ -379,7 +379,7 @@ export default Vue.extend({
     width: 30vw;
   }
 }
-
+/*
 .hover-apply-button {
-}
+} */
 </style>
