@@ -73,10 +73,14 @@
           rel="noopener noreferrer"
         >
           <button
-            class="flex items-center px-4 py-2 font-medium bg-white rounded-full shadow md:px-6 md:py-6 text-py-black"
+            class="flex items-center px-4 py-2 font-medium bg-white rounded-full shadow group md:px-6 md:py-6 text-py-black hover:bg-py-blue-dark"
           >
-            <p class="w-6 h-6 rounded-full bg-py-blue-dark" />
-            <span class="ml-2 md:text-xl md:ml-6 md:mr-4">
+            <p
+              class="w-6 h-6 rounded-full bg-py-blue-dark group-hover:bg-white"
+            />
+            <span
+              class="ml-2 md:text-xl md:ml-6 md:mr-4 group-hover:text-white"
+            >
               スポンサーに申し込む
             </span>
           </button>
@@ -93,10 +97,12 @@
       </template>
       <template #button>
         <button
-          class="flex items-center px-4 py-2 mt-6 font-medium bg-white rounded-full shadow md:px-6 md:py-6 text-py-black"
+          class="flex items-center px-4 py-2 mt-6 font-medium bg-white rounded-full shadow group md:px-6 md:py-6 text-py-black hover:bg-py-orange-dark"
         >
-          <p class="w-6 h-6 rounded-full bg-py-orange-dark" />
-          <span class="ml-2 md:text-xl md:ml-6 md:mr-4">
+          <p
+            class="w-6 h-6 rounded-full bg-py-orange-dark group-hover:bg-white"
+          />
+          <span class="ml-2 md:text-xl md:ml-6 md:mr-4 group-hover:text-white">
             チケットを購入する
           </span>
         </button>
@@ -196,10 +202,12 @@
                 PyConJPの開催を通じて、Pythonの使い手が一堂に集まり、Pythonにまつわる様々な分野の知識や情報を交換し、新たな友達やコミュニティとのつながり、仕事やビジネスチャンスを増やせる場所とすることが目標です。
               </p>
               <button
-                class="flex items-center self-center justify-center w-40 px-2 py-2 mt-6 font-medium bg-white rounded-full shadow md:w-64 md:px-6 md:py-6 text-py-black"
+                class="flex items-center self-center justify-center w-40 px-2 py-2 mt-6 font-medium bg-white rounded-full shadow group md:w-64 md:px-6 md:py-6 text-py-black hover:bg-py-black"
               >
-                <p class="w-6 h-6 mr-auto rounded-full bg-py-blue-dark" />
-                <span class="-ml-4 md:text-xl">
+                <p
+                  class="w-6 h-6 mr-auto rounded-full bg-py-black group-hover:bg-white"
+                />
+                <span class="-ml-4 md:text-xl group-hover:text-white">
                   行動規範
                 </span>
                 <p class="mr-auto" />
