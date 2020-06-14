@@ -119,18 +119,23 @@
           class="relative z-10 flex flex-col justify-center w-4/5 py-8 space-y-6 bg-white rounded-py"
         >
           <div
-            v-for="item in [1, 2, 3]"
-            :key="item"
+            v-for="(item, i) in newsContents"
+            :key="i"
             class="flex flex-col justify-between md:flex-row"
           >
             <h3
               class="mb-2 text-lg font-medium text-left text-gray-700 md:text-xl md:mb-0"
             >
-              2020.5.3
+              {{ item.date }}
             </h3>
-            <div class="w-full font-light md:ml-12 hover:underline">
-              CFP募集開始>CFP募集開始>CFP募集開始>CFP募集開始>CFP募集開始>CFP募集開始>CFP募集開始>CFP募集開始>CFP募集開始>CFP募集開始
-            </div>
+            <a
+              class="w-full font-light md:ml-12 hover:underline"
+              :href="item.link"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {{ item.title }}
+            </a>
           </div>
         </div>
 
@@ -290,6 +295,39 @@ export default Vue.extend({
     PythonBanner,
     // TalkContent,
   },
+  data() {
+    return {
+      newsContents: [
+        {
+          date: '2020.06.10',
+          title:
+            'PyCon JP 2020 スタッフ全体オンラインミーティング(6月)を開催しました！',
+          link: 'https://pyconjp.blogspot.com/2020/06/pycon-jp-2020-6.html',
+        },
+        {
+          date: '2020.06.08',
+          title:
+            'PyCon JP 2020 スポンサー募集 2次募集期間開始のお知らせ / Sponsorship Application 2nd-Period starts',
+          link:
+            'https://pyconjp.blogspot.com/2020/06/2nd-period-of-sponsorship-application.html',
+        },
+        {
+          date: '2020.06.05',
+          title:
+            'PyCon JP 2020 Sponsorship Application FAQ / PyCon JP 2020の良くある問い合わせ/スポンサーシップ1次募集は本日まで!',
+          link:
+            'https://pyconjp.blogspot.com/2020/06/pycon-jp-2020-sponsorship-faq.html',
+        },
+        {
+          date: '2020.06.02',
+          title:
+            'PyCon JP 2020: 2日目のキーノートスピーカー決定のお知らせ/ Announcement of Keynote Speaker on Day 2',
+          link:
+            'https://pyconjp.blogspot.com/2020/06/pycon-jp-2020-2-announcement-of-keynote.html',
+        },
+      ],
+    }
+  },
   async created() {
     // TODO: ブログの最新情報をAPIで取得する
     // const resp = await this.$axios.$get('/news')
@@ -340,5 +378,8 @@ export default Vue.extend({
   .main-visual {
     width: 30vw;
   }
+}
+
+.hover-apply-button {
 }
 </style>
