@@ -202,7 +202,7 @@
           class="flex flex-col items-center justify-center w-full overflow-hidden bg-white rounded-py news-overview-content"
         >
           <div
-            class="relative z-10 flex flex-col justify-between w-full bg-white md:flex-row rounded-py"
+            class="relative z-10 flex flex-col justify-between w-full bg-white lg:flex-row rounded-py"
           >
             <div class="flex flex-col flex-1 p-6 mx-2 md:mx-12">
               <h2 class="inline mb-2 text-2xl font-semibold md:text-4xl">
@@ -229,8 +229,8 @@
               </nuxt-link>
             </div>
             <img
-              :src="require('~/assets/img/overview.png')"
-              class="box-border object-cover object-left w-full h-64 md:h-auto md:w-2/5"
+              :src="require('~/assets/img/overview.jpg')"
+              class="box-border object-cover object-left w-full h-64 md:h-auto lg:w-2/5"
             />
           </div>
         </div>
