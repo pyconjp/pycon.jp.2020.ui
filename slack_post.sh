@@ -5,7 +5,7 @@ if [ "${AWS_BRANCH}" = "staging" ]; then ENVIRONMENT="staging"; fi
 
 PAYLOAD=`cat << EOS
     payload={
-        "channel": "#develop_test",
+        "channel": "${CHANNEL}",
         "text": "<!channel> ${ENVIRONMENT}環境のビルドが完了しました",
     }
 EOS`
