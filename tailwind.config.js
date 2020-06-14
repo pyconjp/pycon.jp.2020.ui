@@ -84,6 +84,7 @@ module.exports = {
   variants: {
     margin: ['responsive', 'first'],
     padding: ['responsive', 'odd', 'even'],
+    borderWidth: ['responsive', 'hover'],
   },
   plugins: [],
 }
