@@ -10,8 +10,12 @@
       <div v-for="(message, i) in $t('message')" :key="`p-${i}`">
         <p class="text-center md:text-xl">{{ message }}</p>
       </div>
-      <a href="mailto:pyconjp@pycon.jp" class="mt-10 text-2xl font-semibold">
-        pyconjp@pycon.jp
+      <a
+        href="mailto:pyconjp@pycon.jp"
+        class="mt-10 text-2xl font-semibold hover:underline"
+      >
+        <i class="text-2xl align-middle material-icons">email</i>
+        <span>pyconjp@pycon.jp</span>
       </a>
     </section>
 
