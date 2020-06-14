@@ -64,6 +64,7 @@ module.exports = {
       },
       borderRadius: {
         xl: '4rem',
+        '2xl': '8rem',
         py: '98px',
         'card-head': '2.35rem',
         '50%': '50%',
