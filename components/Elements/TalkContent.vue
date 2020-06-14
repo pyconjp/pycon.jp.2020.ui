@@ -8,13 +8,11 @@
         <div class="flex flex-col items-center justify-center my-8">
           <div class="w-24 h-24 bg-gray-400 rounded-full"></div>
           <h2 class="text-xl md:text-2xl">
-            <slot name="name">Taro Yamada</slot>
+            <slot name="name"></slot>
           </h2>
         </div>
         <p class="text-base md:text-xl">
-          <slot name="date">
-            8/23
-          </slot>
+          <slot name="date"> </slot>
         </p>
 
         <p class="mb-8 text-sm md:text-base">
