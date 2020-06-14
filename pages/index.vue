@@ -107,18 +107,19 @@
       </template>
       <template #button>
         <button
-          class="flex items-center px-4 py-2 mt-6 font-medium bg-white rounded-full shadow md:px-6 md:py-6 text-py-black focus:outline-none"
+          class="relative flex items-center px-4 py-2 mt-6 font-medium bg-white rounded-full shadow pointer-events-none md:px-6 md:py-6 text-py-black focus:outline-none"
         >
           <p class="w-6 h-6 rounded-full bg-py-orange-dark" />
           <span class="ml-2 md:text-xl md:ml-6 md:mr-4">
             {{ $t('ticket.button') }}
           </span>
+
+          <img
+            class="absolute left-0 w-full"
+            :src="require('~/assets/img/comming-soon.png')"
+            alt="commingSoon"
+          />
         </button>
-        <img
-          class="absolute bottom-0 right-0 w-1/5"
-          :src="require('~/assets/img/comming-soon.png')"
-          alt="commingSoon"
-        />
       </template>
     </python-banner>
 
