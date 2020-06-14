@@ -147,6 +147,9 @@
             <div
               class="absolute w-2 h-2 mt-2 ml-12 bg-white rounded-full"
             ></div>
+            <div class="absolute text-5xl font-bold emotion-mark">
+              !
+            </div>
           </div>
         </div>
       </div>
@@ -170,6 +173,9 @@
             <div
               class="absolute w-2 h-2 mt-0 ml-10 bg-white rounded-full"
             ></div>
+            <div class="absolute text-5xl font-bold emotion-mark">
+              ?
+            </div>
           </div>
         </div>
         <div
@@ -379,7 +385,9 @@ export default Vue.extend({
     width: 30vw;
   }
 }
-/*
-.hover-apply-button {
-} */
+
+.emotion-mark {
+  top: -2.5rem;
+  left: 5rem;
+}
 </style>
