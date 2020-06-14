@@ -62,14 +62,14 @@
 
 <script>
 import Hamburger from '~/components/Domains/Header/Hamburger'
-import Dropdown from '~/components/Domains/Header/Dropdown'
+// import Dropdown from '~/components/Domains/Header/Dropdown'
 import LocalesList from '~/components/Domains/Header/LocalesList'
 import HeaderLink from '~/components/Domains/Header/HeaderLink'
 
 export default {
   components: {
     Hamburger,
-    Dropdown,
+    // Dropdown,
     LocalesList,
     HeaderLink,
   },
