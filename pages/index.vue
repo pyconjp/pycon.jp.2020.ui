@@ -1,9 +1,9 @@
 <template>
   <div class="main-color">
     <section
-      class="relative flex items-start justify-center mb-24 h-80 md:h-120 md:items-center"
+      class="relative flex items-start justify-center mb-12 h-80 md:h-120 md:items-center"
     >
-      <div class="z-50 mt-16 mr-2 md:m-0">
+      <div class="relative z-50 mt-16 mr-2 md:m-0">
         <h1 class="text-4xl font-extrabold leading-tight md:text-6xl">
           PyCon JP <br />2020 <span class="font-semibold">Online</span>
         </h1>
@@ -29,7 +29,17 @@
       </div>
       <div
         class="absolute w-screen h-full opacity-25 md:opacity-100 main-visual md:w-50vw md:relative"
-      ></div>
+      >
+        <div
+          class="absolute hidden rounded-full balloon-1 bg-py-blue-light md:block"
+        ></div>
+        <div
+          class="absolute hidden rounded-full balloon-2 bg-py-orange-light md:block"
+        ></div>
+        <div
+          class="absolute hidden rounded-full balloon-3 bg-py-orange-light md:block"
+        ></div>
+      </div>
     </section>
 
     <!-- <div class="flex flex-col items-center justify-center">
@@ -400,5 +410,26 @@ export default Vue.extend({
 .emotion-mark {
   top: -2.5rem;
   left: 5rem;
+}
+
+.balloon-1 {
+  height: 110px;
+  left: -520px;
+  top: 24px;
+  width: 110px;
+}
+
+.balloon-2 {
+  bottom: -100px;
+  height: 184px;
+  left: -240px;
+  width: 184px;
+}
+
+.balloon-3 {
+  bottom: 0;
+  height: 110px;
+  right: -100px;
+  width: 110px;
 }
 </style>
