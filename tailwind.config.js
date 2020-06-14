@@ -30,8 +30,8 @@ module.exports = {
   },
   theme: {
     fontFamily: {
-      sans: ['Noto Sans', ...defaultTheme.fontFamily.sans],
-      serif: ['Noto Serif', ...defaultTheme.fontFamily.serif],
+      sans: ["'Rounded Mplus 1c'", ...defaultTheme.fontFamily.sans],
+      serif: [...defaultTheme.fontFamily.serif],
       mono: [...defaultTheme.fontFamily.mono],
     },
     screens: {
@@ -41,6 +41,13 @@ module.exports = {
       xl: '1280px',
     },
     extend: {
+      colors: {
+        'py-black': '#404a6b',
+        'py-blue-light': '#d4d4ff',
+        'py-orange-light': '#ffd8a1',
+        'py-blue-dark': '#3D40CB',
+        'py-orange-dark': '#E3AB4A',
+      },
       spacing: {
         72: '18rem',
         80: '20rem',
@@ -57,7 +64,9 @@ module.exports = {
       },
       borderRadius: {
         xl: '4rem',
+        py: '98px',
         'card-head': '2.35rem',
+        '50%': '50%',
       },
       boxShadow: {
         right:

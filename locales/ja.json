@@ -4,42 +4,16 @@
       "title": "PyCon JP 2020",
       "path": "/"
     },
-    "about": {
-      "title": "開催概要",
-      "path": "/about"
-    },
     "code-of-conduct": {
       "title": "行動規範",
       "path": "code-of-conduct"
     },
-    "event-list": {
-      "title": "イベント一覧",
-      "path": "event-list",
-      "childPage": {
-        "timetable": {
-          "title": "タイムテーブル",
-          "path": "timetable"
-        },
-        "workshop": {
-          "title": "子供向けワークショップ",
-          "path": "child-workshop"
-        }
-      }
-    },
     "news": {
       "title": "お知らせ",
       "path": "https://pyconjp.blogspot.com/search/label/pyconjp2020"
-    },
-    "sponsor": {
-      "title": "スポンサー",
-      "path": "/sponsor"
-    },
-    "staff": {
-      "title": "スタッフ",
-      "path": "/staff"
     }
   },
-  "language": "言語",
+  "language": "English",
   "error": {
     "404": "お探しのページが見つかりません。",
     "else": "エラーが発生しました",

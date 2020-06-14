@@ -35,22 +35,31 @@
     </div>
 
     <div
-      class="flex flex-col p-6"
+      class="flex flex-col px-4 py-8"
       :class="direction == 'left' ? 'items-start' : 'items-end'"
     >
       <template v-if="size === 'big'">
         <h3
           v-show="hasTitle === true"
-          class="inline mb-6 text-xl text-white border-b-2 border-white sm:text-2xl md:text-4xl"
+          class="inline mb-6 text-xl text-white sm:text-2xl md:text-4xl"
         >
           <slot name="title">
             企業スポンサー様募集中
           </slot>
         </h3>
-        <p class="text-white sm:text-lg md:text-xl">
+        <p class="flex flex-col items-center text-white">
           <slot name="content">
-            PyCon JP 2020を応援して下さるスポンサー様を募集しております<br />
-            <span class="hover:underline">> 詳細はこちらから</span>
+            <span class="text-lg sm:text-xl md:text-2xl">
+              PyCon JP 2020を応援して下さるスポンサー様を募集しております
+            </span>
+          </slot>
+          <slot name="button">
+            <button
+              class="flex items-center px-8 py-6 mt-4 bg-white rounded-full shadow text-py-black"
+            >
+              <p class="w-6 h-6 mr-4 rounded-full bg-py-blue-dark" />
+              スポンサーに申し込む
+            </button>
           </slot>
         </p>
       </template>

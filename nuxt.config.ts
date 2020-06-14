@@ -70,7 +70,7 @@ export default {
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: ['~/plugins/vue-svg-transition'],
+  plugins: ['~/plugins/vue-svg-transition', '~/plugins/axios'],
   /*
    ** Nuxt.js dev-modules
    */
@@ -90,66 +90,67 @@ export default {
     '@nuxtjs/pwa',
     // Doc: https://github.com/nuxt-community/dotenv-module
     '@nuxtjs/dotenv',
-    [
-      'nuxt-font-loader-strategy',
-      {
-        ignoredEffectiveTypes: ['2g', 'slow-2g'],
-        useWorker: true,
-        fonts: [
-          // Font
-          {
-            fileExtensions: ['eot', 'svg', 'woff2', 'woff'],
-            fontFamily: 'Noto Sans',
-            fontFaces: [
-              // Font-Face
-              {
-                preload: true,
-                local: ['Noto Sans', 'NotoSans-Regular'],
-                src:
-                  '@/assets/fonts/noto-sans-jp-v24-japanese_latin/noto-sans-jp-v24-japanese_latin-regular',
-                fontWeight: 400,
-                fontStyle: 'normal',
-              },
-              // Font-Face
-              {
-                local: ['Noto Sans Bold', 'NotoSans-Bold'],
-                src:
-                  '@/assets/fonts/noto-sans-jp-v24-japanese_latin/noto-sans-jp-v24-japanese_latin-700',
-                fontWeight: 700,
-                fontStyle: 'normal',
-              },
-            ],
-          },
-          // Font
-          {
-            fileExtensions: ['eot', 'svg', 'woff2', 'woff'],
-            fontFamily: 'Noto Serif',
-            fontFaces: [
-              // Font-Face
-              {
-                preload: true,
-                local: ['Noto Serif', 'NotoSerif-Regular'],
-                src:
-                  '@/assets/fonts/noto-serif-jp-v7-japanese_latin/noto-serif-jp-v7-japanese_latin-regular',
-                fontWeight: 400,
-                fontStyle: 'normal',
-              },
-              // Font-Face
-              {
-                local: ['Noto Serif Bold', 'NotoSerif-Bold'],
-                src:
-                  '@/assets/fonts/noto-serif-jp-v7-japanese_latin/noto-serif-jp-v7-japanese_latin-700',
-                fontWeight: 700,
-                fontStyle: 'normal',
-              },
-            ],
-          },
-        ],
-      },
-    ],
+    // [
+    //   'nuxt-font-loader-strategy',
+    //   {
+    //     ignoredEffectiveTypes: ['2g', 'slow-2g'],
+    //     useWorker: true,
+    //     fonts: [
+    //       // Font
+    //       {
+    //         fileExtensions: ['eot', 'svg', 'woff2', 'woff'],
+    //         fontFamily: 'Noto Sans',
+    //         fontFaces: [
+    //           // Font-Face
+    //           {
+    //             preload: true,
+    //             local: ['Noto Sans', 'NotoSans-Regular'],
+    //             src:
+    //               '@/assets/fonts/noto-sans-jp-v24-japanese_latin/noto-sans-jp-v24-japanese_latin-regular',
+    //             fontWeight: 400,
+    //             fontStyle: 'normal',
+    //           },
+    //           // Font-Face
+    //           {
+    //             local: ['Noto Sans Bold', 'NotoSans-Bold'],
+    //             src:
+    //               '@/assets/fonts/noto-sans-jp-v24-japanese_latin/noto-sans-jp-v24-japanese_latin-700',
+    //             fontWeight: 700,
+    //             fontStyle: 'normal',
+    //           },
+    //         ],
+    //       },
+    //       // Font
+    //       {
+    //         fileExtensions: ['eot', 'svg', 'woff2', 'woff'],
+    //         fontFamily: 'Noto Serif',
+    //         fontFaces: [
+    //           // Font-Face
+    //           {
+    //             preload: true,
+    //             local: ['Noto Serif', 'NotoSerif-Regular'],
+    //             src:
+    //               '@/assets/fonts/noto-serif-jp-v7-japanese_latin/noto-serif-jp-v7-japanese_latin-regular',
+    //             fontWeight: 400,
+    //             fontStyle: 'normal',
+    //           },
+    //           // Font-Face
+    //           {
+    //             local: ['Noto Serif Bold', 'NotoSerif-Bold'],
+    //             src:
+    //               '@/assets/fonts/noto-serif-jp-v7-japanese_latin/noto-serif-jp-v7-japanese_latin-700',
+    //             fontWeight: 700,
+    //             fontStyle: 'normal',
+    //           },
+    //         ],
+    //       },
+    //     ],
+    //   },
+    // ],
     'nuxt-i18n',
     '@nuxtjs/sitemap',
     'nuxt-webfontloader',
+    '@nuxtjs/proxy',
   ],
   i18n: {
     vueI18nLoader: true,
@@ -197,7 +198,13 @@ export default {
    ** Axios module configuration
    ** See https://axios.nuxtjs.org/options
    */
-  axios: {},
+  axios: {
+    proxy: true,
+  },
+  proxy: {
+    '/news':
+      'http://pyconjp.blogspot.com/feeds/posts/default/-/pyconjp2020?alt=rss&max-results=5',
+  },
   /*
    ** Build configuration
    */
@@ -209,7 +216,7 @@ export default {
   },
   webfontloader: {
     google: {
-      families: ['Rounded Mplus 1c:700,800,900'],
+      families: ['Rounded Mplus 1c:300,400,500,700,800,900'],
     },
   },
 }
