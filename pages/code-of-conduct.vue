@@ -11,7 +11,7 @@ vue<template>
           ? 'text-left leading-relaxed tracking-wide'
           : 'text-justify leading-7 tracking-wider'
       "
-      class="flex flex-col items-start justify-start my-8 font-serif text-sm sm:text-base md:text-lg"
+      class="flex flex-col items-start justify-start my-8 text-sm sm:text-base md:text-lg"
     >
       <p
         v-for="(paragraph, i) in $t('paragraphs')"
