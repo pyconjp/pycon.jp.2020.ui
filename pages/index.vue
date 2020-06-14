@@ -133,7 +133,7 @@
         <p class="mb-8 text-xl md:text-2xl">{{ $t('news.subtitle') }}</p>
       </div>
       <div
-        class="relative flex flex-col items-center justify-center w-full mt-6 bg-white rounded-py news-overview-content"
+        class="relative flex flex-col items-center justify-center w-full mt-6 bg-white md:w-3/4 rounded-py news-overview-content"
       >
         <div
           class="relative z-10 flex flex-col justify-center w-4/5 py-8 space-y-6 bg-white rounded-py"
@@ -184,7 +184,7 @@
         </h2>
         <p class="mb-8 text-xl md:text-2xl">{{ $t('overview.subtitle') }}</p>
       </div>
-      <div class="relative flex justify-center mt-6">
+      <div class="relative flex justify-center w-full mt-6 md:w-3/4">
         <div
           class="absolute top-0 w-20 h-20 mx-auto -mt-8 border-4 border-solid rounded-card-head news-overview-icon"
         >
