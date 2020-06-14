@@ -11,16 +11,16 @@
       class="absolute inset-y-0 flex flex-col items-center justify-center h-full overflow-hidden transform"
       :class="[
         direction === 'left'
-          ? 'left-0 shadow-left rounded-l-xl'
-          : 'right-0 shadow-right rounded-r-xl',
+          ? 'left-0 shadow-left rounded-l-2xl'
+          : 'right-0 shadow-right rounded-r-2xl',
         size === 'small' ? 'w-12' : 'w-20 md:w-32',
         direction === 'left' && size === 'small'
           ? '-translate-x-12'
           : direction === 'right' && size === 'small'
           ? 'translate-x-12'
           : direction === 'left' && size === 'big'
-          ? '-translate-x-20'
-          : 'translate-x-20',
+          ? '-translate-x-20 md:-translate-x-32'
+          : 'translate-x-20 md:translate-x-32',
       ]"
       :style="{ 'background-color': backGroundColor }"
     >
