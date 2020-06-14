@@ -66,14 +66,21 @@
         PyCon JP 2020を応援して下さるスポンサー様を募集しております
       </template>
       <template #button>
-        <button
-          class="flex items-center px-4 py-2 mt-6 font-medium bg-white rounded-full shadow md:px-6 md:py-6 text-py-black"
+        <a
+          class="mt-6"
+          href="https://pyconjp.blogspot.com/2020/06/2nd-period-of-sponsorship-application.html"
+          target="_blank"
+          rel="noopener noreferrer"
         >
-          <p class="w-6 h-6 rounded-full bg-py-blue-dark" />
-          <span class="ml-2 md:text-xl md:ml-6 md:mr-4">
-            スポンサーに申し込む
-          </span>
-        </button>
+          <button
+            class="flex items-center px-4 py-2 font-medium bg-white rounded-full shadow md:px-6 md:py-6 text-py-black"
+          >
+            <p class="w-6 h-6 rounded-full bg-py-blue-dark" />
+            <span class="ml-2 md:text-xl md:ml-6 md:mr-4">
+              スポンサーに申し込む
+            </span>
+          </button>
+        </a>
       </template>
     </python-banner>
 
