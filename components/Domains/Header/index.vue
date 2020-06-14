@@ -4,10 +4,7 @@
   >
     <div class="flex flex-row items-center justify-between py-4">
       <n-link :to="localePath('/')">
-        <img
-          :src="require('~/assets/img/header-logo.png')"
-          class="h-10 md:h-16"
-        />
+        <img :src="require('~/assets/img/header-logo.png')" class="w-40" />
       </n-link>
       <hamburger
         :is-drawer-open="isDrawerOpen"
@@ -38,11 +35,11 @@
             v-if="page.path !== 'event-list'"
             :path="page.path"
             :exact="page.path === '/' ? true : false"
-            class="mt-2 md:mt-0 md:ml-2 md:first:ml-0"
+            class="mt-2 mr-0 md:mr-2 md:mt-0"
           >
             {{ page.title }}
           </header-link>
-          <dropdown
+          <!-- <dropdown
             v-else
             :is-dropdown-open="isEventListDropdownOpen"
             emit-event="toggleEventListDropdown"
@@ -54,19 +51,10 @@
             <template #menu>
               <locales-list v-if="isEventListDropdownOpen" />
             </template>
-          </dropdown>
+          </dropdown> -->
         </div>
 
-        <dropdown
-          :is-dropdown-open="isDropdownOpen"
-          emit-event="toggleDropdown"
-          @toggleDropdown="isDropdownOpen = !isDropdownOpen"
-        >
-          {{ $t('language') }}
-          <template #menu>
-            <locales-list v-if="isDropdownOpen" />
-          </template>
-        </dropdown>
+        <locales-list />
       </nav>
     </transition>
   </div>
