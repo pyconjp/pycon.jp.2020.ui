@@ -7,11 +7,9 @@
         Contact
       </h2>
 
-      <p class="text-center md:text-xl">
-        事前にFAQをご確認いただけますようにお願いします。 <br />
-        ボランティアによる運営ですので、回答には1週間程度を要します。 <br />
-        何卒お待ちいただけますようにお願いします。 <br />
-      </p>
+      <div v-for="(message, i) in $t('message')" :key="`p-${i}`">
+        <p class="text-center md:text-xl">{{ message }}</p>
+      </div>
       <a
         href="mailto:pyconjp@pycon.jp"
         class="mt-10 text-2xl font-semibold hover:underline"
@@ -62,3 +60,22 @@ export default {}
 </script>
 
 <style></style>
+
+<i18n>
+{
+  "en": {
+    "message": {
+      "p-1": "Please check the FAQ in advance.",
+      "p-2": "It is run by volunteers. It takes about a week to answer.",
+      "p-3": "Thank you for your patience."
+    }
+  },
+  "ja": {
+    "message": {
+      "p-1": "事前にFAQをご確認いただけますようにお願いします。",
+      "p-2": "ボランティアによる運営ですので、回答には1週間程度を要します。",
+      "p-3": "何卒お待ちいただけますようにお願いします。"
+    }
+  }
+}
+</i18n>

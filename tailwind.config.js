@@ -86,6 +86,7 @@ module.exports = {
     textColor: ['group-hover'],
     margin: ['responsive', 'first'],
     padding: ['responsive', 'odd', 'even'],
+    borderWidth: ['responsive', 'hover'],
   },
   plugins: [],
 }

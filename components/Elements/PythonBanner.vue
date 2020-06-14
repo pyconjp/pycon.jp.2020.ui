@@ -13,7 +13,7 @@
         direction === 'left'
           ? 'left-0 shadow-left rounded-l-xl'
           : 'right-0 shadow-right rounded-r-xl',
-        size === 'small' ? 'w-12' : 'w-20',
+        size === 'small' ? 'w-12' : 'w-20 md:w-32',
         direction === 'left' && size === 'small'
           ? '-translate-x-12'
           : direction === 'right' && size === 'small'
@@ -35,7 +35,7 @@
     </div>
 
     <div
-      class="flex flex-col px-4 py-8"
+      class="flex flex-col px-4 py-8 md:px-16"
       :class="direction == 'left' ? 'items-start' : 'items-end'"
     >
       <template v-if="size === 'big'">
