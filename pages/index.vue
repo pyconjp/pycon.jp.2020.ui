@@ -70,10 +70,10 @@
       size="big"
     >
       <template #title>
-        企業スポンサー様募集中
+        {{ $t('sponsor.title') }}
       </template>
       <template #content>
-        PyCon JP 2020を応援して下さるスポンサー様を募集しております
+        {{ $t('sponsor.content') }}
       </template>
       <template #button>
         <a
@@ -91,7 +91,7 @@
             <span
               class="ml-2 md:text-xl md:ml-6 md:mr-4 group-hover:text-white"
             >
-              スポンサーに申し込む
+              {{ $t('sponsor.button') }}
             </span>
           </button>
         </a>
@@ -100,10 +100,10 @@
 
     <python-banner direction="right" back-ground-color="#EE9D2C" size="big">
       <template #title>
-        チケット販売開始
+        {{ $t('ticket.title') }}
       </template>
       <template #content>
-        PyCon JP 2020のチケット販売を開始しました！
+        {{ $t('ticket.content') }}
       </template>
       <template #button>
         <button
@@ -111,7 +111,7 @@
         >
           <p class="w-6 h-6 rounded-full bg-py-orange-dark" />
           <span class="ml-2 md:text-xl md:ml-6 md:mr-4">
-            チケットを購入する
+            {{ $t('ticket.button') }}
           </span>
         </button>
         <img
@@ -129,7 +129,7 @@
         <h2 class="inline mb-2 text-4xl font-semibold md:text-6xl">
           NEWS
         </h2>
-        <p class="mb-8 text-xl md:text-2xl">-お知らせ-</p>
+        <p class="mb-8 text-xl md:text-2xl">{{ $t('news.subtitle') }}</p>
       </div>
       <div
         class="relative flex flex-col items-center justify-center w-full mt-6 bg-white rounded-py news-overview-content"
@@ -181,7 +181,7 @@
         <h2 class="inline mb-2 text-4xl font-semibold md:text-6xl">
           Overview
         </h2>
-        <p class="mb-8 text-xl md:text-2xl">-概要-</p>
+        <p class="mb-8 text-xl md:text-2xl">{{ $t('overview.subtitle') }}</p>
       </div>
       <div class="relative flex justify-center mt-6">
         <div
@@ -208,11 +208,10 @@
                 What is PyConJP?
               </h2>
               <h3 class="mb-8 text-xl font-medium md:text-2xl">
-                -PyConJpとは？-
+                {{ $t('overview.contentTitle') }}
               </h3>
               <p>
-                PyConは、Pythonユーザが集まり、PythonやPythonを使ったソフトウェアについて情報交換、交流をするためのカンファレンスです。
-                PyConJPの開催を通じて、Pythonの使い手が一堂に集まり、Pythonにまつわる様々な分野の知識や情報を交換し、新たな友達やコミュニティとのつながり、仕事やビジネスチャンスを増やせる場所とすることが目標です。
+                {{ $t('overview.content') }}
               </p>
               <nuxt-link to="/code-of-conduct" class="self-center">
                 <button
@@ -222,7 +221,7 @@
                     class="w-6 h-6 mr-auto rounded-full bg-py-black group-hover:bg-white"
                   />
                   <span class="-ml-4 md:text-xl group-hover:text-white">
-                    行動規範
+                    {{ $t('overview.button') }}
                   </span>
                   <p class="mr-auto" />
                 </button>
@@ -435,3 +434,50 @@ export default Vue.extend({
   width: 110px;
 }
 </style>
+
+<i18n>
+{
+  "en": {
+    "sponsor": {
+      "title": "Looking for corporate sponsors",
+      "content": "We are looking for sponsors to support PyCon JP 2020.",
+      "button": "Apply for Sponsor"
+    },
+    "ticket": {
+      "title": "Ticket sales start",
+      "content": "Ticket sales for PyCon JP 2020 have started!",
+      "button": "Buy a ticket"
+    },
+    "news": {
+      "subtitle": "-news-"
+    },
+    "overview": {
+      "subtitle": "-overview-",
+      "contentTitle": "-What is PyConJP?-",
+      "content": "PyCon is a conference for Python users to gather, exchange information and interact with Python and software using Python. Through PyCon JP, the goal is to gather Python users together, exchange knowledge and information on various fields related to Python, connect with new friends and communities, and increase work and business opportunities.",
+      "button": "Code of conduct"
+    }
+  },
+  "ja": {
+    "sponsor": {
+      "title": "企業スポンサー様募集中",
+      "content": "PyCon JP 2020を応援して下さるスポンサー様を募集しております",
+      "button": "スポンサーに申し込む"
+    },
+    "ticket": {
+      "title": "チケット販売開始",
+      "content": "PyCon JP 2020のチケット販売を開始しました！.",
+      "button": "チケットを購入する"
+    },
+    "news": {
+      "subtitle": "-お知らせ-"
+    },
+    "overview": {
+      "subtitle": "-概要-",
+      "contentTitle": "-PyConJpとは？-",
+      "content": "PyConは、Pythonユーザが集まり、PythonやPythonを使ったソフトウェアについて情報交換、交流をするためのカンファレンスです。PyConJPの開催を通じて、Pythonの使い手が一堂に集まり、Pythonにまつわる様々な分野の知識や情報を交換し、新たな友達やコミュニティとのつながり、仕事やビジネスチャンスを増やせる場所とすることが目標です。",
+      "button": "行動規範"
+    }
+  }
+}
+</i18n>
