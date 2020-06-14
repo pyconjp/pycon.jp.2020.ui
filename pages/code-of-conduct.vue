@@ -1,4 +1,4 @@
-vue<template>
+<template>
   <div class="flex flex-col items-center justify-start sm:mx-4 md:mx-8">
     <h1
       class="flex items-center justify-center w-screen h-32 text-2xl text-center bg-gray-200 md:h-56 sm:text-3xl md:text-4xl lg:text-5xl m-screen"

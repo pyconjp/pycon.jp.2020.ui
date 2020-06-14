@@ -18,7 +18,13 @@
         </h2>
         <div class="flex">
           <img :src="require('~/assets/img/twitter.png')" class="h-8" />
-          <a class="ml-2 text-xl text-blue-500">#pyconjp</a>
+          <a
+            class="ml-2 text-xl text-blue-500"
+            href="https://twitter.com/search?q=%23pyconjp&src=typed_query"
+            target="_blank"
+            rel="noopener noreferrer"
+            >#pyconjp</a
+          >
         </div>
       </div>
       <div
