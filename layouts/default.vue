@@ -1,12 +1,14 @@
 <template>
-  <div
-    class="flex flex-col min-h-screen px-6 font-sans sm:px-8 md:px-10 lg:px-12"
-  >
-    <pycon-header class="w-full text-gray-800" />
-    <main class="container flex flex-col flex-1 mx-auto">
+  <div class="flex flex-col min-h-screen">
+    <pycon-header class="w-full px-6 text-gray-800 sm:px-8 md:px-10 lg:px-12" />
+    <main
+      class="container flex flex-col flex-1 px-6 mx-auto sm:px-8 md:px-10 lg:px-12"
+    >
       <nuxt />
     </main>
-    <pycon-footer class="text-gray-800" />
+    <pycon-footer
+      class="px-6 text-gray-800 bg-py-blue-light sm:px-8 md:px-10 lg:px-12"
+    />
   </div>
 </template>
 
@@ -17,11 +19,11 @@ import PyconFooter from '~/components/Domains/Footer'
 export default {
   components: {
     PyconHeader,
-    PyconFooter
+    PyconFooter,
   },
   head() {
     return this.$nuxtI18nSeo()
-  }
+  },
 }
 </script>
 

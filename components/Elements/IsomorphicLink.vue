@@ -16,12 +16,12 @@
 export default {
   inheritAttrs: false,
   props: {
-    path: { type: String, required: true }
+    path: { type: String, required: true },
   },
   methods: {
     isInternalLink(path) {
       return !/^https?:\/\//.test(path)
-    }
-  }
+    },
+  },
 }
 </script>
