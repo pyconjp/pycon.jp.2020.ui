@@ -46,7 +46,7 @@ module.exports = {
         'py-blue-light': '#d4d4ff',
         'py-orange-light': '#ffd8a1',
         'py-blue-dark': '#3D40CB',
-        'py-orange-dark': '#E3AB4A',
+        'py-orange-dark': '#EE9D2C',
       },
       spacing: {
         72: '18rem',
@@ -82,6 +82,8 @@ module.exports = {
     },
   },
   variants: {
+    backgroundColor: ['hover', 'group-hover'],
+    textColor: ['group-hover'],
     margin: ['responsive', 'first'],
     padding: ['responsive', 'odd', 'even'],
   },
