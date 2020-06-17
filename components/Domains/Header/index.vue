@@ -35,7 +35,7 @@
             v-if="page.path !== 'event-list'"
             :path="page.path"
             :exact="page.path === '/' ? true : false"
-            class="mt-2 mr-0 hover:border-b-2 md:mr-2 md:mt-0 hover:border-gray-900"
+            class="mt-2 mr-0 md:mr-2 md:mt-0"
           >
             {{ page.title }}
           </header-link>

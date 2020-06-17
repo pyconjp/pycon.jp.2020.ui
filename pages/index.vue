@@ -7,24 +7,28 @@
         <h1 class="text-4xl font-extrabold leading-tight md:text-6xl">
           PyCon JP <br />2020 <span class="font-semibold">Online</span>
         </h1>
-        <h2 class="mt-6 text-2xl md:text-3xl">
-          <i class="material-icons">location_on</i>
-          Online Conference
-        </h2>
-        <h2 class="text-2xl md:text-3xl">
-          <i class="text-gray-700 material-icons">event</i>
-          <span class="font-semibold">2020 08/28 </span>(Fri.) /
-          <span class="font-semibold">29 </span>(Sat.)
-        </h2>
-        <div class="flex">
-          <img :src="require('~/assets/img/twitter.png')" class="h-8" />
-          <a
-            class="ml-2 text-xl text-blue-500"
-            href="https://twitter.com/search?q=%23pyconjp&src=typed_query"
-            target="_blank"
-            rel="noopener noreferrer"
-            >#pyconjp</a
+        <div class="mt-6 space-y-2">
+          <h2 class="flex items-center text-2xl md:text-3xl">
+            <i class="mr-2 material-icons">location_on</i>
+            Online Conference
+          </h2>
+          <h2
+            class="flex flex-wrap items-center justify-start text-2xl md:text-3xl"
           >
+            <i class="mr-2 text-gray-700 material-icons">event</i>
+            <span class="mr-1 font-semibold">2020 08/28 </span>(Fri.) /
+            <span class="mx-1 font-semibold">29 </span>(Sat.)
+          </h2>
+          <div class="flex items-center">
+            <img :src="require('~/assets/img/twitter.png')" class="h-6 mr-2" />
+            <a
+              class="text-2xl text-blue-400"
+              href="https://twitter.com/search?q=%23pyconjp&src=typed_query"
+              target="_blank"
+              rel="noopener noreferrer"
+              >#pyconjp</a
+            >
+          </div>
         </div>
       </div>
       <div
@@ -83,7 +87,7 @@
           rel="noopener noreferrer"
         >
           <button
-            class="flex items-center px-4 py-2 font-medium bg-white rounded-full shadow group md:px-6 md:py-6 text-py-black hover:bg-py-blue-dark focus:outline-none"
+            class="flex items-center px-4 py-2 font-medium transition-colors duration-200 bg-white rounded-full shadow group md:px-6 md:py-6 text-py-black hover:bg-py-blue-dark focus:outline-none"
           >
             <p
               class="w-6 h-6 rounded-full bg-py-blue-dark group-hover:bg-white"
@@ -136,27 +140,28 @@
         class="relative flex flex-col items-center justify-center w-full mt-6 bg-white md:w-3/4 rounded-py news-overview-content"
       >
         <div
-          class="relative z-10 flex flex-col justify-center w-4/5 py-8 space-y-6 bg-white rounded-py"
+          class="relative z-10 flex flex-col justify-center px-6 py-12 space-y-6 bg-white sm:px-10 md:px-16 rounded-py"
         >
-          <div
-            v-for="(item, i) in newsContents"
+          <article
+            v-for="(item, i) in news"
             :key="i"
             class="flex flex-col justify-between md:flex-row"
           >
-            <h3
+            <time
+              :datetime="formatISO(item.pubDate[0])"
               class="mb-2 text-lg font-medium text-left text-gray-700 md:text-xl md:mb-0"
             >
-              {{ item.date }}
-            </h3>
+              {{ format(item.pubDate[0]) }}
+            </time>
             <a
               class="w-full font-light md:ml-12 hover:underline"
               :href="item.link"
               target="_blank"
               rel="noopener noreferrer"
             >
-              {{ item.title }}
+              {{ item.title[0] }}
             </a>
-          </div>
+          </article>
         </div>
 
         <div
@@ -204,7 +209,7 @@
           <div
             class="relative z-10 flex flex-col justify-between w-full bg-white lg:flex-row rounded-py"
           >
-            <div class="flex flex-col flex-1 p-6 mx-2 md:mx-12">
+            <div class="flex flex-col flex-1 px-6 py-12 sm:px-10 md:px-16">
               <h2 class="inline mb-2 text-2xl font-semibold md:text-4xl">
                 What is PyConJP?
               </h2>
@@ -215,25 +220,24 @@
                 {{ $t('overview.content') }}
               </p>
               <nuxt-link
-                :to="localePath('code-of-conduct')"
+                :to="localePath('/code-of-conduct')"
                 class="self-center"
               >
                 <button
-                  class="flex items-center self-center justify-center w-40 px-2 py-2 mt-6 font-medium bg-white rounded-full shadow group md:w-64 md:px-6 md:py-6 text-py-black hover:bg-py-black focus:outline-none"
+                  class="flex items-center self-center justify-center px-2 py-2 mt-6 font-medium duration-200 bg-white rounded-full shadow group md:px-6 md:py-6 text-py-black hover:bg-py-black focus:outline-none transition-color"
                 >
                   <p
-                    class="w-6 h-6 mr-auto rounded-full bg-py-black group-hover:bg-white"
+                    class="w-6 h-6 rounded-full bg-py-black group-hover:bg-white"
                   />
-                  <span class="-ml-4 md:text-xl group-hover:text-white">
+                  <span class="mx-4 md:text-xl group-hover:text-white">
                     {{ $t('overview.button') }}
                   </span>
-                  <p class="mr-auto" />
                 </button>
               </nuxt-link>
             </div>
             <img
               :src="require('~/assets/img/overview.jpg')"
-              class="box-border object-cover object-left w-full h-64 md:h-auto lg:w-2/5"
+              class="box-border object-cover object-right w-full h-64 md:h-auto lg:w-2/5"
             />
           </div>
         </div>
@@ -317,15 +321,18 @@
 
 <script>
 import Vue from 'vue'
+import { format, formatISO } from 'date-fns'
 import PythonBanner from '~/components/Elements/PythonBanner'
 // import TalkContent from '~/components/Elements/TalkContent'
-
-// const { parseString } = require('xml2js')
 
 export default Vue.extend({
   components: {
     PythonBanner,
     // TalkContent,
+  },
+  async asyncData({ app }) {
+    const news = await app.$axios.$get(`/_nuxt/news.json`)
+    return { news }
   },
   data() {
     return {
@@ -360,13 +367,13 @@ export default Vue.extend({
       ],
     }
   },
-  async created() {
-    // TODO: ブログの最新情報をAPIで取得する
-    // const resp = await this.$axios.$get('/news')
-    // parseString(resp, (err, result) => {
-    //   console.log(result)
-    //   console.error(err)
-    // })
+  methods: {
+    format(date) {
+      return format(new Date(date), 'yyyy.MM.dd')
+    },
+    formatISO(date) {
+      return formatISO(new Date(date))
+    },
   },
   head() {
     return { title: 'PyCon JP 2020', titleTemplate: null }

@@ -53,8 +53,8 @@ export default {
     description:
       'PyCon JPは、Pythonユーザが集まり、PythonやPythonを使ったソフトウェアについて情報交換、交流をするためのカンファレンスです。',
     lang: 'ja',
-    theme_color: '#529b58',
-    background_color: '#bde0c0',
+    theme_color: '#3D40CB',
+    background_color: '#d4d4ff',
     display: 'standalone',
     scope: 'https://pycon.jp/2020',
     start_url: 'https://pycon.jp/2020',
@@ -151,6 +151,7 @@ export default {
     '@nuxtjs/sitemap',
     'nuxt-webfontloader',
     '@nuxtjs/proxy',
+    '~/modules/news',
   ],
   i18n: {
     vueI18nLoader: true,

@@ -1,14 +1,14 @@
 <template>
   <div class="flex flex-col items-center justify-start w-full mb-16 md:mb-32">
     <h1
-      class="flex items-center justify-center w-screen h-32 text-2xl font-semibold text-center text-py-black md:h-56 sm:text-3xl md:text-4xl lg:text-5xl m-screen"
+      class="flex items-center justify-center w-screen h-32 mb-8 text-2xl font-semibold text-center text-py-black md:h-56 sm:text-3xl md:text-4xl lg:text-5xl m-screen"
     >
       {{ $t('pages.code-of-conduct.title') }}
     </h1>
     <div class="relative flex flex-col items-center justify-center">
       <div class="relative z-10 flex justify-center w-screen bg-white m-screen">
         <div
-          class="w-11/12 px-2 border-4 border-solid md:px-10 lg:px-16 md:w-4/5 border-py-black rounded-xl"
+          class="w-11/12 px-6 border-4 border-solid sm:px-8 md:px-10 lg:px-12 md:w-4/5 border-py-black rounded-xl"
         >
           <div
             :class="
@@ -16,7 +16,7 @@
                 ? 'text-left leading-relaxed tracking-wide'
                 : 'text-justify leading-7 tracking-wider'
             "
-            class="flex flex-col items-start justify-start my-8 text-sm sm:text-base md:text-lg"
+            class="flex flex-col items-start justify-start my-8 md:text-lg"
           >
             <p
               v-for="(paragraph, i) in $t('paragraphs')"

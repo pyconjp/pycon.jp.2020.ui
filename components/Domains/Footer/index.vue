@@ -13,7 +13,7 @@
 
       <a
         href="mailto:pyconjp@pycon.jp"
-        class="px-4 py-2 mt-10 text-2xl font-semibold border border-py-black rounded-xl"
+        class="px-4 pt-2 pb-4 mt-10 text-2xl font-semibold duration-200 border border-py-black rounded-xl hover:bg-py-black hover:text-py-blue-light transition-color"
       >
         <i class="text-2xl align-middle material-icons">email</i>
         <span>pyconjp@pycon.jp</span>

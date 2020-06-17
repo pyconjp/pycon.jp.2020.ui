@@ -41,18 +41,18 @@
       <template v-if="size === 'big'">
         <h3
           v-show="hasTitle === true"
-          class="inline mb-6 text-xl text-white sm:text-2xl md:text-4xl"
+          class="inline mb-6 text-xl font-medium text-white sm:text-2xl lg:text-3xl"
         >
           <slot name="title">
             企業スポンサー様募集中
           </slot>
         </h3>
-        <p class="flex flex-col items-center text-white">
-          <slot name="content">
-            <span class="text-lg sm:text-xl md:text-2xl">
+        <p class="flex flex-col items-center">
+          <span class="font-light text-white sm:text-lg md:text-xl">
+            <slot name="content">
               PyCon JP 2020を応援して下さるスポンサー様を募集しております
-            </span>
-          </slot>
+            </slot>
+          </span>
           <slot name="button">
             <button
               class="flex items-center px-8 py-6 mt-4 bg-white rounded-full shadow text-py-black"

@@ -5,6 +5,7 @@
  ** Default: https://github.com/tailwindcss/tailwindcss/blob/master/stubs/defaultConfig.stub.js
  */
 const defaultTheme = require('tailwindcss/defaultTheme')
+const plugin = require('tailwindcss/plugin')
 
 module.exports = {
   purge: {
@@ -84,10 +85,30 @@ module.exports = {
   },
   variants: {
     backgroundColor: ['hover', 'group-hover'],
-    textColor: ['group-hover'],
+    textColor: ['hover', 'group-hover'],
     margin: ['responsive', 'first'],
     padding: ['responsive', 'odd', 'even'],
     borderWidth: ['responsive', 'hover'],
   },
-  plugins: [],
+  plugins: [
+    plugin(function ({ addComponents }) {
+      addComponents({
+        '.aspect': {
+          position: 'relative',
+          width: '100%',
+          height: '0',
+          '> *': {
+            position: 'absolute',
+            top: '0',
+            left: '0',
+            width: '100%',
+            height: '100%',
+          },
+        },
+        '.ratio-16-9': {
+          paddingBottom: '56.25%',
+        },
+      })
+    }),
+  ],
 }
