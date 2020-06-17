@@ -138,25 +138,26 @@
         <div
           class="relative z-10 flex flex-col justify-center w-4/5 py-8 space-y-6 bg-white rounded-py"
         >
-          <div
-            v-for="(item, i) in newsContents"
+          <article
+            v-for="(item, i) in news"
             :key="i"
             class="flex flex-col justify-between md:flex-row"
           >
-            <h3
+            <time
+              :datetime="formatISO(item.pubDate[0])"
               class="mb-2 text-lg font-medium text-left text-gray-700 md:text-xl md:mb-0"
             >
-              {{ item.date }}
-            </h3>
+              {{ format(item.pubDate[0]) }}
+            </time>
             <a
               class="w-full font-light md:ml-12 hover:underline"
               :href="item.link"
               target="_blank"
               rel="noopener noreferrer"
             >
-              {{ item.title }}
+              {{ item.title[0] }}
             </a>
-          </div>
+          </article>
         </div>
 
         <div
@@ -314,15 +315,20 @@
 
 <script>
 import Vue from 'vue'
+import { format, formatISO } from 'date-fns'
 import PythonBanner from '~/components/Elements/PythonBanner'
 // import TalkContent from '~/components/Elements/TalkContent'
 
 // const { parseString } = require('xml2js')
-
+// Mon, 15 Jun 2020 00:10:00 +0000
 export default Vue.extend({
   components: {
     PythonBanner,
     // TalkContent,
+  },
+  async asyncData({ app }) {
+    const news = await app.$axios.$get(`/_nuxt/news.json`)
+    return { news }
   },
   data() {
     return {
@@ -357,13 +363,13 @@ export default Vue.extend({
       ],
     }
   },
-  async created() {
-    // TODO: ブログの最新情報をAPIで取得する
-    // const resp = await this.$axios.$get('/news')
-    // parseString(resp, (err, result) => {
-    //   console.log(result)
-    //   console.error(err)
-    // })
+  methods: {
+    format(date) {
+      return format(new Date(date), 'yyyy.MM.dd')
+    },
+    formatISO(date) {
+      return formatISO(new Date(date))
+    },
   },
   head() {
     return { title: 'PyCon JP 2020', titleTemplate: null }

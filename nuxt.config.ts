@@ -151,6 +151,7 @@ export default {
     '@nuxtjs/sitemap',
     'nuxt-webfontloader',
     '@nuxtjs/proxy',
+    '~/modules/news',
   ],
   i18n: {
     vueI18nLoader: true,
@@ -204,6 +205,7 @@ export default {
   proxy: {
     '/news':
       'http://pyconjp.blogspot.com/feeds/posts/default/-/pyconjp2020?alt=rss&max-results=5',
+    '/todo': 'https://jsonplaceholder.typicode.com/todos',
   },
   /*
    ** Build configuration
