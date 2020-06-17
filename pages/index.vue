@@ -219,7 +219,10 @@
               <p>
                 {{ $t('overview.content') }}
               </p>
-              <nuxt-link to="/code-of-conduct" class="self-center">
+              <nuxt-link
+                :to="localePath('/code-of-conduct')"
+                class="self-center"
+              >
                 <button
                   class="flex items-center self-center justify-center px-2 py-2 mt-6 font-medium duration-200 bg-white rounded-full shadow group md:px-6 md:py-6 text-py-black hover:bg-py-black focus:outline-none transition-color"
                 >
