@@ -322,8 +322,6 @@ import { format, formatISO } from 'date-fns'
 import PythonBanner from '~/components/Elements/PythonBanner'
 // import TalkContent from '~/components/Elements/TalkContent'
 
-// const { parseString } = require('xml2js')
-// Mon, 15 Jun 2020 00:10:00 +0000
 export default Vue.extend({
   components: {
     PythonBanner,
