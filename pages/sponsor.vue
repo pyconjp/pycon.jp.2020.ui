@@ -80,7 +80,7 @@ export default Vue.extend({
   },
   head() {
     return { title: this.$t('pages.sponsor.title') }
-  }
+  },
 })
 </script>
 

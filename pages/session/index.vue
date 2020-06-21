@@ -8,7 +8,7 @@ export default {
   asyncData() {
     const sessions = require('~/mocks/session.json')
     return { sessions }
-  }
+  },
 }
 </script>
 

@@ -5,6 +5,7 @@
 @import 'tailwindcss/utilities';
 
 body {
+  @apply font-sans;
   -webkit-font-smoothing: subpixel-antialiased;
   -moz-osx-font-smoothing: unset;
   @media only screen and(-webkit-min-device-pixel-ratio: 2),(min-resolution: 2dppx) {

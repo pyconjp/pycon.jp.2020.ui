@@ -4,28 +4,16 @@
       "title": "PyCon JP 2020",
       "path": "/"
     },
-    "about": {
-      "title": "About",
-      "path": "/about"
-    },
-    "news": {
-      "title": "News",
-      "path": "https://pyconjp.blogspot.com/search/label/pyconjp2020"
-    },
     "code-of-conduct": {
       "title": "Code of Conduct",
       "path": "code-of-conduct"
     },
-    "sponsor": {
-      "title": "Sponsor",
-      "path": "/sponsor"
-    },
-    "staff": {
-      "title": "Staff",
-      "path": "/staff"
+    "news": {
+      "title": "News",
+      "path": "https://pyconjp.blogspot.com/search/label/pyconjp2020"
     }
   },
-  "language": "Language",
+  "language": "日本語",
   "error": {
     "404": "Page not found",
     "else": "Sorry, something went wrong",

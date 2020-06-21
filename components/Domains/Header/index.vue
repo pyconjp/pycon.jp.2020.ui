@@ -1,13 +1,10 @@
 <template>
   <div
-    class="flex flex-col max-w-screen-xl mx-auto md:items-center md:justify-between md:flex-row md:my-4"
+    class="flex flex-col max-w-screen-xl mx-auto md:items-center md:justify-between md:flex-row md:my-4 xl:w-3/4"
   >
     <div class="flex flex-row items-center justify-between py-4">
-      <n-link
-        :to="localePath('/')"
-        class="text-lg font-semibold tracking-widest text-gray-900 uppercase focus:outline-none focus:shadow-outline"
-      >
-        Pycon JP 2020
+      <n-link :to="localePath('/')">
+        <img :src="require('~/assets/img/header-logo.png')" class="w-40" />
       </n-link>
       <hamburger
         :is-drawer-open="isDrawerOpen"
@@ -29,24 +26,35 @@
         id="navigation"
         class="flex flex-col pb-4 md:pb-0 md:flex md:justify-end md:flex-row"
       >
-        <header-link
+        <div
           v-for="page in filteredPages"
           :key="page.path"
-          :path="page.path"
-          :exact="page.path === '/' ? true : false"
-          class="mt-2 md:mt-0 md:ml-2 md:first:ml-0"
+          class="flex flex-col pb-4 md:pb-0 md:flex md:justify-end md:flex-row"
         >
-          {{ page.title }}
-        </header-link>
-        <dropdown
-          :is-dropdown-open="isDropdownOpen"
-          @toggleDropdown="isDropdownOpen = !isDropdownOpen"
-        >
-          {{ $t('language') }}
-          <template #menu>
-            <locales-list v-if="isDropdownOpen" />
-          </template>
-        </dropdown>
+          <header-link
+            v-if="page.path !== 'event-list'"
+            :path="page.path"
+            :exact="page.path === '/' ? true : false"
+            class="mt-2 mr-0 md:mr-2 md:mt-0"
+          >
+            {{ page.title }}
+          </header-link>
+          <!-- <dropdown
+            v-else
+            :is-dropdown-open="isEventListDropdownOpen"
+            emit-event="toggleEventListDropdown"
+            @toggleEventListDropdown="
+              isEventListDropdownOpen = !isEventListDropdownOpen
+            "
+          >
+            {{ $t('pages.event-list.title') }}
+            <template #menu>
+              <locales-list v-if="isEventListDropdownOpen" />
+            </template>
+          </dropdown> -->
+        </div>
+
+        <locales-list />
       </nav>
     </transition>
   </div>
@@ -54,22 +62,23 @@
 
 <script>
 import Hamburger from '~/components/Domains/Header/Hamburger'
-import Dropdown from '~/components/Domains/Header/Dropdown'
+// import Dropdown from '~/components/Domains/Header/Dropdown'
 import LocalesList from '~/components/Domains/Header/LocalesList'
 import HeaderLink from '~/components/Domains/Header/HeaderLink'
 
 export default {
   components: {
     Hamburger,
-    Dropdown,
+    // Dropdown,
     LocalesList,
-    HeaderLink
+    HeaderLink,
   },
   data() {
     return {
       isDrawerOpen: false,
       isDropdownOpen: false,
-      isMobile: false
+      isEventListDropdownOpen: false,
+      isMobile: false,
     }
   },
   computed: {
@@ -80,7 +89,7 @@ export default {
         this.$i18n.t('pages'),
         ([_key, value]) => value.path !== '/'
       )
-    }
+    },
   },
   mounted() {
     this.$router.beforeEach((_to, _from, next) => {
@@ -126,8 +135,8 @@ export default {
     afterLeave(el) {
       el.style.height = ''
       el.style.overflow = ''
-    }
-  }
+    },
+  },
 }
 </script>
 

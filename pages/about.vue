@@ -13,7 +13,7 @@ export default Vue.extend({
   components: {},
   head() {
     return { title: this.$t('pages.about.title') }
-  }
+  },
 })
 </script>
 

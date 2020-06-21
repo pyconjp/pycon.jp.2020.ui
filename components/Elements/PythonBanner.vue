@@ -4,25 +4,25 @@
     :class="[
       direction == 'left' ? 'ml-auto' : 'mr-auto',
       size === 'small' ? 'w-50vw md:w-35vw' : 'w-70vw',
-      backGroundColor
     ]"
+    :style="{ 'background-color': backGroundColor }"
   >
     <div
       class="absolute inset-y-0 flex flex-col items-center justify-center h-full overflow-hidden transform"
       :class="[
         direction === 'left'
-          ? 'left-0 shadow-left rounded-l-xl'
-          : 'right-0 shadow-right rounded-r-xl',
-        size === 'small' ? 'w-12' : 'w-20',
+          ? 'left-0 shadow-left rounded-l-2xl'
+          : 'right-0 shadow-right rounded-r-2xl',
+        size === 'small' ? 'w-12' : 'w-20 md:w-32',
         direction === 'left' && size === 'small'
           ? '-translate-x-12'
           : direction === 'right' && size === 'small'
           ? 'translate-x-12'
           : direction === 'left' && size === 'big'
-          ? '-translate-x-20'
-          : 'translate-x-20',
-        backGroundColor
+          ? '-translate-x-20 md:-translate-x-32'
+          : 'translate-x-20 md:translate-x-32',
       ]"
+      :style="{ 'background-color': backGroundColor }"
     >
       <template v-if="size === 'small'">
         <div class="w-4 h-4 mb-4 bg-white rounded-full"></div>
@@ -35,22 +35,31 @@
     </div>
 
     <div
-      class="flex flex-col p-6"
+      class="flex flex-col px-4 py-8 md:px-16"
       :class="direction == 'left' ? 'items-start' : 'items-end'"
     >
       <template v-if="size === 'big'">
         <h3
           v-show="hasTitle === true"
-          class="inline mb-6 text-xl text-white border-b-2 border-white sm:text-2xl md:text-4xl"
+          class="inline mb-6 text-xl font-medium text-white sm:text-2xl lg:text-3xl"
         >
           <slot name="title">
             企業スポンサー様募集中
           </slot>
         </h3>
-        <p class="text-white sm:text-lg md:text-xl">
-          <slot name="content">
-            PyCon JP 2020を応援して下さるスポンサー様を募集しております<br />
-            <span class=" hover:underline">> 詳細はこちらから</span>
+        <p class="flex flex-col items-center">
+          <span class="font-light text-white sm:text-lg md:text-xl">
+            <slot name="content">
+              PyCon JP 2020を応援して下さるスポンサー様を募集しております
+            </slot>
+          </span>
+          <slot name="button">
+            <button
+              class="flex items-center px-8 py-6 mt-4 bg-white rounded-full shadow text-py-black"
+            >
+              <p class="w-6 h-6 mr-4 rounded-full bg-py-blue-dark" />
+              スポンサーに申し込む
+            </button>
           </slot>
         </p>
       </template>
@@ -73,24 +82,24 @@ export default {
         // The value must match one of these strings
         return ['left', 'right'].includes(value)
       },
-      default: 'left'
+      default: 'left',
     },
     backGroundColor: {
       type: String,
-      default: 'bg-blue-500'
+      default: '#3D40CB',
     },
     size: {
       validator(value) {
         // The value must match one of these strings
         return ['small', 'big'].includes(value)
       },
-      default: 'small'
+      default: 'small',
     },
     hasTitle: {
       type: Boolean,
-      default: true
-    }
-  }
+      default: true,
+    },
+  },
 }
 </script>
 
