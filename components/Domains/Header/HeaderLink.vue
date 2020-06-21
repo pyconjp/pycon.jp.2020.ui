@@ -1,8 +1,8 @@
 <template>
   <isomorphic-link
     v-bind="$attrs"
-    class="px-4 py-2 transition-colors duration-200 bg-transparent hover:text-gray-900 focus:outline-none"
-    active-class="text-gray-900 border-b-4 border-py-black"
+    class="px-4 py-2 transition-colors duration-200 bg-transparent border-b-2 border-white focus:outline-none hover:text-gray-600"
+    active-class="border-b-2 border-py-black"
     :path="path"
     v-on="$listeners"
   >
