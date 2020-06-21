@@ -82,7 +82,7 @@
       <template #button>
         <a
           class="mt-6"
-          href="https://pyconjp.blogspot.com/2020/06/2nd-period-of-sponsorship-application.html"
+          href="https://pyconjp.blogspot.com/2020/05/2020-sponsorship-application.html"
           target="_blank"
           rel="noopener noreferrer"
         >
