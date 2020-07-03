@@ -4,12 +4,18 @@ const sessionData = require('./mocks/session.json')
 
 export default {
   mode: 'spa',
+  router: {
+    base: '/2020/',
+  },
   /*
    ** Headers of the page
    */
   head: {
     titleTemplate: '%s - PyCon JP 2020',
     title: 'PyCon JP 2020',
+    base: {
+      href: 'router.base',
+    },
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },

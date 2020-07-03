@@ -331,7 +331,7 @@ export default Vue.extend({
     // TalkContent,
   },
   async asyncData({ app }) {
-    const news = await app.$axios.$get(`/_nuxt/news.json`)
+    const news = await app.$axios.$get(`/2020/_nuxt/news.json`)
     return { news }
   },
   data() {
