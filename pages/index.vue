@@ -339,37 +339,7 @@ export default Vue.extend({
     return { news }
   },
   data() {
-    return {
-      newsContents: [
-        {
-          date: '2020.06.10',
-          title:
-            'PyCon JP 2020 スタッフ全体オンラインミーティング(6月)を開催しました！',
-          link: 'https://pyconjp.blogspot.com/2020/06/pycon-jp-2020-6.html',
-        },
-        {
-          date: '2020.06.08',
-          title:
-            'PyCon JP 2020 スポンサー募集 2次募集期間開始のお知らせ / Sponsorship Application 2nd-Period starts',
-          link:
-            'https://pyconjp.blogspot.com/2020/06/2nd-period-of-sponsorship-application.html',
-        },
-        {
-          date: '2020.06.05',
-          title:
-            'PyCon JP 2020 Sponsorship Application FAQ / PyCon JP 2020の良くある問い合わせ/スポンサーシップ1次募集は本日まで!',
-          link:
-            'https://pyconjp.blogspot.com/2020/06/pycon-jp-2020-sponsorship-faq.html',
-        },
-        {
-          date: '2020.06.02',
-          title:
-            'PyCon JP 2020: 2日目のキーノートスピーカー決定のお知らせ/ Announcement of Keynote Speaker on Day 2',
-          link:
-            'https://pyconjp.blogspot.com/2020/06/pycon-jp-2020-2-announcement-of-keynote.html',
-        },
-      ],
-    }
+    return {}
   },
   methods: {
     format(date) {

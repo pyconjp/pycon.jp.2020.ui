@@ -1,15 +1,25 @@
 import ja from './locales/ja.json'
 import en from './locales/en.json'
 const sessionData = require('./mocks/session.json')
+require('dotenv').config()
 
 export default {
   mode: 'spa',
+  router: {
+    base: process.env.TARGET_BRANCH === 'master' ? '/2020/' : '',
+  },
+  env: {
+    targetBranch: process.env.TARGET_BRANCH,
+  },
   /*
    ** Headers of the page
    */
   head: {
     titleTemplate: '%s - PyCon JP 2020',
     title: 'PyCon JP 2020',
+    base: {
+      href: 'router.base',
+    },
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -80,6 +90,7 @@ export default {
     '@nuxtjs/stylelint-module',
     // Doc: https://github.com/nuxt-community/nuxt-tailwindcss
     '@nuxtjs/tailwindcss',
+    '@nuxtjs/dotenv',
   ],
   /*
    ** Nuxt.js modules
