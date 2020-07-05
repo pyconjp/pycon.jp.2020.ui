@@ -244,11 +244,12 @@
       </div>
     </section>
 
-    <!-- <section class="flex flex-col items-center justify-center space-y-12">
-      <div class="flex flex-col items-center justify-center my-24">
-        <h2 class="inline text-3xl md:text-5xl">
-          Session
+    <section class="flex flex-col items-center justify-center mt-12">
+      <div class="flex flex-col items-center">
+        <h2 class="inline mb-2 text-4xl font-semibold md:text-6xl">
+          Conference
         </h2>
+        <p class="mb-8 text-xl md:text-2xl">{{ $t('conference.subtitle') }}</p>
       </div>
       <python-banner direction="right" back-ground-color="#3D40CB" size="small">
         <template #title>
@@ -256,15 +257,33 @@
         </template>
       </python-banner>
 
-      <div class="flex flex-wrap justify-around">
-        <talk-content class="w-full md:w-2/5" talk-type="talk"></talk-content>
+      <div class="flex flex-wrap justify-around mt-12 mb-12">
         <talk-content
-          class="w-full mt-10 md:w-2/5 md:mt-0"
+          v-for="(keynote, index) in $t('keynote')"
+          :key="keynote.name"
+          class="w-full md:w-2/3 xl:w-2/5 xl:mt-0"
+          :class="[index == 0 ? 'mt-8' : 'mt-20']"
           talk-type="talk"
-        ></talk-content>
+        >
+          <template #image
+            ><img
+              :src="require(`~/assets/img/people/${keynote.image}`)"
+              class="object-cover object-top w-24 h-24 rounded-full md:w-40 md:h-40"
+          /></template>
+          <template #name>{{ keynote.name }}</template>
+          <template #date> {{ keynote.date }} </template>
+          <template #description>
+            <p
+              v-for="(description, index2) in keynote.description"
+              :key="`p-${index2}`"
+            >
+              {{ description }}
+            </p>
+          </template>
+        </talk-content>
       </div>
 
-      <python-banner direction="right" back-ground-color="#EE9D2C" size="small">
+      <!-- <python-banner direction="right" back-ground-color="#EE9D2C" size="small">
         <template #title>
           Invided talk
         </template>
@@ -313,9 +332,8 @@
         <template #title>
           Silver
         </template>
-      </python-banner>
+      </python-banner> -->
     </section>
-    -->
   </div>
 </template>
 
@@ -323,12 +341,12 @@
 import Vue from 'vue'
 import { format, formatISO } from 'date-fns'
 import PythonBanner from '~/components/Elements/PythonBanner'
-// import TalkContent from '~/components/Elements/TalkContent'
+import TalkContent from '~/components/Elements/TalkContent'
 
 export default Vue.extend({
   components: {
     PythonBanner,
-    // TalkContent,
+    TalkContent,
   },
   async asyncData({ app }) {
     const jsonPath =
@@ -441,7 +459,34 @@ export default Vue.extend({
       "contentTitle": "-What is PyConJP?-",
       "content": "PyCon is a conference for Python users to gather, exchange information and interact with Python and software using Python. Through PyCon JP, the goal is to gather Python users together, exchange knowledge and information on various fields related to Python, connect with new friends and communities, and increase work and business opportunities.",
       "button": "Code of conduct"
-    }
+    },
+    "conference": {
+      "subtitle": "-conference list-"
+    },
+    "keynote": [
+      {
+        "name": "Sejji Shiba",
+        "image": "Shiba_Image.jpg",
+        "date": "08/28",
+        "description": {
+          "p-1": "In 2017, he began self-taught machine learning, and in the same year, he became the runner-up in the Shogi (Japanese Chess) Den-O tournament he participated in for the first time.",
+          "p-2": "The following year, he won the World Computer Shogi Championship even though it was the first time he participated.。",
+          "p-3": "Since then, he has been a runner-up in the 2019 and 2020 meets and has a phenomenal one-point average ranking in the participating meets.",
+          "p-4": "He is a researcher who mainly works on numerical simulations, but most of his recent publications have been about shogi.",
+          "p-5": "His hobbies are beer and watching shogi."
+        }
+      },
+      {
+        "name": "Rich Jones",
+        "image": "Rich_Image.png",
+        "date": "08/29",
+        "description": {
+          "p-1": "Rich is the cofounder of Gun.io, a global consulting firm staffed by the best hackers from the Free and Open Source software community.",
+          "p-2": "He is the author of Zappa, the leading server-less Python framework, used by thousands of companies and users to save time and money for their web deployments. He has worked on everything from cloud GPU clusters for medical and scientific computing to mobile peer to peer file sharing applications, and on everything in between.",
+          "p-3": "In his spare time, he enjoys skateboarding, dirty southern trap music, and Laphroaig."
+        }
+      }
+    ]
   },
   "ja": {
     "sponsor": {
@@ -462,7 +507,34 @@ export default Vue.extend({
       "contentTitle": "-PyConJpとは？-",
       "content": "PyConは、Pythonユーザが集まり、PythonやPythonを使ったソフトウェアについて情報交換、交流をするためのカンファレンスです。PyConJPの開催を通じて、Pythonの使い手が一堂に集まり、Pythonにまつわる様々な分野の知識や情報を交換し、新たな友達やコミュニティとのつながり、仕事やビジネスチャンスを増やせる場所とすることが目標です。",
       "button": "行動規範"
-    }
+    },
+    "conference":{
+      "subtitle": "-会議一覧-"
+    },
+    "keynote": [
+      {
+        "name": "芝世弐",
+        "image": "Shiba_Image.jpg",
+        "date": "8月28日",
+        "description": {
+          "p-1": "2017年に独学で機械学習を始め，同年に初参加の将棋電王トーナメントにて準優勝。翌年には世界コンピュータ将棋選手権に初参加で優勝してしまう。",
+          "p-2": "以後，2019年および2020年の大会では準優勝と参加大会の平均順位が1点台という驚異的な強さを誇る。",
+          "p-3": "本職は数値シミュレーションを主とする研究者であるが最近の発表は大半将棋に関するものになっている。",
+          "p-4": "趣味はビールと将棋観戦。"
+        }
+      },
+      {
+        "name": "Rich Jones",
+        "image": "Rich_Image.png",
+        "date": "8月29日",
+        "description": {
+          "p-1": "RichはGun.ioの共同設立者です。",
+          "p-2": "Gui.ioはグローバルなコンサルティングファームで、フリーソフトウェアやオープンソースソフトウェアのコミュニティから来た最も優秀なエンジニア（ハッカー）たちが所属しています。",
+          "p-3": "彼は、Pythonにおける主要なサーバレスフレームワーク、Zappaの作者です。",
+          "p-4": "Zappaは、何千もの企業やユーザによって使われ、Web開発における時間と費用を節約しています。彼は医療や科学計算向けのクラウドGPUクラスタからモバイルのピア・ツー・ピアのファイル共有アプリまで、そしてその間にあるあらゆるものに取り組んできました。彼の趣味はスケートボード、サザン・ヒップホップと、ラフロイグを飲むことです。"
+        }
+      }
+    ]
   }
 }
 </i18n>
