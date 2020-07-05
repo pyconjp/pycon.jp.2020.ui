@@ -5,7 +5,10 @@ const sessionData = require('./mocks/session.json')
 export default {
   mode: 'spa',
   router: {
-    base: '/2020/',
+    base: process.env.targetBranch === 'master' ? '/2020/' : '',
+  },
+  env: {
+    targetBranch: process.env.TARGET_BRANCH || 'master',
   },
   /*
    ** Headers of the page
