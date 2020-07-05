@@ -1,0 +1,27 @@
+version: 0.1
+frontend:
+  phases:
+    preBuild:
+      commands:
+        - nvm install v12.16.2
+        - nvm use v12.16.2
+        - npm install -g yarn
+        - yarn install
+        - node -v
+    build:
+      commands:
+        - if [ "${AWS_BRANCH}" = "master" ]; then COMMAND="generate"; fi
+        - if [ "${AWS_BRANCH}" = "staging" ]; then COMMAND=""generate-staging""; fi
+        - yarn run ${COMMAND}
+    postBuild:
+      commands:
+        # - bash slack_post.sh
+
+  artifacts:
+    # IMPORTANT - Please verify your build output directory
+    baseDirectory: dist/
+    files:
+      - '**/*'
+  cache:
+    paths:
+      - node_modules/**/*
