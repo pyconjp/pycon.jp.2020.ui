@@ -2,7 +2,7 @@
   <div class="flex flex-col min-h-screen">
     <pycon-header class="w-full px-6 text-gray-800 sm:px-8 md:px-10 lg:px-12" />
     <main
-      class="container flex flex-col flex-1 px-6 mx-auto h-120 sm:px-8 md:px-10 lg:px-12"
+      class="container flex flex-col flex-1 px-6 mx-auto sm:px-8 md:px-10 lg:px-12"
     >
       <nuxt />
     </main>
