@@ -1,14 +1,15 @@
 import ja from './locales/ja.json'
 import en from './locales/en.json'
 const sessionData = require('./mocks/session.json')
+require('dotenv').config()
 
 export default {
   mode: 'spa',
   router: {
-    base: process.env.targetBranch === 'master' ? '/2020/' : '',
+    base: process.env.TARGET_BRANCH === 'master' ? '/2020/' : '',
   },
   env: {
-    targetBranch: process.env.TARGET_BRANCH || 'master',
+    targetBranch: process.env.TARGET_BRANCH,
   },
   /*
    ** Headers of the page
@@ -89,6 +90,7 @@ export default {
     '@nuxtjs/stylelint-module',
     // Doc: https://github.com/nuxt-community/nuxt-tailwindcss
     '@nuxtjs/tailwindcss',
+    '@nuxtjs/dotenv',
   ],
   /*
    ** Nuxt.js modules
