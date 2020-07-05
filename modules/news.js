@@ -27,12 +27,15 @@ module.exports = function apiModule() {
         })
       },
     })
-
+    const hrefPath =
+      process.env.TARGET_BRANCH === 'master'
+        ? `/2020${this.options.build.publicPath}news.json`
+        : `${this.options.build.publicPath}news.json`
     this.options.head.link = [
       ...this.options.head.link,
       {
         rel: 'prefetch',
-        href: `${this.options.build.publicPath}news.json`,
+        href: hrefPath,
         as: 'fetch',
       },
     ]
