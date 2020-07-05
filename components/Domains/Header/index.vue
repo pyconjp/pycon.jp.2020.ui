@@ -78,7 +78,7 @@ export default {
       isDrawerOpen: false,
       isDropdownOpen: false,
       isEventListDropdownOpen: false,
-      isMobile: false,
+      isMobile: true,
     }
   },
   computed: {

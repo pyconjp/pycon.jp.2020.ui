@@ -5,9 +5,11 @@
   "author": "Koji Ishimoto",
   "private": true,
   "scripts": {
-    "dev": "nuxt-ts",
+    "dev": "NUXT_ENV_TARGET_BRANCH=dev nuxt-ts",
     "build": "nuxt-ts build",
+    "build-staging": "NUXT_ENV_BRANCH=staging nuxt-ts build",
     "generate": "nuxt-ts generate",
+    "generate-staging": "NUXT_ENV_BRANCH=staging nuxt-ts generate",
     "start": "nuxt-ts start",
     "lint": "eslint --fix --ext .js,.ts,.vue --ignore-path .gitignore .",
     "test": "jest"
