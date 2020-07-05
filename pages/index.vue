@@ -332,7 +332,7 @@ export default Vue.extend({
   },
   async asyncData({ app }) {
     const jsonPath =
-      process.env.branch === 'master'
+      process.env.targetBranch === 'master'
         ? '/2020/_nuxt/news.json'
         : '/_nuxt/news.json'
     const news = await app.$axios.$get(jsonPath)
