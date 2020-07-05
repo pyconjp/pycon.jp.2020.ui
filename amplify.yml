@@ -10,9 +10,8 @@ frontend:
         - node -v
     build:
       commands:
-        - if [ "${AWS_BRANCH}" = "master" ]; then COMMAND="generate"; fi
-        - if [ "${AWS_BRANCH}" = "staging" ]; then COMMAND=""generate-staging""; fi
-        - yarn run ${COMMAND}
+        - if [ "${AWS_BRANCH}" = "master" ]; then cp -f .env-master .env; fi
+        - yarn run generate
     postBuild:
       commands:
         # - bash slack_post.sh

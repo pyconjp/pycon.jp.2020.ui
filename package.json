@@ -5,11 +5,9 @@
   "author": "Koji Ishimoto",
   "private": true,
   "scripts": {
-    "dev": "NUXT_ENV_TARGET_BRANCH=dev nuxt-ts",
+    "dev": "nuxt-ts",
     "build": "nuxt-ts build",
-    "build-staging": "NUXT_ENV_BRANCH=staging nuxt-ts build",
     "generate": "nuxt-ts generate",
-    "generate-staging": "NUXT_ENV_BRANCH=staging nuxt-ts generate",
     "start": "nuxt-ts start",
     "lint": "eslint --fix --ext .js,.ts,.vue --ignore-path .gitignore .",
     "test": "jest"
@@ -26,7 +24,7 @@
   "dependencies": {
     "@nuxt/typescript-runtime": "^0.4.10",
     "@nuxtjs/axios": "^5.3.6",
-    "@nuxtjs/dotenv": "^1.4.0",
+    "@nuxtjs/dotenv": "^1.4.1",
     "@nuxtjs/proxy": "^2.0.0",
     "@nuxtjs/pwa": "^3.0.0-0",
     "@nuxtjs/sitemap": "^2.2.0",
