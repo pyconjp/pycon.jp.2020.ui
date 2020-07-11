@@ -465,7 +465,7 @@ export default Vue.extend({
     },
     "keynote": [
       {
-        "name": "Sejji Shiba",
+        "name": "Seiji Shiba",
         "image": "Shiba_Image.jpg",
         "date": "08/28",
         "description": {
