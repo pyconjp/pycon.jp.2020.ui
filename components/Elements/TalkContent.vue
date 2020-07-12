@@ -1,7 +1,7 @@
 <template>
   <article class="relative">
     <div
-      class="relative z-10 flex flex-col items-center justify-center bg-white border-4 border-solid rounded-xl"
+      class="relative z-10 flex flex-col items-center justify-center bg-white border-8 border-solid rounded-xl"
       :style="{ 'border-color': '#3D40CB' }"
     >
       <div class="mx-6 my-4">
