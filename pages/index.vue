@@ -470,7 +470,7 @@ export default Vue.extend({
         "date": "08/28",
         "description": {
           "p-1": "In 2017, he began self-taught machine learning, and in the same year, he became the runner-up in the Shogi (Japanese Chess) Den-O tournament he participated in for the first time.",
-          "p-2": "The following year, he won the World Computer Shogi Championship even though it was the first time he participated.。",
+          "p-2": "The following year, he won the World Computer Shogi Championship even though it was the first time he participated.",
           "p-3": "Since then, he has been a runner-up in the 2019 and 2020 meets and has a phenomenal one-point average ranking in the participating meets.",
           "p-4": "He is a researcher who mainly works on numerical simulations, but most of his recent publications have been about shogi.",
           "p-5": "His hobbies are beer and watching shogi."
