@@ -1,55 +1,76 @@
 <template>
-  <div class="w-full">
-    <h3 class="flex items-center mb-4 text-xl sm:text-2xl lg:text-3xl">
-      <slot name="companyName">
-        ダミーの会社名です
-      </slot>
-      <i class="mt-1 ml-2 material-icons">launch</i>
-    </h3>
-    <p class="bg-blue-200 dummy-logo">Logo</p>
-    <div class="relative flex justify-center">
+  <div class="">
+    <article class="relative">
       <div
-        class="relative w-full toggle-button-bg sm:w-10/12 md:w-9/12 lg:w-8/12"
+        class="relative z-10 flex flex-col items-center justify-center bg-white border-8 border-solid rounded-xl"
+        :style="{ 'border-color': color }"
       >
-        <h4
-          class="z-10 w-1/2 text-center"
-          :class="{ 'active-toggle-button': isCompanyInformation }"
-          @click="
-            isCompanyInformation = true
-            isRecruitInformation = false
-          "
-        >
-          会社概要
-        </h4>
-        <div
-          class="active-toggle-button-bg"
-          :class="{ 'move-effect-toggle-button': isRecruitInformation }"
-        ></div>
-        <h4
-          class="z-10 w-1/2 text-center"
-          :class="{ 'active-toggle-button': isRecruitInformation }"
-          @click="
-            isCompanyInformation = false
-            isRecruitInformation = true
-          "
-        >
-          採用情報
-        </h4>
-      </div>
-    </div>
+        <div class="mx-6 my-4">
+          <div class="flex flex-col items-center justify-center mb-8">
+            <slot name="image"></slot>
+          </div>
+          <div class="flex flex-row items-center">
+            <h3 class="mb-2 text-xl sm:text-2xl lg:text-3xl">
+              <slot name="companyName">
+                ダミーの会社名です
+              </slot>
+            </h3>
+            <a target="_blank" rel="noopener noreferrer" :src="url"
+              ><i class="mt-1 ml-2 text-4xl material-icons">link</i>
+            </a>
+          </div>
 
-    <div class="flex flex-col items-center">
-      <div class="w-full pt-4 border border-gray-400 rounded-lg">
-        <p class="px-8 py-6 mt-2">
-          <slot v-if="isCompanyInformation" name="companyInformation">
-            ダミーの会社情報です
-          </slot>
-          <slot v-if="isRecruitInformation" name="recruitInformation">
-            ダミーの採用情報です
-          </slot>
-        </p>
+          <div class="flex flex-col items-center">
+            <div class="w-full">
+              <p class="px-2 mt-2 mb-8">
+                <slot v-if="isCompanyInformation" name="companyInformation">
+                  ダミーの会社情報です
+                </slot>
+                <slot v-if="isRecruitInformation" name="recruitInformation">
+                  ダミーの採用情報です
+                </slot>
+              </p>
+            </div>
+            <!-- <button
+              class="flex items-center self-center justify-center px-2 py-2 mt-6 font-medium duration-200 bg-white rounded-full shadow group md:px-6 md:py-4 text-py-black focus:outline-none transition-color"
+              :class="[
+                sponsorType === 'platinum'
+                  ? 'platinum-button-style'
+                  : 'gold-button-style',
+              ]"
+              @click="toggleDescription"
+            >
+              <p
+                class="w-6 h-6 rounded-full"
+                :class="[
+                  sponsorType === 'platinum'
+                    ? 'platinum-circle-style'
+                    : 'gold-circle-style',
+                ]"
+              />
+              <span v-if="isCompanyInformation" class="mx-4 md:text-xl">
+                採用情報へ
+              </span>
+              <span v-else class="mx-4 md:text-xl">
+                会社概要へ
+              </span>
+            </button> -->
+          </div>
+        </div>
       </div>
-    </div>
+      <div
+        class="absolute top-0 w-20 h-20 -mt-6 -ml-10 border-4 border-solid rounded-card-head"
+        :class="[
+          sponsorType === 'platinum' ? 'ml-0 left-1/2' : 'ml-10 left-3/4',
+        ]"
+        :style="{ 'border-color': color, 'background-color': color }"
+      >
+        <div class="relative">
+          <div class="absolute w-2 h-2 mt-2 ml-6 bg-white rounded-full"></div>
+          <div class="absolute w-2 h-2 mt-2 ml-10 bg-white rounded-full"></div>
+        </div>
+      </div>
+    </article>
   </div>
 </template>
 
@@ -58,8 +79,31 @@ import Vue from 'vue'
 
 export default Vue.extend({
   components: {},
+  props: {
+    sponsorType: {
+      type: String,
+      default: 'platinum',
+    },
+    url: {
+      type: String,
+      default: '',
+    },
+  },
   data() {
-    return { isCompanyInformation: true, isRecruitInformation: false }
+    return {
+      isCompanyInformation: true,
+      isRecruitInformation: false,
+      color: '#71A4F1',
+    }
+  },
+  created() {
+    this.color = this.sponsorType === 'platinum' ? '#71A4F1' : '#E3AB4A'
+  },
+  methods: {
+    toggleDescription() {
+      this.isCompanyInformation = !this.isCompanyInformation
+      this.isRecruitInformation = !this.isRecruitInformation
+    },
   },
 })
 </script>
@@ -105,5 +149,33 @@ export default Vue.extend({
 
 .move-effect-toggle-button {
   transform: translateX(100%);
+}
+
+.platinum-button-style {
+  background-color: white;
+}
+.platinum-button-style:hover {
+  background-color: #71a4f1;
+  color: white;
+}
+.platinum-circle-style {
+  background-color: #71a4f1;
+}
+.platinum-button-style:hover > .platinum-circle-style {
+  background-color: white;
+}
+
+.gold-button-style {
+  background-color: white;
+}
+.gold-button-style:hover {
+  background-color: #e3ab4a;
+  color: white;
+}
+.gold-circle-style {
+  background-color: #e3ab4a;
+}
+.gold-button-style:hover > .gold-circle-style {
+  background-color: white;
 }
 </style>

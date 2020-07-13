@@ -3,7 +3,9 @@
     class="relative h-auto shadow-lg m-screen"
     :class="[
       direction == 'left' ? 'ml-auto' : 'mr-auto',
-      size === 'small' ? 'w-50vw md:w-35vw' : 'w-70vw',
+      length === 'long' ? 'w-70vw' : '',
+      length === 'mid' ? 'w-50vw' : '',
+      length === 'small' ? 'w-35vw' : '',
     ]"
     :style="{ 'background-color': backGroundColor }"
   >
@@ -64,7 +66,10 @@
         </p>
       </template>
       <template v-else>
-        <h3 class="inline text-lg text-white sm:text-xl md:text-3xl">
+        <h3
+          class="inline mr-12 text-lg text-white sm:text-xl md:text-3xl"
+          :class="[size === 'small' ? 'font-bold' : '']"
+        >
           <slot name="title">
             企業スポンサー様募集中
           </slot>
@@ -94,6 +99,13 @@ export default {
         return ['small', 'big'].includes(value)
       },
       default: 'small',
+    },
+    length: {
+      validator(value) {
+        // The value must match one of these strings
+        return ['small', 'mid', 'long'].includes(value)
+      },
+      default: 'long',
     },
     hasTitle: {
       type: Boolean,

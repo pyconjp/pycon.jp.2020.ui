@@ -8,6 +8,10 @@
       "title": "行動規範",
       "path": "code-of-conduct"
     },
+    "sponsor": {
+      "title": "スポンサー",
+      "path": "sponsor"
+    },
     "news": {
       "title": "お知らせ",
       "path": "https://pyconjp.blogspot.com/search/label/pyconjp2020"
@@ -18,5 +22,114 @@
     "404": "お探しのページが見つかりません。",
     "else": "エラーが発生しました",
     "back": "トップページに戻る"
+  },
+  "sponsor": {
+    "platinum": [
+      {
+        "companyName": "会社A",
+        "url": "https://www.pycon.jp/",
+        "imagePath": "overview.jpg",
+        "description": "Apply for Sponsor",
+        "recruitInformation": "Apply for Sponsor"
+      },
+      {
+        "companyName": "会社B",
+        "url": "https://www.pycon.jp/",
+        "imagePath": "overview.jpg",
+        "description": "Apply for Sponsor",
+        "recruitInformation": "Apply for Sponsor"
+      },
+      {
+        "companyName": "会社C",
+        "url": "https://www.pycon.jp/",
+        "imagePath": "overview.jpg",
+        "description": "Apply for Sponsor",
+        "recruitInformation": "Apply for Sponsor"
+      }
+    ],
+    "gold": [
+      {
+        "companyName": "会社D",
+        "url": "We are looking for sponsors to support PyCon JP 2020.",
+        "imagePath": "overview.jpg",
+        "description": "Apply for Sponsor",
+        "recruitInformation": "Apply for Sponsor"
+      },
+      {
+        "companyName": "会社E",
+        "url": "We are looking for sponsors to support PyCon JP 2020.",
+        "imagePath": "overview.jpg",
+        "description": "Apply for Sponsor",
+        "recruitInformation": "Apply for Sponsor"
+      },
+      {
+        "companyName": "会社F",
+        "url": "We are looking for sponsors to support PyCon JP 2020.",
+        "imagePath": "overview.jpg",
+        "description": "Apply for Sponsor",
+        "recruitInformation": "Apply for Sponsor"
+      },
+      {
+        "companyName": "会社G",
+        "url": "We are looking for sponsors to support PyCon JP 2020.",
+        "imagePath": "overview.jpg",
+        "description": "Apply for Sponsor",
+        "recruitInformation": "Apply for Sponsor"
+      },
+      {
+        "companyName": "会社H",
+        "url": "We are looking for sponsors to support PyCon JP 2020.",
+        "imagePath": "overview.jpg",
+        "description": "Apply for Sponsor",
+        "recruitInformation": "Apply for Sponsor"
+      },
+      {
+        "companyName": "会社I",
+        "url": "We are looking for sponsors to support PyCon JP 2020.",
+        "imagePath": "overview.jpg",
+        "description": "Apply for Sponsor",
+        "recruitInformation": "Apply for Sponsor"
+      },
+      {
+        "companyName": "会社J",
+        "url": "We are looking for sponsors to support PyCon JP 2020.",
+        "imagePath": "overview.jpg",
+        "description": "Apply for Sponsor",
+        "recruitInformation": "Apply for Sponsor"
+      },
+      {
+        "companyName": "会社K",
+        "url": "We are looking for sponsors to support PyCon JP 2020.",
+        "imagePath": "overview.jpg",
+        "description": "Apply for Sponsor",
+        "recruitInformation": "Apply for Sponsor"
+      }
+    ],
+    "silver": [
+      {
+        "companyName": "会社MAAAAAAAAAAAAA"
+      },
+      {
+        "companyName": "会社N"
+      },
+      {
+        "companyName": "会社O"
+      },
+      {
+        "companyName": "会社P"
+      },
+      {
+        "companyName": "会社Q"
+      },
+      {
+        "companyName": "会社R"
+      },
+      {
+        "companyName": "会社S"
+      },
+      {
+        "companyName": "会社T"
+      }
+    ]
   }
 }

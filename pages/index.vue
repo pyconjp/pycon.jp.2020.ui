@@ -306,33 +306,77 @@
         <template #title>
           Sessions
         </template>
-      </python-banner>
+      </python-banner> -->
     </section>
 
     <section class="flex flex-col items-center justify-center space-y-12">
-      <h2
-        class="inline text-3xl border-b-8 border-blue-600 border-solid md:text-5xl"
-      >
-        Sponsor
-      </h2>
+      <div class="flex flex-col items-center">
+        <h2 class="inline mb-2 text-4xl font-semibold md:text-6xl">
+          Sponsor
+        </h2>
+        <p class="mb-8 text-xl md:text-2xl">{{ $t('sponsor.subTitle') }}</p>
+      </div>
 
-      <python-banner direction="right" back-ground-color="#71A4F1" size="small">
+      <python-banner
+        direction="right"
+        back-ground-color="#71A4F1"
+        size="small"
+        length="long"
+      >
         <template #title>
           Platinum
         </template>
       </python-banner>
 
-      <python-banner direction="right" back-ground-color="#E3AB4A" size="small">
+      <div class="flex flex-wrap items-center justify-center">
+        <img
+          v-for="platinum in $t('sponsor.platinum')"
+          :key="platinum.companyName"
+          :src="require(`~/assets/img/sponsor/${platinum.imagePath}`)"
+          class="block w-full m-8 md:w-2/5"
+        />
+      </div>
+
+      <python-banner
+        direction="right"
+        back-ground-color="#E3AB4A"
+        sie="small"
+        length="mid"
+      >
         <template #title>
           Gold
         </template>
       </python-banner>
 
-      <python-banner direction="right" back-ground-color="#818181" size="small">
+      <div class="flex flex-wrap items-center justify-center">
+        <img
+          v-for="gold in $t('sponsor.gold')"
+          :key="gold.companyName"
+          :src="require(`~/assets/img/sponsor/${gold.imagePath}`)"
+          class="block w-full m-8 md:w-1/3"
+        />
+      </div>
+
+      <python-banner
+        direction="right"
+        back-ground-color="#818181"
+        size="small"
+        length="small"
+      >
         <template #title>
           Silver
         </template>
-      </python-banner> -->
+      </python-banner>
+
+      <div class="grid grid-cols-2 gap-4 pb-8 md:grid-cols-3">
+        <p
+          v-for="silver in $t('sponsor.silver')"
+          :key="silver.companyName"
+          class="text-2xl break-all"
+        >
+          {{ silver.companyName }}
+        </p>
+      </div>
     </section>
   </div>
 </template>
@@ -444,7 +488,8 @@ export default Vue.extend({
     "sponsor": {
       "title": "Looking for corporate sponsors",
       "content": "We are looking for sponsors to support PyCon JP 2020.",
-      "button": "Apply for Sponsor"
+      "button": "Apply for Sponsor",
+      "subTitle": "sponsor"
     },
     "ticket": {
       "title": "Ticket sales start",
@@ -492,7 +537,8 @@ export default Vue.extend({
     "sponsor": {
       "title": "企業スポンサー様募集中",
       "content": "PyCon JP 2020を応援して下さるスポンサー様を募集しております",
-      "button": "スポンサーに申し込む"
+      "button": "スポンサーに申し込む",
+      "subTitle": "スポンサー"
     },
     "ticket": {
       "title": "チケット販売開始",
@@ -529,7 +575,7 @@ export default Vue.extend({
         "date": "8月29日",
         "description": {
           "p-1": "RichはGun.ioの共同設立者です。",
-          "p-2": "Gui.ioはグローバルなコンサルティングファームで、フリーソフトウェアやオープンソースソフトウェアのコミュニティから来た最も優秀なエンジニア（ハッカー）たちが所属しています。",
+          "p-2": "Gun.ioはグローバルなコンサルティングファームで、フリーソフトウェアやオープンソースソフトウェアのコミュニティから来た最も優秀なエンジニア（ハッカー）たちが所属しています。",
           "p-3": "彼は、Pythonにおける主要なサーバレスフレームワーク、Zappaの作者です。",
           "p-4": "Zappaは、何千もの企業やユーザによって使われ、Web開発における時間と費用を節約しています。彼は医療や科学計算向けのクラウドGPUクラスタからモバイルのピア・ツー・ピアのファイル共有アプリまで、そしてその間にあるあらゆるものに取り組んできました。彼の趣味はスケートボード、サザン・ヒップホップと、ラフロイグを飲むことです。"
         }

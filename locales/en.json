@@ -8,6 +8,10 @@
       "title": "Code of Conduct",
       "path": "code-of-conduct"
     },
+    "sponsor": {
+      "title": "Sponsor",
+      "path": "sponsor"
+    },
     "news": {
       "title": "News",
       "path": "https://pyconjp.blogspot.com/search/label/pyconjp2020"
@@ -18,5 +22,114 @@
     "404": "Page not found",
     "else": "Sorry, something went wrong",
     "back": "Back to Homepage"
+  },
+  "sponsor": {
+    "platinum": [
+      {
+        "companyName": "CompanyA",
+        "url": "https://www.pycon.jp/",
+        "imagePath": "overview.jpg",
+        "description": "PyconJP??",
+        "recruitInformation": "saiyoujyoho"
+      },
+      {
+        "companyName": "CompanyB",
+        "url": "https://www.pycon.jp/",
+        "imagePath": "overview.jpg",
+        "description": "Apply for Sponsor",
+        "recruitInformation": "Apply for Sponsor"
+      },
+      {
+        "companyName": "CompanyC",
+        "url": "https://www.pycon.jp/",
+        "imagePath": "overview.jpg",
+        "description": "Apply for Sponsor",
+        "recruitInformation": "Apply for Sponsor"
+      }
+    ],
+    "gold": [
+      {
+        "companyName": "CompanyD",
+        "url": "https://www.pycon.jp/",
+        "imagePath": "overview.jpg",
+        "description": "Apply for Sponsor",
+        "recruitInformation": "Apply for Sponsor"
+      },
+      {
+        "companyName": "CompanyE",
+        "url": "https://www.pycon.jp/",
+        "imagePath": "overview.jpg",
+        "description": "Apply for Sponsor",
+        "recruitInformation": "Apply for Sponsor"
+      },
+      {
+        "companyName": "CompanyF",
+        "url": "https://www.pycon.jp/",
+        "imagePath": "overview.jpg",
+        "description": "Apply for Sponsor",
+        "recruitInformation": "Apply for Sponsor"
+      },
+      {
+        "companyName": "CompanyG",
+        "url": "https://www.pycon.jp/",
+        "imagePath": "overview.jpg",
+        "description": "Apply for Sponsor",
+        "recruitInformation": "Apply for Sponsor"
+      },
+      {
+        "companyName": "CompanyH",
+        "url": "https://www.pycon.jp/",
+        "imagePath": "overview.jpg",
+        "description": "Apply for Sponsor",
+        "recruitInformation": "Apply for Sponsor"
+      },
+      {
+        "companyName": "CompanyI",
+        "url": "https://www.pycon.jp/",
+        "imagePath": "overview.jpg",
+        "description": "Apply for Sponsor",
+        "recruitInformation": "Apply for Sponsor"
+      },
+      {
+        "companyName": "CompanyJ",
+        "url": "https://www.pycon.jp/",
+        "imagePath": "overview.jpg",
+        "description": "Apply for Sponsor",
+        "recruitInformation": "Apply for Sponsor"
+      },
+      {
+        "companyName": "CompanyK",
+        "url": "https://www.pycon.jp/",
+        "imagePath": "overview.jpg",
+        "description": "Apply for Sponsor",
+        "recruitInformation": "Apply for Sponsor"
+      }
+    ],
+    "silver": [
+      {
+        "companyName": "CompanyM"
+      },
+      {
+        "companyName": "CompanyN"
+      },
+      {
+        "companyName": "CompanyO"
+      },
+      {
+        "companyName": "CompanyP"
+      },
+      {
+        "companyName": "CompanyQ"
+      },
+      {
+        "companyName": "CompanyR"
+      },
+      {
+        "companyName": "CompanyS"
+      },
+      {
+        "companyName": "CompanyT"
+      }
+    ]
   }
 }
