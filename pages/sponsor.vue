@@ -24,11 +24,12 @@
       </template>
     </python-banner>
 
-    <div class="flex flex-wrap items-center justify-center mt-8">
+    <div class="flex flex-wrap items-start justify-center mt-8">
       <platinum-and-gold-sponsor
         v-for="platinum in $t('sponsor.platinum')"
         :key="platinum.companyName"
         sponsor-type="platinum"
+        :url="platinum.url"
         class="w-full mt-10 lg:w-2/5 lg:mx-8"
       >
         <template #image>
@@ -60,11 +61,12 @@
         GOLD
       </template>
     </python-banner>
-    <div class="flex flex-wrap items-center justify-center mt-8">
+    <div class="flex flex-wrap items-start justify-center mt-8">
       <platinum-and-gold-sponsor
         v-for="gold in $t('sponsor.gold')"
         :key="gold.companyName"
         sponsor-type="gold"
+        :url="gold.url"
         class="w-full mt-10 lg:w-1/3 lg:mx-8"
       >
         <template #image>
@@ -77,7 +79,7 @@
           {{ gold.companyName }}
         </template>
         <template #companyInformation>
-          {{ gold.companyName }}
+          {{ gold.description }}
         </template>
         <template #recruitInformation>
           {{ gold.companyName }}
@@ -97,14 +99,18 @@
       </template>
     </python-banner>
 
-    <div class="grid grid-cols-2 gap-4 mt-8 md:grid-cols-3">
-      <p
+    <div class="grid grid-cols-1 gap-4 mt-8 md:grid-cols-2">
+      <a
         v-for="silver in $t('sponsor.silver')"
         :key="silver.companyName"
-        class="text-2xl break-all"
+        :href="silver.url"
+        target="_blank"
+        rel="noopener noreferrer"
       >
-        {{ silver.companyName }}
-      </p>
+        <p class="text-2xl break-all">
+          {{ silver.companyName }}
+        </p></a
+      >
     </div>
   </div>
 </template>

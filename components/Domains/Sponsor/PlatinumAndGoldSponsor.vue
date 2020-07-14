@@ -10,12 +10,14 @@
             <slot name="image"></slot>
           </div>
           <div class="flex flex-row items-center">
-            <h3 class="mb-2 text-xl sm:text-2xl lg:text-3xl">
-              <slot name="companyName">
-                ダミーの会社名です
-              </slot>
-            </h3>
-            <a target="_blank" rel="noopener noreferrer" :src="url"
+            <a target="_blank" rel="noopener noreferrer" :href="url">
+              <h3 class="mb-2 text-xl sm:text-2xl lg:text-3xl">
+                <slot name="companyName">
+                  ダミーの会社名です
+                </slot>
+              </h3>
+            </a>
+            <a target="_blank" rel="noopener noreferrer" :href="url"
               ><i class="mt-1 ml-2 text-4xl material-icons">link</i>
             </a>
           </div>

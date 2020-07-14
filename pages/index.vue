@@ -329,12 +329,16 @@
       </python-banner>
 
       <div class="flex flex-wrap items-center justify-center">
-        <img
+        <a
           v-for="platinum in $t('sponsor.platinum')"
           :key="platinum.companyName"
-          :src="require(`~/assets/img/sponsor/${platinum.imagePath}`)"
-          class="block w-full m-8 md:w-2/5"
-        />
+          :href="platinum.url"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="w-full m-8 md:w-2/5"
+        >
+          <img :src="require(`~/assets/img/sponsor/${platinum.imagePath}`)"
+        /></a>
       </div>
 
       <python-banner
@@ -349,12 +353,16 @@
       </python-banner>
 
       <div class="flex flex-wrap items-center justify-center">
-        <img
+        <a
           v-for="gold in $t('sponsor.gold')"
           :key="gold.companyName"
-          :src="require(`~/assets/img/sponsor/${gold.imagePath}`)"
-          class="block w-full m-8 md:w-1/3"
-        />
+          :href="gold.url"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="w-full m-8 md:w-1/3"
+        >
+          <img :src="require(`~/assets/img/sponsor/${gold.imagePath}`)" />
+        </a>
       </div>
 
       <python-banner
@@ -368,7 +376,7 @@
         </template>
       </python-banner>
 
-      <div class="grid grid-cols-2 gap-4 pb-8 md:grid-cols-3">
+      <div class="grid grid-cols-1 gap-4 pb-8 md:grid-cols-2">
         <p
           v-for="silver in $t('sponsor.silver')"
           :key="silver.companyName"
