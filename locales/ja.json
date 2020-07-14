@@ -26,21 +26,21 @@
   "sponsor": {
     "platinum": [
       {
-        "companyName": "会社A",
-        "url": "https://www.pycon.jp/",
-        "imagePath": "overview.jpg",
-        "description": "Apply for Sponsor",
-        "recruitInformation": "Apply for Sponsor"
+        "companyName": "株式会社リーディング・エッジ社（Python Start Lab Online）",
+        "url": "https://online.startlab.jp/Online.html",
+        "imagePath": "platinum1.jpg",
+        "description": "",
+        "recruitInformation": ""
       },
       {
-        "companyName": "会社B",
-        "url": "https://www.pycon.jp/",
-        "imagePath": "overview.jpg",
-        "description": "Apply for Sponsor",
-        "recruitInformation": "Apply for Sponsor"
+        "companyName": "HENNGE株式会社",
+        "url": "https://hennge.com/jp/",
+        "imagePath": "platinum2.jpg",
+        "description": "HENNGEは、変化する働き⽅の最前線にいます。私たちは変⾰をもたらすテクノロジーの⼒を活⽤し、それを誰もが安全に利⽤できるように提供しています。クラウドセキュリティサービス「HENNGE One」を利⽤することで、お客様はどこからでもクラウドの⼒を安全に活⽤し、柔軟な作業環境を導⼊することが可能になります。クラウドセキュリティを活⽤することで、従業員はよりスマートに仕事に集中し、仕事の質を向上させ、ビジネスの成果を上げることができます。",
+        "recruitInformation": "事業の成⻑に伴いソフトウェアエンジニアを募集しています。私たちHENNGEは「テクノロジーの開放」をビジョンに、テクノロジーとその利⽤におけるギャップの橋渡し役として、お客様に新しい価値を提供することを使命としています。10カ国以上から集まった仲間とともに、アーリーアダプターとして新しいテクノロジーやフレームワークに⾃ら触れ、得られた成果を⾼品質なサービスとしてお客様に届けるチームに加わっていただける⽅からの応募をお待ちしております。"
       },
       {
-        "companyName": "会社C",
+        "companyName": "日本マイクロソフト株式会社",
         "url": "https://www.pycon.jp/",
         "imagePath": "overview.jpg",
         "description": "Apply for Sponsor",
@@ -49,57 +49,57 @@
     ],
     "gold": [
       {
-        "companyName": "会社D",
-        "url": "We are looking for sponsors to support PyCon JP 2020.",
-        "imagePath": "overview.jpg",
-        "description": "Apply for Sponsor",
-        "recruitInformation": "Apply for Sponsor"
+        "companyName": "一般社団法人Pythonエンジニア育成推進協会",
+        "url": "https://www.pythonic-exam.com/",
+        "imagePath": "gold1.png",
+        "description": "Pythonエンジニア認定基礎試験に加え、6月よりPython3エンジニア認定データ分析試験を開始しました。全国200か所で通年受験が可能です。受験料金は1万円（税抜）で覚張は半額です。学習後のチェックにいかがでしょうか？",
+        "recruitInformation": ""
       },
       {
-        "companyName": "会社E",
-        "url": "We are looking for sponsors to support PyCon JP 2020.",
-        "imagePath": "overview.jpg",
-        "description": "Apply for Sponsor",
-        "recruitInformation": "Apply for Sponsor"
+        "companyName": "株式会社アイリッジ",
+        "url": "https://iridge.jp/",
+        "imagePath": "gold2.jpg",
+        "description": "「Tech Tomorrow」をミッションに、自社プロダクト開発やスマートフォンアプリの受託開発を行なっています。 Python/Djangoを使ったO2O/OMOソリューション「FANSHIP」を始めとして、アプリのバックエンドサーバー、業務を改善するちょっとしたスクリプトまでPythonで開発しています。技術カンファレンスへの協賛や、個人の取組に関する週次のもくもく会・FlyHigh Friday、月次の集中開発・Issue Bashなどの社内勉強会も活発で、技術力向上に積極的です。",
+        "recruitInformation": ""
       },
       {
-        "companyName": "会社F",
-        "url": "We are looking for sponsors to support PyCon JP 2020.",
-        "imagePath": "overview.jpg",
-        "description": "Apply for Sponsor",
-        "recruitInformation": "Apply for Sponsor"
+        "companyName": "株式会社ブレインパッド",
+        "url": "https://www.brainpad.co.jp/",
+        "imagePath": "gold3.png",
+        "description": "",
+        "recruitInformation": ""
       },
       {
-        "companyName": "会社G",
-        "url": "We are looking for sponsors to support PyCon JP 2020.",
-        "imagePath": "overview.jpg",
-        "description": "Apply for Sponsor",
-        "recruitInformation": "Apply for Sponsor"
+        "companyName": "株式会社いい生活",
+        "url": "https://www.e-seikatsu.info/",
+        "imagePath": "gold4.png",
+        "description": "いい生活は「すべての人の生活に関わる\"不動産市場\"を、テクノロジーでより良いものへ。」をミッションに掲げ、不動産業界で起きている情報の格差、非効率性を改善するサービスの提供を行っています。不動産ビジネスの生産性向上のための「ESいい物件One」、住まいに関するコミュニケーションをサポートする「pocketpost」などを開発しています。いい生活は、ITサービスを通じて、住まい・不動産の分野において、もっと多くの「幸せ」や「いい生活」を実現してまいります。",
+        "recruitInformation": ""
       },
       {
-        "companyName": "会社H",
-        "url": "We are looking for sponsors to support PyCon JP 2020.",
-        "imagePath": "overview.jpg",
-        "description": "Apply for Sponsor",
-        "recruitInformation": "Apply for Sponsor"
+        "companyName": "株式会社ビザスク",
+        "url": "https://visasq.co.jp/",
+        "imagePath": "gold5.png",
+        "description": "",
+        "recruitInformation": ""
       },
       {
-        "companyName": "会社I",
-        "url": "We are looking for sponsors to support PyCon JP 2020.",
+        "companyName": "株式会社日本システム技研",
+        "url": "https://jsl.co.jp",
         "imagePath": "overview.jpg",
-        "description": "Apply for Sponsor",
-        "recruitInformation": "Apply for Sponsor"
+        "description": "株式会社日本システム技研(JSL)は「「技術力×人間力」で社会から注目され続ける企業になること」をビジョンに長野でPythonとAWSを中心としたWebの業務を中心に開発をしています。積極的に外部への情報発信を行うためコワーキングスペースGEEKLAB.NAGANO(ギークラボ・ナガノ)を運営しています。GEEKLAB.NAGANOは、PythonやDjango、AWS、ディープラーニング、IoTなど新しい技術に関心があるエンジニアが集まり勉強会を開催しています。",
+        "recruitInformation": ""
       },
       {
-        "companyName": "会社J",
-        "url": "We are looking for sponsors to support PyCon JP 2020.",
-        "imagePath": "overview.jpg",
-        "description": "Apply for Sponsor",
-        "recruitInformation": "Apply for Sponsor"
+        "companyName": "株式会社LegalForce",
+        "url": "https://www.legalforce.co.jp/",
+        "imagePath": "gold7.png",
+        "description": "LegalForceはAIを用いたクラウド型契約書レビュー支援ソフトウェア 「LegalForce」を提供しています。契約書をアップロードすると、自動で契約書に含まれるリスクに対してアラートを出し、修正文例をサジェストします。開発はPythonやRuby、JavaScriptを中心としており、FlaskやFastAPIを用いたWebアプリケーションやElasticsearchを用いた検索システム、BigQueryを用いたデータ基盤、MLOps基盤、自然言語処理システムの開発を行っています。Pythonエンジニアを積極募集中！！",
+        "recruitInformation": ""
       },
       {
-        "companyName": "会社K",
-        "url": "We are looking for sponsors to support PyCon JP 2020.",
+        "companyName": "ジョンソン・エンド・ジョンソン 日本法人グループ",
+        "url": "",
         "imagePath": "overview.jpg",
         "description": "Apply for Sponsor",
         "recruitInformation": "Apply for Sponsor"
@@ -107,28 +107,36 @@
     ],
     "silver": [
       {
-        "companyName": "会社MAAAAAAAAAAAAA"
+        "companyName": "株式会社オープングルーヴ",
+        "url": "https://tracpath.com/"
       },
       {
-        "companyName": "会社N"
+        "companyName": "Nexedi",
+        "url": "https://www.nexedi.com/"
       },
       {
-        "companyName": "会社O"
+        "companyName": "OLTA株式会社",
+        "url": "https://corp.olta.co.jp"
       },
       {
-        "companyName": "会社P"
+        "companyName": "Classi株式会社",
+        "url": "https://corp.classi.jp/"
       },
       {
-        "companyName": "会社Q"
+        "companyName": "ビープラウド",
+        "url": "https://www.beproud.jp/"
       },
       {
-        "companyName": "会社R"
+        "companyName": "Supership株式会社",
+        "url": ""
       },
       {
-        "companyName": "会社S"
+        "companyName": "株式会社JX通信社",
+        "url": "https://jxpress.net/"
       },
       {
-        "companyName": "会社T"
+        "companyName": "株式会社スカラコミュニケーションズ",
+        "url": "https://scala-com.jp/"
       }
     ]
   }
