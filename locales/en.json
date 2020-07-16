@@ -41,10 +41,10 @@
       },
       {
         "companyName": "日本マイクロソフト株式会社",
-        "url": "https://www.pycon.jp/",
+        "url": "",
         "imagePath": "overview.jpg",
-        "description": "Apply for Sponsor",
-        "recruitInformation": "Apply for Sponsor"
+        "description": "",
+        "recruitInformation": ""
       }
     ],
     "gold": [
@@ -99,10 +99,10 @@
       },
       {
         "companyName": "ジョンソン・エンド・ジョンソン 日本法人グループ",
-        "url": "",
-        "imagePath": "overview.jpg",
-        "description": "Apply for Sponsor",
-        "recruitInformation": "Apply for Sponsor"
+        "url": "https://www.jnj.co.jp/",
+        "imagePath": "gold8.png",
+        "description": "At Johnson & Johnson, we use technology and the power of collaboration to fight back against the most devastating healthcare challenges of our generation. Through pharmaceuticals, medical devices, vision care and consumer health products, we develop and deliver solutions that allow people to thrive throughout every stage of their lives.We are looking for data scientists with expertise in crafting, developing and fielding data solutions and YOU will be the pioneer at the cutting edge of data science.",
+        "recruitInformation": ""
       }
     ],
     "silver": [

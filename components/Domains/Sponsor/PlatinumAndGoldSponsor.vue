@@ -33,7 +33,8 @@
                 </slot>
               </p>
             </div>
-            <!-- <button
+            <button
+              v-if="recruitExist"
               class="flex items-center self-center justify-center px-2 py-2 mt-6 font-medium duration-200 bg-white rounded-full shadow group md:px-6 md:py-4 text-py-black focus:outline-none transition-color"
               :class="[
                 sponsorType === 'platinum'
@@ -56,7 +57,7 @@
               <span v-else class="mx-4 md:text-xl">
                 会社概要へ
               </span>
-            </button> -->
+            </button>
           </div>
         </div>
       </div>
@@ -89,6 +90,10 @@ export default Vue.extend({
     url: {
       type: String,
       default: '',
+    },
+    recruitExist: {
+      type: Boolean,
+      default: false,
     },
   },
   data() {

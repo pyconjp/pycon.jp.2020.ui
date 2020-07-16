@@ -314,7 +314,7 @@
         <h2 class="inline mb-2 text-4xl font-semibold md:text-6xl">
           Sponsor
         </h2>
-        <p class="mb-8 text-xl md:text-2xl">{{ $t('sponsor.subTitle') }}</p>
+        <p class="mb-8 text-xl md:text-2xl">-{{ $t('sponsor.subTitle') }}-</p>
       </div>
 
       <python-banner

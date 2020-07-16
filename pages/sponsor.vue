@@ -31,6 +31,9 @@
         sponsor-type="platinum"
         :url="platinum.url"
         class="w-full mt-10 lg:w-2/5 lg:mx-8"
+        :recruit-exist="
+          judgeRecruitInformationExist(platinum.recruitInformation)
+        "
       >
         <template #image>
           <img
@@ -67,6 +70,7 @@
         :key="gold.companyName"
         sponsor-type="gold"
         :url="gold.url"
+        :recruit-exist="judgeRecruitInformationExist(gold.recruitInformation)"
         class="w-full mt-10 lg:w-1/3 lg:mx-8"
       >
         <template #image>
@@ -124,6 +128,11 @@ export default Vue.extend({
   components: { PythonBanner, PlatinumAndGoldSponsor },
   data() {
     return {}
+  },
+  methods: {
+    judgeRecruitInformationExist(message) {
+      return message !== ''
+    },
   },
   head() {
     return { title: this.$t('pages.sponsor.title') }

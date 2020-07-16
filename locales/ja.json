@@ -41,10 +41,10 @@
       },
       {
         "companyName": "日本マイクロソフト株式会社",
-        "url": "https://www.pycon.jp/",
+        "url": "",
         "imagePath": "overview.jpg",
-        "description": "Apply for Sponsor",
-        "recruitInformation": "Apply for Sponsor"
+        "description": "",
+        "recruitInformation": ""
       }
     ],
     "gold": [
@@ -52,7 +52,7 @@
         "companyName": "一般社団法人Pythonエンジニア育成推進協会",
         "url": "https://www.pythonic-exam.com/",
         "imagePath": "gold1.png",
-        "description": "Pythonエンジニア認定基礎試験に加え、6月よりPython3エンジニア認定データ分析試験を開始しました。全国200か所で通年受験が可能です。受験料金は1万円（税抜）で覚張は半額です。学習後のチェックにいかがでしょうか？",
+        "description": "Pythonエンジニア認定基礎試験に加え、6月よりPython3エンジニア認定データ分析試験を開始しました。全国200か所で通年受験が可能です。受験料金は1万円（税抜）で学生は半額です。学習後のチェックにいかがでしょうか？",
         "recruitInformation": ""
       },
       {
@@ -99,10 +99,10 @@
       },
       {
         "companyName": "ジョンソン・エンド・ジョンソン 日本法人グループ",
-        "url": "",
-        "imagePath": "overview.jpg",
-        "description": "Apply for Sponsor",
-        "recruitInformation": "Apply for Sponsor"
+        "url": "https://www.jnj.co.jp/",
+        "imagePath": "gold8.png",
+        "description": "私たちは、一般の方々から医師や看護師まで、幅広いお客様のパートナーとして、ヘルスケア業界の発展に貢献し続けています。世界中のグループ各社を通じ、消費者向け、医療機器、医療用医薬品の分野で数多くの製品を提供しています。 病気や怪我で苦しむすべての人たちが、一日でも早く元通りの生活を取り戻し、夢やビジョンの実現に向かうこと。それが、私たちが目指す世界です。 今、私たちはデータの力を活用して更に成長しています。データ分析や機械学習を駆使して、日本から世界へ製品やサービスを発信する仲間を探しています。 ",
+        "recruitInformation": ""
       }
     ],
     "silver": [
