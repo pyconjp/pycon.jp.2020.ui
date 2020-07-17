@@ -1,143 +1,140 @@
 {
-  "pages": {
-    "index": {
-      "title": "PyCon JP 2020",
-      "path": "/"
+    "pages": {
+        "index": {
+            "title": "PyCon JP 2020",
+            "path": "/"
+        },
+        "code-of-conduct": {
+            "title": "行動規範",
+            "path": "code-of-conduct"
+        },
+        "sponsor": {
+            "title": "スポンサー",
+            "path": "sponsor"
+        },
+        "news": {
+            "title": "お知らせ",
+            "path": "https://pyconjp.blogspot.com/search/label/pyconjp2020"
+        }
     },
-    "code-of-conduct": {
-      "title": "行動規範",
-      "path": "code-of-conduct"
+    "language": "English",
+    "error": {
+        "404": "お探しのページが見つかりません。",
+        "else": "エラーが発生しました",
+        "back": "トップページに戻る"
     },
     "sponsor": {
-      "title": "スポンサー",
-      "path": "sponsor"
-    },
-    "news": {
-      "title": "お知らせ",
-      "path": "https://pyconjp.blogspot.com/search/label/pyconjp2020"
+        "platinum": [{
+                "companyName": "株式会社リーディング・エッジ社（Python Start Lab Online）",
+                "url": "https://online.startlab.jp/Online.html",
+                "imagePath": "platinum1.jpg",
+                "description": "",
+                "recruitInformation": ""
+            },
+            {
+                "companyName": "HENNGE株式会社",
+                "url": "https://hennge.com/jp/",
+                "imagePath": "platinum2.jpg",
+                "description": "HENNGEは、変化する働き⽅の最前線にいます。私たちは変⾰をもたらすテクノロジーの⼒を活⽤し、それを誰もが安全に利⽤できるように提供しています。クラウドセキュリティサービス「HENNGE One」を利⽤することで、お客様はどこからでもクラウドの⼒を安全に活⽤し、柔軟な作業環境を導⼊することが可能になります。クラウドセキュリティを活⽤することで、従業員はよりスマートに仕事に集中し、仕事の質を向上させ、ビジネスの成果を上げることができます。",
+                "recruitInformation": "事業の成⻑に伴いソフトウェアエンジニアを募集しています。私たちHENNGEは「テクノロジーの開放」をビジョンに、テクノロジーとその利⽤におけるギャップの橋渡し役として、お客様に新しい価値を提供することを使命としています。10カ国以上から集まった仲間とともに、アーリーアダプターとして新しいテクノロジーやフレームワークに⾃ら触れ、得られた成果を⾼品質なサービスとしてお客様に届けるチームに加わっていただける⽅からの応募をお待ちしております。"
+            },
+            {
+                "companyName": "日本マイクロソフト株式会社",
+                "url": "",
+                "imagePath": "overview.jpg",
+                "description": "",
+                "recruitInformation": ""
+            }
+        ],
+        "gold": [{
+                "companyName": "一般社団法人Pythonエンジニア育成推進協会",
+                "url": "https://www.pythonic-exam.com/",
+                "imagePath": "gold1.png",
+                "description": "Pythonエンジニア認定基礎試験に加え、6月よりPython3エンジニア認定データ分析試験を開始しました。全国200か所で通年受験が可能です。受験料金は1万円（税抜）で学生は半額です。学習後のチェックにいかがでしょうか？",
+                "recruitInformation": ""
+            },
+            {
+                "companyName": "株式会社アイリッジ",
+                "url": "https://iridge.jp/",
+                "imagePath": "gold2.jpg",
+                "description": "「Tech Tomorrow」をミッションに、自社プロダクト開発やスマートフォンアプリの受託開発を行なっています。 Python/Djangoを使ったO2O/OMOソリューション「FANSHIP」を始めとして、アプリのバックエンドサーバー、業務を改善するちょっとしたスクリプトまでPythonで開発しています。技術カンファレンスへの協賛や、個人の取組に関する週次のもくもく会・FlyHigh Friday、月次の集中開発・Issue Bashなどの社内勉強会も活発で、技術力向上に積極的です。",
+                "recruitInformation": ""
+            },
+            {
+                "companyName": "株式会社ブレインパッド",
+                "url": "https://www.brainpad.co.jp/",
+                "imagePath": "gold3.png",
+                "description": "2004年創業来、「データ活用の促進を通じて持続可能な未来をつくる」をミッションに掲げ、クライアントに対して、ビジネス・顧客体験・オペレーションにおいて先進的で実践的なデータ活用支援をおこなっています。分析業務に必要となる分析基盤の構築や関連ソフトウェアの開発・販売など、データ活用に関するソリューションを総合的に提供しており、国内シェアNo.1のレコメンドエンジン搭載プライベートDMP Rtoasterをはじめとした、デジタルマーケティング領域のプロダクトを開発する、Pythonエンジニアを募集しています！",
+                "recruitInformation": ""
+            },
+            {
+                "companyName": "株式会社いい生活",
+                "url": "https://www.e-seikatsu.info/",
+                "imagePath": "gold4.png",
+                "description": "いい生活は「すべての人の生活に関わる\"不動産市場\"を、テクノロジーでより良いものへ。」をミッションに掲げ、不動産業界で起きている情報の格差、非効率性を改善するサービスの提供を行っています。不動産ビジネスの生産性向上のための「ESいい物件One」、住まいに関するコミュニケーションをサポートする「pocketpost」などを開発しています。いい生活は、ITサービスを通じて、住まい・不動産の分野において、もっと多くの「幸せ」や「いい生活」を実現してまいります。",
+                "recruitInformation": ""
+            },
+            {
+                "companyName": "株式会社ビザスク",
+                "url": "https://visasq.co.jp/",
+                "imagePath": "gold5.png",
+                "description": "",
+                "recruitInformation": ""
+            },
+            {
+                "companyName": "株式会社日本システム技研",
+                "url": "https://jsl.co.jp",
+                "imagePath": "gold6.png",
+                "description": "株式会社日本システム技研(JSL)は「「技術力×人間力」で社会から注目され続ける企業になること」をビジョンに長野でPythonとAWSを中心としたWebの業務を中心に開発をしています。積極的に外部への情報発信を行うためコワーキングスペースGEEKLAB.NAGANO(ギークラボ・ナガノ)を運営しています。GEEKLAB.NAGANOは、PythonやDjango、AWS、ディープラーニング、IoTなど新しい技術に関心があるエンジニアが集まり勉強会を開催しています。",
+                "recruitInformation": ""
+            },
+            {
+                "companyName": "株式会社LegalForce",
+                "url": "https://www.legalforce.co.jp/",
+                "imagePath": "gold7.png",
+                "description": "LegalForceはAIを用いたクラウド型契約書レビュー支援ソフトウェア 「LegalForce」を提供しています。契約書をアップロードすると、自動で契約書に含まれるリスクに対してアラートを出し、修正文例をサジェストします。開発はPythonやRuby、JavaScriptを中心としており、FlaskやFastAPIを用いたWebアプリケーションやElasticsearchを用いた検索システム、BigQueryを用いたデータ基盤、MLOps基盤、自然言語処理システムの開発を行っています。Pythonエンジニアを積極募集中！！",
+                "recruitInformation": ""
+            },
+            {
+                "companyName": "ジョンソン・エンド・ジョンソン 日本法人グループ",
+                "url": "https://www.jnj.co.jp/",
+                "imagePath": "gold8.png",
+                "description": "私たちは、一般の方々から医師や看護師まで、幅広いお客様のパートナーとして、ヘルスケア業界の発展に貢献し続けています。世界中のグループ各社を通じ、消費者向け、医療機器、医療用医薬品の分野で数多くの製品を提供しています。 病気や怪我で苦しむすべての人たちが、一日でも早く元通りの生活を取り戻し、夢やビジョンの実現に向かうこと。それが、私たちが目指す世界です。 今、私たちはデータの力を活用して更に成長しています。データ分析や機械学習を駆使して、日本から世界へ製品やサービスを発信する仲間を探しています。 ",
+                "recruitInformation": ""
+            }
+        ],
+        "silver": [{
+                "companyName": "株式会社オープングルーヴ",
+                "url": "https://tracpath.com/"
+            },
+            {
+                "companyName": "Nexedi",
+                "url": "https://www.nexedi.com/"
+            },
+            {
+                "companyName": "OLTA株式会社",
+                "url": "https://corp.olta.co.jp"
+            },
+            {
+                "companyName": "Classi株式会社",
+                "url": "https://corp.classi.jp/"
+            },
+            {
+                "companyName": "ビープラウド",
+                "url": "https://www.beproud.jp/"
+            },
+            {
+                "companyName": "Supership株式会社",
+                "url": "https://supership.jp/"
+            },
+            {
+                "companyName": "株式会社JX通信社",
+                "url": "https://jxpress.net/"
+            },
+            {
+                "companyName": "株式会社スカラコミュニケーションズ",
+                "url": "https://scala-com.jp/"
+            }
+        ]
     }
-  },
-  "language": "English",
-  "error": {
-    "404": "お探しのページが見つかりません。",
-    "else": "エラーが発生しました",
-    "back": "トップページに戻る"
-  },
-  "sponsor": {
-    "platinum": [
-      {
-        "companyName": "株式会社リーディング・エッジ社（Python Start Lab Online）",
-        "url": "https://online.startlab.jp/Online.html",
-        "imagePath": "platinum1.jpg",
-        "description": "",
-        "recruitInformation": ""
-      },
-      {
-        "companyName": "HENNGE株式会社",
-        "url": "https://hennge.com/jp/",
-        "imagePath": "platinum2.jpg",
-        "description": "HENNGEは、変化する働き⽅の最前線にいます。私たちは変⾰をもたらすテクノロジーの⼒を活⽤し、それを誰もが安全に利⽤できるように提供しています。クラウドセキュリティサービス「HENNGE One」を利⽤することで、お客様はどこからでもクラウドの⼒を安全に活⽤し、柔軟な作業環境を導⼊することが可能になります。クラウドセキュリティを活⽤することで、従業員はよりスマートに仕事に集中し、仕事の質を向上させ、ビジネスの成果を上げることができます。",
-        "recruitInformation": "事業の成⻑に伴いソフトウェアエンジニアを募集しています。私たちHENNGEは「テクノロジーの開放」をビジョンに、テクノロジーとその利⽤におけるギャップの橋渡し役として、お客様に新しい価値を提供することを使命としています。10カ国以上から集まった仲間とともに、アーリーアダプターとして新しいテクノロジーやフレームワークに⾃ら触れ、得られた成果を⾼品質なサービスとしてお客様に届けるチームに加わっていただける⽅からの応募をお待ちしております。"
-      },
-      {
-        "companyName": "日本マイクロソフト株式会社",
-        "url": "",
-        "imagePath": "overview.jpg",
-        "description": "",
-        "recruitInformation": ""
-      }
-    ],
-    "gold": [
-      {
-        "companyName": "一般社団法人Pythonエンジニア育成推進協会",
-        "url": "https://www.pythonic-exam.com/",
-        "imagePath": "gold1.png",
-        "description": "Pythonエンジニア認定基礎試験に加え、6月よりPython3エンジニア認定データ分析試験を開始しました。全国200か所で通年受験が可能です。受験料金は1万円（税抜）で学生は半額です。学習後のチェックにいかがでしょうか？",
-        "recruitInformation": ""
-      },
-      {
-        "companyName": "株式会社アイリッジ",
-        "url": "https://iridge.jp/",
-        "imagePath": "gold2.jpg",
-        "description": "「Tech Tomorrow」をミッションに、自社プロダクト開発やスマートフォンアプリの受託開発を行なっています。 Python/Djangoを使ったO2O/OMOソリューション「FANSHIP」を始めとして、アプリのバックエンドサーバー、業務を改善するちょっとしたスクリプトまでPythonで開発しています。技術カンファレンスへの協賛や、個人の取組に関する週次のもくもく会・FlyHigh Friday、月次の集中開発・Issue Bashなどの社内勉強会も活発で、技術力向上に積極的です。",
-        "recruitInformation": ""
-      },
-      {
-        "companyName": "株式会社ブレインパッド",
-        "url": "https://www.brainpad.co.jp/",
-        "imagePath": "gold3.png",
-        "description": "",
-        "recruitInformation": ""
-      },
-      {
-        "companyName": "株式会社いい生活",
-        "url": "https://www.e-seikatsu.info/",
-        "imagePath": "gold4.png",
-        "description": "いい生活は「すべての人の生活に関わる\"不動産市場\"を、テクノロジーでより良いものへ。」をミッションに掲げ、不動産業界で起きている情報の格差、非効率性を改善するサービスの提供を行っています。不動産ビジネスの生産性向上のための「ESいい物件One」、住まいに関するコミュニケーションをサポートする「pocketpost」などを開発しています。いい生活は、ITサービスを通じて、住まい・不動産の分野において、もっと多くの「幸せ」や「いい生活」を実現してまいります。",
-        "recruitInformation": ""
-      },
-      {
-        "companyName": "株式会社ビザスク",
-        "url": "https://visasq.co.jp/",
-        "imagePath": "gold5.png",
-        "description": "",
-        "recruitInformation": ""
-      },
-      {
-        "companyName": "株式会社日本システム技研",
-        "url": "https://jsl.co.jp",
-        "imagePath": "overview.jpg",
-        "description": "株式会社日本システム技研(JSL)は「「技術力×人間力」で社会から注目され続ける企業になること」をビジョンに長野でPythonとAWSを中心としたWebの業務を中心に開発をしています。積極的に外部への情報発信を行うためコワーキングスペースGEEKLAB.NAGANO(ギークラボ・ナガノ)を運営しています。GEEKLAB.NAGANOは、PythonやDjango、AWS、ディープラーニング、IoTなど新しい技術に関心があるエンジニアが集まり勉強会を開催しています。",
-        "recruitInformation": ""
-      },
-      {
-        "companyName": "株式会社LegalForce",
-        "url": "https://www.legalforce.co.jp/",
-        "imagePath": "gold7.png",
-        "description": "LegalForceはAIを用いたクラウド型契約書レビュー支援ソフトウェア 「LegalForce」を提供しています。契約書をアップロードすると、自動で契約書に含まれるリスクに対してアラートを出し、修正文例をサジェストします。開発はPythonやRuby、JavaScriptを中心としており、FlaskやFastAPIを用いたWebアプリケーションやElasticsearchを用いた検索システム、BigQueryを用いたデータ基盤、MLOps基盤、自然言語処理システムの開発を行っています。Pythonエンジニアを積極募集中！！",
-        "recruitInformation": ""
-      },
-      {
-        "companyName": "ジョンソン・エンド・ジョンソン 日本法人グループ",
-        "url": "https://www.jnj.co.jp/",
-        "imagePath": "gold8.png",
-        "description": "私たちは、一般の方々から医師や看護師まで、幅広いお客様のパートナーとして、ヘルスケア業界の発展に貢献し続けています。世界中のグループ各社を通じ、消費者向け、医療機器、医療用医薬品の分野で数多くの製品を提供しています。 病気や怪我で苦しむすべての人たちが、一日でも早く元通りの生活を取り戻し、夢やビジョンの実現に向かうこと。それが、私たちが目指す世界です。 今、私たちはデータの力を活用して更に成長しています。データ分析や機械学習を駆使して、日本から世界へ製品やサービスを発信する仲間を探しています。 ",
-        "recruitInformation": ""
-      }
-    ],
-    "silver": [
-      {
-        "companyName": "株式会社オープングルーヴ",
-        "url": "https://tracpath.com/"
-      },
-      {
-        "companyName": "Nexedi",
-        "url": "https://www.nexedi.com/"
-      },
-      {
-        "companyName": "OLTA株式会社",
-        "url": "https://corp.olta.co.jp"
-      },
-      {
-        "companyName": "Classi株式会社",
-        "url": "https://corp.classi.jp/"
-      },
-      {
-        "companyName": "ビープラウド",
-        "url": "https://www.beproud.jp/"
-      },
-      {
-        "companyName": "Supership株式会社",
-        "url": ""
-      },
-      {
-        "companyName": "株式会社JX通信社",
-        "url": "https://jxpress.net/"
-      },
-      {
-        "companyName": "株式会社スカラコミュニケーションズ",
-        "url": "https://scala-com.jp/"
-      }
-    ]
-  }
 }
