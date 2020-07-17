@@ -42,7 +42,7 @@
                 "companyName": "日本マイクロソフト株式会社",
                 "url": "https://azure.microsoft.com/ja-jp/",
                 "imagePath": "platinum3.png",
-                "description": "",
+                "description": "MicrosoftはPythonistaを応援しています! オンライン上の共同開発環境であるAzure NotebooksやVisual Studio Codespaces、アプリケーションを開発する皆様には、Azure Functionsの拡張機能としてステートフル関数を記述できるDurable FunctionsのPythonのサポートも開始されました(プレビュー版)。Functionフロー管理ができます! Pythonistaに向けて今後も機能追加/改修を行っていきます! お楽しみに!",
                 "recruitInformation": ""
             }
         ],
