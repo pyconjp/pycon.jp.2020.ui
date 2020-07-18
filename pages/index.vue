@@ -414,6 +414,7 @@
         >
           <img
             :src="require(`~/assets/img/sponsor/${cooperation.imagePath}`)"
+            class="w-full"
           />
         </a>
       </div>
@@ -429,7 +430,10 @@
           rel="noopener noreferrer"
           class="w-full m-8 md:w-1/3"
         >
-          <img :src="require(`~/assets/img/sponsor/${tutorial.imagePath}`)" />
+          <img
+            :src="require(`~/assets/img/sponsor/${tutorial.imagePath}`)"
+            class="w-full"
+          />
         </a>
       </div>
     </section>
