@@ -95,17 +95,18 @@ export default Vue.extend({
       type: Boolean,
       default: false,
     },
+    color: {
+      type: String,
+      default: '#71A4F1',
+    },
   },
   data() {
     return {
       isCompanyInformation: true,
       isRecruitInformation: false,
-      color: '#71A4F1',
     }
   },
-  created() {
-    this.color = this.sponsorType === 'platinum' ? '#71A4F1' : '#E3AB4A'
-  },
+  created() {},
   methods: {
     toggleDescription() {
       this.isCompanyInformation = !this.isCompanyInformation
