@@ -377,13 +377,60 @@
       </python-banner>
 
       <div class="grid grid-cols-1 gap-4 pb-8 md:grid-cols-2">
-        <p
+        <a
           v-for="silver in $t('sponsor.silver')"
           :key="silver.companyName"
-          class="text-2xl break-all"
+          :href="silver.url"
+          target="_blank"
+          rel="noopener noreferrer"
         >
-          {{ silver.companyName }}
-        </p>
+          <p class="text-2xl break-all">
+            {{ silver.companyName }}
+          </p></a
+        >
+      </div>
+      <python-banner
+        direction="right"
+        back-ground-color="#3D40CB"
+        size="small"
+        length="small"
+        class="mt-16"
+      >
+        <template #title>
+          SPECIAL
+        </template>
+      </python-banner>
+      <h3 class="mt-6 text-4xl font-medium text-py-black">
+        {{ $t('sponsor.message.specialSponsor') }}
+      </h3>
+      <div class="flex flex-wrap items-center justify-center">
+        <a
+          v-for="cooperation in $t('sponsor.special.cooperation')"
+          :key="cooperation.companyName"
+          :href="cooperation.url"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="w-full m-8 md:w-1/3"
+        >
+          <img
+            :src="require(`~/assets/img/sponsor/${cooperation.imagePath}`)"
+          />
+        </a>
+      </div>
+      <h3 class="mt-16 text-4xl font-medium text-py-black">
+        {{ $t('sponsor.message.tutorial') }}
+      </h3>
+      <div class="flex flex-wrap items-center justify-center">
+        <a
+          v-for="tutorial in $t('sponsor.special.tutorial')"
+          :key="tutorial.companyName"
+          :href="tutorial.url"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="w-full m-8 md:w-1/3"
+        >
+          <img :src="require(`~/assets/img/sponsor/${tutorial.imagePath}`)" />
+        </a>
       </div>
     </section>
   </div>

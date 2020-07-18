@@ -7,7 +7,7 @@
         Sponsors
       </h1>
       <h3
-        class="flex items-center justify-center w-screen mb-8 text-2xl font-semibold text-center text-py-black sm:text-xl md:text-2xl lg:text-3xl m-screen"
+        class="flex items-center justify-center w-screen mb-8 text-lg font-semibold text-center text-py-black sm:text-xl md:text-2xl lg:text-3xl m-screen"
       >
         {{ $t('pages.sponsor.title') }}
       </h3>
@@ -72,6 +72,7 @@
         :url="gold.url"
         :recruit-exist="judgeRecruitInformationExist(gold.recruitInformation)"
         class="w-full mt-10 lg:w-1/3 lg:mx-8"
+        color="#E3AB4A"
       >
         <template #image>
           <img
@@ -111,10 +112,77 @@
         target="_blank"
         rel="noopener noreferrer"
       >
-        <p class="text-2xl break-all">
-          {{ silver.companyName }}
-        </p></a
+        <div class="flex">
+          <p class="inline text-2xl break-all">
+            {{ silver.companyName }}
+          </p>
+          <i class="ml-2 text-3xl material-icons">link</i>
+        </div>
+      </a>
+    </div>
+
+    <python-banner
+      direction="right"
+      back-ground-color="#3D40CB"
+      size="small"
+      length="small"
+      class="mt-16"
+    >
+      <template #title>
+        SPECIAL
+      </template>
+    </python-banner>
+    <h3 class="mt-6 text-4xl font-medium text-py-black">
+      {{ $t('sponsor.message.specialSponsor') }}
+    </h3>
+    <div class="flex flex-wrap items-start justify-center mt-8">
+      <platinum-and-gold-sponsor
+        v-for="cooperation in $t('sponsor.special.cooperation')"
+        :key="cooperation.companyName"
+        sponsor-type="gold"
+        :url="cooperation.url"
+        class="w-full mt-10 lg:w-1/3 lg:mx-8"
+        color="#3D40CB"
       >
+        <template #image>
+          <img
+            :src="require(`~/assets/img/sponsor/${cooperation.imagePath}`)"
+            class="w-3/4"
+          />
+        </template>
+        <template #companyName>
+          {{ cooperation.companyName }}
+        </template>
+        <template #companyInformation>
+          {{ cooperation.description }}
+        </template>
+      </platinum-and-gold-sponsor>
+    </div>
+    <h3 class="mt-16 text-4xl font-medium text-py-black">
+      {{ $t('sponsor.message.tutorial') }}
+    </h3>
+    <div class="flex flex-wrap items-start justify-center mt-8 mb-16">
+      <platinum-and-gold-sponsor
+        v-for="tutorial in $t('sponsor.special.tutorial')"
+        :key="tutorial.groupName"
+        sponsor-type="gold"
+        :url="tutorial.url"
+        class="w-full mt-10 lg:w-1/3 lg:mx-8"
+        color="#3D40CB"
+      >
+        <template #image>
+          <img
+            :src="require(`~/assets/img/sponsor/${tutorial.imagePath}`)"
+            class="w-3/4"
+          />
+        </template>
+        <template #companyName>
+          {{ tutorial.groupName }}
+        </template>
+        <template #companyInformation>
+          {{ tutorial.description }}
+        </template>
+      </platinum-and-gold-sponsor>
     </div>
   </div>
 </template>
