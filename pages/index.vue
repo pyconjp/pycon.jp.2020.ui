@@ -110,20 +110,25 @@
         {{ $t('ticket.content') }}
       </template>
       <template #button>
-        <button
-          class="relative flex items-center px-4 py-2 mt-6 font-medium bg-white rounded-full shadow pointer-events-none md:px-6 md:py-6 text-py-black focus:outline-none"
+        <a
+          class="mt-6"
+          href="https://pyconjp.blogspot.com/2020/07/pycon-jp-2020-conference-ticket-on-sale.html"
+          target="_blank"
+          rel="noopener noreferrer"
         >
-          <p class="w-6 h-6 rounded-full bg-py-orange-dark" />
-          <span class="ml-2 md:text-xl md:ml-6 md:mr-4">
-            {{ $t('ticket.button') }}
-          </span>
-
-          <img
-            class="absolute left-0 w-full"
-            :src="require('~/assets/img/comming-soon.png')"
-            alt="commingSoon"
-          />
-        </button>
+          <button
+            class="relative flex items-center px-4 py-2 mt-6 font-medium transition-colors duration-200 bg-white rounded-full shadow group md:px-6 md:py-6 hover:bg-py-orange-dark text-py-black focus:outline-none"
+          >
+            <p
+              class="w-6 h-6 rounded-full bg-py-orange-dark group-hover:bg-white"
+            />
+            <span
+              class="ml-2 md:text-xl md:ml-6 md:mr-4 group-hover:text-white"
+            >
+              {{ $t('ticket.button') }}
+            </span>
+          </button></a
+        >
       </template>
     </python-banner>
 
