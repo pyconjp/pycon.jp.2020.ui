@@ -42,7 +42,7 @@
                 "companyName": "日本マイクロソフト株式会社",
                 "url": "https://azure.microsoft.com/ja-jp/",
                 "imagePath": "platinum3.png",
-                "description": "",
+                "description": "Microsoft is cheering for Pythonista! In addition to the online collaborative development environments Azure Notebooks and Visual Studio Codespaces, application developers now also have support for Python in Durable Functions, an extension to Azure Functions that allows you to write stateful functions(in preview). Functions flow management is now available!We’ ll continue to add / modify features for Pythonista in the future!Stay tuned!",
                 "recruitInformation": ""
             }
         ],
