@@ -179,9 +179,9 @@
         <template #companyName>
           {{ tutorial.groupName }}
         </template>
-        <template #companyInformation>
+        <!-- <template #companyInformation>
           {{ tutorial.description }}
-        </template>
+        </template> -->
       </platinum-and-gold-sponsor>
     </div>
   </div>

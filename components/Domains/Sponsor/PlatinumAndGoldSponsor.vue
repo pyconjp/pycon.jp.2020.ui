@@ -26,10 +26,8 @@
             <div class="w-full">
               <p class="px-2 mt-2 mb-8">
                 <slot v-if="isCompanyInformation" name="companyInformation">
-                  ダミーの会社情報です
                 </slot>
                 <slot v-if="isRecruitInformation" name="recruitInformation">
-                  ダミーの採用情報です
                 </slot>
               </p>
             </div>
