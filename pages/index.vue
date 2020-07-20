@@ -110,20 +110,25 @@
         {{ $t('ticket.content') }}
       </template>
       <template #button>
-        <button
-          class="relative flex items-center px-4 py-2 mt-6 font-medium bg-white rounded-full shadow pointer-events-none md:px-6 md:py-6 text-py-black focus:outline-none"
+        <a
+          class="mt-6"
+          href="https://pyconjp.blogspot.com/2020/07/pycon-jp-2020-conference-ticket-on-sale.html"
+          target="_blank"
+          rel="noopener noreferrer"
         >
-          <p class="w-6 h-6 rounded-full bg-py-orange-dark" />
-          <span class="ml-2 md:text-xl md:ml-6 md:mr-4">
-            {{ $t('ticket.button') }}
-          </span>
-
-          <img
-            class="absolute left-0 w-full"
-            :src="require('~/assets/img/comming-soon.png')"
-            alt="commingSoon"
-          />
-        </button>
+          <button
+            class="relative flex items-center px-4 py-2 mt-6 font-medium transition-colors duration-200 bg-white rounded-full shadow group md:px-6 md:py-6 hover:bg-py-orange-dark text-py-black focus:outline-none"
+          >
+            <p
+              class="w-6 h-6 rounded-full bg-py-orange-dark group-hover:bg-white"
+            />
+            <span
+              class="ml-2 md:text-xl md:ml-6 md:mr-4 group-hover:text-white"
+            >
+              {{ $t('ticket.button') }}
+            </span>
+          </button></a
+        >
       </template>
     </python-banner>
 
@@ -306,33 +311,136 @@
         <template #title>
           Sessions
         </template>
-      </python-banner>
+      </python-banner> -->
     </section>
 
     <section class="flex flex-col items-center justify-center space-y-12">
-      <h2
-        class="inline text-3xl border-b-8 border-blue-600 border-solid md:text-5xl"
-      >
-        Sponsor
-      </h2>
+      <div class="flex flex-col items-center">
+        <h2 class="inline mb-2 text-4xl font-semibold md:text-6xl">
+          Sponsor
+        </h2>
+        <p class="mb-8 text-xl md:text-2xl">-{{ $t('sponsor.subTitle') }}-</p>
+      </div>
 
-      <python-banner direction="right" back-ground-color="#71A4F1" size="small">
+      <python-banner
+        direction="right"
+        back-ground-color="#71A4F1"
+        size="small"
+        length="long"
+      >
         <template #title>
           Platinum
         </template>
       </python-banner>
 
-      <python-banner direction="right" back-ground-color="#E3AB4A" size="small">
+      <div class="flex flex-wrap items-center justify-center">
+        <a
+          v-for="platinum in $t('sponsor.platinum')"
+          :key="platinum.companyName"
+          :href="platinum.url"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="w-full m-8 md:w-2/5"
+        >
+          <img :src="require(`~/assets/img/sponsor/${platinum.imagePath}`)"
+        /></a>
+      </div>
+
+      <python-banner
+        direction="right"
+        back-ground-color="#E3AB4A"
+        sie="small"
+        length="mid"
+      >
         <template #title>
           Gold
         </template>
       </python-banner>
 
-      <python-banner direction="right" back-ground-color="#818181" size="small">
+      <div class="flex flex-wrap items-center justify-center">
+        <a
+          v-for="gold in $t('sponsor.gold')"
+          :key="gold.companyName"
+          :href="gold.url"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="w-full m-8 md:w-1/3"
+        >
+          <img :src="require(`~/assets/img/sponsor/${gold.imagePath}`)" />
+        </a>
+      </div>
+
+      <python-banner
+        direction="right"
+        back-ground-color="#818181"
+        size="small"
+        length="small"
+      >
         <template #title>
           Silver
         </template>
-      </python-banner> -->
+      </python-banner>
+
+      <div class="grid grid-cols-1 gap-4 pb-8 md:grid-cols-2">
+        <a
+          v-for="silver in $t('sponsor.silver')"
+          :key="silver.companyName"
+          :href="silver.url"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <p class="text-2xl break-all">
+            {{ silver.companyName }}
+          </p></a
+        >
+      </div>
+      <python-banner
+        direction="right"
+        back-ground-color="#3D40CB"
+        size="small"
+        length="small"
+        class="mt-16"
+      >
+        <template #title>
+          SPECIAL
+        </template>
+      </python-banner>
+      <h3 class="mt-6 text-4xl font-medium text-py-black">
+        {{ $t('sponsor.message.specialSponsor') }}
+      </h3>
+      <div class="flex flex-wrap items-center justify-center">
+        <a
+          v-for="cooperation in $t('sponsor.special.cooperation')"
+          :key="cooperation.companyName"
+          :href="cooperation.url"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="w-full m-8 md:w-1/3"
+        >
+          <img
+            :src="require(`~/assets/img/sponsor/${cooperation.imagePath}`)"
+            class="w-full"
+          />
+        </a>
+      </div>
+      <h3 class="mt-16 text-4xl font-medium text-py-black">
+        {{ $t('sponsor.message.tutorial') }}
+      </h3>
+      <div class="flex flex-wrap items-center justify-center">
+        <a
+          v-for="tutorial in $t('sponsor.special.tutorial')"
+          :key="tutorial.companyName"
+          :href="tutorial.url"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="w-full m-8 md:w-1/3"
+        >
+          <img
+            :src="require(`~/assets/img/sponsor/${tutorial.imagePath}`)"
+            class="w-full"
+          />
+        </a>
+      </div>
     </section>
   </div>
 </template>
@@ -444,7 +552,8 @@ export default Vue.extend({
     "sponsor": {
       "title": "Looking for corporate sponsors",
       "content": "We are looking for sponsors to support PyCon JP 2020.",
-      "button": "Apply for Sponsor"
+      "button": "Apply for Sponsor",
+      "subTitle": "sponsor"
     },
     "ticket": {
       "title": "Ticket sales start",
@@ -490,9 +599,10 @@ export default Vue.extend({
   },
   "ja": {
     "sponsor": {
-      "title": "企業スポンサー様募集中",
-      "content": "PyCon JP 2020を応援して下さるスポンサー様を募集しております",
-      "button": "スポンサーに申し込む"
+      "title": "企業スポンサー募集中",
+      "content": "PyCon JP 2020を応援して下さるスポンサーを募集しております",
+      "button": "スポンサーに申し込む",
+      "subTitle": "スポンサー"
     },
     "ticket": {
       "title": "チケット販売開始",
@@ -529,7 +639,7 @@ export default Vue.extend({
         "date": "8月29日",
         "description": {
           "p-1": "RichはGun.ioの共同設立者です。",
-          "p-2": "Gui.ioはグローバルなコンサルティングファームで、フリーソフトウェアやオープンソースソフトウェアのコミュニティから来た最も優秀なエンジニア（ハッカー）たちが所属しています。",
+          "p-2": "Gun.ioはグローバルなコンサルティングファームで、フリーソフトウェアやオープンソースソフトウェアのコミュニティから来た最も優秀なエンジニア（ハッカー）たちが所属しています。",
           "p-3": "彼は、Pythonにおける主要なサーバレスフレームワーク、Zappaの作者です。",
           "p-4": "Zappaは、何千もの企業やユーザによって使われ、Web開発における時間と費用を節約しています。彼は医療や科学計算向けのクラウドGPUクラスタからモバイルのピア・ツー・ピアのファイル共有アプリまで、そしてその間にあるあらゆるものに取り組んできました。彼の趣味はスケートボード、サザン・ヒップホップと、ラフロイグを飲むことです。"
         }
