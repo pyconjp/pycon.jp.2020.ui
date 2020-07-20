@@ -599,8 +599,8 @@ export default Vue.extend({
   },
   "ja": {
     "sponsor": {
-      "title": "企業スポンサー様募集中",
-      "content": "PyCon JP 2020を応援して下さるスポンサー様を募集しております",
+      "title": "企業スポンサー募集中",
+      "content": "PyCon JP 2020を応援して下さるスポンサーを募集しております",
       "button": "スポンサーに申し込む",
       "subTitle": "スポンサー"
     },
