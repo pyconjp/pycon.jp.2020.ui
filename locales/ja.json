@@ -26,9 +26,9 @@
     "sponsor": {
         "platinum": [{
                 "companyName": "株式会社リーディング・エッジ社（Python Start Lab Online）",
-                "url": "https://online.startlab.jp/Online.html",
+                "url": "https://startlab.jp/",
                 "imagePath": "platinum1.jpg",
-                "description": "",
+                "description": "先端技術分野で最も採用されているPythonは、これまではアンテナ感度の高い一部のITエンジニアだけが習得していましたが、いまや経営層や広く一般の方までもが注目するプログラミング言語になってきました。私たちPython Start Lab Onlineは、IT未経験からエンジニアになりたい人だけでなく、だれもが使えるプログラミング言語としてPythonを選択できる世の中にすることを目指し、ITエンジニアスクールを運営しています。Pythonに関わるひとりでも多くの人と向き合い、成長の機会をつくる教育事業を通してPythonistaに貢献してゆきたいと考えています。",
                 "recruitInformation": ""
             },
             {
