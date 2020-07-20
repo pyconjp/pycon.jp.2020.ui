@@ -40,7 +40,7 @@
       <div class="flex flex-col items-center justify-end sm:items-start">
         <h3 class="mb-2">主催: 一般社団法人PyCon JP Association</h3>
         <h3 class="text-center">
-          PyCon JP 2020 in Tokyo is a production of the
+          PyCon JP 2020 is a production of the
           <span> </span>
           <a
             class="text-blue-400 transition-colors duration-100 hover:text-blue-600"

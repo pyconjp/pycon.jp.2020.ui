@@ -7,6 +7,8 @@ export default {
   mode: 'spa',
   router: {
     base: process.env.TARGET_BRANCH === 'master' ? '/2020/' : '',
+    trailingSlash: true,
+    middleware: 'redirect',
   },
   env: {
     targetBranch: process.env.TARGET_BRANCH,
