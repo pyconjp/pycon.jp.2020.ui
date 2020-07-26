@@ -72,7 +72,7 @@ export default Vue.extend({
     },
   },
   head() {
-    return { title: this.$t('pages.code-of-conduct.title') }
+    return { title: 'チュートリアル' }
   },
 })
 </script>
