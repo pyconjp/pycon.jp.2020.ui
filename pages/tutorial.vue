@@ -25,6 +25,7 @@
             <div class="inline-block w-8/12 mx-0 mb-6 lg:my-3 lg:ml-4 btn-tuto">
               <button
                 class="flex items-center w-full px-4 py-2 font-medium duration-200 bg-white rounded-full shadow xl:w-9/12 xl:ml-10 transition-color group md:px-6 md:py-6 text-py-black hover:bg-py-black focus:outline-none"
+                @click="openConnpass('zoom')"
               >
                 <p
                   class="w-6 h-6 rounded-full bg-py-black group-hover:bg-white"
@@ -36,6 +37,7 @@
               </button>
               <button
                 class="flex items-center w-full px-4 py-2 mt-4 font-medium transition-colors duration-200 bg-white rounded-full shadow lg:mt-8 xl:w-9/12 xl:ml-10 group md:px-6 md:py-6 text-py-black hover:bg-py-black focus:outline-none"
+                @click="openConnpass('youtube')"
               >
                 <p
                   class="w-6 h-6 rounded-full bg-py-black group-hover:bg-white"
@@ -69,6 +71,15 @@ export default Vue.extend({
   computed: {
     isEnglish() {
       return this.$i18n.locale === 'en'
+    },
+  },
+  methods: {
+    openConnpass(type) {
+      if (type === 'youtube') {
+        window.open('https://pyconjp.connpass.com/event/182390/', '_blank')
+      } else {
+        window.open('https://pyconjp.connpass.com/event/181065/', '_blank')
+      }
     },
   },
   head() {
