@@ -47,27 +47,25 @@
           </div>
         </div>
       </div>
-    </div>
-    <div
-      class="absolute w-screen h-full opacity-25 md:opacity-100 main-visual md:w-50vw md:relative"
-    >
       <div
-        class="absolute hidden rounded-full balloon-1 bg-py-blue-light md:block"
-      ></div>
-      <div
-        class="absolute hidden rounded-full balloon-2 bg-py-orange-light md:block"
-      ></div>
+        class="absolute w-screen h-full opacity-25 md:opacity-100 main-visual md:w-50vw md:relative"
+      >
+        <div
+          class="absolute hidden rounded-full balloon-1 bg-py-blue-light md:block"
+        ></div>
+        <div
+          class="absolute hidden rounded-full balloon-2 bg-py-orange-light md:block"
+        ></div>
+      </div>
     </div>
-    <section
-      class="relative flex items-start justify-center mb-12 md:items-center"
-    >
-      <div class="way-to-join-block">
+    <div class="w-screen pt-12 pb-12 mt-24 mb-12 way-to-join-block m-screen">
+      <div
+        class="relative flex items-start justify-center mb-12 md:items-center way-to-join-block"
+      >
         <div class="relative flex flex-col items-center justify-center">
-          <div
-            class="relative z-10 flex justify-center w-screen bg-white m-screen"
-          >
+          <div class="relative z-10 flex justify-center w-screen m-screen">
             <div
-              class="flex flex-col items-center w-11/12 px-6 border-8 border-solid sm:px-8 md:px-10 lg:px-12 lg:flex-row md:w-4/5 border-py-black rounded-xl"
+              class="flex flex-col items-center w-11/12 px-6 border-8 border-solid sm:px-8 md:px-10 lg:px-12 lg:flex-row md:w-4/5 border-py-black rounded-xl way-to-join-content"
             >
               <div class="w-10/12 mx-8 my-6 md:ml-10 text-tuto">
                 <h2 class="inline mb-2 text-2xl font-semibold md:text-4xl">
@@ -113,16 +111,18 @@
             </div>
           </div>
         </div>
-      </div>
-      <div
-        class="absolute top-0 w-20 h-20 -mt-8 border-4 border-solid border-py-black bg-py-black rounded-card-head"
-      >
-        <div class="relative">
-          <div class="absolute w-2 h-2 mt-2 ml-6 bg-white rounded-full"></div>
-          <div class="absolute w-2 h-2 mt-2 ml-10 bg-white rounded-full"></div>
+        <div
+          class="absolute top-0 w-20 h-20 -mt-8 border-4 border-solid border-py-black bg-py-black rounded-card-head"
+        >
+          <div class="relative">
+            <div class="absolute w-2 h-2 mt-2 ml-6 bg-white rounded-full"></div>
+            <div
+              class="absolute w-2 h-2 mt-2 ml-10 bg-white rounded-full"
+            ></div>
+          </div>
         </div>
       </div>
-    </section>
+    </div>
     <div class="text-base description-block">
       <div id="event-one" class="mb-20 event-one">
         <python-banner
@@ -413,6 +413,12 @@ a:visited {
   right: 100px;
   width: 110px;
   z-index: -1;
+}
+.way-to-join-block {
+  background-color: #ffd8a1;
+}
+.way-to-join-content {
+  background-color: #ffffff;
 }
 .date-block .date-text span {
   color: #3d40cb;
