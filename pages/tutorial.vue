@@ -58,7 +58,7 @@
         ></div>
       </div>
     </div>
-    <div class="w-screen pt-12 pb-12 mt-24 mb-12 way-to-join-block m-screen">
+    <div class="w-screen pt-12 pb-12 mt-24 way-to-join-block m-screen">
       <div
         class="relative flex items-start justify-center mb-12 md:items-center way-to-join-block"
       >
@@ -123,7 +123,7 @@
         </div>
       </div>
     </div>
-    <div class="text-base description-block">
+    <div class="mt-24 text-base description-block">
       <div id="event-one" class="mb-20 event-one">
         <python-banner
           direction="right"
