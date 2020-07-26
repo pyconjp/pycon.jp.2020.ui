@@ -14,13 +14,14 @@
               <h2 class="inline mb-2 text-2xl font-semibold md:text-4xl">
                 {{ $t('title') }}
               </h2>
-              <p
-                v-for="(paragraph, i) in $t('paragraphs')"
-                :key="`p-${i}`"
-                class="my-4"
-              >
-                {{ paragraph }}
-              </p>
+              <div v-for="(paragraph, i) in $t('paragraphs')" :key="`p-${i}`">
+                <p v-if="i != 'p-9'" class="my-4">
+                  {{ paragraph }}
+                </p>
+                <a v-if="i === 'p-9'" :href="paragraph['link']">{{
+                  paragraph['content']
+                }}</a>
+              </div>
             </div>
             <div class="inline-block w-8/12 mx-0 mb-6 lg:my-3 lg:ml-4 btn-tuto">
               <button
@@ -87,11 +88,8 @@ export default Vue.extend({
   },
 })
 </script>
-<style scoped>
-.overview-area {
-  background-color: #ffd8a1;
-}
 
+<style scoped>
 .attend-icon {
   border-color: #404a6b;
   background-color: #404a6b;
@@ -101,6 +99,10 @@ export default Vue.extend({
   border-style: solid;
   border-color: #404a6b;
   border-width: 8px;
+}
+
+a {
+  text-decoration: underline;
 }
 </style>
 
@@ -122,8 +124,18 @@ export default Vue.extend({
     "title": "参加方法",
     "paragraphs": {
       "p-1": "本年度のチュートリアルには2種類の参加方法があります",
-      "p-2": "・講師に質問できるZoom参加(限定20名、抽選)・YouTube Live視聴のみの参加Zoom参加の場合は環境構築の他、コミュニケーションツールとしてZoomの用意が必要です。Zoomのアドレスについては後ほど参加者情報の蘭でお伝えします。",
-      "p-3": "また、以下のものは含まれません。・カンファレンス（8/28~29）のZoom参加権チュートリアルの詳細は<a></a>をご覧下さい。"
+      "p-2": "・講師に質問できるZoom参加(限定20名、抽選)",
+      "p-3": "・YouTube Live視聴のみの参加",
+      "p-4": "Zoom参加の場合は環境構築の他、コミュニケーションツールとしてZoomの用意が必要です。",
+      "p-5": "Zoomのアドレスについては後ほどconnpassの参加者情報欄でお伝えします。",
+      "p-6": "また、以下のものは含まれません。",
+      "p-7": "・カンファレンス（8/28~29）のZoom参加権",
+      "p-8": "チュートリアルの詳細は",
+      "p-9": {
+        "link": "https://pyconjp.blogspot.com/2020/07/2020-tutorial.html",
+        "content": "PyCon JP 2020 Blogのチュートリアル募集に関する記事"
+      },
+      "p-10": "をご覧下さい。"
     },
     "tutorial": {
       "youtube": "Youtube Live参加",
