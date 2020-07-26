@@ -189,6 +189,7 @@ export default {
     },
     vueI18n: {
       fallbackLocale: 'ja',
+      silentTranslationWarn: true,
       messages: {
         ja,
         en,
