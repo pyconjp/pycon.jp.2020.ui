@@ -58,9 +58,9 @@
         ></div>
       </div>
     </div>
-    <div class="w-screen pt-12 pb-12 mt-24 way-to-join-block m-screen">
+    <div class="w-screen pt-24 pb-24 mt-24 way-to-join-block m-screen">
       <div
-        class="relative flex items-start justify-center mb-12 md:items-center way-to-join-block"
+        class="relative flex items-start justify-center md:items-center way-to-join-block"
       >
         <div class="relative flex flex-col items-center justify-center">
           <div class="relative z-10 flex justify-center w-screen m-screen">
