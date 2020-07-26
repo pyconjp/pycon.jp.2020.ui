@@ -111,9 +111,19 @@ a {
 "en": {
     "title": "How to attend",
     "paragraphs": {
-      "p-1": "本年度のチュートリアルには2種類の参加方法があります",
-      "p-2": "・講師に質問できるZoom参加",
-      "p-3": "また、以下のものは含まれません"
+      "p-1": "You have 2 options to join tutorial.",
+      "p-2": "・Join Zoom(including chance to ask questions to tutors. Limited for 20 people lottery selected)",
+      "p-3": "・Join YouTube Live(you can only watch the tutorial.)",
+      "p-4": "If you join Zoom, you need to prepare Zoom application.",
+      "p-5": "We will tell you the Zoom link to join via connpass limeted section for participants.",
+      "p-6": "Tutorial ticket does not include:",
+      "p-7": "・Tickets for PyCon JP 2020 Conference(Aug. 28-29(JST))",
+      "p-8": "For more details please check:",
+      "p-9": {
+        "link": "https://pyconjp.blogspot.com/2020/07/2020-tutorial.html",
+        "content": "PyCon JP 2020 Blog post about the tutorial"
+      },
+      "p-10": "Tutorial classes will be held only in Japanese. We kindly ask for your understanding."
     },
     "tutorial": {
       "youtube": "Join Youtube Live",
