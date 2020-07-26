@@ -2,7 +2,7 @@
   <section
     class="relative flex items-start justify-center mb-12 md:items-center"
   >
-    <div class="description-block">
+    <div class="way-to-join-block">
       <div class="relative flex flex-col items-center justify-center">
         <div
           class="relative z-10 flex justify-center w-screen bg-white m-screen"
@@ -83,7 +83,7 @@ export default Vue.extend({
     },
   },
   head() {
-    return { title: this.$t('pages.code-of-conduct.title') }
+    return { title: 'チュートリアル' }
   },
 })
 </script>
