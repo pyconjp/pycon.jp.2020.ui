@@ -22,7 +22,7 @@
                 {{ paragraph }}
               </p>
             </div>
-            <div class="inline-block w-8/12 mx-0 my-3 lg:ml-4 btn-tuto">
+            <div class="inline-block w-8/12 mx-0 mb-6 lg:my-3 lg:ml-4 btn-tuto">
               <button
                 class="flex items-center w-full px-4 py-2 font-medium duration-200 bg-white rounded-full shadow xl:w-9/12 xl:ml-10 transition-color group md:px-6 md:py-6 text-py-black hover:bg-py-black focus:outline-none"
               >
