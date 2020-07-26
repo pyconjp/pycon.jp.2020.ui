@@ -365,14 +365,6 @@ export default Vue.extend({
   components: {
     PythonBanner,
   },
-  data() {
-    return {}
-  },
-  computed: {
-    isEnglish() {
-      return this.$i18n.locale === 'en'
-    },
-  },
   methods: {
     openConnpass(type) {
       if (type === 'youtube') {
