@@ -4,12 +4,13 @@
   >
     <div class="px-2 py-2 bg-white rounded-md shadow">
       <n-link
-        v-for="locale in availableLocales"
-        :key="locale.code"
+        v-for="event in $t('pages.event-list.content-list')"
+        :key="event.title"
         class="block px-4 py-2 mt-2 text-sm font-semibold transition-colors duration-200 bg-transparent rounded-lg px- md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
-        :to="switchLocalePath(locale.code)"
+        :to="localePath(event.path)"
+        @click.native.stop="$emit(emitEvent)"
       >
-        {{ locale.name }}
+        {{ event.title }}
       </n-link>
     </div>
   </div>
@@ -17,6 +18,12 @@
 
 <script>
 export default {
+  props: {
+    emitEvent: {
+      type: String,
+      default: '',
+    },
+  },
   computed: {
     availableLocales() {
       return this.$i18n.locales.filter((i) => i.code !== this.$i18n.locale)

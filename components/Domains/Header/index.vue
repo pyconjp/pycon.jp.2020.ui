@@ -32,14 +32,14 @@
           class="flex flex-col pb-4 md:pb-0 md:flex md:justify-end md:flex-row"
         >
           <header-link
-            v-if="page.path !== 'event-list'"
+            v-if="page.path !== undefined"
             :path="page.path"
             :exact="page.path === '/' ? true : false"
             class="mt-2 mr-0 md:mr-2 md:mt-0"
           >
             {{ page.title }}
           </header-link>
-          <!-- <dropdown
+          <dropdown
             v-else
             :is-dropdown-open="isEventListDropdownOpen"
             emit-event="toggleEventListDropdown"
@@ -49,9 +49,15 @@
           >
             {{ $t('pages.event-list.title') }}
             <template #menu>
-              <locales-list v-if="isEventListDropdownOpen" />
+              <event-list
+                v-if="isEventListDropdownOpen"
+                emit-event="toggleEventListDropdown"
+                @toggleEventListDropdown="
+                  isEventListDropdownOpen = !isEventListDropdownOpen
+                "
+              />
             </template>
-          </dropdown> -->
+          </dropdown>
         </div>
 
         <locales-list />
@@ -62,14 +68,16 @@
 
 <script>
 import Hamburger from '~/components/Domains/Header/Hamburger'
-// import Dropdown from '~/components/Domains/Header/Dropdown'
+import Dropdown from '~/components/Domains/Header/Dropdown'
+import EventList from '~/components/Domains/Header/EventList'
 import LocalesList from '~/components/Domains/Header/LocalesList'
 import HeaderLink from '~/components/Domains/Header/HeaderLink'
 
 export default {
   components: {
     Hamburger,
-    // Dropdown,
+    Dropdown,
+    EventList,
     LocalesList,
     HeaderLink,
   },
@@ -102,6 +110,9 @@ export default {
     mql.addListener(this.updateMatches)
   },
   methods: {
+    test() {
+      console.log('testdesu')
+    },
     updateMatches(mql) {
       if (mql.matches) {
         this.isMobile = false
