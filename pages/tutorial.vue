@@ -84,7 +84,11 @@ export default Vue.extend({
     },
   },
   head() {
-    return { title: 'チュートリアル' }
+    let titleTxt = 'Tutorial'
+    if (this.$i18n.locale === 'ja') {
+      titleTxt = 'チュートリアル'
+    }
+    return { title: titleTxt }
   },
 })
 </script>
