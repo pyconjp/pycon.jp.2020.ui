@@ -25,25 +25,23 @@
         <div class="description-block lg:ml-10">
           <div>
             <p class="mt-12 mb-4 text-base">
-              カンファレンス翌日8/30（日）に行われるPython初心者〜中級者向けのイベントです。<br />
-              カンファレンス本体に参加しない方もチュートリアルに参加可能です。
+              {{ $t('description.p-1') }}<br />
+              {{ $t('description.p-2') }}
             </p>
             <p class="mb-4 text-base">
-              今年は以下の2種類のチュートリアルを行います。<br />
-              <span class="font-bold"
-                >なお、今年のチュートリアルではどちらも他のプログラム言語での開発知識がある事を前提としています。</span
-              >
+              {{ $t('description.p-3') }}<br />
+              <span class="font-bold">{{ $t('description.p-4') }}</span>
             </p>
           </div>
           <div class="description-link-block">
             <div class="mb-4 text-lg font-bold">
               <nuxt-link to="#event-one">
-                Pythonの開発エコシステムを学ぼう Slack Bot編
+                {{ $t('description.event-one-title') }}
               </nuxt-link>
             </div>
             <div class="text-lg font-bold">
               <nuxt-link to="#event-two">
-                オープンデータを使って、Pythonでデータ分析
+                {{ $t('description.event-two-title') }}
               </nuxt-link>
             </div>
           </div>
@@ -70,18 +68,20 @@
           size="small"
         >
           <template #title>
-            Pythonの開発エコシステムを学ぼう Slack Bot編
+            {{ $t('description.event-one-title') }}
           </template>
         </python-banner>
         <div class="mt-12 event-description">
-          このチュートリアルではSlack
-          Botの開発を通じて、Pythonによるアプリケーション開発の基礎知識やテスト駆動開発のためのpytestの基本的な使い方、Sphinxを使ったdocstringからのドキュメント作成の基礎を学ぶことができます。各国の挨拶を返したり、Livedoor天気APIで現在の天気を取得したり、connpassのAPIでイベント情報を検索できるSlack
-          Botを作ることができるようになるでしょう。
+          {{ $t('event-one.description') }}
         </div>
         <div class="mt-8 event-detials">
           <div class="date-block">
-            <div class="mb-2 text-xl font-bold title">日程</div>
-            <div class="content">2020.08.30(日)10:00-17:00</div>
+            <div class="mb-2 text-xl font-bold title">
+              {{ $t('event-one.date-title') }}
+            </div>
+            <div class="content">
+              2020.08.30( {{ $t('event-one.date-content') }})10:00-17:00
+            </div>
           </div>
           <div class="mt-4 powered-block">
             <div class="mb-2 text-xl font-bold title">提供</div>
@@ -201,7 +201,7 @@
           size="small"
         >
           <template #title>
-            オープンデータを使って、Pythonでデータ分析
+            {{ $t('description.event-two-title') }}
           </template>
         </python-banner>
         <div class="mt-12 event-description">
@@ -302,6 +302,11 @@ export default Vue.extend({
   data() {
     return {}
   },
+  computed: {
+    isEnglish() {
+      return this.$i18n.locale === 'ja'
+    },
+  },
   head() {
     return { title: 'PyCon JP 2020', titleTemplate: null }
   },
@@ -348,8 +353,36 @@ a:visited {
 <i18n>
 {
   "en": {
+    "description": {
+      "p-1": "This is a beginner to intermediate Python event on Sunday, August 30, the day after the conference." ,
+      "p-2": "Those who do not attend the conference itself can still participate in the tutorial." ,
+      "p-3": "This year we will be doing two different tutorials." ,
+      "p-4": "Still, both of this year's tutorials assume that you have development knowledge in other programming languages." ,
+      "event-one-title": "Learn the Python Development Ecosystem, Slack Bot Edition",
+      "event-two-title": "Using Open Data to Analyze Data in Python"
+      },
+    "event-one" : {
+      "description" : "In this tutorial you will learn the basics of application development in Python, the basics of pytest for test-driven development, and the basics of documenting from docstrings using Sphinx through the development of a Slack Bot. You can do things like. You'll be able to return greetings from different countries, get the current weather with the Livable Weather API, and create a Slack Bot that allows you to search for event information with the connpass API." ,
+      "date-title": "dates",
+      "date-content": "Sun",
+      "powered-by" : "Powered by"
+    }
   },
   "ja": {
+    "description": {
+      "p-1": "カンファレンス翌日8/30（日）に行われるPython初心者〜中級者向けのイベントです。",
+      "p-2": "カンファレンス本体に参加しない方もチュートリアルに参加可能です。",
+      "p-3": "今年は以下の2種類のチュートリアルを行います。",
+      "p-4": "なお、今年のチュートリアルではどちらも他のプログラム言語での開発知識がある事を前提としています。",
+      "event-one-title": "Pythonの開発エコシステムを学ぼう Slack Bot編",
+      "event-two-title": "オープンデータを使って、Pythonでデータ分析"
+    },
+    "event-one" : {
+      "description" : "このチュートリアルではSlack Botの開発を通じて、Pythonによるアプリケーション開発の基礎知識やテスト駆動開発のためのpytestの基本的な使い方、Sphinxを使ったdocstringからのドキュメント作成の基礎を学ぶことができます。各国の挨拶を返したり、Livedoor天気APIで現在の天気を取得したり、connpassのAPIでイベント情報を検索できるSlack Botを作ることができるようになるでしょう。",
+      "date-title": "日程",
+      "date-content": "日",
+      "powered-by" : "提供"
+    }
   }
 }
 </i18n>
