@@ -370,7 +370,7 @@ export default Vue.extend({
   },
   computed: {
     isEnglish() {
-      return this.$i18n.locale === 'ja'
+      return this.$i18n.locale === 'en'
     },
   },
   methods: {
@@ -439,18 +439,12 @@ a:visited {
 {
 "en": {
   "description": {
-      "p-1": "This is a beginner to intermediate Python event on Sunday, August 30, the day after the conference." ,
-      "p-2": "Those who do not attend the conference itself can still participate in the tutorial." ,
-      "p-3": "This year we will be doing two different tutorials." ,
-      "p-4": "Still, both of this year's tutorials assume that you have development knowledge in other programming languages." ,
+      "p-1": "This event is for a beginner to intermediate level at Python held on Sunday, August 30 - the day after the conference." ,
+      "p-2": "Those who do not attend the conference can still participate in this tutorial." ,
+      "p-3": "This year we will have two tutorials." ,
+      "p-4": "Still, both tutorials assume that you have development knowledge in other(non-Python) programming languages." ,
       "event-one-title": "Learn the Python Development Ecosystem, Slack Bot Edition",
       "event-two-title": "Using Open Data to Analyze Data in Python"
-      },
-    "event-one" : {
-      "description" : "In this tutorial you will learn the basics of application development in Python, the basics of pytest for test-driven development, and the basics of documenting from docstrings using Sphinx through the development of a Slack Bot. You can do things like. You'll be able to return greetings from different countries, get the current weather with the Livable Weather API, and create a Slack Bot that allows you to search for event information with the connpass API." ,
-      "date-title": "dates",
-      "date-content": "Sun",
-      "powered-by" : "Powered by"
     },
     "title": "How to attend",
     "paragraphs": {
@@ -478,15 +472,9 @@ a:visited {
       "p-1": "カンファレンス翌日8/30（日）に行われるPython初心者〜中級者向けのイベントです。",
       "p-2": "カンファレンス本体に参加しない方もチュートリアルに参加可能です。",
       "p-3": "今年は以下の2種類のチュートリアルを行います。",
-      "p-4": "なお、今年のチュートリアルではどちらも他のプログラム言語での開発知識がある事を前提としています。",
+      "p-4": "なお、今年のチュートリアルではどちらもPython以外のプログラム言語での開発知識がある事を前提としています。",
       "event-one-title": "Pythonの開発エコシステムを学ぼう Slack Bot編",
       "event-two-title": "オープンデータを使って、Pythonでデータ分析"
-    },
-    "event-one" : {
-      "description" : "このチュートリアルではSlack Botの開発を通じて、Pythonによるアプリケーション開発の基礎知識やテスト駆動開発のためのpytestの基本的な使い方、Sphinxを使ったdocstringからのドキュメント作成の基礎を学ぶことができます。各国の挨拶を返したり、Livedoor天気APIで現在の天気を取得したり、connpassのAPIでイベント情報を検索できるSlack Botを作ることができるようになるでしょう。",
-      "date-title": "日程",
-      "date-content": "日",
-      "powered-by" : "提供"
     },
     "title": "参加方法",
     "paragraphs": {
