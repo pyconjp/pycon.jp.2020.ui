@@ -1,6 +1,6 @@
 <template>
   <div
-    class="flex flex-col max-w-screen-xl mx-auto md:items-center md:justify-between md:flex-row md:my-4 xl:w-3/4"
+    class="flex flex-col max-w-screen-xl mx-auto tb:items-center tb:justify-between tb:flex-row tb:my-4 xl:w-3/4"
   >
     <div class="flex flex-row items-center justify-between py-4">
       <n-link :to="localePath('/')">
@@ -40,7 +40,7 @@
             {{ page.title }}
           </header-link>
           <dropdown
-            v-else
+            v-else-if="!isMobile"
             :is-dropdown-open="isEventListDropdownOpen"
             emit-event="toggleEventListDropdown"
             @toggleEventListDropdown="
@@ -58,6 +58,19 @@
               />
             </template>
           </dropdown>
+          <div v-else>
+            <h5 class="block px-4 py-2 mt-2 text-sm bg-transparent md:mt-0">
+              {{ $t('pages.event-list.title') }}
+            </h5>
+            <n-link
+              v-for="event in $t('pages.event-list.content-list')"
+              :key="event.title"
+              class="block px-4 py-2 mt-2 ml-10 text-sm bg-transparent md:mt-0"
+              :to="localePath(event.path)"
+            >
+              {{ event.title }}
+            </n-link>
+          </div>
         </div>
 
         <locales-list />
@@ -105,14 +118,11 @@ export default {
       this.isDropdownOpen = false
       next()
     })
-    const mql = window.matchMedia('(min-width: 768px)')
+    const mql = window.matchMedia('(min-width: 848px)')
     this.updateMatches(mql)
     mql.addListener(this.updateMatches)
   },
   methods: {
-    test() {
-      console.log('testdesu')
-    },
     updateMatches(mql) {
       if (mql.matches) {
         this.isMobile = false
