@@ -135,15 +135,17 @@
           </template>
         </python-banner>
         <div class="mt-12 event-description">
-          {{ $t('event-one.description') }}
+          このチュートリアルではSlack
+          Botの開発を通じて、Pythonによるアプリケーション開発の基礎知識やテスト駆動開発のためのpytestの基本的な使い方、Sphinxを使ったdocstringからのドキュメント作成の基礎を学ぶことができます。各国の挨拶を返したり、Livedoor天気APIで現在の天気を取得したり、connpassのAPIでイベント情報を検索できるSlack
+          Botを作ることができるようになるでしょう。
         </div>
         <div class="mt-8 event-detials">
           <div class="date-block">
             <div class="mb-2 text-xl font-bold title">
-              {{ $t('event-one.date-title') }}
+              日程
             </div>
             <div class="content">
-              2020.08.30( {{ $t('event-one.date-content') }})10:00-17:00
+              2020.08.30(日)10:00-17:00
             </div>
           </div>
           <div class="mt-4 powered-block">
