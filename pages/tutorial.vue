@@ -13,7 +13,7 @@
             <div class="mb-0 text-5xl font-bold date-text">
               2020.08.30<span class="ml-2 text-lg">(Sun)</span>
             </div>
-            <div class="mx-1 text-lg font-semibol">10:00 - 17:00</div>
+            <div class="mx-1 mb-2 text-lg font-semibol">10:00 - 17:00</div>
           </div>
           <div class="image-blck">
             <img
