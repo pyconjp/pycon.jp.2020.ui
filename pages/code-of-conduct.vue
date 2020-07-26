@@ -58,7 +58,7 @@
           >
             <p
               v-for="(paragraph, i) in $t('guideline.section1')"
-              :key="`p-${i}`"
+              :key="`s1-${i}`"
               class="my-4"
             >
               {{ paragraph }}
@@ -69,7 +69,7 @@
             </p>
             <p
               v-for="(paragraph, i) in $t('guideline.section2.paragraph')"
-              :key="`p-${i}`"
+              :key="`s2-${i}`"
             >
               {{ paragraph }}
             </p>
@@ -78,7 +78,7 @@
             </p>
             <p
               v-for="(paragraph, i) in $t('guideline.section3.paragraph')"
-              :key="`p-${i}`"
+              :key="`s3-${i}`"
             >
               {{ paragraph }}
             </p>
@@ -87,7 +87,7 @@
             </p>
             <p
               v-for="(paragraph, i) in $t('guideline.section4.paragraph')"
-              :key="`p-${i}`"
+              :key="`s4-${i}`"
             >
               {{ paragraph }}
             </p>
@@ -96,7 +96,7 @@
             </p>
             <p
               v-for="(paragraph, i) in $t('guideline.section5.paragraph')"
-              :key="`p-${i}`"
+              :key="`s5-${i}`"
             >
               {{ paragraph }}
             </p>
@@ -105,7 +105,7 @@
             </p>
             <p
               v-for="(paragraph, i) in $t('guideline.section6.paragraph')"
-              :key="`p-${i}`"
+              :key="`s6-${i}`"
             >
               {{ paragraph }}
             </p>
