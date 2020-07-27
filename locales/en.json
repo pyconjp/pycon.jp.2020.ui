@@ -4,6 +4,15 @@
       "title": "PyCon JP 2020",
       "path": "/"
     },
+    "event-list": {
+      "title": "Event List",
+      "content-list": [
+        {
+          "title": "Tutorial",
+          "path": "tutorial"
+        }
+      ]
+    },
     "code-of-conduct": {
       "title": "Code of Conduct",
       "path": "code-of-conduct"
@@ -15,15 +24,6 @@
     "news": {
       "title": "News",
       "path": "https://pyconjp.blogspot.com/search/label/pyconjp2020"
-    },
-    "event-list": {
-      "title": "Event List",
-      "content-list": [
-        {
-          "title": "Tutorial",
-          "path": "tutorial"
-        }
-      ]
     }
   },
   "language": "日本語",
