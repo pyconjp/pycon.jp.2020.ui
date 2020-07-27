@@ -13,9 +13,11 @@
             <div class="mb-0 text-5xl font-bold date-text">
               2020.08.30<span class="ml-2 text-lg">(Sun)</span>
             </div>
-            <div class="mx-1 mb-2 text-lg font-semibol">10:00 - 17:00</div>
+            <div class="mx-1 mb-2 text-lg font-semibold md:text-3xl">
+              10:00 - 17:00
+            </div>
           </div>
-          <div class="image-blck">
+          <div class="mt-8">
             <img
               :src="require('~/assets/img/tutorial/tutorial.png')"
               class="z-10"
@@ -67,7 +69,7 @@
             <div
               class="flex flex-col items-center w-11/12 px-6 border-8 border-solid sm:px-8 md:px-10 lg:px-12 lg:flex-row md:w-4/5 border-py-black rounded-xl way-to-join-content"
             >
-              <div class="w-10/12 mx-8 my-6 md:ml-10 text-tuto">
+              <div class="w-10/12 mx-8 my-6 md:ml-10">
                 <h2 class="inline mb-2 text-2xl font-semibold md:text-4xl">
                   {{ $t('title') }}
                 </h2>
