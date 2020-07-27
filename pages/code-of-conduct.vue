@@ -58,7 +58,7 @@
           >
             <p
               v-for="(paragraph, i) in $t('guideline.section1')"
-              :key="`p-${i}`"
+              :key="`s1-${i}`"
               class="my-4"
             >
               {{ paragraph }}
@@ -69,7 +69,7 @@
             </p>
             <p
               v-for="(paragraph, i) in $t('guideline.section2.paragraph')"
-              :key="`p-${i}`"
+              :key="`s2-${i}`"
             >
               {{ paragraph }}
             </p>
@@ -78,7 +78,7 @@
             </p>
             <p
               v-for="(paragraph, i) in $t('guideline.section3.paragraph')"
-              :key="`p-${i}`"
+              :key="`s3-${i}`"
             >
               {{ paragraph }}
             </p>
@@ -87,7 +87,7 @@
             </p>
             <p
               v-for="(paragraph, i) in $t('guideline.section4.paragraph')"
-              :key="`p-${i}`"
+              :key="`s4-${i}`"
             >
               {{ paragraph }}
             </p>
@@ -96,7 +96,7 @@
             </p>
             <p
               v-for="(paragraph, i) in $t('guideline.section5.paragraph')"
-              :key="`p-${i}`"
+              :key="`s5-${i}`"
             >
               {{ paragraph }}
             </p>
@@ -105,7 +105,7 @@
             </p>
             <p
               v-for="(paragraph, i) in $t('guideline.section6.paragraph')"
-              :key="`p-${i}`"
+              :key="`s6-${i}`"
             >
               {{ paragraph }}
             </p>
@@ -151,8 +151,9 @@ export default Vue.extend({
       "p-4": "Sponsors are also subject to the anti-harassment policy. In particular, sponsors should not use sexualised images, activities, or other material. Booth staff (including volunteers) should not use sexualised clothing/uniforms/costumes, or otherwise create a sexualised environment.",
       "p-5": "If a participant engages in harassing behavior, the conference organisers may take any action they deem appropriate, including warning the offender or expulsion from the conference with no refund.",
       "p-6": "If you are being harassed, notice that someone else is being harassed, or have any other concerns, please contact a member of conference staff immediately. Conference staff can be identified as they'll be wearing branded t-shirts.",
-      "p-7": "Conference staff will be happy to help participants contact hotel/venue security or local law enforcement, provide escorts, or otherwise assist those experiencing harassment to feel safe for the duration of the conference. We value your attendance.",
-      "p-8": "We expect participants to follow these rules at conference and workshop venues and conference-related social events."
+      "p-7": "* PyCon JP 2020 is held Online, so let a member of staff know by email(coc@pycon.jp) in that case instead of finding a conference staff with branded t-shirts.",
+      "p-8": "Conference staff will be happy to help participants contact hotel/venue security or local law enforcement, provide escorts, or otherwise assist those experiencing harassment to feel safe for the duration of the conference. We value your attendance.",
+      "p-9": "We expect participants to follow these rules at conference and workshop venues and conference-related social events."
     },
     "guideline": {
       "title": "Guidelines of Conduct",
@@ -206,8 +207,9 @@ export default Vue.extend({
       "p-3": "参加者は、これらのハラスメント行為を止めるように求められた場合、すぐに従わなければなりません。",
       "p-4": "スポンサーもまた反ハラスメント行為ポリシーに従わなければなりません。特に、スポンサーは性的な関心を引き起こす映像表現、活動、あるいはその他の物品を使うべきではありません。ボランティアを含め、ブースのスタッフは、性的な関心を引き起こすような服装/制服/コスチュームを使うべきではありませんし、その他の手段で性的な関心を引き起こすような環境を作ることもすべきではありません。",
       "p-5": "もしあなたがハラスメントに遭った場合、他の人がハラスメントに遭っている場合、あるいは他に気になることがあった時は、すぐに会議スタッフの誰かに連絡していただくようお願いします。会議スタッフは会議のブランドを付けたTシャツを着ています。",
-      "p-6": "会議スタッフは、ハラスメントを経験した人が、会議期間中安全かつ安心と感じられるように、参加者がホテル/会場の警備や近隣の警察に連絡すること、付き添い者の提供、およびその他の支援を行います。私達にとってあなたが参加しているのは大事なことなのです。",
-      "p-7": "私達は参加者が会議場とワークショップ会場、また会議に関連したソーシャルイベントにて、このルールに従うことを望みます。"
+      "p-6": "※PyCon JP 2020はオンライン開催のため、coc@pycon.jp宛にメールにて連絡をお願いします(Tシャツを着た現地スタッフを探す必要はありません)。",
+      "p-7": "会議スタッフは、ハラスメントを経験した人が、会議期間中安全かつ安心と感じられるように、参加者がホテル/会場の警備や近隣の警察に連絡すること、付き添い者の提供、およびその他の支援を行います。私達にとってあなたが参加しているのは大事なことなのです。",
+      "p-8": "私達は参加者が会議場とワークショップ会場、また会議に関連したソーシャルイベントにて、このルールに従うことを望みます。"
     },
     "guideline": {
       "title": "行動ガイドライン",
