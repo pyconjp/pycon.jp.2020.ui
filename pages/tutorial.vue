@@ -8,7 +8,7 @@
         <p class="mb-8 text-xl md:text-2xl">-チュートリアル-</p>
       </div>
       <div class="flex flex-wrap mt-12 mb-12">
-        <dir class="flex flex-wrap items-center justify-center">
+        <div class="flex flex-wrap items-center justify-center">
           <div class="mr-8 date-block">
             <div class="mb-0 text-5xl font-bold date-text">
               2020.08.30<span class="ml-2 text-lg">(Sun)</span>
@@ -21,7 +21,7 @@
               class="z-10"
             />
           </div>
-        </dir>
+        </div>
         <div class="description-block lg:ml-10">
           <div>
             <p class="mt-12 mb-4 text-base">
