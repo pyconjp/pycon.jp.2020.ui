@@ -4,6 +4,10 @@
       "title": "PyCon JP 2020",
       "path": "/"
     },
+    "code-of-conduct": {
+      "title": "Code of Conduct",
+      "path": "code-of-conduct"
+    },
     "event-list": {
       "title": "Event List",
       "content-list": [
@@ -12,10 +16,6 @@
           "path": "tutorial"
         }
       ]
-    },
-    "code-of-conduct": {
-      "title": "Code of Conduct",
-      "path": "code-of-conduct"
     },
     "sponsor": {
       "title": "Sponsor",
