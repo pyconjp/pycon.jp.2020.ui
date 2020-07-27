@@ -8,14 +8,6 @@
       "title": "行動規範",
       "path": "code-of-conduct"
     },
-    "sponsor": {
-      "title": "スポンサー",
-      "path": "sponsor"
-    },
-    "news": {
-      "title": "お知らせ",
-      "path": "https://pyconjp.blogspot.com/search/label/pyconjp2020"
-    },
     "event-list": {
       "title": "イベント一覧",
       "content-list": [
@@ -24,6 +16,14 @@
           "path": "tutorial"
         }
       ]
+    },
+    "sponsor": {
+      "title": "スポンサー",
+      "path": "sponsor"
+    },
+    "news": {
+      "title": "お知らせ",
+      "path": "https://pyconjp.blogspot.com/search/label/pyconjp2020"
     }
   },
   "language": "English",
