@@ -3,7 +3,7 @@
     <section
       class="relative flex items-start justify-center mb-12 h-80 md:h-120 md:items-center"
     >
-      <div class="relative z-50 mt-16 mr-2 md:m-0">
+      <div class="relative z-10 mt-16 mr-2 md:m-0">
         <h1 class="text-4xl font-extrabold leading-tight md:text-6xl">
           PyCon JP <br />2020 <span class="font-semibold">Online</span>
         </h1>
