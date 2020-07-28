@@ -184,12 +184,12 @@
             ],
             "media": [{
                     "name": "O'Reilly Japan, Inc.",
-                    "url": "",
+                    "url": "https://www.oreilly.co.jp/index.shtml",
                     "imagePath": "media1.png"
                 },
                 {
                     "name": "ITmedia Inc.",
-                    "url": "",
+                    "url": "https://www.atmarkit.co.jp/",
                     "imagePath": "media2.png"
                 },
                 {
