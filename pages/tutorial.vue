@@ -284,7 +284,7 @@
             <div class="mt-4 mb-2 text-xl font-bold title">提供</div>
             <div class="content">
               <ul>
-                <li>・はんなりPython</li>
+                <li>・はんなりPythonの会</li>
                 <li>・PyData Osaka</li>
                 <li>・PyCon mini Hiroshima</li>
               </ul>
