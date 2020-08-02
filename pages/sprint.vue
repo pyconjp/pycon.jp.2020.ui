@@ -1,5 +1,5 @@
 <template>
-  <section class="w-full py-8">
+  <section class="w-full">
     <div class="hero-block">
       <div class="flex flex-col items-center title-block">
         <h2 class="inline mb-2 text-4xl font-semibold md:text-6xl">

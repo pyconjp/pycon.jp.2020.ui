@@ -24,12 +24,12 @@
       <nav
         v-show="isDrawerOpen || !isMobile"
         id="navigation"
-        class="flex flex-col pb-4 md:pb-0 md:flex md:justify-end md:flex-row"
+        class="flex flex-col pb-4 md:pb-0 md:justify-end tb:flex-row"
       >
         <div
           v-for="page in filteredPages"
           :key="page.path"
-          class="flex flex-col pb-4 md:pb-0 md:flex md:justify-end md:flex-row"
+          class="flex flex-col pb-4 md:pb-0 md:justify-end tb:flex-row"
         >
           <header-link
             v-if="page.path !== undefined"
