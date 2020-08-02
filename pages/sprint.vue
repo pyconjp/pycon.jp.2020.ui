@@ -20,7 +20,7 @@
           <div class="flex justify-center w-full mt-8 md:w-1/3 lg:w-1/2">
             <img
               :src="require('~/assets/img/sprint/sprint.png')"
-              class="z-10 w-full rounded-xl"
+              class="z-10 object-contain w-full rounded-xl"
             />
           </div>
         </div>
