@@ -18,6 +18,10 @@
         {
           "title": "Sprint",
           "path": "sprint"
+        },
+        {
+          "title": "Youth Coder Workshop",
+          "path": "youth-coder"
         }
       ]
     },
