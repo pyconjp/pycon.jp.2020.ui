@@ -18,6 +18,10 @@
         {
           "title": "スプリント",
           "path": "sprint"
+        },
+        {
+          "title": "ユースコーダーワークショップ",
+          "path": "youth-coder"
         }
       ]
     },
