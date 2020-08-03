@@ -1,6 +1,6 @@
 <template>
-  <section class="w-full">
-    <div class="hero-block">
+  <section class="">
+    <div class="relative">
       <div class="flex flex-col items-center title-block">
         <h2 class="mb-2 text-4xl font-semibold text-center md:text-6xl">
           Youth Coder Workshop
@@ -17,13 +17,13 @@
           <div class="flex justify-center w-full mt-8 md:w-1/3 lg:w-1/2">
             <img
               :src="require('~/assets/img/youth-coder/youth-coder.png')"
-              class="z-10 object-contain w-full rounded-xl"
+              class="z-10 w-full rounded-xl"
             />
           </div>
         </div>
       </div>
       <div
-        class="absolute w-screen h-full opacity-25 md:opacity-100 main-visual md:w-50vw md:relative"
+        class="absolute w-screen opacity-25 md:opacity-100 main-visual md:w-50vw md:relative"
       >
         <div
           class="absolute hidden rounded-full balloon-1 bg-py-blue-light md:block"
@@ -33,7 +33,7 @@
         ></div>
       </div>
     </div>
-    <div class="w-screen pt-24 pb-24 mt-24 way-to-join-block m-screen">
+    <div class="pt-24 pb-24 mt-24 way-to-join-block m-screen">
       <div
         class="relative flex items-start justify-center md:items-center way-to-join-block"
       >

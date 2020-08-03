@@ -1,5 +1,5 @@
 <template>
-  <section class="w-full py-8">
+  <section class="">
     <div class="hero-block">
       <div class="flex flex-col items-center title-block">
         <h2 class="inline mb-2 text-4xl font-semibold md:text-6xl">
@@ -50,7 +50,7 @@
         </div>
       </div>
       <div
-        class="absolute w-screen h-full opacity-25 md:opacity-100 main-visual md:w-50vw md:relative"
+        class="absolute w-screen opacity-25 md:opacity-100 main-visual md:w-50vw md:relative"
       >
         <div
           class="absolute hidden rounded-full balloon-1 bg-py-blue-light md:block"
