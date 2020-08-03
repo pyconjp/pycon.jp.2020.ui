@@ -5,7 +5,7 @@
         <h2 class="inline mb-2 text-4xl font-semibold md:text-6xl">
           Sprint
         </h2>
-        <p class="mb-8 text-xl md:text-2xl">-スプリント-</p>
+        <p class="mb-8 text-xl md:text-2xl">-Sprint-</p>
       </div>
       <div class="flex flex-col">
         <div class="flex flex-wrap items-center justify-center md:flex-no-wrap">
