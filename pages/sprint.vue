@@ -1,6 +1,6 @@
 <template>
-  <section class="w-full">
-    <div class="hero-block">
+  <section class="">
+    <div class="relative">
       <div class="flex flex-col items-center title-block">
         <h2 class="inline mb-2 text-4xl font-semibold md:text-6xl">
           Sprint
@@ -20,7 +20,7 @@
           <div class="flex justify-center w-full mt-8 md:w-1/3 lg:w-1/2">
             <img
               :src="require('~/assets/img/sprint/sprint.png')"
-              class="z-10 object-contain w-full rounded-xl"
+              class="z-10 w-full rounded-xl"
             />
           </div>
         </div>
@@ -37,7 +37,7 @@
         </div>
       </div>
       <div
-        class="absolute w-screen h-full opacity-25 md:opacity-100 main-visual md:w-50vw md:relative"
+        class="absolute w-screen opacity-25 md:opacity-100 main-visual md:w-50vw md:relative"
       >
         <div
           class="absolute hidden rounded-full balloon-1 bg-py-blue-light md:block"
@@ -47,7 +47,7 @@
         ></div>
       </div>
     </div>
-    <div class="w-screen pt-24 pb-24 mt-24 way-to-join-block m-screen">
+    <div class="pt-24 pb-24 mt-24 way-to-join-block m-screen">
       <div
         class="relative flex items-start justify-center md:items-center way-to-join-block"
       >
@@ -376,8 +376,8 @@ tfoot {
   "ja": {
     "description": {
       "p-1": "PyCon JP 2020のスプリント参加者およびスプリントリーダーの募集を開始しました！",
-      "p-2": "今年のスプリントは、8/22（土）から8/30（日）までの1週間オンラインで開催いたします。 皆様のテーマの目的を達成できるなら、期間中すべて活動頂いても、1日だけ活動頂いてもOKです。 （キックオフ時にプロジェクトごとに決めていただきます。）",
-      "p-3": "本イベントに登録頂くだけで、どなたでも無料で参加いただけます！スプリント参加にあたってPyCon JP 2020のチケットは必要ありません。"
+      "p-2": "今年のスプリントは、8/22（土）から8/30（日）までの1週間オンラインで開催いたします。 みなさんのテーマの目的を達成できるなら、期間中すべて活動頂いても、1日だけ活動頂いてもOKです。 （キックオフ時にプロジェクトごとに決めていただきます。）",
+      "p-3": "本イベントに登録頂くだけで、どなたでも無料で参加いただけます！スプリント参加にあたってPyCon JP 2020カンファレンス参加のチケットは必要ありません。"
     },
     "title": "参加方法",
     "paragraphs": {
