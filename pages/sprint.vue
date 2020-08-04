@@ -150,60 +150,62 @@
             <p class="mt-2 mb-8">
               {{ $t('contents.section3.description.p-1') }}
             </p>
-            <table>
-              <thead>
-                <tr>
-                  <th
-                    v-for="(message, key) in $t('contents.section3.table')"
-                    :key="`table-${key}`"
-                  >
-                    {{ message }}
-                  </th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>2020/08/22 ({{ $t('weekday.friday') }})</td>
-                  <td>13:00</td>
-                  <td>Zoom/Discord</td>
-                  <td>
-                    {{ $t('contents.section3.description.p-2') }}
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    2020/08/23 ({{ $t('weekday.friday') }}) ~ 8/29 ({{
-                      $t('weekday.saturday')
-                    }})
-                  </td>
-                  <td>-</td>
-                  <td>Discord</td>
-                  <td>
-                    {{ $t('contents.section3.description.p-3') }}
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    2020/08/28 ({{ $t('weekday.friday') }}) ~ 8/29 ({{
-                      $t('weekday.saturday')
-                    }})
-                  </td>
-                  <td>-</td>
-                  <td>-</td>
-                  <td>
-                    {{ $t('contents.section3.description.p-4') }}
-                  </td>
-                </tr>
-                <tr>
-                  <td>2020/08/30 ({{ $t('weekday.sunday') }})</td>
-                  <td>15:00</td>
-                  <td>Zoom/Discord</td>
-                  <td>
-                    {{ $t('contents.section3.description.p-5') }}
-                  </td>
-                </tr>
-              </tbody>
-            </table>
+            <div class="w-full overflow-x-scroll">
+              <table>
+                <thead>
+                  <tr>
+                    <th
+                      v-for="(message, key) in $t('contents.section3.table')"
+                      :key="`table-${key}`"
+                    >
+                      {{ message }}
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>2020/08/22 ({{ $t('weekday.friday') }})</td>
+                    <td>13:00</td>
+                    <td>Zoom/Discord</td>
+                    <td>
+                      {{ $t('contents.section3.description.p-2') }}
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      2020/08/23 ({{ $t('weekday.friday') }}) ~ 8/29 ({{
+                        $t('weekday.saturday')
+                      }})
+                    </td>
+                    <td>-</td>
+                    <td>Discord</td>
+                    <td>
+                      {{ $t('contents.section3.description.p-3') }}
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      2020/08/28 ({{ $t('weekday.friday') }}) ~ 8/29 ({{
+                        $t('weekday.saturday')
+                      }})
+                    </td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>
+                      {{ $t('contents.section3.description.p-4') }}
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>2020/08/30 ({{ $t('weekday.sunday') }})</td>
+                    <td>15:00</td>
+                    <td>Zoom/Discord</td>
+                    <td>
+                      {{ $t('contents.section3.description.p-5') }}
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
           </div>
           <div class="mt-8">
             <div class="mb-2 text-2xl font-bold title">
