@@ -1,6 +1,6 @@
 <template>
   <button
-    class="rounded-lg md:hidden focus:outline-none focus:shadow-outline"
+    class="rounded-lg tb:hidden focus:outline-none focus:shadow-outline"
     role="button"
     aria-label="Open menu"
     aria-controls="navigation"

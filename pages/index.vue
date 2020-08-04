@@ -3,7 +3,7 @@
     <section
       class="relative flex items-start justify-center mb-12 h-80 md:h-120 md:items-center"
     >
-      <div class="relative z-50 mt-16 mr-2 md:m-0">
+      <div class="relative z-10 mt-16 mr-2 md:m-0">
         <h1 class="text-4xl font-extrabold leading-tight md:text-6xl">
           PyCon JP <br />2020 <span class="font-semibold">Online</span>
         </h1>
@@ -437,6 +437,24 @@
         >
           <img
             :src="require(`~/assets/img/sponsor/${tutorial.imagePath}`)"
+            class="w-full"
+          />
+        </a>
+      </div>
+      <h3 class="mt-6 text-4xl font-medium text-py-black">
+        {{ $t('sponsor.message.media') }}
+      </h3>
+      <div class="flex flex-wrap items-center justify-center">
+        <a
+          v-for="media in $t('sponsor.special.media')"
+          :key="media.companyName"
+          :href="media.url"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="w-full m-8 md:w-1/3"
+        >
+          <img
+            :src="require(`~/assets/img/sponsor/${media.imagePath}`)"
             class="w-full"
           />
         </a>

@@ -8,6 +8,22 @@
             "title": "Code of Conduct",
             "path": "code-of-conduct"
         },
+        "event-list": {
+            "title": "Event List",
+            "content-list": [{
+                    "title": "Tutorial",
+                    "path": "tutorial"
+                },
+                {
+                    "title": "Sprint",
+                    "path": "sprint"
+                },
+                {
+                    "title": "Youth Coder Workshop",
+                    "path": "youth-coder"
+                }
+            ]
+        },
         "sponsor": {
             "title": "Sponsor",
             "path": "sponsor"
@@ -99,7 +115,7 @@
                 "companyName": "ジョンソン・エンド・ジョンソン 日本法人グループ",
                 "url": "https://www.jnj.co.jp/",
                 "imagePath": "gold8.png",
-                "description": "At Johnson & Johnson, we use technology and the power of collaboration to fight back against the most devastating healthcare challenges of our generation. Through pharmaceuticals, medical devices, vision care and consumer health products, we develop and deliver solutions that allow people to thrive throughout every stage of their lives. We are looking for data scientists with expertise in crafting, developing and fielding data solutions and YOU will be the pioneer at the cutting edge of data science.",
+                "description": "We believe good health is the foundation of vibrant lives and thriving communities, and have kept people well at every age and every life stage. As the world's largest health care company, we strive to create healthier communities and put a healthy mind, body and environment within reach of everyone, everywhere. We are blending our heart, science and ingenuity to profoundly change the trajectory of health for humanity. We are growing in a data-driven way and looking for data scientists to our team. YOU will be the pioneer to deliver products and services.",
                 "recruitInformation": ""
             }
         ],
@@ -174,12 +190,38 @@
                     "imagePath": "tutorial5.png",
                     "description": "私たちの今回のテーマは「つながろう Python」です。「つながる Python」は PyCon JP 2012 のテーマでした。 Python はいろいろな技術やシステムをつなぐ手段として、便利なツールです。 一方で Python でつながった人や組織やコミュニティも、 私たちの経験、宝物になりました。今回は広島から、私たちの地域に向けて、また地域を超えて、 Python の技術とコミュニティを愛する人たちに「つながろう」と呼び掛けます。"
                 }
+            ],
+            "media": [{
+                    "name": "O'Reilly Japan, Inc.",
+                    "url": "https://www.oreilly.co.jp/index.shtml",
+                    "imagePath": "media1.png"
+                },
+                {
+                    "name": "ITmedia Inc.",
+                    "url": "https://www.atmarkit.co.jp/",
+                    "imagePath": "media2.png"
+                },
+                {
+                    "name": "Gijutsu-Hyohron Co., Ltd",
+                    "url": "https://gihyo.jp/",
+                    "imagePath": "media3.jpg"
+                },
+                {
+                    "name": "Impress Corporation",
+                    "url": "https://thinkit.co.jp/",
+                    "imagePath": "media4.png"
+                },
+                {
+                    "name": "SHOEISHA",
+                    "url": "https://codezine.jp/",
+                    "imagePath": "media5.png"
+                }
             ]
         },
         "message": {
             "specialSponsor": "Special Sponsor",
             "tutorial": "Tutorial",
-            "media": "Media"
+            "media": "Media Sponsor"
         }
     }
 }

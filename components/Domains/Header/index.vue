@@ -1,6 +1,6 @@
 <template>
   <div
-    class="flex flex-col max-w-screen-xl mx-auto md:items-center md:justify-between md:flex-row md:my-4 xl:w-3/4"
+    class="flex flex-col max-w-screen-xl mx-auto tb:items-center tb:justify-between tb:flex-row tb:my-4 xl:w-3/4"
   >
     <div class="flex flex-row items-center justify-between py-4">
       <n-link :to="localePath('/')">
@@ -24,23 +24,23 @@
       <nav
         v-show="isDrawerOpen || !isMobile"
         id="navigation"
-        class="flex flex-col pb-4 md:pb-0 md:flex md:justify-end md:flex-row"
+        class="flex flex-col pb-4 md:pb-0 md:justify-end tb:flex-row"
       >
         <div
           v-for="page in filteredPages"
           :key="page.path"
-          class="flex flex-col pb-4 md:pb-0 md:flex md:justify-end md:flex-row"
+          class="flex flex-col pb-4 md:pb-0 md:justify-end tb:flex-row"
         >
           <header-link
-            v-if="page.path !== 'event-list'"
+            v-if="page.path !== undefined"
             :path="page.path"
             :exact="page.path === '/' ? true : false"
             class="mt-2 mr-0 md:mr-2 md:mt-0"
           >
             {{ page.title }}
           </header-link>
-          <!-- <dropdown
-            v-else
+          <dropdown
+            v-else-if="!isMobile"
             :is-dropdown-open="isEventListDropdownOpen"
             emit-event="toggleEventListDropdown"
             @toggleEventListDropdown="
@@ -49,9 +49,28 @@
           >
             {{ $t('pages.event-list.title') }}
             <template #menu>
-              <locales-list v-if="isEventListDropdownOpen" />
+              <event-list
+                v-if="isEventListDropdownOpen"
+                emit-event="toggleEventListDropdown"
+                @toggleEventListDropdown="
+                  isEventListDropdownOpen = !isEventListDropdownOpen
+                "
+              />
             </template>
-          </dropdown> -->
+          </dropdown>
+          <div v-else>
+            <h5 class="block px-4 py-2 mt-2 text-sm bg-transparent md:mt-0">
+              {{ $t('pages.event-list.title') }}
+            </h5>
+            <n-link
+              v-for="event in $t('pages.event-list.content-list')"
+              :key="event.title"
+              class="block px-4 py-2 mt-2 ml-10 text-sm bg-transparent md:mt-0"
+              :to="localePath(event.path)"
+            >
+              {{ event.title }}
+            </n-link>
+          </div>
         </div>
 
         <locales-list />
@@ -62,14 +81,16 @@
 
 <script>
 import Hamburger from '~/components/Domains/Header/Hamburger'
-// import Dropdown from '~/components/Domains/Header/Dropdown'
+import Dropdown from '~/components/Domains/Header/Dropdown'
+import EventList from '~/components/Domains/Header/EventList'
 import LocalesList from '~/components/Domains/Header/LocalesList'
 import HeaderLink from '~/components/Domains/Header/HeaderLink'
 
 export default {
   components: {
     Hamburger,
-    // Dropdown,
+    Dropdown,
+    EventList,
     LocalesList,
     HeaderLink,
   },
@@ -97,7 +118,7 @@ export default {
       this.isDropdownOpen = false
       next()
     })
-    const mql = window.matchMedia('(min-width: 768px)')
+    const mql = window.matchMedia('(min-width: 848px)')
     this.updateMatches(mql)
     mql.addListener(this.updateMatches)
   },

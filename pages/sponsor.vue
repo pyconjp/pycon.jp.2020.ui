@@ -184,6 +184,29 @@
         </template> -->
       </platinum-and-gold-sponsor>
     </div>
+    <h3 class="mt-16 text-4xl font-medium text-py-black">
+      {{ $t('sponsor.message.media') }}
+    </h3>
+    <div class="flex flex-wrap items-start justify-center mt-8 mb-16">
+      <platinum-and-gold-sponsor
+        v-for="media in $t('sponsor.special.media')"
+        :key="media.name"
+        sponsor-type="gold"
+        :url="media.url"
+        class="w-full mt-10 lg:w-1/3 lg:mx-8"
+        color="#3D40CB"
+      >
+        <template #image>
+          <img
+            :src="require(`~/assets/img/sponsor/${media.imagePath}`)"
+            class="w-3/4"
+          />
+        </template>
+        <template #companyName>
+          {{ media.name }}
+        </template>
+      </platinum-and-gold-sponsor>
+    </div>
   </div>
 </template>
 
