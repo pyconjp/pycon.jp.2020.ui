@@ -17,7 +17,7 @@
           <div class="flex justify-center w-full mt-8 md:w-1/3 lg:w-1/2">
             <img
               :src="require('~/assets/img/youth-coder/youth-coder.png')"
-              class="z-10 w-full rounded-xl"
+              class="z-10 w-full h-full rounded-xl"
             />
           </div>
         </div>
@@ -33,7 +33,7 @@
         ></div>
       </div>
     </div>
-    <div class="pt-24 pb-24 mt-24 way-to-join-block m-screen">
+    <div class="pt-24 pb-24 mt-12 md:mt-24 way-to-join-block m-screen">
       <div
         class="relative flex items-start justify-center md:items-center way-to-join-block"
       >

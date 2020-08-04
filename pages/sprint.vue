@@ -20,11 +20,11 @@
           <div class="flex justify-center w-full mt-8 md:w-1/3 lg:w-1/2">
             <img
               :src="require('~/assets/img/sprint/sprint.png')"
-              class="z-10 w-full rounded-xl"
+              class="z-10 w-full h-full rounded-xl"
             />
           </div>
         </div>
-        <div class="mt-20 lg:ml-10">
+        <div class="mt-12 md:mt-20 lg:ml-10">
           <div>
             <p
               v-for="(message, key) in $t('description')"
@@ -289,6 +289,8 @@ table,
 td {
   border: 1px solid #333;
   text-align: center;
+}
+td {
   padding-left: 0.5rem;
   padding-right: 0.5rem;
 }
