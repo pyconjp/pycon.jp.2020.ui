@@ -1,5 +1,5 @@
 <template>
-  <section class="w-full py-8">
+  <section class="">
     <div class="hero-block">
       <div class="flex flex-col items-center title-block">
         <h2 class="inline mb-2 text-4xl font-semibold md:text-6xl">
@@ -50,7 +50,7 @@
         </div>
       </div>
       <div
-        class="absolute w-screen h-full opacity-25 md:opacity-100 main-visual md:w-50vw md:relative"
+        class="absolute w-screen opacity-25 md:opacity-100 main-visual md:w-50vw md:relative"
       >
         <div
           class="absolute hidden rounded-full balloon-1 bg-py-blue-light md:block"
@@ -284,7 +284,7 @@
             <div class="mt-4 mb-2 text-xl font-bold title">提供</div>
             <div class="content">
               <ul>
-                <li>・はんなりPython</li>
+                <li>・はんなりPythonの会</li>
                 <li>・PyData Osaka</li>
                 <li>・PyCon mini Hiroshima</li>
               </ul>

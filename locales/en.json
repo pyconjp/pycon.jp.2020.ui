@@ -1,200 +1,227 @@
 {
-  "pages": {
-    "index": {
-      "title": "PyCon JP 2020",
-      "path": "/"
-    },
-    "code-of-conduct": {
-      "title": "Code of Conduct",
-      "path": "code-of-conduct"
-    },
-    "event-list": {
-      "title": "Event List",
-      "content-list": [
-        {
-          "title": "Tutorial",
-          "path": "tutorial"
+    "pages": {
+        "index": {
+            "title": "PyCon JP 2020",
+            "path": "/"
+        },
+        "code-of-conduct": {
+            "title": "Code of Conduct",
+            "path": "code-of-conduct"
+        },
+        "event-list": {
+            "title": "Event List",
+            "content-list": [{
+                    "title": "Tutorial",
+                    "path": "tutorial"
+                },
+                {
+                    "title": "Sprint",
+                    "path": "sprint"
+                },
+                {
+                    "title": "Youth Coder Workshop",
+                    "path": "youth-coder"
+                }
+            ]
+        },
+        "sponsor": {
+            "title": "Sponsor",
+            "path": "sponsor"
+        },
+        "news": {
+            "title": "News",
+            "path": "https://pyconjp.blogspot.com/search/label/pyconjp2020"
         }
-      ]
+    },
+    "language": "日本語",
+    "error": {
+        "404": "Page not found",
+        "else": "Sorry, something went wrong",
+        "back": "Back to Homepage"
     },
     "sponsor": {
-      "title": "Sponsor",
-      "path": "sponsor"
-    },
-    "news": {
-      "title": "News",
-      "path": "https://pyconjp.blogspot.com/search/label/pyconjp2020"
-    }
-  },
-  "language": "日本語",
-  "error": {
-    "404": "Page not found",
-    "else": "Sorry, something went wrong",
-    "back": "Back to Homepage"
-  },
-  "sponsor": {
-    "platinum": [
-      {
-        "companyName": "株式会社リーディング・エッジ社（Python Start Lab Online）",
-        "url": "https://startlab.jp/",
-        "imagePath": "platinum1.jpg",
-        "description": "私たちPython Start Lab Onlineは、IT未経験からエンジニアになりたい人だけでなく、だれもが使えるプログラミング言語としてPythonを選択できる世の中にすることを目指し、ITエンジニアスクールを運営しています。Pythonに関わるひとりでも多くの人と向き合い、成長の機会をつくる教育事業を通してPythonistaに貢献してゆきたいと考えています。",
-        "recruitInformation": ""
-      },
-      {
-        "companyName": "HENNGE株式会社",
-        "url": "https://hennge.com/jp/",
-        "imagePath": "platinum2.jpg",
-        "description": "HENNGE is at the forefront of the changing workplace. In a world of constant change, weharness the power of transformative technology and make it accessible and secure for all.Cloud security service “HENNGE One” enables customers to adopt flexible workenvironments and safely harness the power of the cloud from any location. With cloudsecurity taken care of, employees are free to focus on working smarter, improving qualityand achieving business results.",
-        "recruitInformation": "As our business continues to grow, we are looking for talented software engineers to join ourteam.Under our vision, “liberation of technology”, HENNGE’s mission is to deliver new values tocustomers by bridging the gap between technology and its usage. We are looking forengineers who wish to join the team with members from over 10 countries. We try newtechnology and frameworks as early adopters and deliver the result to our customers bymaking it high-quality services."
-      },
-      {
-        "companyName": "日本マイクロソフト株式会社",
-        "url": "https://azure.microsoft.com/ja-jp/",
-        "imagePath": "platinum3.png",
-        "description": "Microsoft is cheering for Pythonista! In addition to the online collaborative development environments Azure Notebooks and Visual Studio Codespaces, application developers now also have support for Python in Durable Functions, an extension to Azure Functions that allows you to write stateful functions (in preview). Functions flow management is now available! We’ll continue to add/modify features for Pythonista in the future! Stay tuned!",
-        "recruitInformation": ""
-      }
-    ],
-    "gold": [
-      {
-        "companyName": "一般社団法人Pythonエンジニア育成推進協会",
-        "url": "https://www.pythonic-exam.com/",
-        "imagePath": "gold1.png",
-        "description": "Pythonエンジニア認定基礎試験に加え、6月よりPython3エンジニア認定データ分析試験を開始しました。全国200か所で通年受験が可能です。受験料金は1万円（税抜）で覚張は半額です。学習後のチェックにいかがでしょうか？",
-        "recruitInformation": ""
-      },
-      {
-        "companyName": "株式会社アイリッジ",
-        "url": "https://iridge.jp/",
-        "imagePath": "gold2.jpg",
-        "description": "「Tech Tomorrow」をミッションに、自社プロダクト開発やスマートフォンアプリの受託開発を行なっています。 Python/Djangoを使ったO2O/OMOソリューション「FANSHIP」を始めとして、アプリのバックエンドサーバー、業務を改善するちょっとしたスクリプトまでPythonで開発しています。技術カンファレンスへの協賛や、個人の取組に関する週次のもくもく会・FlyHigh Friday、月次の集中開発・Issue Bashなどの社内勉強会も活発で、技術力向上に積極的です。",
-        "recruitInformation": ""
-      },
-      {
-        "companyName": "株式会社ブレインパッド",
-        "url": "https://www.brainpad.co.jp/",
-        "imagePath": "gold3.png",
-        "description": "2004年創業来、「データ活用の促進を通じて持続可能な未来をつくる」をミッションに掲げ、クライアントに対して、ビジネス・顧客体験・オペレーションにおいて先進的で実践的なデータ活用支援をおこなっています。分析業務に必要となる分析基盤の構築や関連ソフトウェアの開発・販売など、データ活用に関するソリューションを総合的に提供しており、国内シェアNo.1のレコメンドエンジン搭載プライベートDMP Rtoasterをはじめとした、デジタルマーケティング領域のプロダクトを開発する、Pythonエンジニアを募集しています！",
-        "recruitInformation": ""
-      },
-      {
-        "companyName": "株式会社いい生活",
-        "url": "https://www.e-seikatsu.info/",
-        "imagePath": "gold4.png",
-        "description": "いい生活は「すべての人の生活に関わる\"不動産市場\"を、テクノロジーでより良いものへ。」をミッションに掲げ、不動産業界で起きている情報の格差、非効率性を改善するサービスの提供を行っています。不動産ビジネスの生産性向上のための「ESいい物件One」、住まいに関するコミュニケーションをサポートする「pocketpost」などを開発しています。いい生活は、ITサービスを通じて、住まい・不動産の分野において、もっと多くの「幸せ」や「いい生活」を実現してまいります。",
-        "recruitInformation": ""
-      },
-      {
-        "companyName": "株式会社ビザスク",
-        "url": "https://visasq.co.jp/",
-        "imagePath": "gold5.png",
-        "description": "ビザスクは、求める知見を持つアドバイザーから直接話が聞ける1時間からのスポットコンサルサービスを主軸に、企業の課題を解決するナレッジプラットフォームとして大手企業の新規事業開発や、ベンチャー企業の市場調査と様々な場面で利用されております。既に国内外で10万人以上のアドバイザーが登録していますが、これをさらに20万人、100万人と成長させ、グローバル展開も積極的に進めていきます。Python/Django、Vue.js、Elasticsearch、GCPと新しい技術を取り入れ開発を進めています。Pythonエンジニア募集中です！",
-        "recruitInformation": ""
-      },
-      {
-        "companyName": "株式会社日本システム技研",
-        "url": "https://jsl.co.jp",
-        "imagePath": "gold6.png",
-        "description": "Japan System Laboratory Co.,Ltd. (JSL) \"To become a company that continues to attract attention from society with\" technical power x human power in NaganoWith the vision, we are developing mainly web operations centered on Python and AWS.We operate the coworking space GEEKLAB.NAGANO to actively disseminate information to the outside.At GEEKLAB.NAGANO, engineers who are interested in new technologies such as Python, Django, AWS, deep learning, and IoT gather to hold study sessions.",
-        "recruitInformation": ""
-      },
-      {
-        "companyName": "株式会社LegalForce",
-        "url": "https://www.legalforce.co.jp/",
-        "imagePath": "gold7.png",
-        "description": "LegalForce offers a cloud-based contract review software using AI.When a contract is uploaded, alerts pop-up showing problematic clauses and modifications are suggested.We use Python, Ruby, and JavaScript to develop our software in web applications using Flask and FastAPI, search systems using Elasiticsearch, Data Infrastructure using BigQuery, MLOps, NLP systems.We are actively recruiting Python engineers!! ",
-        "recruitInformation": ""
-      },
-      {
-        "companyName": "ジョンソン・エンド・ジョンソン 日本法人グループ",
-        "url": "https://www.jnj.co.jp/",
-        "imagePath": "gold8.png",
-        "description": "We believe good health is the foundation of vibrant lives and thriving communities, and have kept people well at every age and every life stage. As the world's largest health care company, we strive to create healthier communities and put a healthy mind, body and environment within reach of everyone, everywhere. We are blending our heart, science and ingenuity to profoundly change the trajectory of health for humanity. We are growing in a data-driven way and looking for data scientists to our team. YOU will be the pioneer to deliver products and services.",
-        "recruitInformation": ""
-      }
-    ],
-    "silver": [
-      {
-        "companyName": "株式会社オープングルーヴ",
-        "url": "https://tracpath.com/"
-      },
-      {
-        "companyName": "Nexedi",
-        "url": "https://www.nexedi.com/"
-      },
-      {
-        "companyName": "OLTA株式会社",
-        "url": "https://corp.olta.co.jp"
-      },
-      {
-        "companyName": "Classi株式会社",
-        "url": "https://corp.classi.jp/"
-      },
-      {
-        "companyName": "株式会社ビープラウド",
-        "url": "https://www.beproud.jp/"
-      },
-      {
-        "companyName": "Supership株式会社",
-        "url": "https://supership.jp/"
-      },
-      {
-        "companyName": "株式会社JX通信社",
-        "url": "https://jxpress.net/"
-      },
-      {
-        "companyName": "株式会社スカラコミュニケーションズ",
-        "url": "https://scala-com.jp/"
-      }
-    ],
-    "special": {
-      "cooperation": [
-        {
-          "companyName": "株式会社チェリオコーポレーション",
-          "url": "https://www.cheerio.co.jp/",
-          "imagePath": "special1.jpg",
-          "description": "",
-          "recruitInformation": ""
+        "platinum": [{
+                "companyName": "株式会社リーディング・エッジ社（Python Start Lab Online）",
+                "url": "https://startlab.jp/",
+                "imagePath": "platinum1.jpg",
+                "description": "私たちPython Start Lab Onlineは、IT未経験からエンジニアになりたい人だけでなく、だれもが使えるプログラミング言語としてPythonを選択できる世の中にすることを目指し、ITエンジニアスクールを運営しています。Pythonに関わるひとりでも多くの人と向き合い、成長の機会をつくる教育事業を通してPythonistaに貢献してゆきたいと考えています。",
+                "recruitInformation": ""
+            },
+            {
+                "companyName": "HENNGE株式会社",
+                "url": "https://hennge.com/jp/",
+                "imagePath": "platinum2.jpg",
+                "description": "HENNGE is at the forefront of the changing workplace. In a world of constant change, weharness the power of transformative technology and make it accessible and secure for all.Cloud security service “HENNGE One” enables customers to adopt flexible workenvironments and safely harness the power of the cloud from any location. With cloudsecurity taken care of, employees are free to focus on working smarter, improving qualityand achieving business results.",
+                "recruitInformation": "As our business continues to grow, we are looking for talented software engineers to join ourteam.Under our vision, “liberation of technology”, HENNGE’s mission is to deliver new values tocustomers by bridging the gap between technology and its usage. We are looking forengineers who wish to join the team with members from over 10 countries. We try newtechnology and frameworks as early adopters and deliver the result to our customers bymaking it high-quality services."
+            },
+            {
+                "companyName": "日本マイクロソフト株式会社",
+                "url": "https://azure.microsoft.com/ja-jp/",
+                "imagePath": "platinum3.png",
+                "description": "Microsoft is cheering for Pythonista! In addition to the online collaborative development environments Azure Notebooks and Visual Studio Codespaces, application developers now also have support for Python in Durable Functions, an extension to Azure Functions that allows you to write stateful functions (in preview). Functions flow management is now available! We’ll continue to add/modify features for Pythonista in the future! Stay tuned!",
+                "recruitInformation": ""
+            }
+        ],
+        "gold": [{
+                "companyName": "一般社団法人Pythonエンジニア育成推進協会",
+                "url": "https://www.pythonic-exam.com/",
+                "imagePath": "gold1.png",
+                "description": "Pythonエンジニア認定基礎試験に加え、6月よりPython3エンジニア認定データ分析試験を開始しました。全国200か所で通年受験が可能です。受験料金は1万円（税抜）で覚張は半額です。学習後のチェックにいかがでしょうか？",
+                "recruitInformation": ""
+            },
+            {
+                "companyName": "株式会社アイリッジ",
+                "url": "https://iridge.jp/",
+                "imagePath": "gold2.jpg",
+                "description": "「Tech Tomorrow」をミッションに、自社プロダクト開発やスマートフォンアプリの受託開発を行なっています。 Python/Djangoを使ったO2O/OMOソリューション「FANSHIP」を始めとして、アプリのバックエンドサーバー、業務を改善するちょっとしたスクリプトまでPythonで開発しています。技術カンファレンスへの協賛や、個人の取組に関する週次のもくもく会・FlyHigh Friday、月次の集中開発・Issue Bashなどの社内勉強会も活発で、技術力向上に積極的です。",
+                "recruitInformation": ""
+            },
+            {
+                "companyName": "株式会社ブレインパッド",
+                "url": "https://www.brainpad.co.jp/",
+                "imagePath": "gold3.png",
+                "description": "2004年創業来、「データ活用の促進を通じて持続可能な未来をつくる」をミッションに掲げ、クライアントに対して、ビジネス・顧客体験・オペレーションにおいて先進的で実践的なデータ活用支援をおこなっています。分析業務に必要となる分析基盤の構築や関連ソフトウェアの開発・販売など、データ活用に関するソリューションを総合的に提供しており、国内シェアNo.1のレコメンドエンジン搭載プライベートDMP Rtoasterをはじめとした、デジタルマーケティング領域のプロダクトを開発する、Pythonエンジニアを募集しています！",
+                "recruitInformation": ""
+            },
+            {
+                "companyName": "株式会社いい生活",
+                "url": "https://www.e-seikatsu.info/",
+                "imagePath": "gold4.png",
+                "description": "いい生活は「すべての人の生活に関わる\"不動産市場\"を、テクノロジーでより良いものへ。」をミッションに掲げ、不動産業界で起きている情報の格差、非効率性を改善するサービスの提供を行っています。不動産ビジネスの生産性向上のための「ESいい物件One」、住まいに関するコミュニケーションをサポートする「pocketpost」などを開発しています。いい生活は、ITサービスを通じて、住まい・不動産の分野において、もっと多くの「幸せ」や「いい生活」を実現してまいります。",
+                "recruitInformation": ""
+            },
+            {
+                "companyName": "株式会社ビザスク",
+                "url": "https://visasq.co.jp/",
+                "imagePath": "gold5.png",
+                "description": "ビザスクは、求める知見を持つアドバイザーから直接話が聞ける1時間からのスポットコンサルサービスを主軸に、企業の課題を解決するナレッジプラットフォームとして大手企業の新規事業開発や、ベンチャー企業の市場調査と様々な場面で利用されております。既に国内外で10万人以上のアドバイザーが登録していますが、これをさらに20万人、100万人と成長させ、グローバル展開も積極的に進めていきます。Python/Django、Vue.js、Elasticsearch、GCPと新しい技術を取り入れ開発を進めています。Pythonエンジニア募集中です！",
+                "recruitInformation": ""
+            },
+            {
+                "companyName": "株式会社日本システム技研",
+                "url": "https://jsl.co.jp",
+                "imagePath": "gold6.png",
+                "description": "Japan System Laboratory Co.,Ltd. (JSL) \"To become a company that continues to attract attention from society with\" technical power x human power in NaganoWith the vision, we are developing mainly web operations centered on Python and AWS.We operate the coworking space GEEKLAB.NAGANO to actively disseminate information to the outside.At GEEKLAB.NAGANO, engineers who are interested in new technologies such as Python, Django, AWS, deep learning, and IoT gather to hold study sessions.",
+                "recruitInformation": ""
+            },
+            {
+                "companyName": "株式会社LegalForce",
+                "url": "https://www.legalforce.co.jp/",
+                "imagePath": "gold7.png",
+                "description": "LegalForce offers a cloud-based contract review software using AI.When a contract is uploaded, alerts pop-up showing problematic clauses and modifications are suggested.We use Python, Ruby, and JavaScript to develop our software in web applications using Flask and FastAPI, search systems using Elasiticsearch, Data Infrastructure using BigQuery, MLOps, NLP systems.We are actively recruiting Python engineers!! ",
+                "recruitInformation": ""
+            },
+            {
+                "companyName": "ジョンソン・エンド・ジョンソン 日本法人グループ",
+                "url": "https://www.jnj.co.jp/",
+                "imagePath": "gold8.png",
+                "description": "We believe good health is the foundation of vibrant lives and thriving communities, and have kept people well at every age and every life stage. As the world's largest health care company, we strive to create healthier communities and put a healthy mind, body and environment within reach of everyone, everywhere. We are blending our heart, science and ingenuity to profoundly change the trajectory of health for humanity. We are growing in a data-driven way and looking for data scientists to our team. YOU will be the pioneer to deliver products and services.",
+                "recruitInformation": ""
+            }
+        ],
+        "silver": [{
+                "companyName": "株式会社オープングルーヴ",
+                "url": "https://tracpath.com/"
+            },
+            {
+                "companyName": "Nexedi",
+                "url": "https://www.nexedi.com/"
+            },
+            {
+                "companyName": "OLTA株式会社",
+                "url": "https://corp.olta.co.jp"
+            },
+            {
+                "companyName": "Classi株式会社",
+                "url": "https://corp.classi.jp/"
+            },
+            {
+                "companyName": "株式会社ビープラウド",
+                "url": "https://www.beproud.jp/"
+            },
+            {
+                "companyName": "Supership株式会社",
+                "url": "https://supership.jp/"
+            },
+            {
+                "companyName": "株式会社JX通信社",
+                "url": "https://jxpress.net/"
+            },
+            {
+                "companyName": "株式会社スカラコミュニケーションズ",
+                "url": "https://scala-com.jp/"
+            }
+        ],
+        "special": {
+            "cooperation": [{
+                "companyName": "株式会社チェリオコーポレーション",
+                "url": "https://www.cheerio.co.jp/",
+                "imagePath": "special1.jpg",
+                "description": "",
+                "recruitInformation": ""
+            }],
+            "tutorial": [{
+                    "groupName": "Python駿河",
+                    "url": "https://py-suruga.connpass.com/",
+                    "imagePath": "tutorial1.png",
+                    "description": "Python Boot Camp in 静岡県藤枝市の開催をきっかけにPython駿河（するが）が誕生しました！プログラミング言語Pythonに興味のある方のために、様々なテーマで勉強会を開催していくことが目標です。主に静岡県中部地方を中心として活動していく予定です。"
+                },
+                {
+                    "groupName": "Unagi.py",
+                    "url": "https://unagi-py.connpass.com/",
+                    "imagePath": "tutorial2.png",
+                    "description": "Unagi.pyは、主に浜名湖の周辺に生息しているIT技術者で構成されているPython勉強会コミュニティーです。勉強会は、浜松市を主な拠点とし豊橋・湖西・磐田・掛川・静岡市での開催も考えています。内容については、参加者の興味次第でその毎回テーマを決めてやってます。何か今が旬の話題がありましたら、是非、いっしょに勉強しましょう！また、勉強会以外にもオンラインでSlack にて情報交換や勉強会フォローを行っています。"
+                },
+                {
+                    "groupName": "はんなりPythonの会",
+                    "url": "https://hannari-python.connpass.com/",
+                    "imagePath": "tutorial3.png",
+                    "description": "はんなりPythonの会は京都のPythonコミュニティです。毎月第3金曜日に勉強会を開催しています。入門者、初心者にやさしい会です。kyoto.py の後継コミュニティです。はんなりPythonの会 公式ブログにて勉強会の様子など様々な情報をお知らせしています。オンラインでの交流などはComunity Chatで行っています。"
+                },
+                {
+                    "groupName": "PyData Osaka",
+                    "url": "https://medium.com/pydata-osaka",
+                    "imagePath": "tutorial4.png",
+                    "description": "PyData Osaka はデータ分析に関わるユーザやツールの開発者のためのグループであり、関西を中心に活動しています。主にPythonを使ったツールを取り上げることが多いですが、Pythonに限定せず、他のプログラミング言語やデータ分析のための一般的な技術、例えばデータ前処理、機械学習、可視化など、データ分析に関わる内容を広く扱っています。アイデアを共有し共に学んでいくための場として活用していただければと思っています。"
+                },
+                {
+                    "groupName": "PyCon mini Hiroshima",
+                    "url": "https://hiroshima.pycon.jp/2020/",
+                    "imagePath": "tutorial5.png",
+                    "description": "私たちの今回のテーマは「つながろう Python」です。「つながる Python」は PyCon JP 2012 のテーマでした。 Python はいろいろな技術やシステムをつなぐ手段として、便利なツールです。 一方で Python でつながった人や組織やコミュニティも、 私たちの経験、宝物になりました。今回は広島から、私たちの地域に向けて、また地域を超えて、 Python の技術とコミュニティを愛する人たちに「つながろう」と呼び掛けます。"
+                }
+            ],
+            "media": [{
+                    "name": "O'Reilly Japan, Inc.",
+                    "url": "https://www.oreilly.co.jp/index.shtml",
+                    "imagePath": "media1.png"
+                },
+                {
+                    "name": "ITmedia Inc.",
+                    "url": "https://www.atmarkit.co.jp/",
+                    "imagePath": "media2.png"
+                },
+                {
+                    "name": "Gijutsu-Hyohron Co., Ltd",
+                    "url": "https://gihyo.jp/",
+                    "imagePath": "media3.jpg"
+                },
+                {
+                    "name": "Impress Corporation",
+                    "url": "https://thinkit.co.jp/",
+                    "imagePath": "media4.png"
+                },
+                {
+                    "name": "SHOEISHA",
+                    "url": "https://codezine.jp/",
+                    "imagePath": "media5.png"
+                }
+            ]
+        },
+        "message": {
+            "specialSponsor": "Special Sponsor",
+            "tutorial": "Tutorial",
+            "media": "Media Sponsor"
         }
-      ],
-      "tutorial": [
-        {
-          "groupName": "Python駿河",
-          "url": "https://py-suruga.connpass.com/",
-          "imagePath": "tutorial1.png",
-          "description": "Python Boot Camp in 静岡県藤枝市の開催をきっかけにPython駿河（するが）が誕生しました！プログラミング言語Pythonに興味のある方のために、様々なテーマで勉強会を開催していくことが目標です。主に静岡県中部地方を中心として活動していく予定です。"
-        },
-        {
-          "groupName": "Unagi.py",
-          "url": "https://unagi-py.connpass.com/",
-          "imagePath": "tutorial2.png",
-          "description": "Unagi.pyは、主に浜名湖の周辺に生息しているIT技術者で構成されているPython勉強会コミュニティーです。勉強会は、浜松市を主な拠点とし豊橋・湖西・磐田・掛川・静岡市での開催も考えています。内容については、参加者の興味次第でその毎回テーマを決めてやってます。何か今が旬の話題がありましたら、是非、いっしょに勉強しましょう！また、勉強会以外にもオンラインでSlack にて情報交換や勉強会フォローを行っています。"
-        },
-        {
-          "groupName": "はんなりPythonの会",
-          "url": "https://hannari-python.connpass.com/",
-          "imagePath": "tutorial3.png",
-          "description": "はんなりPythonの会は京都のPythonコミュニティです。毎月第3金曜日に勉強会を開催しています。入門者、初心者にやさしい会です。kyoto.py の後継コミュニティです。はんなりPythonの会 公式ブログにて勉強会の様子など様々な情報をお知らせしています。オンラインでの交流などはComunity Chatで行っています。"
-        },
-        {
-          "groupName": "PyData Osaka",
-          "url": "https://medium.com/pydata-osaka",
-          "imagePath": "tutorial4.png",
-          "description": "PyData Osaka はデータ分析に関わるユーザやツールの開発者のためのグループであり、関西を中心に活動しています。主にPythonを使ったツールを取り上げることが多いですが、Pythonに限定せず、他のプログラミング言語やデータ分析のための一般的な技術、例えばデータ前処理、機械学習、可視化など、データ分析に関わる内容を広く扱っています。アイデアを共有し共に学んでいくための場として活用していただければと思っています。"
-        },
-        {
-          "groupName": "PyCon mini Hiroshima",
-          "url": "https://hiroshima.pycon.jp/2020/",
-          "imagePath": "tutorial5.png",
-          "description": "私たちの今回のテーマは「つながろう Python」です。「つながる Python」は PyCon JP 2012 のテーマでした。 Python はいろいろな技術やシステムをつなぐ手段として、便利なツールです。 一方で Python でつながった人や組織やコミュニティも、 私たちの経験、宝物になりました。今回は広島から、私たちの地域に向けて、また地域を超えて、 Python の技術とコミュニティを愛する人たちに「つながろう」と呼び掛けます。"
-        }
-      ]
-    },
-    "message": {
-      "specialSponsor": "Special Sponsor",
-      "tutorial": "Tutorial",
-      "media": "Media"
     }
-  }
 }
