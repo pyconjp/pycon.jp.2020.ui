@@ -441,6 +441,24 @@
           />
         </a>
       </div>
+      <h3 class="mt-6 text-4xl font-medium text-py-black">
+        {{ $t('sponsor.message.media') }}
+      </h3>
+      <div class="flex flex-wrap items-center justify-center">
+        <a
+          v-for="media in $t('sponsor.special.media')"
+          :key="media.companyName"
+          :href="media.url"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="w-full m-8 md:w-1/3"
+        >
+          <img
+            :src="require(`~/assets/img/sponsor/${media.imagePath}`)"
+            class="w-full"
+          />
+        </a>
+      </div>
     </section>
   </div>
 </template>
