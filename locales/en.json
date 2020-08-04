@@ -210,6 +210,11 @@
                     "name": "Impress Corporation",
                     "url": "https://thinkit.co.jp/",
                     "imagePath": "media4.png"
+                },
+                {
+                    "name": "SHOEISHA",
+                    "url": "https://codezine.jp/",
+                    "imagePath": "media5.png"
                 }
             ]
         },
