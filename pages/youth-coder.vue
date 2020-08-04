@@ -263,8 +263,8 @@ export default Vue.extend({
   data() {
     return {
       memberList: [
-        '今津 善文（所属 CoderDojo 厚木',
-        '瀬戸 亮一（所属 CoderDojo 浦安',
+        '今津 善文（所属 CoderDojo 厚木）',
+        '瀬戸 亮一（所属 CoderDojo 浦安）',
         '田中 真輔（所属 CoderDojo 大船）',
         '土井 敬司（所属 CoderDojo 大船）',
         '千葉 幸恵（所属 CoderDojo 鎌ヶ谷）',
