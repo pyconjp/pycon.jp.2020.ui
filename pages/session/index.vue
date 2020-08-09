@@ -12,11 +12,23 @@
         {{ $t('pages["event-list"]["content-list"][0].title') }}
       </h3>
     </div>
+    <div class="flex flex-row items-center justify-around w-full">
+      <a
+        v-for="platinum in $t('sponsor.platinum')"
+        :key="platinum.companyName"
+        :href="platinum.url"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="w-1/5"
+      >
+        <img :src="require(`~/assets/img/sponsor/${platinum.imagePath}`)"
+      /></a>
+    </div>
     <iframe
       id="iframeid"
       src="https://dev7367.d2hce9hbdo38af.amplifyapp.com/"
       frameborder="0"
-      class="w-full frame"
+      class="w-full mt-4 frame"
     ></iframe>
   </div>
 </template>
