@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>タイムテーブル</title>
+
+  <script>
+    (function () {
+
+      function initialize() {
+        // コンテンツを監視してサイズが変更されたらiframe埋め込み元へ高さを通知する
+        const resizeObserver = new ResizeObserver(entries => {
+          for (const entry of entries) {
+            // 変更を検知した要素
+            console.log(entry.target);
+
+            // 検知した変更の矩形
+            const rect = entry.contentRect;
+            console.log(rect.top, rect.left);
+            console.log(rect.width, rect.height);
+            parent.postMessage(rect.height, "*");
+          }
+        });
+        resizeObserver.observe(document.documentElement)
+      }
+
+      window.onload = initialize;
+
+    })();
+  </script>
+</head>
+
+<body>
+  <script type="text/javascript" src="https://sessionize.com/api/v2/dmev1prx/view/GridSmart"></script>
+</body>
+
+<style>
+  .sz-speaker__tagline {
+    display: none;
+  }
+</style>
+
+</html>
