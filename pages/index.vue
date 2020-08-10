@@ -67,7 +67,7 @@
       </div>
     </div> -->
 
-    <python-banner
+    <!-- <python-banner
       class="mb-24"
       direction="left"
       back-ground-color="#3D40CB"
@@ -100,7 +100,7 @@
           </button>
         </a>
       </template>
-    </python-banner>
+    </python-banner> -->
 
     <python-banner direction="right" back-ground-color="#EE9D2C" size="big">
       <template #title>
