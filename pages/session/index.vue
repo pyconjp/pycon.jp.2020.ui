@@ -35,10 +35,20 @@
 <script>
 export default {
   asyncData() {
-    const sessions = require('~/mocks/session.json')
-    return { sessions }
+    // const sessions = require('~/mocks/session.json')
+    // return { sessions }
+  },
+  mounted() {
+    window.addEventListener(
+      'message',
+      function (element) {
+        const iframe = document.getElementById('iframeid')
+        iframe.style.height = element.data + 'px'
+      },
+      false
+    )
   },
 }
 </script>
 
-<style></style>
+<style scoped></style>
