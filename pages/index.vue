@@ -757,7 +757,7 @@ export default Vue.extend({
         }
       },
       {
-        "name": "Lina Katayose",
+        "name": "片寄里菜",
         "image": "Katayose_Image.jpg",
         "date": "08/29",
         "description": {
