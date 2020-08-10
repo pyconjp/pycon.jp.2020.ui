@@ -299,7 +299,7 @@
           v-for="(invitedTalk, index) in $t('invited-talk')"
           :key="invitedTalk.name"
           class="w-full md:w-2/3 xl:w-2/5"
-          :class="[index == 0 ? 'mt-8' : 'mt-20']"
+          :class="[index == 0 || index == 1 ? 'mt-8' : 'mt-20']"
           talk-type="talk"
           main-color="#EE9D2C"
         >
