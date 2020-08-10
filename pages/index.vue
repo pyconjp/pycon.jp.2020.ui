@@ -288,26 +288,40 @@
         </talk-content>
       </div>
 
-      <!-- <python-banner direction="right" back-ground-color="#EE9D2C" size="small">
+      <python-banner direction="right" back-ground-color="#EE9D2C" size="small">
         <template #title>
           Invided talk
         </template>
       </python-banner>
 
-      <div class="flex flex-wrap justify-around">
+      <div class="flex flex-wrap justify-around mt-12 mb-12">
         <talk-content
-          class="w-full md:w-2/5"
+          v-for="(invitedTalk, index) in $t('invited-talk')"
+          :key="invitedTalk.name"
+          class="w-full md:w-2/3 xl:w-2/5"
+          :class="[index == 0 ? 'mt-8' : 'mt-20']"
           talk-type="talk"
-          main-color="orange"
-        ></talk-content>
-        <talk-content
-          class="w-full mt-10 md:w-2/5 md:mt-0"
-          talk-type="talk"
-          main-color="orange"
-        ></talk-content>
+          main-color="#EE9D2C"
+        >
+          <template #image
+            ><img
+              :src="require(`~/assets/img/people/${invitedTalk.image}`)"
+              class="object-cover object-top w-24 h-24 rounded-full md:w-40 md:h-40"
+          /></template>
+          <template #name>{{ invitedTalk.name }}</template>
+          <template #date> {{ invitedTalk.date }} </template>
+          <template #description>
+            <p
+              v-for="(description, index2) in invitedTalk.description"
+              :key="`p-${index2}`"
+            >
+              {{ description }}
+            </p>
+          </template>
+        </talk-content>
       </div>
 
-      <python-banner direction="right" back-ground-color="#3F496A" size="small">
+      <!-- <python-banner direction="right" back-ground-color="#3F496A" size="small">
         <template #title>
           Sessions
         </template>
@@ -613,6 +627,54 @@ export default Vue.extend({
           "p-3": "In his spare time, he enjoys skateboarding, dirty southern trap music, and Laphroaig."
         }
       }
+    ],
+    "invited-talk": [
+      {
+        "name": "Tomoko Uchida",
+        "image": "Uchida_Image.jpg",
+        "date": "08/28",
+        "description": {
+          "p-1": "Tomoko completed the master's program at the University of Tsukuba Graduate School of Systems and Information Engineering in 2007. ",
+          "p-2": "After working for several IT companies, she is currently engaged in research and development of search systems and language processing at the R&D team of LegalForce Inc. In 2015, she released Janome, a Japanese Python morphological analysis library as OSS, and had a presentation on PyCon JP. She is also a committer of Apache Lucene, an OSS search engine library, from 2019. She is interested in information retrieval, machine learning, and natural language processing. She is dreaming of living with her cats in a room with a view of the ocean."
+        }
+      },
+      {
+        "name": "Makoto Tsuyuki",
+        "image": "Tsuyuki_Image.jpg",
+        "date": "08/29",
+        "description": {
+          "p-1": "Makoto moved from the fashion jewelry industry to the IT industry around 2000 and has been working as a software engineer ever since.",
+          "p-2": "He has worked on a variety of development projects both for BtoB and BtoC using Python, Java, Perl, Ruby, etc.",
+          "p-3": "He has worked not only in development as a software engineer, a chief architect or a technical lead, but also worked outside of development, such as a programming courses teacher and a member of starting up in-house factory.",
+          "p-4": "In the past few years, he has been involved in creating a comfortable environment for engineers."
+        }
+      },
+      {
+        "name": "Yuki Iwazaki",
+        "image": "Iwazaki_Image.jpg",
+        "date": "08/28",
+        "description": {
+          "p-1": "Yuki is a Research Engineer at AI Lab on CyberAgent, Inc.",
+          "p-2": "After joining the company in 2014 as a server-side engineer, he developed an ad delivery platform, ad rendering engine and effect prediction system using Scala, JavaScript and Python in the Internet Advertising Business.",
+          "p-3": "He has been in his current position since 2017 after working in frontend, infrastructure and data analysis.",
+          "p-4": "He works in the Creative Research Group and analyzes the impact of streaming from high-dimensional features such as text, images and videos in ads.",
+          "p-5": "In RPG games, he likes paper armor attackers like wizards."
+        }
+      },
+      {
+        "name": "Lina Katayose",
+        "image": "Katayose_Image.jpg",
+        "date": "08/29",
+        "description": {
+          "p-1": "Rina Katayose has been interested in aircraft since childhood, and her desire to learn more led her to pursue a master's degree in aerospace at Tokai University's Graduate School of Engineering, where she studied helicopters and other VTOL(vertical takeoff and landing) aircraft.",
+          "p-2": "After finishing the graduate school, she worked on her personal research while working on web-related projects and came across Python. ",
+          "p-3": "She has programmed using Python mainly focusing on controlling \"things\" around using Raspberry Pi.",
+          "p-4": "She attended PyCon JP for the first time in 2016, and after discovering the fun and depth of Python, she joined various communities and made many friends. She joined the PyLadies Tokyo community and now she is an organizer of PyLadies Tokyo.",
+          "p-5": "She presented and demonstrated drones and controlling them by Python at PyCon JP 2017 and 2018. ",
+          "p-6": "She is known as an international speaker at PyCon Thailand 2019 and talked about PyLadies' community activities, also has attended in PyCon US and other international PyCon events. ",
+          "p-7": "In 2018, she founded moegi, Inc. and develops smartphone applications. She is also researching the uses and problems of the skies not only in Japan but also in the world, and working as a developer in the field of aviation."
+        }
+      }
     ]
   },
   "ja": {
@@ -660,6 +722,51 @@ export default Vue.extend({
           "p-2": "Gun.ioはグローバルなコンサルティングファームで、フリーソフトウェアやオープンソースソフトウェアのコミュニティから来た最も優秀なエンジニア（ハッカー）たちが所属しています。",
           "p-3": "彼は、Pythonにおける主要なサーバレスフレームワーク、Zappaの作者です。",
           "p-4": "Zappaは、何千もの企業やユーザによって使われ、Web開発における時間と費用を節約しています。彼は医療や科学計算向けのクラウドGPUクラスタからモバイルのピア・ツー・ピアのファイル共有アプリまで、そしてその間にあるあらゆるものに取り組んできました。彼の趣味はスケートボード、サザン・ヒップホップと、ラフロイグを飲むことです。"
+        }
+      }
+    ],
+    "invited-talk": [
+      {
+        "name": "打田智子",
+        "image": "Uchida_Image.jpg",
+        "date": "08/28",
+        "description": {
+          "p-1": "2007年に筑波大学大学院システム情報工学研究科の博士前期課程を修了後，いくつかのIT系企業を経て，現在は株式会社 LegalForce の R&D チームで検索システムや言語処理の研究開発に従事。2015年に Python 製日本語形態素解析ライブラリ Janome を OSS として公開し，同年 PyConJP にも登壇。Janome の開発をほそぼそ続けながら，2019年から OSS 検索エンジンライブラリ Apache Lucene のコミッターも務める。興味のある分野は情報検索と機械学習，自然言語処理。海の見える部屋で猫と暮らすのが夢。"
+        }
+      },
+      {
+        "name": "露木誠",
+        "image": "Tsuyuki_Image.jpg",
+        "date": "08/29",
+        "description": {
+          "p-1": "2000年頃にファッションジュエリー業界からIT業界へ移り、以来ソフトウェアエンジニアとして働いています。",
+          "p-2": "Python、Java、Perl、Rubyなどのプログラミング言語を用いてB向けC向けを問わずさまざまな開発に従事してきました。",
+          "p-3": "ソフトウェアエンジニア・チーフアーキテクト・テックリードなどとして開発に携わるのみならず、プログラミング講習の講師や自社サービス用工場の立ち上げなど、開発から外れた仕事もしてきました。",
+          "p-4": "ここ数年はエンジニアが働きやすい環境づくりなどにも関わっています。"
+        }
+      },
+      {
+        "name": "岩崎祐貴",
+        "image": "Iwazaki_Image.jpg",
+        "date": "08/28",
+        "description": {
+          "p-1": "株式会社サイバーエージェント AI Lab Research Engineer。",
+          "p-2": "2014年にサーバーサイドエンジニアとして入社後、インターネット広告事業でScala、JavaScript、Pythonを使った配信基盤や広告レンダリングエンジン、効果予測システムを作成。",
+          "p-3": "フロント・インフラ・データ分析業務を経て、2017年から現職。",
+          "p-4": "クリエイティブリサーチグループにて広告のテキストや画像、動画等の高次元特徴から配信影響を紐解く研究に従事。",
+          "p-5": "ゲームでは魔法使いのような紙耐久アタッカーが好き。"
+        }
+      },
+      {
+        "name": "Lina Katayose",
+        "image": "Katayose_Image.jpg",
+        "date": "08/29",
+        "description": {
+          "p-1": "片寄里菜さんは、幼い時より航空機に興味があり、もっと学びたいという想いから東海大学工学研究科・航空宇宙学専攻の博士課程前期に進み、ヘリコプターなど垂直離着陸機の研究を行っていました。",
+          "p-2": "大学院修了後は、WEB関連の仕事をしながら個人的な研究テーマを進め、Pythonと出会いました。Pythonでは主にRaspberryPiを使ったモノを動かすプログラミングに視点を置き、開発などを行っていました。 ",
+          "p-3": "PyConJPには2016年に初参加。Pythonの楽しさや奥深さを知り、様々なコミュニティに参加し友人・知人を増やしたようです。またPyLadiesTokyoコミュニティ参加をきっかけに、今ではスタッフとして活動しています。",
+          "p-4": "登壇経験としてPyConJP2017と2018ではドローンとPythonに関する内容で発表・実演を行いました。またPyCon Thailand2019ではPyLadiesのコミュニティ活動に関する海外の登壇経験もあります。PyConUSなど海外のPyConに参加している経験もあり、精力的に活動を行っています。",
+          "p-5": "ご自身の仕事は2018年に株式会社moegiを創業し、計測用のスマホアプリなどを開発。日本だけでなく世界の空の活用法や問題点なども調べ、航空機分野の開発者として活躍できるようにと日々活動をしています。"
         }
       }
     ]
