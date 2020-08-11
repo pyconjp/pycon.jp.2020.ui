@@ -1,0 +1,114 @@
+[
+    {
+        "id": "100001",
+        "title": "TBD",
+        "day": 1,
+        "talk_format": "Keynote",
+        "name": "芝世弐",
+        "profile": "2017年に独学で機械学習を始め，同年に初参加の将棋電王トーナメントにて準優勝。\n翌年には世界コンピュータ将棋選手権に初参加で優勝してしまう。\n以後，2019年および2020年の大会では準優勝と参加大会の平均順位が1点台という驚異的な強さを誇る。\n本職は数値シミュレーションを主とする研究者であるが最近の発表は大半将棋に関するものになっている。\n趣味はビールと将棋観戦。\n\nIn 2017, he began self-taught machine learning, and in the same year, he became the runner-up in the Shogi (Japanese Chess) Den-O tournament he participated in for the first time.\nThe following year, he won the World Computer Shogi Championship even though it was the first time he participated.\nSince then, he has been a runner-up in the 2019 and 2020 meets and has a phenomenal one-point average ranking in the participating meets.\nHe is a researcher who mainly works on numerical simulations, but most of his recent publications have been about shogi.\nHis hobbies are beer and watching shogi."
+    },
+    {
+        "id": "100002",
+        "title": "TBD",
+        "day": 2,
+        "talk_format": "Keynote",
+        "name": "Rich Jones",
+        "profile": " Rich is the cofounder of Gun.io, a global consulting firm staffed by the best hackers from the Free and Open Source software community. He is the author of Zappa, the leading server-less Python framework, used by thousands of companies and users to save time and money for their web deployments. He has worked on everything from cloud GPU clusters for medical and scientific computing to mobile peer to peer file sharing applications, and on everything in between. In his spare time, he enjoys skateboarding, dirty southern trap music, and Laphroaig.\n\nRichはGun.ioの共同設立者です。\nGun.ioはグローバルなコンサルティングファームで、フリーソフトウェアやオープンソースソフトウェアのコミュニティから来た最も優秀なエンジニア（ハッカー）たちが所属しています。\n彼は、Pythonにおける主要なサーバレスフレームワーク、Zappaの作者です。\nZappaは、何千もの企業やユーザによって使われ、Web開発における時間と費用を節約しています。彼は医療や科学計算向けのクラウドGPUクラスタからモバイルのピア・ツー・ピアのファイル共有アプリまで、そしてその間にあるあらゆるものに取り組んできました。彼の趣味はスケートボード、サザン・ヒップホップと、ラフロイグを飲むことです。"
+    },
+    {
+        "id": "100011",
+        "title": "TBD",
+        "room": "#pyconjp_1",
+        "day": 1,
+        "no": 1,
+        "talk_format": "Invited talks(45min)",
+        "lang_of_talk": "English",
+        "name": "",
+        "profile": ""
+    },
+    {
+        "id": "100012",
+        "title": "ある個人開発 OSS の歩み：5 歳になった Janome のこれまでと，これから",
+        "room": "#pyconjp_1",
+        "day": 1,
+        "no": 2,
+        "elevator_pitch": "2015年に生まれた Janome は，今年で開発5年目となりました。PyConJP 2015での発表から，これまでに行ってきた機能開発や改善について，技術的な解説を交えつつ振り返ります。また，今後追加していきたい機能や，個人開発のモチベーションをゆるく長く保ち続けるコツについてもお話できればと思います。",
+        "talk_format": "Invited talks(45min)",
+        "lang_of_talk": "Japanese",
+        "description": "https://pyconjp.blogspot.com/2020/08/invited-talks1.html",
+        "name": "打田智子",
+        "profile": "2007年に筑波大学大学院システム情報工学研究科の博士前期課程を修了後，いくつかのIT系企業を経て，現在は株式会社 LegalForce の R&D チームで検索システムや言語処理の研究開発に従事。2015年に Python 製日本語形態素解析ライブラリ Janome を OSS として公開し，同年 PyConJP にも登壇。Janome の開発をほそぼそ続けながら，2019年から OSS 検索エンジンライブラリ Apache Lucene のコミッターも務める。興味のある分野は情報検索と機械学習，自然言語処理。海の見える部屋で猫と暮らすのが夢。"
+    },
+    {
+        "id": "100013",
+        "title": "続・小さく始めて大きく育てるMLOps2020",
+        "room": "#pyconjp_1",
+        "day": 1,
+        "no": 3,
+        "elevator_pitch": "乱立するJupyter Notebook、身元不明なデータ、再現しない学習結果、引き継ぎできない実験コード…\nそんな課題を解決するべく、今日から始められるMLOpsを紹介します。\n趣味の機械学習から研究室での実験管理、プロダクトでの運用まで、広く参考になれば幸いです。",
+        "lang_of_talk": "Japanese",
+        "talk_format": "Invited talks(30min)",
+        "description": "https://pyconjp.blogspot.com/2020/08/pycon-jp-2020-3-announcement-of-invited.html",
+        "name": "岩崎祐貴",
+        "profile": "株式会社サイバーエージェント AI Lab Research Engineer。\n2014年にサーバーサイドエンジニアとして入社後、インターネット広告事業でScala、JavaScript、Pythonを使った配信基盤や広告レンダリングエンジン、効果予測システムを作成。\nフロント・インフラ・データ分析業務を経て、2017年から現職。\nクリエイティブリサーチグループにて広告のテキストや画像、動画等の高次元特徴から配信影響を紐解く研究に従事。\nゲームでは魔法使いのような紙耐久アタッカーが好き。"
+    },
+    {
+        "id": "100014",
+        "title": "Metaclass？Descriptor？完全に理解した()あなたに",
+        "room": "#pyconjp_1",
+        "day": 2,
+        "no": 1,
+        "elevator_pitch": "Python3.6で追加されたとあるダンダーメソッドが、DescriptorやMetaclassに大きく影響を与えました。\nというのはどういうことなのか。完全に理解したあなたと私のために、metaclassとdescriptorの復習から始めます。\n存在は知っているけれどどう使われてるの？となりがちなMetaclassとDescriptorを「ちゃんと」理解していきましょう。",
+        "talk_format": "Invited talks(45min)",
+        "lang_of_talk": "Japanese",
+        "description": "https://pyconjp.blogspot.com/2020/08/invited-talks2.html",
+        "name": "露木誠",
+        "profile": "2000年頃にファッションジュエリー業界からIT業界へ移り、以来ソフトウェアエンジニアとして働いています。\nPython、Java、Perl、Rubyなどのプログラミング言語を用いてB向けC向けを問わずさまざまな開発に従事してきました。\nソフトウェアエンジニア・チーフアーキテクト・テックリードなどとして開発に携わるのみならず、プログラミング講習の講師や自社サービス用工場の立ち上げなど、開発から外れた仕事もしてきました。\nここ数年はエンジニアが働きやすい環境づくりなどにも関わっています。"
+    },
+    {
+        "id": "100015",
+        "title": "過去2回の登壇内容からのPython×ドローンの進化、アップデート内容と今後について展望",
+        "room": "#pyconjp_1",
+        "day": 2,
+        "no": 2,
+        "elevator_pitch": "過去2年(2017，2018)のPyConJP発表からの進化・進捗などをまとめて、Pythonとドローンをどのように扱い、活用すべきかを自身の経験も踏まえてお話をします。\n2017年および2018年の発表時には何ができて、何が問題・不足したのか。そしてその後はどのように解決したのか。\n果たしてPythonとドローンの組み合わせは良かったのか？\n現在市販されているミニドローン「Tello」がPythonでプログラミングできます。では、実際にどのような動作ができるのかを調査しまとめます。\n最後に、ハードウェアとソフトウェアの両方を実験して感じたことをまとめ、トークします。",
+        "lang_of_talk": "Japanese",
+        "talk_format": "Invited talks(30min)",
+        "description": "https://pyconjp.blogspot.com/2020/08/invited-talks4.html",
+        "name": "片寄里菜",
+        "profile": "片寄里菜さんは、幼い時より航空機に興味があり、もっと学びたいという想いから東海大学工学研究科・航空宇宙学専攻の博士課程前期に進み、ヘリコプターなど垂直離着陸機の研究を行っていま\n大学院修了後は、WEB関連の仕事をしながら個人的な研究テーマを進め、Pythonと出会いました。Pythonでは主にRaspberryPiを使ったモノを動かすプログラミングに視点を置き、開発などを行っていました。\nPyConJPには2016年に初参加。Pythonの楽しさや奥深さを知り、様々なコミュニティに参加し友人・知人を増やしたようです。またPyLadiesTokyoコミュニティ参加をきっかけに、今ではスタッフとして活動しています。\n登壇経験としてPyConJP2017と2018ではドローンとPythonに関する内容で発表・実演を行いました。またPyCon Thailand2019ではPyLadiesのコミュニティ活動に関する海外の登壇経験もあります。PyConUSなど海外のPyConに参加している経験もあり、精力的に活動を行っています。\nご自身の仕事は2018年に株式会社moegiを創業し、計測用のスマホアプリなどを開発。日本だけでなく世界の空の活用法や問題点なども調べ、航空機分野の開発者として活躍できるようにと日々活動をしています。"
+    },
+    {
+        "id": "100021",
+        "title": "オープニング",
+        "day": 1
+    },
+    {
+        "id": "100022",
+        "title": "クロージング",
+        "day": 1
+    },
+    {
+        "id": "100023",
+        "title": "オープニング",
+        "day": 2,
+        "room": "#pyconjp_1"
+    },
+    {
+        "id": "100024",
+        "title": "クロージング",
+        "day": 2,
+        "room": "#pyconjp_1"
+    },
+    {
+        "id": "100025",
+        "title": "スポンサーバネルディスカッション",
+        "day": 2,
+        "elevator_pitch": "ランチタイムにスポンサーによるパネルディスカッションを開催します。\nランチが始まったらご飯を準備いただき、パネルディスカッションはご飯を食べながら是非お聞きください。"
+    },
+    {
+        "id": "100026",
+        "title": "一般社団法人PyCon JP Association 公開会議",
+        "day": 1
+    }
+]
