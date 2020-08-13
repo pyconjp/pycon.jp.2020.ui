@@ -173,7 +173,7 @@
                   </tr>
                   <tr>
                     <td>
-                      2020/08/23 ({{ $t('weekday.friday') }}) ~ 8/29 ({{
+                      2020/08/23 ({{ $t('weekday.sunday') }}) ~ 8/29 ({{
                         $t('weekday.saturday')
                       }})
                     </td>
