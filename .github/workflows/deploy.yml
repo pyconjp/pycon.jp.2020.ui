@@ -23,11 +23,18 @@ jobs:
       with:
         node-version: 12.x
 
+    - name: Set up Python ${{ matrix.python-version }}
+      uses: actions/setup-python@v2
+      with:
+        python-version: ${{ matrix.python-version }}
+
     - name: create session csv
       run: bash tools/run.sh z6tqc1cx
 
     - name: copy session csv
-      run: cp -p tools/talks.csv content/talks.csv
+      run: |
+        mkdir content
+        cp -p tools/talks.csv content/talks.csv
 
     - name: pre build
       run: yarn install
