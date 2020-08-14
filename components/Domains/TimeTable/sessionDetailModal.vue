@@ -29,19 +29,23 @@
                     </div>
                   </div>
                   <!-- YouTube Link -->
-                  <div
+
+                  <a
+                    :href="youtubeLink"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     class="flex justify-start w-2/3 mt-2 md:justify-center md:items-center md:w-3/12"
                   >
                     <fa class="text-2xl text-gray-700" :icon="faPlayCircle" />
                     <p class="ml-2">Live</p>
-                  </div>
+                  </a>
                   <!-- Document Link -->
-                  <div
+                  <!-- <div
                     class="flex items-center justify-start w-2/3 mt-2 md:justify-center md:w-3/12"
                   >
                     <fa class="text-2xl text-gray-700" :icon="faFileAlt" />
                     <p class="ml-2">Document</p>
-                  </div>
+                  </div> -->
                 </div>
               </div>
             </div>
@@ -60,16 +64,17 @@
           <!-- コンテンツエリア -->
           <div class="flex justify-center mt-1 bg-white">
             <div class="w-10/12 my-4">
-              <p class="text-lg font-medium">{{ speakerName }}</p>
+              <p class="text-sm text-gray-800">Speaker</p>
+              <p class="-mt-1 text-lg font-medium">{{ speakerName }}</p>
               <div class="mt-4">
-                <p class="text-lg font-medium">エレベーターピッチ</p>
+                <p class="text-lg font-medium">{{ $t('elevatorPitch') }}</p>
                 <div
                   class="list_style"
                   v-html="$md.render(elevatorPitch)"
                 ></div>
               </div>
               <div class="mt-4">
-                <p class="text-lg font-medium">聴衆に求める前提知識</p>
+                <p class="text-lg font-medium">{{ $t('requiredKnowledge') }}</p>
                 <div
                   class="list_style"
                   v-html="$md.render(prerequisiteKnowledge)"
@@ -77,7 +82,7 @@
               </div>
               <div class="mt-4">
                 <p class="text-lg font-medium">
-                  聴衆が持ち帰ることができるもの
+                  {{ $t('knowledgeGained') }}
                 </p>
                 <div
                   class="list_style"
@@ -117,7 +122,7 @@
                     {{ audienceExpertise }}
                   </p>
                 </div>
-                <p>Language</p>
+                <p>Talk Language</p>
                 <div>
                   <p
                     class="inline-block px-4 text-center bg-gray-300 rounded-lg md:rounded-xl"
@@ -125,7 +130,7 @@
                     {{ langOfTalk }}
                   </p>
                 </div>
-                <p>発表資料の言語</p>
+                <p>Slide Language</p>
                 <div>
                   <p
                     class="inline-block px-4 text-center bg-gray-300 rounded-lg md:rounded-xl"
@@ -171,6 +176,8 @@ import {
   faTimes,
 } from '@fortawesome/free-solid-svg-icons'
 import { disableBodyScroll, clearAllBodyScrollLocks } from 'body-scroll-lock'
+import { getYoutubeLiveLink } from '~/lib/youtute-link'
+
 export default {
   props: {
     sessionData: {
@@ -230,7 +237,10 @@ export default {
   created() {
     this.sessionTitle = this.sessionData.title
     this.speakerName = this.sessionData.name
-    this.youtubeLink = ''
+    // TODO: 開催後YouTubeのリンクを修正すること
+    this.youtubeLink = getYoutubeLiveLink()[
+      `pyconjp${this.sessionData.room.slice(-1)}`
+    ]
     this.documentLink = ''
     this.elevatorPitch = this.sessionData.elevator_pitch
     this.prerequisiteKnowledge = this.sessionData.prerequisite_knowledge
@@ -274,6 +284,13 @@ export default {
     overflow: scroll;
     width: 85%;
     max-height: 80%;
+    overflow-x: hidden;
+
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+  &-window::-webkit-scrollbar {
+    display: none;
   }
 
   &-content {
@@ -370,3 +387,18 @@ ul {
   }
 }
 </style>
+
+<i18n>
+{
+  "en": {
+    "elevatorPitch": "Elevator Pitch",
+    "requiredKnowledge": "Prerequisite knowledge required from the audience",
+    "knowledgeGained": "Knowledge that the audience can take home"
+  },
+  "ja": {
+    "elevatorPitch": "エレベーターピッチ",
+    "requiredKnowledge": "聴衆に求める前提知識",
+    "knowledgeGained": "聴衆が持ち帰ることができるもの"
+  }
+}
+</i18n>

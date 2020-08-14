@@ -68,7 +68,7 @@
                   <p class="font-bold text-center">#pyconjp_ {{ index }}</p>
                   <div class="flex items-center justify-center mt-2 mb-2">
                     <fa class="text-2xl text-gray-700" :icon="faPlayCircle" />
-                    <p class="ml-2 underline">放送中のLive</p>
+                    <p class="ml-2 underline">{{ $t('OnAir') }}</p>
                   </div>
                 </a>
               </div>
@@ -231,6 +231,15 @@
                       String(outerIndex)
                     )
                   "
+                  @click.native="
+                    openSessionModal(
+                      getTargetSessionData(
+                        '1',
+                        `#pyconjp_${index}`,
+                        String(outerIndex)
+                      )
+                    )
+                  "
                 ></Session>
               </div>
             </div>
@@ -328,6 +337,11 @@
                   :session-data="
                     getTargetSessionData('2', `#pyconjp_${index}`, '1')
                   "
+                  @click.native="
+                    openSessionModal(
+                      getTargetSessionData('2', `#pyconjp_${index}`, '1')
+                    )
+                  "
                 ></Session>
               </div>
             </div>
@@ -367,6 +381,11 @@
                   :session-data="
                     getTargetSessionData('2', `#pyconjp_${index}`, '2')
                   "
+                  @click.native="
+                    openSessionModal(
+                      getTargetSessionData('2', `#pyconjp_${index}`, '2')
+                    )
+                  "
                 ></Session>
               </div>
             </div>
@@ -386,6 +405,11 @@
                   :key="`outer${index}`"
                   :session-data="
                     getTargetSessionData('2', `#pyconjp_${index}`, '3')
+                  "
+                  @click.native="
+                    openSessionModal(
+                      getTargetSessionData('2', `#pyconjp_${index}`, '3')
+                    )
                   "
                 ></Session>
               </div>
@@ -422,6 +446,11 @@
                   :session-data="
                     getTargetSessionData('2', `#pyconjp_${index}`, '4')
                   "
+                  @click.native="
+                    openSessionModal(
+                      getTargetSessionData('2', `#pyconjp_${index}`, '4')
+                    )
+                  "
                 ></Session>
               </div>
             </div>
@@ -443,6 +472,11 @@
                     getTargetSessionData('2', `#pyconjp_${index}`, '5')
                   "
                   :class="[`grid_layout_style${index}`]"
+                  @click.native="
+                    openSessionModal(
+                      getTargetSessionData('2', `#pyconjp_${index}`, '5')
+                    )
+                  "
                 ></Session>
               </div>
             </div>
@@ -486,19 +520,13 @@
       :session-data="modalDisplaySessionData"
       @close="closeSessionModal"
     ></SessionDetailModal>
-
-    <!-- <iframe
-      id="iframeid"
-      src="https://dev7367.d2hce9hbdo38af.amplifyapp.com/"
-      frameborder="0"
-      class="w-full mt-4 frame"
-    ></iframe> -->
   </div>
 </template>
 <script>
 import { faPlayCircle } from '@fortawesome/free-solid-svg-icons'
 import Session from '~/components/Domains/TimeTable/session'
 import SessionDetailModal from '~/components/Domains/TimeTable/sessionDetailModal'
+import { getYoutubeLiveLink } from '~/lib/youtute-link'
 
 export default {
   components: {
@@ -512,16 +540,8 @@ export default {
     }
   },
   data() {
-    // TODO: Youtubeのリンクを修正する
     return {
-      youtubeLiveUrlList: {
-        pyconjp0: 'https://www.youtube.com/user/PyConJP',
-        pyconjp1: 'https://www.youtube.com/user/PyConJP',
-        pyconjp2: 'https://www.youtube.com/user/PyConJP',
-        pyconjp3: 'https://www.youtube.com/user/PyConJP',
-        pyconjp4: 'https://www.youtube.com/user/PyConJP',
-        pyconjp5: 'https://www.youtube.com/user/PyConJP',
-      },
+      youtubeLiveUrlList: getYoutubeLiveLink(),
       day1SessionList: [],
       day2SessionList: [],
       isTablet: false,
@@ -749,3 +769,14 @@ export default {
   }
 }
 </style>
+
+<i18n>
+{
+  "en": {
+    "OnAir": "On Air"
+  },
+  "ja": {
+    "OnAir": "放送中のLive"
+  }
+}
+</i18n>
