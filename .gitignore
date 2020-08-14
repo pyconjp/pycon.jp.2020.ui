@@ -90,3 +90,5 @@ sw.*
 *.swp
 
 *.zip
+
+.mypy_cache

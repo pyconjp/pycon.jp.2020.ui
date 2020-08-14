@@ -3,6 +3,8 @@ frontend:
   phases:
     preBuild:
       commands:
+        - bash tools/run.sh z6tqc1cx
+        - cp -p tools/talks.csv content/talks.csv
         - nvm install v12.16.2
         - nvm use v12.16.2
         - npm install -g yarn
