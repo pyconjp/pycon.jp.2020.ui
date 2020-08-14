@@ -98,7 +98,12 @@
               <div
                 class="flex items-center justify-center w-full h-16 mt-2 cursor-pointer md:m-0 box_style1 timetable_inner_width rounded-xl hover:bg-py-blue-light"
               >
-                <p class="text-2xl font-bold">基調講演：芝世弐氏</p>
+                <p
+                  class="text-2xl font-bold"
+                  @click="openSessionModal(getTargetSessionDataById('100001'))"
+                >
+                  基調講演：芝世弐氏
+                </p>
                 <!-- <p>{{ getTargetSessionDataById('100001').title }}</p> -->
               </div>
             </div>
@@ -138,7 +143,10 @@
               <div
                 class="flex items-center justify-center w-full h-16 mt-2 cursor-pointer md:m-0 box_style1 timetable_inner_width rounded-xl hover:bg-py-blue-light"
               >
-                <p class="text-2xl font-bold text-center">
+                <p
+                  class="text-2xl font-bold text-center"
+                  @click="openSessionModal(getTargetSessionDataById('100026'))"
+                >
                   {{ getTargetSessionDataById('100026').title }}
                 </p>
               </div>
@@ -254,7 +262,7 @@
               <div
                 class="flex items-center justify-center w-full h-16 mt-2 md:m-0 box_style1 timetable_inner_width rounded-xl"
               >
-                <p class="text-2xl font-bold">CLOSING</p>
+                <p class="text-2xl font-bold">CLOSING(Day1)</p>
                 <!-- <p>{{ getTargetSessionDataById('').title }}</p> -->
               </div>
             </div>
@@ -286,7 +294,7 @@
                   <p class="font-bold text-center">#pyconjp_ {{ index }}</p>
                   <div class="flex items-center justify-center mt-2 mb-2">
                     <fa class="text-2xl text-gray-700" :icon="faPlayCircle" />
-                    <p class="ml-2 underline">放送中のLive</p>
+                    <p class="ml-2 underline">{{ $t('OnAir') }}</p>
                   </div>
                 </a>
               </div>
@@ -316,8 +324,13 @@
               <div
                 class="flex items-center justify-center w-full h-16 mt-2 cursor-pointer md:m-0 box_style1 timetable_inner_width rounded-xl hover:bg-py-blue-light"
               >
-                <p class="text-2xl font-bold">Keynote: Rich Jones氏</p>
-                <!-- <p>{{ getTargetSessionDataById('100001').title }}</p> -->
+                <p
+                  class="text-2xl font-bold"
+                  @click="openSessionModal(getTargetSessionDataById('100002'))"
+                >
+                  Keynote: Rich Jones氏
+                </p>
+                <!-- <p>{{ getTargetSessionDataById('100002').title }}</p> -->
               </div>
             </div>
 
