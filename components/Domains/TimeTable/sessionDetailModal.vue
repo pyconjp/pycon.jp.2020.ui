@@ -248,9 +248,11 @@ export default {
     this.talkFormat = this.sessionData.talk_format
     this.track = this.sessionData.track
     this.audiencePythonLevel = this.sessionData.audience_python_level
+      ? this.sessionData.audience_python_level
+      : 'undefined'
     this.audienceExpertise = this.sessionData.audience_expertise
-    this.langOfTalk = this.sessionData.lang_of_talk ? 'JP' : 'EN'
-    this.langOfSlide = this.sessionData.lang_of_slide ? 'JP' : 'EN'
+    this.langOfTalk = this.sessionData.lang_of_talk ? 'JA' : 'EN'
+    this.langOfSlide = this.sessionData.lang_of_slide ? 'JA' : 'EN'
     this.description = this.sessionData.description
   },
   mounted() {
