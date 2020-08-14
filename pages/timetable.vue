@@ -534,9 +534,10 @@ export default {
     SessionDetailModal,
   },
   async asyncData({ $content }) {
-    const sessionDataList = await $content('/talks').fetch()
+    // const sessionDataList = await $content('/talks').fetch()
+    const sessionDataList = await $content().fetch()
     return {
-      sessionDataList,
+      sessionDataList: sessionDataList[0],
     }
   },
   data() {
