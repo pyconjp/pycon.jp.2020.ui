@@ -40,7 +40,9 @@ jobs:
       run: bash tools/run.sh z6tqc1cx
 
     - name: copy session csv
-      run: cp -p tools/talks.csv content/talks.csv
+      run: |
+        mkdir content
+        cp -p tools/talks.csv content/talks.csv
 
     - name: pre build
       run: yarn install
