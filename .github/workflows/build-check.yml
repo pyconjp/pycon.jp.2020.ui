@@ -24,7 +24,12 @@ jobs:
         node-version: 12.x
 
     - name: command test
-      run: which python
+      run: |
+        which python
+        python --version
+        which python3
+        alias python='python3'
+
 
     - name: create session csv
       run: bash tools/run.sh z6tqc1cx
