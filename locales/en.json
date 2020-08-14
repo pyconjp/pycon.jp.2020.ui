@@ -13,7 +13,7 @@
       "content-list": [
         {
           "title": "TimeTable",
-          "path": "session"
+          "path": "timetable"
         },
         {
           "title": "Tutorial",
