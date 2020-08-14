@@ -29,6 +29,7 @@ jobs:
         python --version
         which python3
         alias python='python3'
+        python --version
 
 
     - name: create session csv
