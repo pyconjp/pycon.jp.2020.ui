@@ -74,7 +74,7 @@ def talk_number(start_at: str) -> int:
     return talk_number_map.get(start_at)
 
 
-@dataclass(frozen=True)
+@dataclass
 class Talk:
     id: str
     title: str
@@ -142,6 +142,10 @@ class Speaker:
         return asdict(self)
 
 
+class StaffEnteredContent(Talk):
+    pass
+
+
 class InvitedTalk(Talk):
     @classmethod
     def create(cls, session, day):
@@ -150,9 +154,15 @@ class InvitedTalk(Talk):
         talk.category_items.talk_format = talk_format
         return talk
 
+    def take_over_profile_from_description(self):
+        description = self.description
+        raw_description, raw_profile = description.split("-----")
+        self.description = raw_description.strip()
+        return raw_profile.strip()
+
 
 def create_staff_entered_contents(session, day):
     if session["id"] in ID_TO_TALK_FORMAT_MAP:
         # キーノートまたは招待講演の場合
         return InvitedTalk.create(session, day)
-    return Talk.create(session, day)
+    return StaffEnteredContent.create(session, day)

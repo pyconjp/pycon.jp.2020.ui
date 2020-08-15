@@ -327,9 +327,59 @@ class InvitedTalkCreateTestCase(TestCase):
         )
 
 
+class InvitedTalkTakeOverProfileFromDescription(TestCase):
+    def test_should_return_profile_and_change_description(self):
+        talk = sut.InvitedTalk(
+            "213320",
+            "招待講演テストデータ",
+            "#pyconjp_1",
+            1,
+            2,
+            (
+                "〇〇氏による招待講演です\r\nhttp://example.com/blog\r\n"
+                "-----\r\n〇〇氏のプロフィール。\r\nプロフィールが続きます"
+            ),
+            sut.AnswerItems("招待講演のエレベーターピッチ", None, None),
+            sut.CategoryItems(
+                "Invited talk(45min)",
+                None,
+                None,
+                "Data Science / Machine Learning",
+                "Japanese",
+                "Japanese only",
+            ),
+            ["masked_id_ddd"],
+        )
+
+        actual = talk.take_over_profile_from_description()
+
+        self.assertEqual(actual, "〇〇氏のプロフィール。\r\nプロフィールが続きます")
+        self.assertEqual(
+            talk,
+            sut.InvitedTalk(
+                "213320",
+                "招待講演テストデータ",
+                "#pyconjp_1",
+                1,
+                2,
+                "〇〇氏による招待講演です\r\nhttp://example.com/blog",
+                sut.AnswerItems("招待講演のエレベーターピッチ", None, None),
+                sut.CategoryItems(
+                    "Invited talk(45min)",
+                    None,
+                    None,
+                    "Data Science / Machine Learning",
+                    "Japanese",
+                    "Japanese only",
+                ),
+                ["masked_id_ddd"],
+            ),
+        )
+
+
 class CreateStaffEnteredContentsTestCase(TestCase):
-    @patch("sessionfetcher.data.Talk.create")
-    def test_should_return_talk(self, talk_create):
+    @patch("sessionfetcher.data.StaffEnteredContent.create")
+    def test_should_return_contents(self, content_create):
         session_data = {
             "questionAnswers": [
                 {"question": "Elevator Pitch", "answer": None},
@@ -365,8 +415,8 @@ class CreateStaffEnteredContentsTestCase(TestCase):
 
         actual = sut.create_staff_entered_contents(session_data, day)
 
-        self.assertEqual(actual, talk_create.return_value)
-        talk_create.assert_called_once_with(session_data, day)
+        self.assertEqual(actual, content_create.return_value)
+        content_create.assert_called_once_with(session_data, day)
 
     @patch("sessionfetcher.data.InvitedTalk.create")
     def test_should_return_invited_talk(self, invited_talk_create):
