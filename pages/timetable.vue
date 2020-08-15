@@ -579,12 +579,12 @@ export default {
     const mql = window.matchMedia('(min-width: 848px)')
     this.updateMatches(mql)
     mql.addListener(this.updateMatches)
-    // console.log(this.getTargetSessionData('1', `#pyconjp_1`, '1'))
-    // console.log(
-    //   this.sessionDataList.body.filter(
-    //     (sessionData) => sessionData.title === 'スペシャルブースツアー'
-    //   )
-    // )
+
+    if (this.$route.query.id !== undefined) {
+      console.log(this.$route.query.id)
+      const targetSession = this.getTargetSessionDataById(this.$route.query.id)
+      this.openSessionModal(targetSession)
+    }
   },
   methods: {
     updateMatches(mql) {
@@ -646,9 +646,11 @@ export default {
     },
     openSessionModal(sessionData) {
       this.isModal = true
+      this.$router.push({ query: { id: sessionData.id } })
       this.modalDisplaySessionData = sessionData
     },
     closeSessionModal() {
+      this.$router.replace({ query: null })
       this.isModal = false
     },
   },
