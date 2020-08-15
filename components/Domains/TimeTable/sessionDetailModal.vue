@@ -66,6 +66,7 @@
             <div class="w-10/12 my-4">
               <p class="text-sm text-gray-800">Speaker</p>
               <p class="-mt-1 text-lg font-medium">{{ speakerName }}</p>
+              <p>{{ speakerProfile }}</p>
               <div class="mt-4">
                 <p class="text-lg font-medium">{{ $t('elevatorPitch') }}</p>
                 <div
@@ -100,27 +101,45 @@
                 </div>
                 <p>Track</p>
                 <div>
-                  <p
-                    class="inline-block px-4 text-center bg-gray-300 rounded-lg md:rounded-xl"
+                  <a
+                    href="https://pyconjp.blogspot.com/2020/04/pyconjp-2020-proposal-track.html"
+                    target="_blank"
+                    rel="noopener noreferrer"
                   >
-                    {{ track }}
-                  </p>
+                    <p
+                      class="inline-block px-4 text-center bg-gray-300 rounded-lg md:rounded-xl"
+                    >
+                      {{ track }}
+                    </p>
+                  </a>
                 </div>
                 <p>Level</p>
                 <div>
-                  <p
-                    class="inline-block px-4 text-center bg-gray-300 rounded-lg md:rounded-xl"
+                  <a
+                    href="https://pyconjp.blogspot.com/2020/04/pyconjp-2020-proposal-audience-information.html"
+                    target="_blank"
+                    rel="noopener noreferrer"
                   >
-                    {{ audiencePythonLevel }}
-                  </p>
+                    <p
+                      class="inline-block px-4 text-center bg-gray-300 rounded-lg md:rounded-xl"
+                    >
+                      {{ audiencePythonLevel }}
+                    </p></a
+                  >
                 </div>
                 <p>Audience expertise</p>
                 <div>
-                  <p
-                    class="inline-block px-4 text-center bg-gray-300 rounded-lg md:rounded-xl"
+                  <a
+                    href="https://pyconjp.blogspot.com/2020/04/pyconjp-2020-proposal-audience-information.html"
+                    target="_blank"
+                    rel="noopener noreferrer"
                   >
-                    {{ audienceExpertise }}
-                  </p>
+                    <p
+                      class="inline-block px-4 text-center bg-gray-300 rounded-lg md:rounded-xl"
+                    >
+                      {{ audienceExpertise }}
+                    </p></a
+                  >
                 </div>
                 <p>Talk Language</p>
                 <div>
@@ -186,6 +205,7 @@ export default {
         return {
           title: '',
           name: '',
+          profile: '',
           elevator_pitch: '',
           prerequisite_knowledge: '',
           audience_takeaway: '',
@@ -206,6 +226,7 @@ export default {
       // セッション情報表示用
       sessionTitle: '',
       speakerName: '',
+      speakerProfile: '',
       youtubeLink: '',
       documentLink: '',
       elevatorPitch: '',
@@ -237,6 +258,7 @@ export default {
   created() {
     this.sessionTitle = this.sessionData.title
     this.speakerName = this.sessionData.name
+    this.speakerProfile = this.sessionData.profile
     // TODO: 開催後YouTubeのリンクを修正すること
     this.youtubeLink = getYoutubeLiveLink()[
       `pyconjp${this.sessionData.room.slice(-1)}`
@@ -249,11 +271,12 @@ export default {
     this.track = this.sessionData.track
     this.audiencePythonLevel = this.sessionData.audience_python_level
       ? this.sessionData.audience_python_level
-      : 'undefined'
+      : 'all'
     this.audienceExpertise = this.sessionData.audience_expertise
     this.langOfTalk = this.sessionData.lang_of_talk ? 'JA' : 'EN'
     this.langOfSlide = this.sessionData.lang_of_slide ? 'JA' : 'EN'
     this.description = this.sessionData.description
+    this.description = this.sessionData.description.replace(/\n/g, '\n\n')
   },
   mounted() {
     const targetElement = document.querySelector('#modal-content')

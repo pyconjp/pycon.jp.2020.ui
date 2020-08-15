@@ -327,7 +327,7 @@
       </python-banner> -->
     </section>
 
-    <section class="flex flex-col items-center justify-center space-y-12">
+    <section class="flex flex-col items-center justify-center mb-8 space-y-12">
       <div class="flex flex-col items-center">
         <h2 class="inline mb-2 text-4xl font-semibold md:text-6xl">
           Sponsor
@@ -472,6 +472,28 @@
           />
         </a>
       </div>
+
+      <python-banner
+        direction="right"
+        back-ground-color="#3F496A"
+        size="small"
+        length="small"
+        class="mt-16"
+      >
+        <template #title>
+          PATRON
+        </template>
+      </python-banner>
+      <div class="flex flex-wrap mt-4 mb-8">
+        <Patron
+          v-for="patron in $t('sponsor.patron')"
+          :key="patron.name"
+          class="ml-4"
+          :connpass-link="patron.connpassLink"
+          :name="patron.name"
+          :icon-image-link="patron.iconImageLink"
+        ></Patron>
+      </div>
     </section>
   </div>
 </template>
@@ -481,11 +503,13 @@ import Vue from 'vue'
 import { format, formatISO } from 'date-fns'
 import PythonBanner from '~/components/Elements/PythonBanner'
 import TalkContent from '~/components/Elements/TalkContent'
+import Patron from '~/components/Elements/Patron'
 
 export default Vue.extend({
   components: {
     PythonBanner,
     TalkContent,
+    Patron,
   },
   async asyncData({ app }) {
     const jsonPath =
