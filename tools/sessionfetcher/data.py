@@ -2,6 +2,7 @@ from dataclasses import dataclass, asdict
 from typing import List
 
 from sessionfetcher import parser
+from sessionfetcher.constants import ID_TO_TALK_FORMAT_MAP
 
 
 @dataclass(frozen=True)
@@ -23,7 +24,7 @@ class AnswerItems:
         return asdict(self)
 
 
-@dataclass(frozen=True)
+@dataclass
 class CategoryItems:
     talk_format: str
     audience_python_level: str
@@ -139,3 +140,19 @@ class Speaker:
 
     def as_dict(self):
         return asdict(self)
+
+
+class InvitedTalk(Talk):
+    @classmethod
+    def create(cls, session, day):
+        talk = super().create(session, day)
+        talk_format = ID_TO_TALK_FORMAT_MAP[talk.id]
+        talk.category_items.talk_format = talk_format
+        return talk
+
+
+def create_staff_entered_contents(session, day):
+    if session["id"] in ID_TO_TALK_FORMAT_MAP:
+        # キーノートまたは招待講演の場合
+        return InvitedTalk.create(session, day)
+    return Talk.create(session, day)

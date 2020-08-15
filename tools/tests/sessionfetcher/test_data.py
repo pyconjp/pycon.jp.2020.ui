@@ -1,4 +1,5 @@
 from unittest import TestCase
+from unittest.mock import patch
 
 from sessionfetcher import data as sut
 
@@ -255,3 +256,162 @@ class SessionAsDictTestCase(TestCase):
                 "description": "テストデータに使うための\r\nダミープロポーザル",
             },
         )
+
+
+class InvitedTalkCreateTestCase(TestCase):
+    def test_should_create(self):
+        session_data = {
+            "questionAnswers": [
+                {"question": "Elevator Pitch", "answer": "招待講演のエレベーターピッチ"},
+                {
+                    "question": (
+                        "聴衆に求める前提知識 / Prerequisite knowledge for attending"
+                    ),
+                    "answer": None,
+                },
+                {"question": "聴衆が持ち帰ることができるもの", "answer": None},
+            ],
+            "id": "213320",
+            "title": "招待講演テストデータ",
+            "description": "招待講演の情報を\r\nスタッフが入力しました",
+            "startsAt": "2020-08-28T13:45:00",
+            "endsAt": "2020-08-28T14:30:00",
+            "speakers": [{"id": "masked_id_ddd", "name": "PyCon JP"}],
+            "categories": [
+                {
+                    "name": "Session format",
+                    "categoryItems": [{"name": "Talk(45min)"}],
+                },
+                {
+                    "name": "Track",
+                    "categoryItems": [
+                        {"name": "Data Science / Machine Learning"}
+                    ],
+                },
+                {"name": "Level", "categoryItems": []},
+                {"name": "Language", "categoryItems": [{"name": "Japanese"}]},
+                {
+                    "name": "発表資料の言語 / Language of presentation material",
+                    "categoryItems": [{"name": "Japanese only"}],
+                },
+                {"name": "Audience expertise", "categoryItems": []},
+            ],
+            "roomId": 14816,
+            "room": "#pyconjp_1",
+        }
+        day = 1
+
+        actual = sut.InvitedTalk.create(session_data, day)
+
+        self.assertIsInstance(actual, sut.Talk)
+        self.assertEqual(
+            actual,
+            sut.InvitedTalk(
+                "213320",
+                "招待講演テストデータ",
+                "#pyconjp_1",
+                1,
+                2,
+                "招待講演の情報を\r\nスタッフが入力しました",
+                sut.AnswerItems("招待講演のエレベーターピッチ", None, None),
+                sut.CategoryItems(
+                    "Invited talk(45min)",
+                    None,
+                    None,
+                    "Data Science / Machine Learning",
+                    "Japanese",
+                    "Japanese only",
+                ),
+                ["masked_id_ddd"],
+            ),
+        )
+
+
+class CreateStaffEnteredContentsTestCase(TestCase):
+    @patch("sessionfetcher.data.Talk.create")
+    def test_should_return_talk(self, talk_create):
+        session_data = {
+            "questionAnswers": [
+                {"question": "Elevator Pitch", "answer": None},
+                {
+                    "question": (
+                        "聴衆に求める前提知識 / Prerequisite knowledge for attending"
+                    ),
+                    "answer": None,
+                },
+                {"question": "聴衆が持ち帰ることができるもの", "answer": None},
+            ],
+            "id": "214735",
+            "title": "スタッフ作成コンテンツ",
+            "description": "スタッフが作成した\r\nキーノート・招待講演以外のコンテンツです",
+            "startsAt": "2020-08-29T10:00:00",
+            "endsAt": "2020-08-29T10:30:00",
+            "speakers": [{"id": "masked_id_ccc", "name": "Staff"}],
+            "categories": [
+                {"name": "Session format", "categoryItems": []},
+                {"name": "Track", "categoryItems": []},
+                {"name": "Level", "categoryItems": []},
+                {"name": "Language", "categoryItems": [{"name": "Japanese"}]},
+                {
+                    "name": "発表資料の言語 / Language of presentation material",
+                    "categoryItems": [{"name": "Japanese only"}],
+                },
+                {"name": "Audience expertise", "categoryItems": []},
+            ],
+            "roomId": 14495,
+            "room": "#pyconjp",
+        }
+        day = 2
+
+        actual = sut.create_staff_entered_contents(session_data, day)
+
+        self.assertEqual(actual, talk_create.return_value)
+        talk_create.assert_called_once_with(session_data, day)
+
+    @patch("sessionfetcher.data.InvitedTalk.create")
+    def test_should_return_invited_talk(self, invited_talk_create):
+        session_data = {
+            "questionAnswers": [
+                {"question": "Elevator Pitch", "answer": "招待講演のエレベーターピッチ"},
+                {
+                    "question": (
+                        "聴衆に求める前提知識 / Prerequisite knowledge for attending"
+                    ),
+                    "answer": None,
+                },
+                {"question": "聴衆が持ち帰ることができるもの", "answer": None},
+            ],
+            "id": "213316",
+            "title": "招待講演テストデータ その2",
+            "description": "招待講演の情報を\r\nスタッフが入力しました",
+            "startsAt": "2020-08-28T14:50:00",
+            "endsAt": "2020-08-28T15:20:00",
+            "speakers": [{"id": "masked_id_eee", "name": "PyCon JP"}],
+            "categories": [
+                {
+                    "name": "Session format",
+                    "categoryItems": [{"name": "Talk(30min)"}],
+                },
+                {
+                    "name": "Track",
+                    "categoryItems": [
+                        {"name": "Data Science / Machine Learning"}
+                    ],
+                },
+                {"name": "Level", "categoryItems": []},
+                {"name": "Language", "categoryItems": [{"name": "Japanese"}]},
+                {
+                    "name": "発表資料の言語 / Language of presentation material",
+                    "categoryItems": [{"name": "Japanese only"}],
+                },
+                {"name": "Audience expertise", "categoryItems": []},
+            ],
+            "roomId": 14816,
+            "room": "#pyconjp_1",
+        }
+        day = 1
+
+        actual = sut.create_staff_entered_contents(session_data, day)
+
+        self.assertEqual(actual, invited_talk_create.return_value)
+        invited_talk_create.assert_called_once_with(session_data, day)
