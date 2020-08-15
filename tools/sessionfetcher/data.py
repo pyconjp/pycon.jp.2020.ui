@@ -70,11 +70,7 @@ def talk_number(start_at: str) -> int:
         "2020-08-29T16:00:00": 4,
         "2020-08-29T16:30:00": 5,
     }
-    try:
-        number = talk_number_map[start_at]
-    except KeyError:
-        raise RuntimeError(f"想定していない開始日時です: {start_at}")
-    return number
+    return talk_number_map.get(start_at)
 
 
 @dataclass(frozen=True)
