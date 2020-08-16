@@ -20,7 +20,7 @@
                     <div
                       class="w-1/6 font-bold text-center border-t border-b border-l rounded-l-lg border-py-blue-dark text-py-blue-dark"
                     >
-                      {{ langOfTalk }}
+                      {{ sessionLanguage }}
                     </div>
                     <div
                       class="w-5/6 font-bold text-center text-green-700 truncate border border-green-700 rounded-r-lg"
@@ -66,7 +66,7 @@
             <div class="w-10/12 my-4">
               <p class="text-sm text-gray-800">Speaker</p>
               <p class="-mt-1 text-lg font-medium">{{ speakerName }}</p>
-              <p>{{ speakerProfile }}</p>
+              <div class="list_style" v-html="$md.render(speakerProfile)"></div>
               <div class="mt-4">
                 <p class="text-lg font-medium">{{ $t('elevatorPitch') }}</p>
                 <div
@@ -254,6 +254,13 @@ export default {
     faTimes() {
       return faTimes
     },
+    sessionLanguage() {
+      if (this.langOfTalk === 'Japanese') {
+        return 'JA'
+      } else {
+        return 'EN'
+      }
+    },
   },
   created() {
     this.sessionTitle = this.sessionData.title
@@ -273,8 +280,8 @@ export default {
       ? this.sessionData.audience_python_level
       : 'All'
     this.audienceExpertise = this.sessionData.audience_expertise
-    this.langOfTalk = this.sessionData.lang_of_talk ? 'JA' : 'EN'
-    this.langOfSlide = this.sessionData.lang_of_slide ? 'JA' : 'EN'
+    this.langOfTalk = this.sessionData.lang_of_talk
+    this.langOfSlide = this.sessionData.lang_of_slide
     this.description = this.sessionData.description
     this.description = this.sessionData.description.replace(/\n/g, '\n\n')
   },
@@ -413,6 +420,16 @@ ul {
   ul {
     list-style-type: disc;
     padding-left: 1rem;
+  }
+
+  h1 {
+    font-size: 1.4rem;
+  }
+  h2 {
+    font-size: 1.3rem;
+  }
+  h3 {
+    font-size: 1.2rem;
   }
 }
 </style>
