@@ -3,16 +3,9 @@ frontend:
   phases:
     preBuild:
       commands:
-        - export BASE_PATH=$(pwd)
-        - yum install -y gcc openssl-devel bzip2-devel libffi-devel python3.8-pip
-        - cd /opt && wget https://www.python.org/ftp/python/3.8.2/Python-3.8.2.tgz
-        - cd /opt && tar xzf Python-3.8.2.tgz
-        - cd /opt/Python-3.8.2 && ./configure --enable-optimizations
-        - cd /opt/Python-3.8.2 && make altinstall
-        - pip3.8 install --user pipenv
-        - ln -fs /usr/local/bin/python3.8 /usr/bin/python
-        - ln -fs /usr/local/bin/pip3.8 /usr/bin/pip
-        - cd $BASE_PATH
+        - python3 --version
+        - which python3
+        - ln -fs /usr/bin/python3 /usr/bin/python
         - python --version
         - bash tools/run.sh z6tqc1cx
         - mkdir content
