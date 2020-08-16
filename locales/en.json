@@ -13,7 +13,7 @@
       "content-list": [
         {
           "title": "TimeTable",
-          "path": "session"
+          "path": "timetable"
         },
         {
           "title": "Tutorial",
@@ -234,6 +234,68 @@
       "specialSponsor": "Special Sponsor",
       "tutorial": "Tutorial",
       "media": "Media Sponsor"
-    }
+    },
+    "patron": [
+      {
+        "name": "GitHub30",
+        "connpassLink": "https://connpass.com/user/salamander_jp/",
+        "iconImageLink": "https://connpass-tokyo.s3.amazonaws.com/user/158194/d3a036a32afb40dd97eb38eb66f20ca4.jpg"
+      },
+      {
+        "name": "あべんべん",
+        "connpassLink": "https://connpass.com/user/abenben/",
+        "iconImageLink": "https://connpass-tokyo.s3.amazonaws.com/user/5763/944658953c344f7ea74907af1c3dd394.jpg"
+      },
+      {
+        "name": "shimizukawa",
+        "connpassLink": "https://connpass.com/user/shimizukawa/",
+        "iconImageLink": "https://connpass-tokyo.s3.amazonaws.com/user/16/d01c102f0c5e46edaa775099752ada0c.png"
+      },
+      {
+        "name": "kioto",
+        "connpassLink": "https://connpass.com/user/takaneh/",
+        "iconImageLink": "https://connpass-tokyo.s3.amazonaws.com/user/46790/04a1d74cec424258aee178925b2e38c9.jpg"
+      },
+      {
+        "name": "hrsano645",
+        "connpassLink": "https://connpass.com/user/hrsano645/",
+        "iconImageLink": "https://connpass-tokyo.s3.amazonaws.com/user/12331/eb425b2ce2264885bb04c68d057af320.jpg"
+      },
+      {
+        "name": "h_tsk",
+        "connpassLink": "https://connpass.com/user/h_tsk/",
+        "iconImageLink": "https://connpass-tokyo.s3.amazonaws.com/user/4897/5c2d7bd653ab4752ac998e43f6821779.jpg"
+      },
+      {
+        "name": "_stakaya",
+        "connpassLink": "https://connpass.com/user/_stakaya/",
+        "iconImageLink": "https://connpass-tokyo.s3.amazonaws.com/user/117340/826beef3b6e44df69312354a5a3546ff.jpg"
+      },
+      {
+        "name": "rokujyouhitoma",
+        "connpassLink": "https://connpass.com/user/rokujyouhitoma/",
+        "iconImageLink": "https://connpass-tokyo.s3.amazonaws.com/user/248/1bfbb312cb4c432597f418a0c5034644.jpeg"
+      },
+      {
+        "name": "佐藤 治夫",
+        "connpassLink": "https://connpass.com/user/haru860/",
+        "iconImageLink": "https://connpass-tokyo.s3.amazonaws.com/user/8/c25ca78c194c4e55b46025b52aff9437.jpg"
+      },
+      {
+        "name": "jbking",
+        "connpassLink": "https://connpass.com/user/jbking/",
+        "iconImageLink": "https://connpass-tokyo.s3.amazonaws.com/user/94/a9480b3253cb46dfba1829ade86746c7.jpeg"
+      },
+      {
+        "name": "tell-k",
+        "connpassLink": "https://connpass.com/user/tell-k/",
+        "iconImageLink": "https://connpass-tokyo.s3.amazonaws.com/user/1/47bef409c76d43979794b19845e676ca.png"
+      },
+      {
+        "name": "kohei_sakamoto",
+        "connpassLink": "https://connpass.com/user/kohei_sakamoto/",
+        "iconImageLink": ""
+      }
+    ]
   }
 }

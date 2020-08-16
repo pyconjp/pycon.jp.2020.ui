@@ -327,7 +327,7 @@
       </python-banner> -->
     </section>
 
-    <section class="flex flex-col items-center justify-center space-y-12">
+    <section class="flex flex-col items-center justify-center mb-8 space-y-12">
       <div class="flex flex-col items-center">
         <h2 class="inline mb-2 text-4xl font-semibold md:text-6xl">
           Sponsor
@@ -472,6 +472,28 @@
           />
         </a>
       </div>
+
+      <python-banner
+        direction="right"
+        back-ground-color="#3F496A"
+        size="small"
+        length="small"
+        class="mt-16"
+      >
+        <template #title>
+          PATRON
+        </template>
+      </python-banner>
+      <div class="flex flex-wrap mt-4 mb-8">
+        <Patron
+          v-for="patron in $t('sponsor.patron')"
+          :key="patron.name"
+          class="ml-4"
+          :connpass-link="patron.connpassLink"
+          :name="patron.name"
+          :icon-image-link="patron.iconImageLink"
+        ></Patron>
+      </div>
     </section>
   </div>
 </template>
@@ -481,11 +503,13 @@ import Vue from 'vue'
 import { format, formatISO } from 'date-fns'
 import PythonBanner from '~/components/Elements/PythonBanner'
 import TalkContent from '~/components/Elements/TalkContent'
+import Patron from '~/components/Elements/Patron'
 
 export default Vue.extend({
   components: {
     PythonBanner,
     TalkContent,
+    Patron,
   },
   async asyncData({ app }) {
     const jsonPath =
@@ -665,7 +689,7 @@ export default Vue.extend({
         "image": "Katayose_Image.jpg",
         "date": "08/29",
         "description": {
-          "p-1": "Rina Katayose has been interested in aircraft since childhood, and her desire to learn more led her to pursue a master's degree in aerospace at Tokai University's Graduate School of Engineering, where she studied helicopters and other VTOL(vertical takeoff and landing) aircraft.",
+          "p-1": "Lina Katayose has been interested in aircraft since childhood, and her desire to learn more led her to pursue a master's degree in aerospace at Tokai University's Graduate School of Engineering, where she studied helicopters and other VTOL(vertical takeoff and landing) aircraft.",
           "p-2": "After finishing the graduate school, she worked on her personal research while working on web-related projects and came across Python. ",
           "p-3": "She has programmed using Python mainly focusing on controlling \"things\" around using Raspberry Pi.",
           "p-4": "She attended PyCon JP for the first time in 2016, and after discovering the fun and depth of Python, she joined various communities and made many friends. She joined the PyLadies Tokyo community and now she is an organizer of PyLadies Tokyo.",

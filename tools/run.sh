@@ -16,4 +16,4 @@ SESSIONS_LIST_ENDPOINT="https://sessionize.com/api/v2/${ENDPOINT_ID}/view/Sessio
 SPEAKERS_LIST_ENDPOINT="https://sessionize.com/api/v2/${ENDPOINT_ID}/view/Speakers"
 # Required python>=3.7.0
 python ${SCRIPT_DIR}/main.py ${SESSIONS_LIST_ENDPOINT} ${SPEAKERS_LIST_ENDPOINT} \
-    -l ${SCRIPT_DIR}/data/invited.json -d ${SCRIPT_DIR}/talks.csv
+    -d ${SCRIPT_DIR}/talks.csv
