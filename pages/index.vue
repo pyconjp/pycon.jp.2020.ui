@@ -689,7 +689,7 @@ export default Vue.extend({
         "image": "Katayose_Image.jpg",
         "date": "08/29",
         "description": {
-          "p-1": "Rina Katayose has been interested in aircraft since childhood, and her desire to learn more led her to pursue a master's degree in aerospace at Tokai University's Graduate School of Engineering, where she studied helicopters and other VTOL(vertical takeoff and landing) aircraft.",
+          "p-1": "Lina Katayose has been interested in aircraft since childhood, and her desire to learn more led her to pursue a master's degree in aerospace at Tokai University's Graduate School of Engineering, where she studied helicopters and other VTOL(vertical takeoff and landing) aircraft.",
           "p-2": "After finishing the graduate school, she worked on her personal research while working on web-related projects and came across Python. ",
           "p-3": "She has programmed using Python mainly focusing on controlling \"things\" around using Raspberry Pi.",
           "p-4": "She attended PyCon JP for the first time in 2016, and after discovering the fun and depth of Python, she joined various communities and made many friends. She joined the PyLadies Tokyo community and now she is an organizer of PyLadies Tokyo.",

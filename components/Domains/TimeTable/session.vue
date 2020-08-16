@@ -15,14 +15,14 @@
           {{
             sessionData.audience_python_level
               ? sessionData.audience_python_level
-              : 'all'
+              : 'All'
           }}
         </div>
       </div>
       <p class="mt-4">{{ sessionData.title }}</p>
       <p class="mt-4 text-gray-600">{{ sessionData.name }}</p>
       <p class="">
-        {{ sessionData.talk_format ? sessionData.talk_format : 'all' }}
+        {{ sessionData.talk_format ? sessionData.talk_format : 'All' }}
       </p>
     </div>
   </div>

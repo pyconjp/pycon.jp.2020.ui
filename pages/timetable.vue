@@ -97,14 +97,11 @@
               </div>
               <div
                 class="flex items-center justify-center w-full h-16 mt-2 cursor-pointer md:m-0 box_style1 timetable_inner_width rounded-xl hover:bg-py-blue-light"
+                @click="openSessionModal(getTargetSessionDataById('214736'))"
               >
-                <p
-                  class="text-2xl font-bold"
-                  @click="openSessionModal(getTargetSessionDataById('100001'))"
-                >
-                  基調講演：芝世弐氏
+                <p class="text-2xl font-bold">
+                  {{ getTargetSessionDataById('214736').title }}
                 </p>
-                <!-- <p>{{ getTargetSessionDataById('100001').title }}</p> -->
               </div>
             </div>
 
@@ -142,12 +139,10 @@
               </div>
               <div
                 class="flex items-center justify-center w-full h-16 mt-2 cursor-pointer md:m-0 box_style1 timetable_inner_width rounded-xl hover:bg-py-blue-light"
+                @click="openSessionModal(getTargetSessionDataById('215380'))"
               >
-                <p
-                  class="text-2xl font-bold text-center"
-                  @click="openSessionModal(getTargetSessionDataById('100026'))"
-                >
-                  {{ getTargetSessionDataById('100026').title }}
+                <p class="text-2xl font-bold text-center">
+                  {{ getTargetSessionDataById('215380').title }}
                 </p>
               </div>
             </div>
@@ -211,9 +206,11 @@
               </div>
               <div
                 class="flex items-center justify-center w-full h-16 mt-2 cursor-pointer md:m-0 box_style1 timetable_inner_width rounded-xl hover:bg-py-blue-light"
+                @click="openSessionModal(getTargetSessionDataById('215383'))"
               >
-                <p class="text-2xl font-bold">スペシャルブースツアー</p>
-                <!-- <p>{{ getTargetSessionDataById('').title }}</p> -->
+                <p class="text-2xl font-bold text-center">
+                  {{ getTargetSessionDataById('215383').title }}
+                </p>
               </div>
             </div>
 
@@ -323,14 +320,11 @@
               </div>
               <div
                 class="flex items-center justify-center w-full h-16 mt-2 cursor-pointer md:m-0 box_style1 timetable_inner_width rounded-xl hover:bg-py-blue-light"
+                @click="openSessionModal(getTargetSessionDataById('214737'))"
               >
-                <p
-                  class="text-2xl font-bold"
-                  @click="openSessionModal(getTargetSessionDataById('100002'))"
-                >
-                  Keynote: Rich Jones氏
+                <p class="text-2xl font-bold">
+                  {{ getTargetSessionDataById('214737').title }}
                 </p>
-                <!-- <p>{{ getTargetSessionDataById('100002').title }}</p> -->
               </div>
             </div>
 
@@ -368,13 +362,11 @@
               </div>
               <div
                 class="flex items-center justify-center w-full h-16 mt-2 cursor-pointer md:m-0 box_style1 timetable_inner_width rounded-xl hover:bg-py-blue-light"
+                @click="openSessionModal(getTargetSessionDataById('214742'))"
               >
                 <p class="text-2xl font-bold text-center">
-                  スペシャルパネルディスカッション
+                  {{ getTargetSessionDataById('214742').title }}
                 </p>
-                <!-- <p class="text-2xl font-bold text-center">
-                  {{ getTargetSessionDataById('').title }}
-                </p> -->
               </div>
             </div>
 
@@ -437,9 +429,11 @@
               </div>
               <div
                 class="flex items-center justify-center w-full h-16 mt-2 cursor-pointer md:m-0 box_style1 timetable_inner_width rounded-xl hover:bg-py-blue-light"
+                @click="openSessionModal(getTargetSessionDataById('215384'))"
               >
-                <p class="text-2xl font-bold">スペシャルブースツアー</p>
-                <!-- <p>{{ getTargetSessionDataById('').title }}</p> -->
+                <p class="text-2xl font-bold">
+                  {{ getTargetSessionDataById('215384').title }}
+                </p>
               </div>
             </div>
 
@@ -517,10 +511,12 @@
                 <p>18:15</p>
               </div>
               <div
-                class="flex items-center justify-center w-full h-16 mt-2 md:m-0 box_style1 timetable_inner_width rounded-xl"
+                class="flex items-center justify-center w-full h-16 mt-2 cursor-pointer md:m-0 box_style1 timetable_inner_width rounded-xl hover:bg-py-blue-light"
+                @click="openSessionModal(getTargetSessionDataById('215384'))"
               >
-                <p class="text-2xl font-bold">Online Party</p>
-                <!-- <p>{{ getTargetSessionDataById('').title }}</p> -->
+                <p class="text-2xl font-bold">
+                  {{ getTargetSessionDataById('215531').title }}
+                </p>
               </div>
             </div>
           </div>

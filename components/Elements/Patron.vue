@@ -1,5 +1,5 @@
 <template>
-  <div class="p-4 shadow-lg rounded-xl">
+  <div class="flex items-center justify-center p-4 shadow-lg rounded-xl">
     <a
       :href="connpassLink"
       class="flex items-center justify-center"
@@ -7,6 +7,7 @@
       rel="noopener noreferrer"
     >
       <img
+        v-if="iconImageLink"
         :src="iconImageLink"
         alt="Patron Icon"
         class="object-center w-12 h-12 rounded-full"
