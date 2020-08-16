@@ -107,7 +107,7 @@
                     rel="noopener noreferrer"
                   >
                     <p
-                      class="inline-block px-4 text-center bg-gray-300 rounded-lg md:rounded-xl"
+                      class="inline-block px-4 text-center underline bg-gray-300 rounded-lg md:rounded-xl hover:text-blue-500"
                     >
                       {{ track }}
                     </p>
@@ -121,7 +121,7 @@
                     rel="noopener noreferrer"
                   >
                     <p
-                      class="inline-block px-4 text-center bg-gray-300 rounded-lg md:rounded-xl"
+                      class="inline-block px-4 text-center underline bg-gray-300 rounded-lg md:rounded-xl hover:text-blue-500"
                     >
                       {{ audiencePythonLevel }}
                     </p></a
@@ -135,7 +135,7 @@
                     rel="noopener noreferrer"
                   >
                     <p
-                      class="inline-block px-4 text-center bg-gray-300 rounded-lg md:rounded-xl"
+                      class="inline-block px-4 text-center underline bg-gray-300 rounded-lg md:rounded-xl hover:text-blue-500"
                     >
                       {{ audienceExpertise }}
                     </p></a
@@ -271,7 +271,7 @@ export default {
     this.track = this.sessionData.track
     this.audiencePythonLevel = this.sessionData.audience_python_level
       ? this.sessionData.audience_python_level
-      : 'all'
+      : 'All'
     this.audienceExpertise = this.sessionData.audience_expertise
     this.langOfTalk = this.sessionData.lang_of_talk ? 'JA' : 'EN'
     this.langOfSlide = this.sessionData.lang_of_slide ? 'JA' : 'EN'

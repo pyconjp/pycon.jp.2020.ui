@@ -285,6 +285,16 @@
         "name": "jbking",
         "connpassLink": "https://connpass.com/user/jbking/",
         "iconImageLink": "https://connpass-tokyo.s3.amazonaws.com/user/94/a9480b3253cb46dfba1829ade86746c7.jpeg"
+      },
+      {
+        "name": "tell-k",
+        "connpassLink": "https://connpass.com/user/tell-k/",
+        "iconImageLink": "https://connpass-tokyo.s3.amazonaws.com/user/1/47bef409c76d43979794b19845e676ca.png"
+      },
+      {
+        "name": "kohei_sakamoto",
+        "connpassLink": "https://connpass.com/user/kohei_sakamoto/",
+        "iconImageLink": ""
       }
     ]
   }
