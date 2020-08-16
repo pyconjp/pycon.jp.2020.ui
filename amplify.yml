@@ -3,6 +3,8 @@ frontend:
   phases:
     preBuild:
       commands:
+        - python3 --version
+        - which python3
         - export BASE_PATH=$(pwd)
         - yum install -y gcc openssl-devel bzip2-devel libffi-devel python3.8-pip
         - cd /opt && wget https://www.python.org/ftp/python/3.8.2/Python-3.8.2.tgz
