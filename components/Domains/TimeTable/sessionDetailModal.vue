@@ -62,7 +62,7 @@
           </div>
 
           <!-- コンテンツエリア -->
-          <div class="flex justify-center mt-1 bg-white">
+          <div class="flex justify-center mt-1 bg-white content_bottom_radius">
             <div class="w-10/12 my-4">
               <p class="text-sm text-gray-800">Speaker</p>
               <p class="-mt-1 text-lg font-medium">{{ speakerName }}</p>
@@ -399,6 +399,10 @@ export default {
 
 .outer_radius {
   border-radius: 36px 36px 0 0;
+}
+
+.content_bottom_radius {
+  border-radius: 0 0 36px 36px;
 }
 
 ul {
