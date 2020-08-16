@@ -2,6 +2,7 @@ from dataclasses import dataclass, asdict
 from typing import List
 
 from sessionfetcher import parser
+from sessionfetcher.constants import ID_TO_TALK_FORMAT_MAP
 
 
 @dataclass(frozen=True)
@@ -23,7 +24,7 @@ class AnswerItems:
         return asdict(self)
 
 
-@dataclass(frozen=True)
+@dataclass
 class CategoryItems:
     talk_format: str
     audience_python_level: str
@@ -70,14 +71,10 @@ def talk_number(start_at: str) -> int:
         "2020-08-29T16:00:00": 4,
         "2020-08-29T16:30:00": 5,
     }
-    try:
-        number = talk_number_map[start_at]
-    except KeyError:
-        raise RuntimeError(f"想定していない開始日時です: {start_at}")
-    return number
+    return talk_number_map.get(start_at)
 
 
-@dataclass(frozen=True)
+@dataclass
 class Talk:
     id: str
     title: str
@@ -143,3 +140,29 @@ class Speaker:
 
     def as_dict(self):
         return asdict(self)
+
+
+class StaffEnteredContent(Talk):
+    pass
+
+
+class InvitedTalk(Talk):
+    @classmethod
+    def create(cls, session, day):
+        talk = super().create(session, day)
+        talk_format = ID_TO_TALK_FORMAT_MAP[talk.id]
+        talk.category_items.talk_format = talk_format
+        return talk
+
+    def take_over_profile_from_description(self):
+        description = self.description
+        raw_description, raw_profile = description.split("-----")
+        self.description = raw_description.strip()
+        return raw_profile.strip()
+
+
+def create_staff_entered_contents(session, day):
+    if session["id"] in ID_TO_TALK_FORMAT_MAP:
+        # キーノートまたは招待講演の場合
+        return InvitedTalk.create(session, day)
+    return StaffEnteredContent.create(session, day)
