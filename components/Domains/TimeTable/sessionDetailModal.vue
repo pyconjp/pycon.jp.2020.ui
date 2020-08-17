@@ -431,6 +431,11 @@ ul {
   h3 {
     font-size: 1.2rem;
   }
+
+  ol {
+    list-style-type: decimal;
+    padding-left: 1rem;
+  }
 }
 </style>
 
