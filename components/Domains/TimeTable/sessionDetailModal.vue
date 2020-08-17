@@ -436,6 +436,11 @@ ul {
     list-style-type: decimal;
     padding-left: 1rem;
   }
+
+  a {
+    text-decoration: underline;
+    color: #1e90ff;
+  }
 }
 </style>
 
