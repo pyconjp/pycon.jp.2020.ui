@@ -88,3 +88,7 @@ sw.*
 
 # Vim swap files
 *.swp
+
+*.zip
+
+.mypy_cache

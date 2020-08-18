@@ -3,6 +3,13 @@ frontend:
   phases:
     preBuild:
       commands:
+        - python3 --version
+        - which python3
+        - ln -fs /usr/bin/python3 /usr/bin/python
+        - python --version
+        - bash tools/run.sh z6tqc1cx
+        - mkdir content
+        - cp -p tools/talks.csv content/talks.csv
         - nvm install v12.16.2
         - nvm use v12.16.2
         - npm install -g yarn

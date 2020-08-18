@@ -207,6 +207,28 @@
         </template>
       </platinum-and-gold-sponsor>
     </div>
+
+    <python-banner
+      direction="right"
+      back-ground-color="#3F496A"
+      size="small"
+      length="small"
+      class="mt-16"
+    >
+      <template #title>
+        PATRON
+      </template>
+    </python-banner>
+    <div class="flex flex-wrap mt-4 mb-8">
+      <Patron
+        v-for="patron in $t('sponsor.patron')"
+        :key="patron.name"
+        class="ml-4"
+        :connpass-link="patron.connpassLink"
+        :name="patron.name"
+        :icon-image-link="patron.iconImageLink"
+      ></Patron>
+    </div>
   </div>
 </template>
 
@@ -214,9 +236,10 @@
 import Vue from 'vue'
 import PythonBanner from '~/components/Elements/PythonBanner'
 import PlatinumAndGoldSponsor from '~/components/Domains/Sponsor/PlatinumAndGoldSponsor'
+import Patron from '~/components/Elements/Patron'
 
 export default Vue.extend({
-  components: { PythonBanner, PlatinumAndGoldSponsor },
+  components: { PythonBanner, PlatinumAndGoldSponsor, Patron },
   data() {
     return {}
   },

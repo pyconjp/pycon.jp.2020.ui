@@ -165,6 +165,9 @@ export default {
     'nuxt-webfontloader',
     '@nuxtjs/proxy',
     '~/modules/news',
+    '@nuxt/content',
+    'nuxt-fontawesome',
+    '@nuxtjs/markdownit',
   ],
   i18n: {
     vueI18nLoader: true,
@@ -216,10 +219,10 @@ export default {
   axios: {
     proxy: true,
   },
-  proxy: {
-    '/news':
-      'http://pyconjp.blogspot.com/feeds/posts/default/-/pyconjp2020?alt=rss&max-results=5',
-  },
+  // proxy: {
+  //   '/news':
+  //     'http://pyconjp.blogspot.com/feeds/posts/default/-/pyconjp2020?alt=rss&max-results=5',
+  // },
   /*
    ** Build configuration
    */
@@ -233,5 +236,11 @@ export default {
     google: {
       families: ['Rounded Mplus 1c:300,400,500,700,800,900'],
     },
+  },
+  fontawesome: {
+    component: 'fa',
+  },
+  markdownit: {
+    injected: true,
   },
 }
