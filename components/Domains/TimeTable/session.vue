@@ -1,6 +1,6 @@
 <template>
   <div
-    class="flex items-start justify-center w-full h-full p-2 cursor-pointer outer_style hover:bg-py-blue-light"
+    class="flex items-start justify-center w-full p-2 cursor-pointer md:h-full outer_style hover:bg-py-blue-light"
   >
     <div class="w-11/12 mt-2">
       <div class="flex items-center justify-center">

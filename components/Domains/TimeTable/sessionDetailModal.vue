@@ -194,7 +194,6 @@ import {
   faFileAlt,
   faTimes,
 } from '@fortawesome/free-solid-svg-icons'
-import { disableBodyScroll, clearAllBodyScrollLocks } from 'body-scroll-lock'
 import { getYoutubeLiveLink } from '~/lib/youtute-link'
 
 export default {
@@ -284,13 +283,6 @@ export default {
     this.langOfSlide = this.sessionData.lang_of_slide
     this.description = this.sessionData.description
     this.description = this.sessionData.description.replace(/\n/g, '\n\n')
-  },
-  mounted() {
-    const targetElement = document.querySelector('#modal-content')
-    disableBodyScroll(targetElement)
-  },
-  beforeDestroy() {
-    clearAllBodyScrollLocks()
   },
 }
 </script>
