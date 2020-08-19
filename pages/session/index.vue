@@ -34,10 +34,6 @@
 </template>
 <script>
 export default {
-  asyncData() {
-    // const sessions = require('~/mocks/session.json')
-    // return { sessions }
-  },
   mounted() {
     window.addEventListener(
       'message',
