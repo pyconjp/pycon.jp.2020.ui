@@ -168,7 +168,6 @@ export default {
     '@nuxt/content',
     'nuxt-fontawesome',
     '@nuxtjs/markdownit',
-    ['@nuxtjs/redirect-module', [{ from: '^/session', to: '/timetable' }]],
   ],
   i18n: {
     vueI18nLoader: true,
