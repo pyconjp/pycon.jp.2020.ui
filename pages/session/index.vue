@@ -34,9 +34,8 @@
 </template>
 <script>
 export default {
-  asyncData() {
-    // const sessions = require('~/mocks/session.json')
-    // return { sessions }
+  created() {
+    this.$router.push(this.localePath('timetable'))
   },
   mounted() {
     window.addEventListener(
