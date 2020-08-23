@@ -40,6 +40,10 @@
     "news": {
       "title": "お知らせ",
       "path": "https://pyconjp.blogspot.com/search/label/pyconjp2020"
+    },
+    "staff": {
+      "title": "スタッフ",
+      "path": "staff"
     }
   },
   "language": "English",
