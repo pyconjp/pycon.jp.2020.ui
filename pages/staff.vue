@@ -435,7 +435,7 @@ export default Vue.extend({
         "facebook": "koedoyoshida"
       },
       {
-        "name": "寺田　学",
+        "name": "寺田 学",
         "title": "一般社団法人PyCon JP 代表理事",
         "photo": "https://www.dropbox.com/s/r8r34b6rcbkjbzw/terada1-256.png?dl=0",
         "twitter": "terapyon",
@@ -484,7 +484,7 @@ export default Vue.extend({
         "facebook": ""
       },
       {
-        "name": "稲森　景",
+        "name": "稲森 景",
         "title": "",
         "photo": "",
         "twitter": "ainamori",
@@ -533,7 +533,7 @@ export default Vue.extend({
         "facebook": "mstk214"
       },
       {
-        "name": "オブリスト　ヨナス",
+        "name": "オブリスト ヨナス",
         "title": "一般社団法人PyCon JP 理事",
         "photo": "",
         "twitter": "ojiidotch",

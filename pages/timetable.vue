@@ -24,6 +24,12 @@
         <img :src="require(`~/assets/img/sponsor/${platinum.imagePath}`)"
       /></a>
     </div>
+
+    <div class="w-full banner">
+      <!-- TODO:仮画像なので後で差し替え -->
+      <img class="w-full mb-8" src="~/assets/img/57_1.svg" />
+    </div>
+
     <div class="w-full mb-8">
       <div class="flex justify-center w-full">
         <div
