@@ -59,6 +59,52 @@
           </div>
         </div>
       </div>
+      <python-banner direction="right" back-ground-color="#EE9D2C" size="small">
+        <template #title>
+          Support Staff
+        </template>
+      </python-banner>
+      <div class="grid grid-flow-row grid-cols-3 mt-4">
+        <div
+          v-for="staff in $t('support-staff-list')"
+          :key="staff.name"
+          class="p-3 m-4 rounded-lg staff-box-shawow"
+        >
+          <div class="flex items-center">
+            <img
+              v-if="staff.photo !== ''"
+              :src="staff.photo"
+              class="w-12 h-12 mr-3 rounded-full"
+              alt=""
+            />
+            <i
+              v-if="staff.photo === ''"
+              class="mr-3 text-5xl text-gray-700 material-icons"
+              >account_circle</i
+            >
+            <p class="text-xl">{{ staff.name }}</p>
+          </div>
+          <div class="flex items-center space-x-2">
+            <div class="mr-auto">{{ staff.title }}</div>
+            <a
+              v-if="staff.twitter"
+              rel="noopener noreferrer"
+              :href="`https://twitter.com/${staff.twitter}`"
+              class="text-3xl text-gray-800"
+            >
+              <fa :icon="faTwitter" />
+            </a>
+            <a
+              v-if="staff.facebook"
+              rel="noopener noreferrer"
+              :href="`https://facebook.com/${staff.facebook}`"
+              class="text-3xl text-gray-800"
+            >
+              <fa :icon="faFacebook" />
+            </a>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -436,7 +482,7 @@ export default Vue.extend({
       {
         "name": "Ryosuke Izumi",
         "title": "",
-        "photo": "",
+        "photo": "https://isryo-profile-image.s3-ap-northeast-1.amazonaws.com/p_image.jpg",
         "twitter": "is_ryo",
         "facebook": ""
       },
@@ -799,7 +845,7 @@ export default Vue.extend({
       {
         "name": "泉 亮輔",
         "title": "",
-        "photo": "",
+        "photo": "https://isryo-profile-image.s3-ap-northeast-1.amazonaws.com/p_image.jpg",
         "twitter": "is_ryo",
         "facebook": ""
       },
