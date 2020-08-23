@@ -459,7 +459,7 @@ export default Vue.extend({
         "title": "",
         "photo": "",
         "twitter": "",
-        "facebook": "RYOKO YASUTAKE"
+        "facebook": "rilly17"
       },
       {
         "name": "Yusuke Nakayama",
@@ -816,7 +816,7 @@ export default Vue.extend({
         "title": "",
         "photo": "",
         "twitter": "",
-        "facebook": "RYOKO YASUTAKE"
+        "facebook": "rilly17"
       },
       {
         "name": "中山 裕介",
