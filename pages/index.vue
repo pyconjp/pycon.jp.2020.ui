@@ -290,7 +290,7 @@
 
       <python-banner direction="right" back-ground-color="#EE9D2C" size="small">
         <template #title>
-          Invided talk
+          Invited talk
         </template>
       </python-banner>
 
