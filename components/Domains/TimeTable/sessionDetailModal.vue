@@ -195,6 +195,7 @@ import {
   faTimes,
 } from '@fortawesome/free-solid-svg-icons'
 import { getYoutubeLiveLink } from '~/lib/youtute-link'
+import { getSessionDocument } from '~/lib/session-url'
 
 export default {
   props: {
@@ -202,6 +203,7 @@ export default {
       type: Object,
       default() {
         return {
+          id: '',
           title: '',
           name: '',
           profile: '',
@@ -266,8 +268,8 @@ export default {
     this.speakerName = this.sessionData.name
     this.speakerProfile = this.sessionData.profile
     // TODO: 開催後YouTubeのリンクを修正すること
-    this.youtubeLink = getYoutubeLiveLink()[
-      `pyconjp${this.sessionData.room.slice(-1)}`
+    this.youtubeLink = getYoutubeLiveLink()[Number(this.sessionData.day) - 1][
+      this.sessionData.room
     ]
     this.documentLink = ''
     this.elevatorPitch = this.sessionData.elevator_pitch

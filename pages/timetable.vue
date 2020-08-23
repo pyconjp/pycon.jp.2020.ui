@@ -66,7 +66,7 @@
                 class="flex flex-col items-center justify-center w-full cursor-pointer box_style1 hover:bg-py-blue-light"
               >
                 <a
-                  :href="youtubeLiveUrlList[`pyconjp${index}`]"
+                  :href="youtubeLiveUrlList[0][`#pyconjp_${index}`]"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -290,7 +290,7 @@
                 class="flex flex-col items-center justify-center w-full cursor-pointer box_style1 hover:bg-py-blue-light"
               >
                 <a
-                  :href="youtubeLiveUrlList[`pyconjp${index}`]"
+                  :href="youtubeLiveUrlList[1][`#pyconjp_${index}`]"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
