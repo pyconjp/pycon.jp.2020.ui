@@ -12,37 +12,7 @@
         {{ $t('pages["event-list"]["content-list"][1].title') }}
       </h3>
     </div>
-    <div>
-      <p>
-        タイムテーブル よろしくお願いします
-      </p>
-    </div>
-    <div>
-      <div class="flex flex-wrap items-start justify-center mt-8 mb-16">
-        <Sponsor
-          v-for="sponsor in $t('special-booth-company-list')"
-          :key="sponsor.companyName"
-          sponsor-type="gold"
-          :url="sponsor.url"
-          class="w-full mt-10 lg:w-1/4 lg:mx-8"
-          color="#3D40CB"
-        >
-          <template #image>
-            <img
-              :src="require(`~/assets/img/sponsor/${sponsor.imagePath}`)"
-              class="w-3/4"
-            />
-          </template>
-          <template #companyName class="text-lg">
-            {{ sponsor.companyName }}
-          </template>
-          <!-- <template #companyInformation>
-          {{ tutorial.description }}
-        </template> -->
-        </Sponsor>
-      </div>
-    </div>
-    <div class="w-screen pt-24 pb-24 mt-24 way-to-join-block m-screen">
+    <div class="w-screen pt-24 pb-24 way-to-join-block m-screen text-py-black">
       <div
         class="relative flex items-start justify-center md:items-center way-to-join-block"
       >
@@ -94,6 +64,28 @@
             ></div>
           </div>
         </div>
+      </div>
+    </div>
+    <div>
+      <div class="flex flex-wrap items-start justify-center mt-8 mb-16">
+        <Sponsor
+          v-for="sponsor in $t('special-booth-company-list')"
+          :key="sponsor.companyName"
+          sponsor-type="gold"
+          :url="sponsor.url"
+          class="w-full mt-10 lg:w-1/4 lg:mx-8"
+          color="#3D40CB"
+        >
+          <template #image>
+            <img
+              :src="require(`~/assets/img/sponsor/${sponsor.imagePath}`)"
+              class="w-3/4"
+            />
+          </template>
+          <template #companyName class="text-lg">
+            {{ sponsor.companyName }}
+          </template>
+        </Sponsor>
       </div>
     </div>
   </div>
