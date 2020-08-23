@@ -42,6 +42,60 @@
         </Sponsor>
       </div>
     </div>
+    <div class="w-screen pt-24 pb-24 mt-24 way-to-join-block m-screen">
+      <div
+        class="relative flex items-start justify-center md:items-center way-to-join-block"
+      >
+        <div class="relative flex flex-col items-center justify-center">
+          <div class="relative z-10 flex justify-center w-screen m-screen">
+            <div
+              class="flex flex-col items-center w-11/12 px-6 border-8 border-solid sm:px-8 md:px-10 lg:px-12 lg:flex-row md:w-4/5 border-py-black rounded-xl way-to-join-content"
+            >
+              <div class="w-10/12 mx-8 my-6 md:ml-10">
+                <h2 class="inline mb-2 text-2xl font-semibold md:text-4xl">
+                  {{ $t('stamp-rally.title') }}
+                </h2>
+                <div>
+                  <p class="my-4">
+                    {{ $t('stamp-rally.paragraphs.p-1') }}
+                  </p>
+                  <p class="my-4">
+                    {{ $t('stamp-rally.paragraphs.p-2') }}
+                  </p>
+                  <p class="my-4">
+                    {{ $t('stamp-rally.paragraphs.p-3') }}
+                  </p>
+                  <p class="my-4">
+                    {{ $t('stamp-rally.paragraphs.p-4') }}
+                    <a
+                      href="https://docs.google.com/document/d/1iqGOJiB6QrFPZdIQn4baSGTtm9bHsO2JO7ZCs2d7qfE/edit?usp=sharing"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      {{ $t('stamp-rally.paragraphs.p-5') }}</a
+                    >
+                    {{ $t('stamp-rally.paragraphs.p-6') }}
+                  </p>
+                </div>
+                <p class="my-4">
+                  {{ $t('stamp-rally.paragraphs.p-7') }}
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="absolute top-0 w-20 h-20 -mt-8 border-4 border-solid border-py-black bg-py-black rounded-card-head"
+        >
+          <div class="relative">
+            <div class="absolute w-2 h-2 mt-2 ml-6 bg-white rounded-full"></div>
+            <div
+              class="absolute w-2 h-2 mt-2 ml-10 bg-white rounded-full"
+            ></div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -57,7 +111,58 @@ export default Vue.extend({
 })
 </script>
 
-<style></style>
+<style scoped>
+section {
+  color: #404a6b;
+}
+a:link,
+a:visited {
+  color: #006edb;
+  text-decoration: underline;
+  cursor: pointer;
+}
+.attend-icon {
+  border-color: #404a6b;
+  background-color: #404a6b;
+}
+
+.attend-content {
+  border-style: solid;
+  border-color: #404a6b;
+  border-width: 8px;
+}
+.balloon-1 {
+  height: 110px;
+  left: 340px;
+  top: -620px;
+  width: 110px;
+  z-index: -1;
+}
+.balloon-2 {
+  bottom: 130px;
+  height: 110px;
+  right: 100px;
+  width: 110px;
+  z-index: -1;
+}
+.way-to-join-block {
+  background-color: #ffd8a1;
+}
+.way-to-join-content {
+  background-color: #ffffff;
+}
+.date-block .date-text span {
+  color: #3d40cb;
+}
+.text-indent-one {
+  text-indent: -1em;
+  padding-left: 2em;
+}
+.text-indent-two {
+  text-indent: -2em;
+  padding-left: 4em;
+}
+</style>
 
 <i18n>
 {
@@ -128,7 +233,19 @@ export default Vue.extend({
         "url": "https://codezine.jp/",
         "imagePath": "media5.png"
       }
-    ]
+    ],
+    "stamp-rally":{
+      "title": "Online Stamp Rally",
+      "paragraphs": {
+        "p-1": "We will be holding an online stamp rally with prizes for participating in a special booth to collect words and great prizes donated by our sponsors!",
+        "p-2": "All you have to do is visit the special booth, collect words, and apply for the contest using the special application form.The more words you submit, you may more likely get premiums.",
+        "p-3": "As a award for participation, you will receive a limited edition PyConJP2020 virtual background and a coupon to be used at the SHOEISYA online store.",
+        "p-4":"Check",
+        "p-5": "Here（Google Documents）",
+        "p-6": "for more information on events and great prizes!",
+        "p-7":"※ Only those who have purchased tickets on PyConJP2020 Connpass will be able to attend this event."
+      }
+    }
   },
   "ja": {
     "special-booth-company-list": [
@@ -197,7 +314,19 @@ export default Vue.extend({
         "url": "https://codezine.jp/",
         "imagePath": "media5.png"
       }
-    ]
+    ],
+    "stamp-rally":{
+      "title": "オンラインスタンプラリー",
+      "paragraphs": {
+        "p-1": "スペシャルブースであいことばを集めて、参加賞とスポンサーの方からご提供頂いた豪華景品が抽選であたるオンラインスタンプラリーを開催します！",
+        "p-2": "参加方法はスペシャルブースを訪問し、あいことばを集めて、専用の応募フォームにて応募するだけ。あいことばが合っている企業が多ければ多いほど、抽選の当選確率が上がります。",
+        "p-3": "参加賞として、PyConJP2020限定バーチャル背景と翔泳社のオンラインストアで利用できるクーポンをプレゼントいたします。",
+        "p-4":"イベントや豪華景品の詳細ついては",
+        "p-5": "こちら（Googleドキュメント）",
+        "p-6": "をご確認ください。",
+        "p-7":"※本イベントの参加者は、PyConJP2020のConnpass にてチケット購入をされている方に限ります"
+      }
+    }
   }
 }
 
