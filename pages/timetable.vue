@@ -25,7 +25,7 @@
       /></a>
     </div>
 
-    <nuxt-link :to="localePath('/code-of-conduct')" class="w-full banner">
+    <nuxt-link :to="localePath('/special-booth')" class="w-full banner">
       <img class="w-full mb-8" src="~/assets/img/57_12x.png" />
     </nuxt-link>
 

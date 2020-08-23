@@ -18,7 +18,7 @@
           Core Staff
         </template>
       </python-banner>
-      <div class="grid grid-flow-row grid-cols-3 mt-4">
+      <div class="grid grid-flow-row grid-cols-1 mt-4 md:grid-cols-3">
         <div
           v-for="staff in $t('core-staff-list')"
           :key="staff.name"
@@ -64,7 +64,7 @@
           Support Staff
         </template>
       </python-banner>
-      <div class="grid grid-flow-row grid-cols-3 mt-4">
+      <div class="grid grid-flow-row grid-cols-1 mt-4 md:grid-cols-3">
         <div
           v-for="staff in $t('support-staff-list')"
           :key="staff.name"
