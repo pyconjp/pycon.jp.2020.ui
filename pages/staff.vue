@@ -226,7 +226,7 @@ export default Vue.extend({
         "title": "",
         "photo": "",
         "twitter": "ainamori",
-        "facebook": "ainamori"
+        "facebook": "ainamori01"
       },
       {
         "name": "eda3",
@@ -287,7 +287,7 @@ export default Vue.extend({
       {
         "name": "Peacock",
         "title": "\nDesign Team Leader",
-        "photo": "https://drive.google.com/file/d/1G09iIHfqD0rcQb_12rVruWztv_5-2tcN/view",
+        "photo": "",
         "twitter": "peacock0803sz",
         "facebook": ""
       },
@@ -380,7 +380,7 @@ export default Vue.extend({
         "title": "",
         "photo": "",
         "twitter": "parman_osaru",
-        "facebook": "yasuyukiutsunomiya"
+        "facebook": "utsunomiyayasuyuki"
       },
       {
         "name": "Takuya Kumagai",
@@ -583,7 +583,7 @@ export default Vue.extend({
         "title": "",
         "photo": "",
         "twitter": "ainamori",
-        "facebook": "ainamori"
+        "facebook": "ainamori01"
       },
       {
         "name": "えだ",
@@ -644,7 +644,7 @@ export default Vue.extend({
       {
         "name": "Peacock",
         "title": "デザインチームリーダー",
-        "photo": "https://drive.google.com/file/d/1G09iIHfqD0rcQb_12rVruWztv_5-2tcN/view",
+        "photo": "",
         "twitter": "peacock0803sz",
         "facebook": ""
       },
@@ -737,7 +737,7 @@ export default Vue.extend({
         "title": "",
         "photo": "",
         "twitter": "parman_osaru",
-        "facebook": "yasuyukiutsunomiya"
+        "facebook": "utsunomiyayasuyuki"
       },
       {
         "name": "熊谷 拓也",
