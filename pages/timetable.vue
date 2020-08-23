@@ -25,10 +25,9 @@
       /></a>
     </div>
 
-    <div class="w-full banner">
-      <!-- TODO:仮画像なので後で差し替え -->
+    <nuxt-link to="/special-booth" class="w-full banner">
       <img class="w-full mb-8" src="~/assets/img/57_12x.png" />
-    </div>
+    </nuxt-link>
 
     <div class="w-full mb-8">
       <div class="flex justify-center w-full">
