@@ -274,13 +274,6 @@ export default Vue.extend({
         "facebook": "yuichi.nakashima.7"
       },
       {
-        "name": "Takuya Futatsugi",
-        "title": "",
-        "photo": "",
-        "twitter": "ftnext",
-        "facebook": ""
-      },
-      {
         "name": "Nori Suzuki",
         "title": "Delivery Team Leader",
         "photo": "https://pbs.twimg.com/profile_images/1166720283090145280/YTwcPMN8_400x400.jpg",
@@ -636,13 +629,6 @@ export default Vue.extend({
         "photo": "",
         "twitter": "",
         "facebook": "yuichi.nakashima.7"
-      },
-      {
-        "name": "二木 拓也",
-        "title": "",
-        "photo": "",
-        "twitter": "ftnext",
-        "facebook": ""
       },
       {
         "name": "鈴木 教之",
