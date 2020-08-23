@@ -92,3 +92,4 @@ sw.*
 *.zip
 
 .mypy_cache
+content

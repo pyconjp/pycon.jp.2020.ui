@@ -18,21 +18,92 @@
           Core Staff
         </template>
       </python-banner>
-      <div v-for="staff in $t('core-staff-list')" :key="staff.name">
-        <img :src="staff.photo" class="w-12 h-12" alt="" />
-        <p>{{ staff.name }}</p>
-        <a
-          v-if="staff.twitter"
-          rel="noopener noreferrer"
-          :href="`https://twitter.com/${staff.twitter}`"
-          >twitter</a
+      <div class="grid grid-flow-row grid-cols-3 mt-4">
+        <div
+          v-for="staff in $t('core-staff-list')"
+          :key="staff.name"
+          class="p-3 m-4 rounded-lg staff-box-shawow"
         >
-        <a
-          v-if="staff.facebook"
-          rel="noopener noreferrer"
-          :href="`https://twitter.com/${staff.facebook}`"
-          >facebook</a
+          <div class="flex items-center">
+            <img
+              v-if="staff.photo !== ''"
+              :src="staff.photo"
+              class="w-12 h-12 mr-3 rounded-full"
+              alt=""
+            />
+            <i
+              v-if="staff.photo === ''"
+              class="mr-3 text-5xl text-gray-700 material-icons"
+              >account_circle</i
+            >
+            <p class="text-xl">{{ staff.name }}</p>
+          </div>
+          <div class="flex items-center space-x-2">
+            <div class="mr-auto">{{ staff.title }}</div>
+            <a
+              v-if="staff.twitter"
+              rel="noopener noreferrer"
+              :href="`https://twitter.com/${staff.twitter}`"
+              class="text-3xl text-gray-800"
+            >
+              <fa :icon="faTwitter" />
+            </a>
+            <a
+              v-if="staff.facebook"
+              rel="noopener noreferrer"
+              :href="`https://facebook.com/${staff.facebook}`"
+              class="text-3xl text-gray-800"
+            >
+              <fa :icon="faFacebook" />
+            </a>
+          </div>
+        </div>
+      </div>
+      <python-banner direction="right" back-ground-color="#EE9D2C" size="small">
+        <template #title>
+          Support Staff
+        </template>
+      </python-banner>
+      <div class="grid grid-flow-row grid-cols-3 mt-4">
+        <div
+          v-for="staff in $t('support-staff-list')"
+          :key="staff.name"
+          class="p-3 m-4 rounded-lg staff-box-shawow"
         >
+          <div class="flex items-center">
+            <img
+              v-if="staff.photo !== ''"
+              :src="staff.photo"
+              class="w-12 h-12 mr-3 rounded-full"
+              alt=""
+            />
+            <i
+              v-if="staff.photo === ''"
+              class="mr-3 text-5xl text-gray-700 material-icons"
+              >account_circle</i
+            >
+            <p class="text-xl">{{ staff.name }}</p>
+          </div>
+          <div class="flex items-center space-x-2">
+            <div class="mr-auto">{{ staff.title }}</div>
+            <a
+              v-if="staff.twitter"
+              rel="noopener noreferrer"
+              :href="`https://twitter.com/${staff.twitter}`"
+              class="text-3xl text-gray-800"
+            >
+              <fa :icon="faTwitter" />
+            </a>
+            <a
+              v-if="staff.facebook"
+              rel="noopener noreferrer"
+              :href="`https://facebook.com/${staff.facebook}`"
+              class="text-3xl text-gray-800"
+            >
+              <fa :icon="faFacebook" />
+            </a>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -40,17 +111,30 @@
 
 <script>
 import Vue from 'vue'
+import { faTwitter, faFacebook } from '@fortawesome/free-brands-svg-icons'
 import PythonBanner from '~/components/Elements/PythonBanner'
 
 export default Vue.extend({
   components: { PythonBanner },
+  computed: {
+    faTwitter() {
+      return faTwitter
+    },
+    faFacebook() {
+      return faFacebook
+    },
+  },
   head() {
     return { title: this.$t('pages.staff.title') }
   },
 })
 </script>
 
-<style></style>
+<style>
+.staff-box-shawow {
+  box-shadow: 0px 3px 6px #00000029;
+}
+</style>
 
 <i18n>
 {
@@ -398,7 +482,7 @@ export default Vue.extend({
       {
         "name": "Ryosuke Izumi",
         "title": "",
-        "photo": "",
+        "photo": "https://isryo-profile-image.s3-ap-northeast-1.amazonaws.com/p_image.jpg",
         "twitter": "is_ryo",
         "facebook": ""
       },
@@ -435,7 +519,7 @@ export default Vue.extend({
         "facebook": "koedoyoshida"
       },
       {
-        "name": "寺田　学",
+        "name": "寺田 学",
         "title": "一般社団法人PyCon JP 代表理事",
         "photo": "https://www.dropbox.com/s/r8r34b6rcbkjbzw/terada1-256.png?dl=0",
         "twitter": "terapyon",
@@ -484,7 +568,7 @@ export default Vue.extend({
         "facebook": ""
       },
       {
-        "name": "稲森　景",
+        "name": "稲森 景",
         "title": "",
         "photo": "",
         "twitter": "ainamori",
@@ -533,7 +617,7 @@ export default Vue.extend({
         "facebook": "mstk214"
       },
       {
-        "name": "オブリスト　ヨナス",
+        "name": "オブリスト ヨナス",
         "title": "一般社団法人PyCon JP 理事",
         "photo": "",
         "twitter": "ojiidotch",
@@ -761,7 +845,7 @@ export default Vue.extend({
       {
         "name": "泉 亮輔",
         "title": "",
-        "photo": "",
+        "photo": "https://isryo-profile-image.s3-ap-northeast-1.amazonaws.com/p_image.jpg",
         "twitter": "is_ryo",
         "facebook": ""
       },
