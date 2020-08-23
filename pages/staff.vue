@@ -28,7 +28,7 @@
             <img
               v-if="staff.photo !== ''"
               :src="staff.photo"
-              class="w-12 h-12 mr-3 rounded-full"
+              class="object-fill w-12 h-12 mr-3 rounded-full"
               alt=""
             />
             <i
@@ -43,16 +43,18 @@
             <a
               v-if="staff.twitter"
               rel="noopener noreferrer"
+              target="_blank"
               :href="`https://twitter.com/${staff.twitter}`"
-              class="text-3xl text-gray-800"
+              class="text-3xl titter-color"
             >
               <fa :icon="faTwitter" />
             </a>
             <a
               v-if="staff.facebook"
               rel="noopener noreferrer"
+              target="_blank"
               :href="`https://facebook.com/${staff.facebook}`"
-              class="text-3xl text-gray-800"
+              class="text-3xl facebook-color"
             >
               <fa :icon="faFacebook" />
             </a>
@@ -89,16 +91,18 @@
             <a
               v-if="staff.twitter"
               rel="noopener noreferrer"
+              target="_blank"
               :href="`https://twitter.com/${staff.twitter}`"
-              class="text-3xl text-gray-800"
+              class="text-3xl titter-color"
             >
               <fa :icon="faTwitter" />
             </a>
             <a
               v-if="staff.facebook"
               rel="noopener noreferrer"
+              target="_blank"
               :href="`https://facebook.com/${staff.facebook}`"
-              class="text-3xl text-gray-800"
+              class="text-3xl facebook-color"
             >
               <fa :icon="faFacebook" />
             </a>
@@ -134,6 +138,13 @@ export default Vue.extend({
 .staff-box-shawow {
   box-shadow: 0px 3px 6px #00000029;
 }
+
+.titter-color {
+  color: #1da1f2;
+}
+.facebook-color {
+  color: #4267b2;
+}
 </style>
 
 <i18n>
@@ -150,7 +161,7 @@ export default Vue.extend({
       {
         "name": "Daisuke Saito",
         "title": "Vice Chair",
-        "photo": "https://www.facebook.com/photo.php?fbid=1977170479010853&set=a.159759130752006&type=3&theater",
+        "photo": "https://github.com/pyconjp/pycon.jp.2020.ui/raw/develop/assets/img/staff/Daisuke_Saito.jpg",
         "twitter": "PCShop_kabu",
         "facebook": "ds110.sai"
       },
@@ -164,7 +175,7 @@ export default Vue.extend({
       {
         "name": "Manabu TERADA",
         "title": "Board Chair",
-        "photo": "https://www.dropbox.com/s/r8r34b6rcbkjbzw/terada1-256.png?dl=0",
+        "photo": "https://github.com/pyconjp/pycon.jp.2020.ui/raw/develop/assets/img/staff/Manabu_TERADA.png",
         "twitter": "terapyon",
         "facebook": "terapyon"
       },
@@ -178,7 +189,7 @@ export default Vue.extend({
       {
         "name": "nikkie",
         "title": "Content Team Leader",
-        "photo": "https://flic.kr/p/2hgk4xp",
+        "photo": "https://github.com/pyconjp/pycon.jp.2020.ui/raw/develop/assets/img/staff/nikkie.jpg",
         "twitter": "ftnext",
         "facebook": ""
       },
@@ -430,7 +441,7 @@ export default Vue.extend({
       {
         "name": "Momoka Takeda",
         "title": "",
-        "photo": "https://drive.google.com/open?id=1DK-1tuoQnMj1o4ElWutokICqvhLzpvaT",
+        "photo": "https://github.com/pyconjp/pycon.jp.2020.ui/raw/develop/assets/img/staff/Momoka_Takeda.png",
         "twitter": "wahho",
         "facebook": ""
       },
@@ -489,7 +500,7 @@ export default Vue.extend({
       {
         "name": "Kento Yamanaka",
         "title": "",
-        "photo": "https://drive.google.com/file/d/11hsmSCracBvKh9bWyf0RjIL5r7tG72jc/view?usp=sharing",
+        "photo": "https://github.com/pyconjp/pycon.jp.2020.ui/raw/develop/assets/img/staff/Kento_Yamanaka.JPG",
         "twitter": "kentoym_jp",
         "facebook": ""
       }
@@ -507,7 +518,7 @@ export default Vue.extend({
       {
         "name": "齋藤 大輔",
         "title": "副座長",
-        "photo": "https://www.facebook.com/photo.php?fbid=1977170479010853&set=a.159759130752006&type=3&theater",
+        "photo": "https://github.com/pyconjp/pycon.jp.2020.ui/raw/develop/assets/img/staff/Daisuke_Saito.jpg",
         "twitter": "PCShop_kabu",
         "facebook": "ds110.sai"
       },
@@ -521,7 +532,7 @@ export default Vue.extend({
       {
         "name": "寺田 学",
         "title": "一般社団法人PyCon JP 代表理事",
-        "photo": "https://www.dropbox.com/s/r8r34b6rcbkjbzw/terada1-256.png?dl=0",
+        "photo": "https://github.com/pyconjp/pycon.jp.2020.ui/raw/develop/assets/img/staff/Manabu_TERADA.png",
         "twitter": "terapyon",
         "facebook": "terapyon"
       },
@@ -535,7 +546,7 @@ export default Vue.extend({
       {
         "name": "にっきー",
         "title": "コンテンツチームリーダー",
-        "photo": "https://flic.kr/p/2hgk4xp",
+        "photo": "https://github.com/pyconjp/pycon.jp.2020.ui/raw/develop/assets/img/staff/nikkie.jpg",
         "twitter": "ftnext",
         "facebook": ""
       },
@@ -787,7 +798,7 @@ export default Vue.extend({
       {
         "name": "武田 桃花",
         "title": "",
-        "photo": "https://drive.google.com/open?id=1DK-1tuoQnMj1o4ElWutokICqvhLzpvaT",
+        "photo": "https://github.com/pyconjp/pycon.jp.2020.ui/raw/develop/assets/img/staff/Momoka_Takeda.png",
         "twitter": "wahho",
         "facebook": ""
       },
@@ -852,7 +863,7 @@ export default Vue.extend({
       {
         "name": "山中 建人",
         "title": "",
-        "photo": "https://drive.google.com/file/d/11hsmSCracBvKh9bWyf0RjIL5r7tG72jc/view?usp=sharing",
+        "photo": "https://github.com/pyconjp/pycon.jp.2020.ui/raw/develop/assets/img/staff/Kento_Yamanaka.JPG",
         "twitter": "kentoym_jp",
         "facebook": ""
       }
