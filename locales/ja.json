@@ -16,6 +16,10 @@
           "path": "timetable"
         },
         {
+          "title": "スペシャルブース",
+          "path": "special-booth"
+        },
+        {
           "title": "チュートリアル",
           "path": "tutorial"
         },
@@ -36,6 +40,10 @@
     "news": {
       "title": "お知らせ",
       "path": "https://pyconjp.blogspot.com/search/label/pyconjp2020"
+    },
+    "staff": {
+      "title": "スタッフ",
+      "path": "staff"
     }
   },
   "language": "English",
