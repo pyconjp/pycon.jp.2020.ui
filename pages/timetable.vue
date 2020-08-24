@@ -24,6 +24,11 @@
         <img :src="require(`~/assets/img/sponsor/${platinum.imagePath}`)"
       /></a>
     </div>
+
+    <nuxt-link :to="localePath('/special-booth')" class="w-full banner">
+      <img class="w-full mb-8" src="~/assets/img/57_12x.png" />
+    </nuxt-link>
+
     <div class="w-full mb-8">
       <div class="flex justify-center w-full">
         <div
@@ -61,7 +66,7 @@
                 class="flex flex-col items-center justify-center w-full cursor-pointer box_style1 hover:bg-py-blue-light"
               >
                 <a
-                  :href="youtubeLiveUrlList[`pyconjp${index}`]"
+                  :href="youtubeLiveUrlList[0][`#pyconjp_${index}`]"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -113,7 +118,7 @@
                 <p>{{ getSessionTime(1, 0) }}</p>
               </div>
               <div
-                class="grid items-start grid-cols-1 grid-rows-1 gap-2 md:grid-cols-5 timetable_inner_width"
+                class="grid items-start grid-cols-1 grid-rows-1 gap-2 md:grid-cols-5 timetable_inner_width day1_line1_session_height"
               >
                 <Session
                   v-for="index in [1, 2, 3, 4, 5]"
@@ -155,7 +160,7 @@
                 <p>{{ getSessionTime(1, 1) }}</p>
               </div>
               <div
-                class="grid items-start grid-cols-1 grid-rows-1 gap-2 md:grid-cols-5 timetable_inner_width"
+                class="grid items-start grid-cols-1 grid-rows-1 gap-2 md:grid-cols-5 timetable_inner_width day1_line2_session_height"
               >
                 <Session
                   v-for="index in [1, 2, 3, 4, 5]"
@@ -180,7 +185,7 @@
                 <p>{{ getSessionTime(1, 2) }}</p>
               </div>
               <div
-                class="grid items-start grid-cols-1 grid-rows-1 gap-2 md:grid-cols-5 timetable_inner_width"
+                class="grid items-start grid-cols-1 grid-rows-1 gap-2 md:grid-cols-5 timetable_inner_width day1_line3_session_height"
               >
                 <Session
                   v-for="index in [1, 2, 3, 4, 5]"
@@ -225,6 +230,7 @@
               </div>
               <div
                 class="grid items-start grid-cols-1 grid-rows-1 gap-2 md:grid-cols-5 timetable_inner_width"
+                :class="[`day1_line${outerIndex}_session_height`]"
               >
                 <Session
                   v-for="index in [1, 2, 3, 4, 5]"
@@ -284,7 +290,7 @@
                 class="flex flex-col items-center justify-center w-full cursor-pointer box_style1 hover:bg-py-blue-light"
               >
                 <a
-                  :href="youtubeLiveUrlList[`pyconjp${index}`]"
+                  :href="youtubeLiveUrlList[1][`#pyconjp_${index}`]"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -336,7 +342,7 @@
                 <p>{{ getSessionTime(2, 0) }}</p>
               </div>
               <div
-                class="grid items-start grid-cols-1 grid-rows-1 gap-2 md:grid-cols-5 timetable_inner_width"
+                class="grid items-start grid-cols-1 grid-rows-1 gap-2 md:grid-cols-5 timetable_inner_width day2_line1_session_height"
               >
                 <Session
                   v-for="index in [1, 2, 3, 4, 5]"
@@ -378,7 +384,7 @@
                 <p>{{ getSessionTime(2, 1) }}</p>
               </div>
               <div
-                class="grid items-start grid-cols-1 grid-rows-1 gap-2 md:grid-cols-5 timetable_inner_width"
+                class="grid items-start grid-cols-1 grid-rows-1 gap-2 md:grid-cols-5 timetable_inner_width day2_line2_session_height"
               >
                 <Session
                   v-for="index in [1, 2, 3, 4, 5]"
@@ -403,7 +409,7 @@
                 <p>{{ getSessionTime(2, 2) }}</p>
               </div>
               <div
-                class="grid items-start grid-cols-1 grid-rows-1 gap-2 md:grid-cols-5 timetable_inner_width"
+                class="grid items-start grid-cols-1 grid-rows-1 gap-2 md:grid-cols-5 timetable_inner_width day2_line3_session_height"
               >
                 <Session
                   v-for="index in [1, 2, 3, 4, 5]"
@@ -445,7 +451,7 @@
                 <p>{{ getSessionTime(2, 3) }}</p>
               </div>
               <div
-                class="grid items-start grid-cols-1 grid-rows-1 gap-2 md:grid-cols-5 timetable_inner_width"
+                class="grid items-start grid-cols-1 grid-rows-1 gap-2 md:grid-cols-5 timetable_inner_width day2_line4_session_height"
               >
                 <Session
                   v-for="index in [1, 2, 3, 4, 5]"
@@ -470,7 +476,7 @@
                 <p>{{ getSessionTime(2, 4) }}</p>
               </div>
               <div
-                class="grid items-start grid-cols-1 grid-rows-1 gap-2 md:grid-cols-5 timetable_inner_width"
+                class="grid items-start grid-cols-1 grid-rows-1 gap-2 md:grid-cols-5 timetable_inner_width day2_line5_session_height"
               >
                 <Session
                   v-for="index in [1, 2, 3, 5]"
@@ -778,6 +784,117 @@ export default {
   .grid_layout_style5 {
     grid-row: 1;
     grid-column: 5;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .day1_line1_session_height {
+    height: 274px;
+  }
+  .day1_line2_session_height {
+    height: 322px;
+  }
+  .day1_line3_session_height {
+    height: 298px;
+  }
+  .day1_line4_session_height {
+    height: 298px;
+  }
+  .day1_line5_session_height {
+    height: 346px;
+  }
+  .day1_line6_session_height {
+    height: 322px;
+  }
+
+  .day2_line1_session_height {
+    height: 298px;
+  }
+  .day2_line2_session_height {
+    height: 370px;
+  }
+  .day2_line3_session_height {
+    height: 346px;
+  }
+  .day2_line4_session_height {
+    height: 274px;
+  }
+  .day2_line5_session_height {
+    height: 226px;
+  }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1439px) {
+  .day1_line1_session_height {
+    height: 250px;
+  }
+  .day1_line2_session_height {
+    height: 298px;
+  }
+  .day1_line3_session_height {
+    height: 250px;
+  }
+  .day1_line4_session_height {
+    height: 274px;
+  }
+  .day1_line5_session_height {
+    height: 298px;
+  }
+  .day1_line6_session_height {
+    height: 298px;
+  }
+
+  .day2_line1_session_height {
+    height: 274px;
+  }
+  .day2_line2_session_height {
+    height: 322px;
+  }
+  .day2_line3_session_height {
+    height: 298px;
+  }
+  .day2_line4_session_height {
+    height: 250px;
+  }
+  .day2_line5_session_height {
+    height: 226px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .day1_line1_session_height {
+    height: 226px;
+  }
+  .day1_line2_session_height {
+    height: 226px;
+  }
+  .day1_line3_session_height {
+    height: 226px;
+  }
+  .day1_line4_session_height {
+    height: 250px;
+  }
+  .day1_line5_session_height {
+    height: 250px;
+  }
+  .day1_line6_session_height {
+    height: 250px;
+  }
+
+  .day2_line1_session_height {
+    height: 226px;
+  }
+  .day2_line2_session_height {
+    height: 250px;
+  }
+  .day2_line3_session_height {
+    height: 250px;
+  }
+  .day2_line4_session_height {
+    height: 202px;
+  }
+  .day2_line5_session_height {
+    height: 202px;
   }
 }
 </style>

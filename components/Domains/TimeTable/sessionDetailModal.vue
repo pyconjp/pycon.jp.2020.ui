@@ -29,7 +29,6 @@
                     </div>
                   </div>
                   <!-- YouTube Link -->
-
                   <a
                     :href="youtubeLink"
                     target="_blank"
@@ -39,13 +38,18 @@
                     <fa class="text-2xl text-gray-700" :icon="faPlayCircle" />
                     <p class="ml-2">Live</p>
                   </a>
+
                   <!-- Document Link -->
-                  <!-- <div
-                    class="flex items-center justify-start w-2/3 mt-2 md:justify-center md:w-3/12"
+                  <a
+                    v-if="documentLink"
+                    :href="documentLink"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="flex justify-start w-2/3 mt-2 md:justify-center md:items-center md:w-3/12"
                   >
                     <fa class="text-2xl text-gray-700" :icon="faFileAlt" />
                     <p class="ml-2">Document</p>
-                  </div> -->
+                  </a>
                 </div>
               </div>
             </div>
@@ -194,8 +198,8 @@ import {
   faFileAlt,
   faTimes,
 } from '@fortawesome/free-solid-svg-icons'
-import { disableBodyScroll, clearAllBodyScrollLocks } from 'body-scroll-lock'
 import { getYoutubeLiveLink } from '~/lib/youtute-link'
+import { getSessionDocumentUrl } from '~/lib/session-url'
 
 export default {
   props: {
@@ -203,6 +207,7 @@ export default {
       type: Object,
       default() {
         return {
+          id: '',
           title: '',
           name: '',
           profile: '',
@@ -267,10 +272,10 @@ export default {
     this.speakerName = this.sessionData.name
     this.speakerProfile = this.sessionData.profile
     // TODO: 開催後YouTubeのリンクを修正すること
-    this.youtubeLink = getYoutubeLiveLink()[
-      `pyconjp${this.sessionData.room.slice(-1)}`
+    this.youtubeLink = getYoutubeLiveLink()[Number(this.sessionData.day) - 1][
+      this.sessionData.room
     ]
-    this.documentLink = ''
+    this.documentLink = getSessionDocumentUrl(this.sessionData.id)
     this.elevatorPitch = this.sessionData.elevator_pitch
     this.prerequisiteKnowledge = this.sessionData.prerequisite_knowledge
     this.audienceTakeaway = this.sessionData.audience_takeaway
@@ -284,13 +289,6 @@ export default {
     this.langOfSlide = this.sessionData.lang_of_slide
     this.description = this.sessionData.description
     this.description = this.sessionData.description.replace(/\n/g, '\n\n')
-  },
-  mounted() {
-    const targetElement = document.querySelector('#modal-content')
-    disableBodyScroll(targetElement)
-  },
-  beforeDestroy() {
-    clearAllBodyScrollLocks()
   },
 }
 </script>

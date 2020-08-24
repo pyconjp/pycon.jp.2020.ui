@@ -92,3 +92,7 @@ sw.*
 *.zip
 
 .mypy_cache
+content
+tools/*.csv
+tools2/*.csv
+tools2/*.json
