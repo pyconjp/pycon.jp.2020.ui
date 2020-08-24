@@ -196,8 +196,8 @@ export default Vue.extend({
       {
         "name": "Takumi Kuramoto",
         "title": "",
-        "photo": "",
-        "twitter": "try",
+        "photo": "https://pbs.twimg.com/profile_images/1180059309750669314/YUD8jLIZ_400x400.jpg",
+        "twitter": "katura46",
         "facebook": ""
       },
       {
@@ -553,8 +553,8 @@ export default Vue.extend({
       {
         "name": "倉本 拓実\n",
         "title": "",
-        "photo": "",
-        "twitter": "try",
+        "photo": "https://pbs.twimg.com/profile_images/1180059309750669314/YUD8jLIZ_400x400.jpg",
+        "twitter": "katura46",
         "facebook": ""
       },
       {
