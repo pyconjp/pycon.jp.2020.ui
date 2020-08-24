@@ -287,7 +287,7 @@ export default Vue.extend({
       {
         "name": "Peacock",
         "title": "\nDesign Team Leader",
-        "photo": "",
+        "photo": "https://github.com/pyconjp/pycon.jp.2020.ui/raw/develop/assets/img/staff/peacock.png",
         "twitter": "peacock0803sz",
         "facebook": ""
       },
@@ -644,7 +644,7 @@ export default Vue.extend({
       {
         "name": "Peacock",
         "title": "デザインチームリーダー",
-        "photo": "",
+        "photo": "https://github.com/pyconjp/pycon.jp.2020.ui/raw/develop/assets/img/staff/peacock.png",
         "twitter": "peacock0803sz",
         "facebook": ""
       },
