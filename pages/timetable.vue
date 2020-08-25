@@ -518,7 +518,7 @@
               </div>
               <div
                 class="flex items-center justify-center w-full h-16 mt-2 cursor-pointer md:m-0 box_style1 timetable_inner_width rounded-xl hover:bg-py-blue-light"
-                @click="openSessionModal(getTargetSessionDataById('215384'))"
+                @click="openSessionModal(getTargetSessionDataById('215531'))"
               >
                 <p class="text-2xl font-bold">
                   {{ getTargetSessionDataById('215531').title }}
