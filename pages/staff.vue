@@ -182,7 +182,7 @@ export default Vue.extend({
       {
         "name": "Iosif Takakura",
         "title": "",
-        "photo": "",
+        "photo": "https://github.com/pyconjp/pycon.jp.2020.ui/raw/develop/assets/img/staff/Iosif_Takakura.jpg",
         "twitter": "huideyeren",
         "facebook": "iosif.takakura.yusuke"
       },
@@ -546,7 +546,7 @@ export default Vue.extend({
       {
         "name": "高倉佑輔",
         "title": "",
-        "photo": "",
+        "photo": "https://github.com/pyconjp/pycon.jp.2020.ui/raw/develop/assets/img/staff/Iosif_Takakura.jpg",
         "twitter": "huideyeren",
         "facebook": "iosif.takakura.yusuke"
       },
