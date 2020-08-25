@@ -28,7 +28,7 @@
             <img
               v-if="staff.photo !== ''"
               :src="staff.photo"
-              class="object-fill w-12 h-12 mr-3 rounded-full"
+              class="object-cover object-center w-12 h-12 mr-3 rounded-full"
               alt=""
             />
             <i
@@ -283,6 +283,13 @@ export default Vue.extend({
         "photo": "https://africa.pycon.org/media/speakers/Jasveen_Sandral1.jpg",
         "twitter": "SJasveen",
         "facebook": "jasveen.sandral"
+      },
+      {
+        "name": "Kenji Takano",
+        "title": "",
+        "photo": "",
+        "twitter": "",
+        "facebook": ""
       },
       {
         "name": "Peacock",
@@ -640,6 +647,13 @@ export default Vue.extend({
         "photo": "https://africa.pycon.org/media/speakers/Jasveen_Sandral1.jpg",
         "twitter": "SJasveen",
         "facebook": "jasveen.sandral"
+      },
+      {
+        "name": "髙野　健二",
+        "title": "",
+        "photo": "",
+        "twitter": "",
+        "facebook": ""
       },
       {
         "name": "Peacock",
