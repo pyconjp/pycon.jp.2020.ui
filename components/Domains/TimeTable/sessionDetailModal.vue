@@ -30,6 +30,7 @@
                   </div>
                   <!-- YouTube Link -->
                   <a
+                    v-if="youtubeLink"
                     :href="youtubeLink"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -201,7 +202,11 @@ import {
 import { getYoutubeLiveLink } from '~/lib/youtute-link'
 import { getSessionDocumentUrl } from '~/lib/session-url'
 
+// 下記のセッションIDについてはYouTube Liveのリンクを表示させない
+const SESSION_LIST_WITHOUT_YOUTUBE_LINK = ['215380', '215383', '215384']
+
 export default {
+  name: 'SessionDetailModal',
   props: {
     sessionData: {
       type: Object,
@@ -275,6 +280,9 @@ export default {
     this.youtubeLink = getYoutubeLiveLink()[Number(this.sessionData.day) - 1][
       this.sessionData.room
     ]
+    if (SESSION_LIST_WITHOUT_YOUTUBE_LINK.includes(this.sessionData.id)) {
+      this.youtubeLink = ''
+    }
     this.documentLink = getSessionDocumentUrl(this.sessionData.id)
     this.elevatorPitch = this.sessionData.elevator_pitch
     this.prerequisiteKnowledge = this.sessionData.prerequisite_knowledge
