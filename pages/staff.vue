@@ -154,7 +154,7 @@ export default Vue.extend({
       {
         "name": "Yoshiro Nishimura",
         "title": "Chair",
-        "photo": "",
+        "photo": "https://github.com/pyconjp/pycon.jp.2020.ui/raw/develop/assets/img/staff/Yoshiro_Nishimura.jpg",
         "twitter": "",
         "facebook": "yoshiro.nishimura.9"
       },
@@ -518,7 +518,7 @@ export default Vue.extend({
       {
         "name": "西村ヨシロウ",
         "title": "座長",
-        "photo": "",
+        "photo": "https://github.com/pyconjp/pycon.jp.2020.ui/raw/develop/assets/img/staff/Yoshiro_Nishimura.jpg",
         "twitter": "",
         "facebook": "yoshiro.nishimura.9"
       },
@@ -649,7 +649,7 @@ export default Vue.extend({
         "facebook": "jasveen.sandral"
       },
       {
-        "name": "髙野　健二",
+        "name": "髙野 健二",
         "title": "",
         "photo": "",
         "twitter": "",
