@@ -87,9 +87,12 @@
                 <p>10:00</p>
               </div>
               <div
-                class="flex items-center justify-center w-full h-16 mt-2 md:m-0 box_style1 timetable_inner_width rounded-xl"
+                class="flex items-center justify-center w-full h-16 mt-2 cursor-pointer md:m-0 box_style1 timetable_inner_width rounded-xl hover:bg-py-blue-light"
+                @click="openSessionModal(getTargetSessionDataById('214734'))"
               >
-                <p class="text-2xl font-bold">OPENING(Day1)</p>
+                <p class="text-2xl font-bold">
+                  {{ getTargetSessionDataById('214734').title }}
+                </p>
               </div>
             </div>
 
@@ -263,10 +266,12 @@
                 <p>18:30</p>
               </div>
               <div
-                class="flex items-center justify-center w-full h-16 mt-2 md:m-0 box_style1 timetable_inner_width rounded-xl"
+                class="flex items-center justify-center w-full h-16 mt-2 cursor-pointer md:m-0 box_style1 timetable_inner_width rounded-xl hover:bg-py-blue-light"
+                @click="openSessionModal(getTargetSessionDataById('214739'))"
               >
-                <p class="text-2xl font-bold">CLOSING(Day1)</p>
-                <!-- <p>{{ getTargetSessionDataById('').title }}</p> -->
+                <p class="text-2xl font-bold">
+                  {{ getTargetSessionDataById('214739').title }}
+                </p>
               </div>
             </div>
           </div>
@@ -311,9 +316,12 @@
                 <p>10:00</p>
               </div>
               <div
-                class="flex items-center justify-center w-full h-16 mt-2 md:m-0 box_style1 timetable_inner_width rounded-xl"
+                class="flex items-center justify-center w-full h-16 mt-2 cursor-pointer md:m-0 box_style1 timetable_inner_width rounded-xl hover:bg-py-blue-light"
+                @click="openSessionModal(getTargetSessionDataById('214735'))"
               >
-                <p class="text-2xl font-bold">OPENING(Day2)</p>
+                <p class="text-2xl font-bold">
+                  {{ getTargetSessionDataById('214735').title }}
+                </p>
               </div>
             </div>
 
@@ -502,10 +510,12 @@
                 <p>17:15</p>
               </div>
               <div
-                class="flex items-center justify-center w-full h-16 mt-2 md:m-0 box_style1 timetable_inner_width rounded-xl"
+                class="flex items-center justify-center w-full h-16 mt-2 cursor-pointer md:m-0 box_style1 timetable_inner_width rounded-xl hover:bg-py-blue-light"
+                @click="openSessionModal(getTargetSessionDataById('214740'))"
               >
-                <p class="text-2xl font-bold">CLOSING(Day2)</p>
-                <!-- <p>{{ getTargetSessionDataById('').title }}</p> -->
+                <p class="text-2xl font-bold">
+                  {{ getTargetSessionDataById('214740').title }}
+                </p>
               </div>
             </div>
 
