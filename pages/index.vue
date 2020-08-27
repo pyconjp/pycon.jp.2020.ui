@@ -697,6 +697,15 @@ export default Vue.extend({
           "p-6": "She is known as an international speaker at PyCon Thailand 2019 and talked about PyLadies' community activities, also has attended in PyCon US and other international PyCon events. ",
           "p-7": "In 2018, she founded moegi, Inc. and develops smartphone applications. She is also researching the uses and problems of the skies not only in Japan but also in the world, and working as a developer in the field of aviation."
         }
+      },
+      {
+        "name": "Nina Zakharenko",
+        "image": "Nina_Zakharenko.jpg",
+        "date": "08/28",
+        "description": {
+          "p-1": "Nina Zakharenko is a software engineer with over a decade of experience and a newly elected member of the Board of Directors of the PSF. She currently focuses on Python at Microsoft on the Cloud Developer Advocacy team. In the past, she’s written software for satellite control computers at HBO, code that's helped people connect over their passions at Meetup, and implemented time-wasting features on Reddit. In her spare time, she enjoys tinkering with hardware, LEDs, and wearable electronics.",
+          "p-2": "Nina loves teaching developers and has spoken at conferences like PyCon US, PyCon Russia, EuroPython, and DjangoCon in the US and internationally. This year, she's very excited to join PyCon Japan remotely for the first time!"
+        }
       }
     ]
   },
@@ -790,6 +799,15 @@ export default Vue.extend({
           "p-3": "PyConJPには2016年に初参加。Pythonの楽しさや奥深さを知り、様々なコミュニティに参加し友人・知人を増やしたようです。またPyLadiesTokyoコミュニティ参加をきっかけに、今ではスタッフとして活動しています。",
           "p-4": "登壇経験としてPyConJP2017と2018ではドローンとPythonに関する内容で発表・実演を行いました。またPyCon Thailand2019ではPyLadiesのコミュニティ活動に関する海外の登壇経験もあります。PyConUSなど海外のPyConに参加している経験もあり、精力的に活動を行っています。",
           "p-5": "ご自身の仕事は2018年に株式会社moegiを創業し、計測用のスマホアプリなどを開発。日本だけでなく世界の空の活用法や問題点なども調べ、航空機分野の開発者として活躍できるようにと日々活動をしています。"
+        }
+      },
+      {
+        "name": "Nina Zakharenko",
+        "image": "Nina_Zakharenko.jpg",
+        "date": "08/28",
+        "description": {
+          "p-1": "Nina Zakharenko is a software engineer with over a decade of experience and a newly elected member of the Board of Directors of the PSF. She currently focuses on Python at Microsoft on the Cloud Developer Advocacy team. In the past, she’s written software for satellite control computers at HBO, code that's helped people connect over their passions at Meetup, and implemented time-wasting features on Reddit. In her spare time, she enjoys tinkering with hardware, LEDs, and wearable electronics.",
+          "p-2": "Nina loves teaching developers and has spoken at conferences like PyCon US, PyCon Russia, EuroPython, and DjangoCon in the US and internationally. This year, she's very excited to join PyCon Japan remotely for the first time!"
         }
       }
     ]
