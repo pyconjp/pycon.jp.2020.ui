@@ -597,6 +597,13 @@ export default {
       const targetSession = this.getTargetSessionDataById(this.$route.query.id)
       this.openSessionModal(targetSession)
     }
+
+    document.onkeydown = (evt) => {
+      evt = evt || window.event
+      if (evt.keyCode === 27) {
+        this.closeSessionModal()
+      }
+    }
   },
   methods: {
     updateMatches(mql) {
@@ -662,7 +669,10 @@ export default {
       this.modalDisplaySessionData = sessionData
     },
     closeSessionModal() {
-      this.$router.replace({ query: null })
+      if (this.$route.query.id) {
+        this.$router.replace({ query: null })
+      }
+
       this.isModal = false
     },
   },
