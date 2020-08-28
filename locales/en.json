@@ -30,6 +30,10 @@
         {
           "title": "Youth Coder Workshop",
           "path": "youth-coder"
+        },
+        {
+          "title": "YouTube Live Delivery List",
+          "path": "https://pycon.jp/2020_live"
         }
       ]
     },
@@ -235,6 +239,11 @@
           "name": "SHOEISHA",
           "url": "https://codezine.jp/",
           "imagePath": "media5.png"
+        },
+        {
+          "name": "Logmi, Inc.",
+          "url": "https://logmi.jp/tech",
+          "imagePath": "media6.png"
         }
       ]
     },

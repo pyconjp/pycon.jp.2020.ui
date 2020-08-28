@@ -30,6 +30,10 @@
         {
           "title": "ユースコーダーワークショップ",
           "path": "youth-coder"
+        },
+        {
+          "title": "YouTube Live配信一覧",
+          "path": "https://pycon.jp/2020_live"
         }
       ]
     },
@@ -235,6 +239,11 @@
           "name": "株式会社翔泳社",
           "url": "https://codezine.jp/",
           "imagePath": "media5.png"
+        },
+        {
+          "name": "ログミー株式会社",
+          "url": "https://logmi.jp/tech",
+          "imagePath": "media6.png"
         }
       ]
     },

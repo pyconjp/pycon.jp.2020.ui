@@ -62,14 +62,26 @@
             <h5 class="block px-4 py-2 mt-2 text-sm bg-transparent md:mt-0">
               {{ $t('pages.event-list.title') }}
             </h5>
-            <n-link
+            <div
               v-for="event in $t('pages.event-list.content-list')"
               :key="event.title"
-              class="block px-4 py-2 mt-2 ml-10 text-sm bg-transparent md:mt-0"
-              :to="localePath(event.path)"
             >
-              {{ event.title }}
-            </n-link>
+              <n-link
+                v-if="judgeNuxtPath(event.path)"
+                class="block px-4 py-2 mt-2 ml-10 text-sm bg-transparent md:mt-0"
+                :to="localePath(event.path)"
+              >
+                {{ event.title }}
+              </n-link>
+              <a
+                v-else
+                :href="event.path"
+                class="block px-4 py-2 mt-2 ml-10 text-sm bg-transparent md:mt-0"
+                target="_blank"
+                rel="noopener noreferrer"
+                >{{ event.title }}</a
+              >
+            </div>
           </div>
         </div>
 
@@ -156,6 +168,9 @@ export default {
     afterLeave(el) {
       el.style.height = ''
       el.style.overflow = ''
+    },
+    judgeNuxtPath(path) {
+      return !/^https?:\/\//.test(path)
     },
   },
 }
