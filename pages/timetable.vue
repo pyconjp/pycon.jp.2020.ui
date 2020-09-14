@@ -63,19 +63,15 @@
               <div
                 v-for="index in [1, 2, 3, 4, 5]"
                 :key="index"
-                class="flex flex-col items-center justify-center w-full cursor-pointer box_style1 hover:bg-py-blue-light"
+                class="flex flex-col items-center justify-center w-full box_style1"
               >
-                <a
-                  :href="youtubeLiveUrlList[0][`#pyconjp_${index}`]"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
+                <div>
                   <p class="font-bold text-center">#pyconjp_ {{ index }}</p>
                   <div class="flex items-center justify-center mt-2 mb-2">
                     <fa class="text-2xl text-gray-700" :icon="faPlayCircle" />
                     <p class="ml-2 underline">{{ $t('OnAir') }}</p>
                   </div>
-                </a>
+                </div>
               </div>
             </div>
 
@@ -292,19 +288,15 @@
               <div
                 v-for="index in [1, 2, 3, 4, 5]"
                 :key="index"
-                class="flex flex-col items-center justify-center w-full cursor-pointer box_style1 hover:bg-py-blue-light"
+                class="flex flex-col items-center justify-center w-full box_style1"
               >
-                <a
-                  :href="youtubeLiveUrlList[1][`#pyconjp_${index}`]"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
+                <div>
                   <p class="font-bold text-center">#pyconjp_ {{ index }}</p>
                   <div class="flex items-center justify-center mt-2 mb-2">
                     <fa class="text-2xl text-gray-700" :icon="faPlayCircle" />
                     <p class="ml-2 underline">{{ $t('OnAir') }}</p>
                   </div>
-                </a>
+                </div>
               </div>
             </div>
 
