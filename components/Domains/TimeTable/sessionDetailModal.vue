@@ -37,7 +37,7 @@
                     class="flex justify-start w-2/3 mt-2 md:justify-center md:items-center md:w-3/12"
                   >
                     <fa class="text-2xl text-gray-700" :icon="faPlayCircle" />
-                    <p class="ml-2">Live</p>
+                    <p class="ml-2">Video</p>
                   </a>
 
                   <!-- Document Link -->
