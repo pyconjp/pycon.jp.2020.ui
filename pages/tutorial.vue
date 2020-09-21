@@ -36,15 +36,33 @@
             </p>
           </div>
           <div class="description-link-block">
-            <div class="mb-4 text-lg font-bold">
+            <div class="text-lg font-bold">
               <nuxt-link to="#event-one">
                 {{ $t('description.event-one-title') }}
               </nuxt-link>
+            </div>
+            <div class="mt-1 mb-4">
+              <p class="-mb-1 text-sm">{{ $t('description.video-url') }}</p>
+              <a
+                href="https://www.youtube.com/watch?v=u9koCmL0Nxg"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Tutorial Slack Bot編</a
+              >
             </div>
             <div class="text-lg font-bold">
               <nuxt-link to="#event-two">
                 {{ $t('description.event-two-title') }}
               </nuxt-link>
+            </div>
+            <div class="mt-1 mb-4">
+              <p class="-mb-1 text-sm">{{ $t('description.video-url') }}</p>
+              <a
+                href="https://www.youtube.com/watch?v=3WPke2nc20c"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Tutorial データ分析編</a
+              >
             </div>
           </div>
         </div>
@@ -444,7 +462,8 @@ a:visited {
       "p-3": "This year we will have two tutorials." ,
       "p-4": "Still, both tutorials assume that you have development knowledge in other(non-Python) programming languages." ,
       "event-one-title": "Learn the Python Development Ecosystem, Slack Bot Edition",
-      "event-two-title": "Using Open Data to Analyze Data in Python"
+      "event-two-title": "Using Open Data to Analyze Data in Python",
+      "video-url": "Click here for video url"
     },
     "title": "How to attend",
     "paragraphs": {
@@ -474,7 +493,8 @@ a:visited {
       "p-3": "今年は以下の2種類のチュートリアルを行います。",
       "p-4": "なお、今年のチュートリアルではどちらもPython以外のプログラム言語での開発知識がある事を前提としています。",
       "event-one-title": "Pythonの開発エコシステムを学ぼう Slack Bot編",
-      "event-two-title": "オープンデータを使って、Pythonでデータ分析"
+      "event-two-title": "オープンデータを使って、Pythonでデータ分析",
+      "video-url": "動画URLはこちら"
     },
     "title": "参加方法",
     "paragraphs": {
