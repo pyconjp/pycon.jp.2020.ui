@@ -93,6 +93,9 @@ sw.*
 
 .mypy_cache
 content
+!2020
 tools/*.csv
 tools2/*.csv
 tools2/*.json
+
+.mypy_cache
