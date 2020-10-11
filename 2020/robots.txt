@@ -1,0 +1,2 @@
+User-agent: *
+Sitemap: https://pycon.jp/2020/sitemap.xml
