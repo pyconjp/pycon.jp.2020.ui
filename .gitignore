@@ -93,7 +93,7 @@ sw.*
 
 .mypy_cache
 content
-!2020/_nuxt/content
+!2020
 tools/*.csv
 tools2/*.csv
 tools2/*.json
