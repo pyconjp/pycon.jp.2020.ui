@@ -117,18 +117,17 @@
           rel="noopener noreferrer"
         >
           <button
-            class="relative flex items-center px-4 py-2 mt-6 font-medium transition-colors duration-200 bg-white rounded-full shadow group md:px-6 md:py-6 hover:bg-py-orange-dark text-py-black focus:outline-none"
+            class="relative flex items-center px-4 py-2 mt-6 font-medium transition-colors duration-200 bg-white rounded-full shadow group md:px-6 md:py-6 text-py-black focus:outline-none"
           >
-            <p
-              class="w-6 h-6 rounded-full bg-py-orange-dark group-hover:bg-white"
-            />
-            <span
-              class="ml-2 md:text-xl md:ml-6 md:mr-4 group-hover:text-white"
-            >
+            <p class="w-6 h-6 rounded-full bg-py-orange-dark" />
+            <span class="ml-2 md:text-xl md:ml-6 md:mr-4">
               {{ $t('ticket.button') }}
             </span>
-          </button></a
-        >
+            <img
+              :src="require('~/assets/img/closed.png')"
+              class="box-border absolute object-cover object-right w-full md:h-auto lg:w-4/5"
+            /></button
+        ></a>
       </template>
     </python-banner>
 
@@ -703,8 +702,10 @@ export default Vue.extend({
         "image": "Nina_Zakharenko.jpg",
         "date": "08/28",
         "description": {
-          "p-1": "Nina Zakharenko is a software engineer with over a decade of experience and a newly elected member of the Board of Directors of the PSF. She currently focuses on Python at Microsoft on the Cloud Developer Advocacy team. In the past, she’s written software for satellite control computers at HBO, code that's helped people connect over their passions at Meetup, and implemented time-wasting features on Reddit. In her spare time, she enjoys tinkering with hardware, LEDs, and wearable electronics.",
-          "p-2": "Nina loves teaching developers and has spoken at conferences like PyCon US, PyCon Russia, EuroPython, and DjangoCon in the US and internationally. This year, she's very excited to join PyCon Japan remotely for the first time!"
+          "p-1": "Nina Zakharenko is a software engineer with over a decade of experience and a newly elected member of the Board of Directors of the PSF. ",
+          "p-2": "She currently focuses on Python at Microsoft on the Cloud Developer Advocacy team. ",
+          "p-3": "In the past, she’s written software for satellite control computers at HBO, code that's helped people connect over their passions at Meetup, and implemented time-wasting features on Reddit. In her spare time, she enjoys tinkering with hardware, LEDs, and wearable electronics.",
+          "p-4": "Nina loves teaching developers and has spoken at conferences like PyCon US, PyCon Russia, EuroPython, and DjangoCon in the US and internationally. This year, she's very excited to join PyCon Japan remotely for the first time!"
         }
       }
     ]
@@ -753,7 +754,7 @@ export default Vue.extend({
           "p-1": "RichはGun.ioの共同設立者です。",
           "p-2": "Gun.ioはグローバルなコンサルティングファームで、フリーソフトウェアやオープンソースソフトウェアのコミュニティから来た最も優秀なエンジニア（ハッカー）たちが所属しています。",
           "p-3": "彼は、Pythonにおける主要なサーバレスフレームワーク、Zappaの作者です。",
-          "p-4": "Zappaは、何千もの企業やユーザによって使われ、Web開発における時間と費用を節約しています。彼は医療や科学計算向けのクラウドGPUクラスタからモバイルのピア・ツー・ピアのファイル共有アプリまで、そしてその間にあるあらゆるものに取り組んできました。彼の趣味はスケートボード、サザン・ヒップホップと、ラフロイグを飲むことです。"
+          "p-4": "Zappaは、何千もの企業やユーザによって使われ、Webデプロイにおける時間と費用を節約しています。彼は医療や科学計算向けのクラウドGPUクラスタからモバイルのピア・ツー・ピアのファイル共有アプリまで、そしてその間にあるあらゆるものに取り組んできました。彼の趣味はスケートボード、サザン・ヒップホップと、ラフロイグを飲むことです。"
         }
       }
     ],
@@ -806,8 +807,11 @@ export default Vue.extend({
         "image": "Nina_Zakharenko.jpg",
         "date": "08/28",
         "description": {
-          "p-1": "Nina Zakharenko is a software engineer with over a decade of experience and a newly elected member of the Board of Directors of the PSF. She currently focuses on Python at Microsoft on the Cloud Developer Advocacy team. In the past, she’s written software for satellite control computers at HBO, code that's helped people connect over their passions at Meetup, and implemented time-wasting features on Reddit. In her spare time, she enjoys tinkering with hardware, LEDs, and wearable electronics.",
-          "p-2": "Nina loves teaching developers and has spoken at conferences like PyCon US, PyCon Russia, EuroPython, and DjangoCon in the US and internationally. This year, she's very excited to join PyCon Japan remotely for the first time!"
+          "p-1": "Nina Zakharenkoは10年を超える経験を持つソフトウェアエンジニアであり、PSF（Pythonソフトウェア財団）のBoard of Directorsに新しく選出された一員でもあります。",
+          "p-2": "彼女は現在マイクロソフトのCloud Developer AdvocacyチームでPythonを中心に活動しています。",
+          "p-3": "これまでに、彼女はHBO（アメリカのケーブルテレビ局）で衛星を制御するコンピュータのソフトウェアを書いたり、Meetupで情熱を持った人々がつながるのを助けるコードを書いたり、Redditで時間の無駄遣いになるような機能を実装したりしてきました。",
+          "p-4": "余暇にはハードウェア、LED、身につけられる電子部品をいじって楽しんでいます。",
+          "p-5": "Ninaは開発者に教えることが大好きで、PyCon US、PyCon Russia、EuroPython、アメリカでのDjangoConなど国際的にカンファレンスで登壇しています。今年はPyCon JPにリモートではじめて参加することにワクワクしています。"
         }
       }
     ]

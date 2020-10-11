@@ -37,7 +37,7 @@
                     class="flex justify-start w-2/3 mt-2 md:justify-center md:items-center md:w-3/12"
                   >
                     <fa class="text-2xl text-gray-700" :icon="faPlayCircle" />
-                    <p class="ml-2">Live</p>
+                    <p class="ml-2">Video</p>
                   </a>
 
                   <!-- Document Link -->
@@ -199,8 +199,7 @@ import {
   faFileAlt,
   faTimes,
 } from '@fortawesome/free-solid-svg-icons'
-import { getYoutubeLiveLink } from '~/lib/youtute-link'
-import { getSessionDocumentUrl } from '~/lib/session-url'
+import { getSessionDocumentUrl, getSessionYoutubeUrl } from '~/lib/session-url'
 
 // 下記のセッションIDについてはYouTube Liveのリンクを表示させない
 const SESSION_LIST_WITHOUT_YOUTUBE_LINK = ['215380', '215383', '215384']
@@ -277,9 +276,7 @@ export default {
     this.speakerName = this.sessionData.name
     this.speakerProfile = this.sessionData.profile
     // TODO: 開催後YouTubeのリンクを修正すること
-    this.youtubeLink = getYoutubeLiveLink()[Number(this.sessionData.day) - 1][
-      this.sessionData.room
-    ]
+    this.youtubeLink = getSessionYoutubeUrl(this.sessionData.id)
     if (SESSION_LIST_WITHOUT_YOUTUBE_LINK.includes(this.sessionData.id)) {
       this.youtubeLink = ''
     }
@@ -301,7 +298,7 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .modal {
   &.modal-overlay {
     display: flex;
