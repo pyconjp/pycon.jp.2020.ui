@@ -34,7 +34,7 @@
     "@nuxtjs/proxy": "^2.0.0",
     "@nuxtjs/pwa": "^3.0.0-0",
     "@nuxtjs/sitemap": "^2.2.0",
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "body-scroll-lock": "^3.0.3",
     "date-fns": "^2.14.0",
     "node-sass": "^4.14.1",
