@@ -16,6 +16,10 @@
           "path": "timetable"
         },
         {
+          "title": "Special Booth",
+          "path": "special-booth"
+        },
+        {
           "title": "Tutorial",
           "path": "tutorial"
         },
