@@ -32,7 +32,7 @@
     "axios": "^0.19.2",
     "body-scroll-lock": "^3.0.3",
     "date-fns": "^2.14.0",
-    "node-sass": "^4.14.1",
+    "node-sass": "^7.0.0",
     "nuxt": "^2.12.2",
     "nuxt-font-loader-strategy": "^1.0.0",
     "nuxt-fontawesome": "^0.4.0",
